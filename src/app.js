@@ -27,6 +27,10 @@ app.get('/:page', (req, res) => {
   }
 });
 
+app.use((req, res, next) => {
+  res.status(404).sendFile(__dirname + '/pages/404.html');
+});
+
 const port = 3000;
 
 function findAvailablePort() {
