@@ -27,6 +27,25 @@ app.get('/:page', (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log(`Server is running on port 3000\nVisit ${'http://localhost:3000/'} to access the app.`);
+const port = 3000;
+
+function findAvailablePort() {
+  return new Promise((resolve, reject) => {
+    const server = app.listen(port, () => {
+      console.log(`Server is running on port ${port}`);
+      resolve(port);
+    }).on('error', (err) => {
+      if (err.code === 'EADDRINUSE') {
+        port++;
+        server.close();
+        findAvailablePort().then((newPort) => resolve(newPort));
+      } else {
+        reject(err);
+      }
+    });
+  });
+}
+
+findAvailablePort().then((port) => {
+  console.log(`Visit http://localhost:${port}/ to access the app.`);
 });
