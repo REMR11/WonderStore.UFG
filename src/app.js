@@ -8,8 +8,12 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 
-//http://localhost:3000/home/index.html para recibir peticiones de ese tipo
+//Permitir usar recursos de las diferentes carpetas
 app.use(express.static(path.join(__dirname, 'pages')));
+app.use('/api',express.static(path.join(__dirname, 'api')));
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
+app.use('/components', express.static(path.join(__dirname, 'components')));
+app.use('/lib', express.static(path.join(__dirname, 'lib')));
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + 'pages/index.html');
