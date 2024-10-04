@@ -28,5 +28,5 @@ app.get('/:page', (req, res) => {
 });
 
 app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+  console.log(`Server is running on port 3000\nVisit ${'http://localhost:3000/'} to access the app.`);
 });

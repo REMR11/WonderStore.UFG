@@ -1,18 +1,33 @@
+**WonderStore**
+================
 
-# WonderStore
-Este es el proyecto universitario de la UFG, de la materia de Diseño Web.
+This is a university project for the Web Design course at UFG.
 
-La aplicación es una tienda en linea llamada WonderStore.
+**About the Project**
+--------------------
 
-Se solicita que a todos los integrantes del equipo necesitan instalar Node https://nodejs.org/en en la versión minima de: 20.14.0.
+WonderStore is an online store application.
 
-Los comandos al realizar el clone de git son:
+**Getting Started**
+-------------------
 
-JAMAS BORRAR EL package.json
+### Prerequisites
 
-npm i -> Instala las dependencias
-npm run dev -> Inicia el Servidor
+* Node.js (minimum version: 20.14.0) - [Download and install from here](https://nodejs.org/en)
 
-Luego dirigirse al puerto http://127.0.0.1:3000/
+### Clone and Run
 
-Listo, cada que hagan cambios deben recargar la página.
+1. Clone the repository.
+2. **Do not delete the `package.json` file.**
+3. Run the following commands:
+This will install the dependencies and start the server.
+**Copy and Paste:**
+
+npm i -> Instalará las dependencias
+npm run dev -> Que corre la aplicación 
+
+### Access the App
+
+Open a web browser and navigate to `http://127.0.0.1:3000/` to access the WonderStore app.
+
+**Note**: After making changes, reload the page to see the updates.
