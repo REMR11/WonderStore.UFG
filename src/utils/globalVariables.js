@@ -70,6 +70,6 @@ export const LINKS_EXTERNAL = [
   },
   {
     "rel": "stylesheet",
-    "URL": BASE_URL + "/style.css"
+    "URL": BASE_URL + "/styles.css"
   }
 ];
