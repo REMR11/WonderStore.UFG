@@ -52,12 +52,12 @@ export const CATEGORIES = [
 
 export const SCRIPTS = [
   {
-    "src": BASE_URL + "/resources/components/navbar.js",
+    "src": BASE_URL + "/components/navbar.js",
     "isModule": true,
     "isPrincipal": true
   },
   {
-    "src": BASE_URL + "/resources/components/footer.js",
+    "src": BASE_URL + "/components/footer.js",
     "isModule": true,
     "isPrincipal": true
   }  
