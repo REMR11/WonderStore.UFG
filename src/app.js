@@ -9,7 +9,20 @@ import connectLivereload from 'connect-livereload';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
-const liveReloadServer = livereload.createServer();
+
+const isProduction = process.env.NODE_ENV === 'production'; // Verifica si es producción
+
+if (!isProduction) {
+  const liveReloadServer = livereload.createServer();
+  app.use(connectLivereload()); // Agregar middleware de LiveReload
+  liveReloadServer.watch(path.join(__dirname, 'src')); // Observa el directorio 'src'
+
+  liveReloadServer.server.once("connection", () => {
+    setTimeout(() => {
+      liveReloadServer.refresh("/");
+    }, 100); // Evitar parpadeo al inicio
+  })
+}
 
 //Permitir usar recursos de las diferentes carpetas
 app.use(connectLivereload()); // Agregar middleware de LiveReload
@@ -20,6 +33,10 @@ app.use('/components', express.static(path.join(__dirname, 'components')));
 app.use('/lib', express.static(path.join(__dirname, 'lib')));
 
 app.get('/', (req, res) => {
+  res.sendFile(__dirname + 'pages/index.html');
+});
+
+app.get('/inicio', (req, res) => {
   res.sendFile(__dirname + 'pages/index.html');
 });
 
@@ -38,9 +55,6 @@ app.get('/:page', (req, res) => {
 app.use((req, res, next) => {
   res.status(404).sendFile(__dirname + '/pages/404.html');
 });
-
-// Iniciar el servidor de LiveReload
-liveReloadServer.watch(path.join(__dirname, 'src')); // Observa el directorio 'src'
 
 const port = 3000;
 
@@ -63,10 +77,4 @@ function findAvailablePort() {
 
 findAvailablePort().then((port) => {
   console.log(`Visit http://localhost:${port}/ to access the app.`);
-
-  liveReloadServer.server.once("connection", () => {
-    setTimeout(() => {
-      liveReloadServer.refresh("/");
-    }, 100); // Evitar parpadeo al inicio
-  });
 });
