@@ -31,13 +31,14 @@ app.use('/api', express.static(path.join(__dirname, 'api')));
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/components', express.static(path.join(__dirname, 'components')));
 app.use('/lib', express.static(path.join(__dirname, 'lib')));
+app.use('/utils', express.static(path.join(__dirname, 'utils')));
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + 'pages/index.html');
 });
 
 app.get('/inicio', (req, res) => {
-  res.sendFile(__dirname + 'pages/index.html');
+  res.sendFile(__dirname + '/pages/index.html');
 });
 
 app.get('/:page', (req, res) => {
