@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/inicio', (req, res) => {
-  res.sendFile(__dirname + 'pages/index.html');
+  res.sendFile(__dirname + '/pages/index.html');
 });
 
 app.get('/:page', (req, res) => {
