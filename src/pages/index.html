@@ -1,32 +1,91 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  
+
   <link rel="icon" href="../assets/icons/page-icon.svg" type="img/svg">
 
   <meta name="description" content="Wonder Store - Tienda en linea hecha por fans para fans. ¡Deja que te sorprenda!">
 
   <meta property="og:title" content="Wonder Store - Tienda en linea hecha por fans para fans. ¡Deja que te sorprenda!">
 
-  <meta property="og:image"
-    content="../assets/icons/page-icon.svg">
+  <meta property="og:image" content="../assets/icons/page-icon.svg">
 
   <meta property="og:image:alt" content="Icono de la tienda">
 
   <title>WonderStore</title>
   <script type="module" src="./general.js"></script>
 </head>
-<body>
-  <header class="nav-container">
 
+<body>
+  <header class="header-principal nav-container">
+    <div class="nav-logo">
+      <a href="/" class="nav-logo-img">
+        <img src="../assets/icons/logo-navbar.webp" alt="Icono de la tienda">
+      </a>
+    </div>
+    <div class="nav-section-2">
+      <nav class="navbar">
+        <div class="nav__menu__container">
+          <p>Menú</p>
+          <div class="nav__burger__menu navbar__burger__menu--open" title="Cerrar Menú">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <u class="navbar-list">
+          <li>
+            <a href="/prueba" class="navbar-list-item">Marvel</a>
+          </li>
+          <li>
+            <a href="/prueba" class="navbar-list-item">Star Wars</a>
+          </li>
+          <li>
+            <a href="/prueba" class="navbar-list-item">Anime</a>
+          </li>
+          <li>
+            <a href="/prueba" class="navbar-list-item">Videojuegos</a>
+          </li>
+          <li class="navbar-expand-container">
+            <label class="navbar-list-item navbar-expand-label">GoT Universe
+              <span class="material-symbols-outlined">
+                keyboard_arrow_down
+              </span>
+            </label>
+
+            <ul class="navbar-expanded-list">
+              <li class="navbar-expanded-item">
+                <a class="navbar-list-item" href="./index.html">GoT</a>
+              </li>
+              <li class="navbar-expanded-item">
+                <a class="navbar-list-item" href="./index.html">HoTD</a>
+              </li>
+            </ul>
+          </li>
+        </u>
+      </nav>
+      <div class="overlay"></div>
+      <div class="shopping">
+        <a href="/carrito" title="Ir al carrito" id="shopping-button" data-count-item-shopping="999">
+          <span class="material-symbols-outlined">
+            shopping_cart
+          </span>
+        </a>
+      </div>
+      <div class="nav__menu__container" title="Abrir Menú">
+        <div class="nav__burger__menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
   </header>
-  <h1>Inicio soy guapo pajas esta madre si por que no sera</h1>
-  Hola
-  <a href="/prueba">Dirección a prueba</a>
   <script src="./index.js"></script>
 </body>
+
 </html>

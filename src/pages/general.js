@@ -3,6 +3,7 @@ import { SCRIPTS, LINKS_EXTERNAL } from "../utils/globalVariables.js";
 document.addEventListener("DOMContentLoaded", async () => {
   await loadLink();
   await loadScripts();
+  toggleMenu();
 });
 
 function loadLink() {
@@ -47,4 +48,15 @@ function loadScripts() {
       };
     }
   });
+}
+
+function toggleMenu() {
+  const nav = document.querySelector('.navbar');
+  const buttons = document.getElementsByClassName('nav__burger__menu');
+
+  for (const button of buttons) {
+    button.addEventListener('click', function () {
+      nav.classList.toggle('navbar--open');
+    })
+  }
 }
