@@ -240,7 +240,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
 
-    li {
+    .nav-item {
       width: 100%;
     }
   }
@@ -337,10 +337,13 @@ body {
   /*Estilos para el logo*/
   .nav-logo {
     flex: 0;
+    left: 0;
+    height: 65px;
   }
 
   .header-principal.nav-container {
-    padding-right: 20px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .nav-section-2 {
@@ -365,10 +368,6 @@ body {
       padding: 0;
       gap: 5rem;
       position: relative;
-
-      li {
-        width: 100%;
-      }
     }
   }
 

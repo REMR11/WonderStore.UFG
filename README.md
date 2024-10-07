@@ -56,4 +56,4 @@ La ultima versión habilita livereload por ende los cambios deberían de verse t
 
 ### Importante
 
-Cuando se este desarrollando una vista por favor incluir el script de js `general` ya que ese carga los estilos y componentes principales además añadir el `type="module"`.
+Cuando se este desarrollando una vista por favor incluir el script de js `general` ya que ese carga los estilos y componentes principales además añadir el `type="module"`.x
