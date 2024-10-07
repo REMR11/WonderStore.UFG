@@ -37,6 +37,10 @@ npm run dev
 Mirar la consola de la aplicación ahí verán un enlace como el siguiente:
 Visit `http://127.0.0.1:3000/` to access the WonderStore app.
 
+### Close the App
+
+Para cerrar la aplicación en la consola donde se inicio se debe presionar ```ctr+c``` dos veces
+
 
 **Note**: 
 La ultima versión habilita livereload por ende los cambios deberían de verse tras 1s después de haber guardado cambios; en caso de no verse se debe de recargar manualmente el navegador "Ctr + F5"
