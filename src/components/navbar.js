@@ -6,7 +6,7 @@ function getListItem(linkArray, isExpandedItem = false) {
 
   for (const link of linkArray) {
     if (link.isExpandContainer) {
-      links += `<li class="navbar-expand-container">
+      links += `<li class="nav-item navbar-expand-container">
                     <label class="navbar-list-item navbar-expand-label">
                       ${link.title}
                       <span class="material-symbols-outlined">

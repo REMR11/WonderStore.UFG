@@ -45,7 +45,7 @@ body {
   justify-content: space-between;
   position: sticky;
   top: 0;
-
+  z-index: 999;
   a {
     text-decoration: none;
   }
@@ -326,8 +326,41 @@ body {
   width: 100%;
   left: 30%;
 }
+/*General Skeleton*/
+@keyframes loading-skeleton {
+
+  /*En el inicio el fondo (Osea el degradado va estar en su 200% ejex y en el Y ni se mueve)*/
+  0% {
+    background-position: 200% 0;
+  }
+
+  /*Al finalizar la animación hacemos que regrese a la posición original osea le quitamos el 200% que tenía*/
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.general-skeleton {
+  background-image: linear-gradient(100deg, #e0e0e0 30%, #f0f0f0 50%, #e0e0e0 70%);
+  background-size: 200% 100%;
+  animation: loading-skeleton 2s infinite;
+  border-radius: 10px;
+}
+
+/*Método para evitar el scroll cuando el navbar esta activo*/
+.body-no-scroll {
+  overflow-y: hidden;
+}
 
 @media (width >=1024px) {
+  /*No evitar el scroll*/
+  .body-no-scroll {
+    overflow-y: initial;
+  }
+
+  .overlay{
+    display: none !important;
+  }
 
   /*Estilos para el menu del navbar*/
   .nav__menu__container {
@@ -359,6 +392,7 @@ body {
     transform: translateX(0);
     background-color: transparent;
     align-items: center;
+
     .navbar-list {
       width: 100%;
       display: flex;
@@ -379,7 +413,7 @@ body {
     width: max-content;
   }
 
-  .navbar-list-item::after{
+  .navbar-list-item::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -390,11 +424,11 @@ body {
     transition: width 0.3s ease-in-out;
   }
 
-  .navbar-list-item:hover{
+  .navbar-list-item:hover {
     scale: 1;
   }
 
-  .navbar-list-item:hover::after{
+  .navbar-list-item:hover::after {
     width: 75%;
   }
 
@@ -405,13 +439,13 @@ body {
     border: 2px solid var(--primary-color);
     padding: 10px;
     border-radius: 7px;
-  
+
     @starting-style {
       opacity: 0;
     }
   }
 
-  .navbar-expanded-item .navbar-list-item{
+  .navbar-expanded-item .navbar-list-item {
     width: 100%;
     border-radius: 7px;
     border: 0;

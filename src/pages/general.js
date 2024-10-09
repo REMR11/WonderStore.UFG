@@ -57,6 +57,7 @@ function toggleMenu() {
   for (const button of buttons) {
     button.addEventListener('click', function () {
       nav.classList.toggle('navbar--open');
+      document.body.classList.toggle('body-no-scroll');
     })
   }
 }
