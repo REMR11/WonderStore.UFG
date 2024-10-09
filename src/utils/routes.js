@@ -19,32 +19,32 @@ import { BASE_URL, TOPICS,  } from "./globalVariables.js";
 //     "children": [
 //       {
 //         "title": "Marvel",
-//         "URL": BASE_URL + "/productos?topic=" + TOPICS.MARVEL,
+//         "URL": BASE_URL + "/products?topic=" + TOPICS.MARVEL,
 //         "isExpandableContainer": false
 //       },
 //       {
 //         "title": "Star Wars",
-//         "URL": `${BASE_URL}/productos?topic=${TOPICS.STAR_WARS}`,
+//         "URL": `${BASE_URL}/products?topic=${TOPICS.STAR_WARS}`,
 //         "isExpandableContainer": false
 //       },
 //       {
 //         "title": "Anime",
-//         "URL": `${BASE_URL}/productos?topic=${TOPICS.ANIME}`,
+//         "URL": `${BASE_URL}/products?topic=${TOPICS.ANIME}`,
 //         "isExpandableContainer": false
 //       },
 //       {
 //         "title": "Videojuegos",
-//         "URL": `${BASE_URL}/productos?topic=${TOPICS.VIDEOJUEGOS}`,
+//         "URL": `${BASE_URL}/products?topic=${TOPICS.VIDEOJUEGOS}`,
 //         "isExpandableContainer": false
 //       },
 //       {
 //         "title": "Got",
-//         "URL": `${BASE_URL}/productos?topic=${TOPICS.GOT}`,
+//         "URL": `${BASE_URL}/products?topic=${TOPICS.GOT}`,
 //         "isExpandableContainer": false
 //       },
 //       {
 //         "title": "HotD",
-//         "URL": `${BASE_URL}/productos?topic=${TOPICS.HOTD}`,
+//         "URL": `${BASE_URL}/products?topic=${TOPICS.HOTD}`,
 //         "isExpandableContainer": false
 //       }
 //     ]
@@ -54,22 +54,22 @@ import { BASE_URL, TOPICS,  } from "./globalVariables.js";
 const ROUTES = [
   {
     "title": "Marvel",
-    "URL": BASE_URL + "/productos?topic=" + TOPICS.MARVEL,
+    "URL": BASE_URL + "/products?topic=" + TOPICS.MARVEL,
     "isExpandableContainer": false
   },
   {
     "title": "Star Wars",
-    "URL": `${BASE_URL}/productos?topic=${TOPICS.STAR_WARS}`,
+    "URL": `${BASE_URL}/products?topic=${TOPICS.STAR_WARS}`,
     "isExpandableContainer": false
   },
   {
     "title": "Anime",
-    "URL": `${BASE_URL}/productos?topic=${TOPICS.ANIME}`,
+    "URL": `${BASE_URL}/products?topic=${TOPICS.ANIME}`,
     "isExpandableContainer": false
   },
   {
     "title": "Videojuegos",
-    "URL": `${BASE_URL}/productos?topic=${TOPICS.VIDEOJUEGOS}`,
+    "URL": `${BASE_URL}/products?topic=${TOPICS.VIDEOJUEGOS}`,
     "isExpandableContainer": false
   },
   {
@@ -78,12 +78,12 @@ const ROUTES = [
     "children": [
       {
         "title": "Got",
-        "URL": `${BASE_URL}/productos?topic=${TOPICS.GOT}`,
+        "URL": `${BASE_URL}/products?topic=${TOPICS.GOT}`,
         "isExpandableContainer": false
       },
       {
         "title": "HotD",
-        "URL": `${BASE_URL}/productos?topic=${TOPICS.HOTD}`,
+        "URL": `${BASE_URL}/products?topic=${TOPICS.HOTD}`,
         "isExpandableContainer": false
       }
     ]

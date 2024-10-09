@@ -1,0 +1,29 @@
+.banner-container {
+  width: 100%;
+  min-height: 150px;
+  max-height: 334px;
+  border-radius: 0 !important;
+  /* img {
+    block-size: auto;
+    filter: blur(4px);
+    opacity: 0;
+    transition: opacity 200ms ease-out, filter 1s ease-out;
+    object-position: center;
+  } */
+}
+
+.on-load-img-fn-loaded{
+  animation: none !important;
+  background-image: none !important;
+}
+
+.on-load-img-fn-loaded > img{
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* @media (width>=768px){
+  .banner-category-container{
+    height: initial;
+  }
+} */
