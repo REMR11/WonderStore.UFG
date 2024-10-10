@@ -1,29 +1,78 @@
 .banner-container {
   width: 100%;
-  min-height: 150px;
-  max-height: 334px;
+  overflow: hidden;
+  height: 250px;
   border-radius: 0 !important;
-  /* img {
-    block-size: auto;
-    filter: blur(4px);
-    opacity: 0;
-    transition: opacity 200ms ease-out, filter 1s ease-out;
-    object-position: center;
-  } */
+  position: relative;
+  perspective: 1px;
 }
 
-.on-load-img-fn-loaded{
+.banner-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.banner-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateZ(-1px) scale(2.2); 
+  filter: brightness(0.45) !important;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-content img {
+  max-width: 100%;
+  height: 53px;
+  z-index: 2;
+}
+
+.on-load-img-fn-loaded {
   animation: none !important;
   background-image: none !important;
 }
 
-.on-load-img-fn-loaded > img{
-  opacity: 1;
-  filter: blur(0);
+.on-load-img-fn > img{
+  opacity: 0;
+  filter: blur(4px);
+  transition: opacity 200ms ease-out, filter 1s ease-out;
 }
 
-/* @media (width>=768px){
-  .banner-category-container{
-    height: initial;
+.on-load-img-fn-loaded>img {
+  filter: blur(0);
+  opacity: 1;
+}
+
+.star-wars .banner-content img{
+  height: 100px;
+}
+
+.got .banner-content img{
+  height: 150px;
+}
+
+@media (width >=768px) {
+  .banner-container {
+    height: 350px;
   }
-} */
+}

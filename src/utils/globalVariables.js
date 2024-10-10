@@ -21,32 +21,42 @@ export const CATEGORIES = Object.freeze([
   Object.freeze({
     name: TOPICS.MARVEL,
     productTypes: [PRODUCT_CATEGORIES.ACCESORIOS, PRODUCT_CATEGORIES.COMIC, PRODUCT_CATEGORIES.MANGA, PRODUCT_CATEGORIES.FIGURAS],
-    bannerName: 'marvel-banner.webp'
+    bannerBackgroundName: 'marvel-banner.webp',
+    bannerTextName: 'marvel-text.svg'
   }),
   Object.freeze({
     name: TOPICS.STAR_WARS,
     productTypes: [PRODUCT_CATEGORIES.ACCESORIOS, PRODUCT_CATEGORIES.COMIC, PRODUCT_CATEGORIES.FIGURAS, PRODUCT_CATEGORIES.LIBROS],
-    bannerName: 'star-wars.webp'
+    bannerBackgroundName: 'star-wars.webp',
+    bannerTextName: 'star-wars-text.svg',
+    customStyleClassName: 'star-wars'
   }),
   Object.freeze({
     name: TOPICS.ANIME,
     productTypes: [PRODUCT_CATEGORIES.ACCESORIOS, PRODUCT_CATEGORIES.MANGA, PRODUCT_CATEGORIES.FIGURAS],
-    bannerName: 'anime.webp'
+    bannerBackgroundName: 'anime.webp',
+    bannerTextName: 'anime-text.svg',
+
   }),
   Object.freeze({
     name: TOPICS.VIDEOJUEGOS,
     productTypes: [PRODUCT_CATEGORIES.ACCESORIOS, PRODUCT_CATEGORIES.COMIC, PRODUCT_CATEGORIES.FIGURAS, PRODUCT_CATEGORIES.MANGA, PRODUCT_CATEGORIES.LIBROS],
-    bannerName: 'videojuegos.webp'
+    bannerBackgroundName: 'videojuegos.webp',
+    bannerTextName: 'videojuegos-text.svg'
   }),
   Object.freeze({
     name: TOPICS.GOT,
     productTypes: [PRODUCT_CATEGORIES.ACCESORIOS, PRODUCT_CATEGORIES.FIGURAS, PRODUCT_CATEGORIES.LIBROS],
-    bannerName: 'got.webp'
+    bannerBackgroundName: 'got.webp',
+    bannerTextName: 'got-text.svg',
+    customStyleClassName: 'got'
   }),
   Object.freeze({
     name: TOPICS.HOTD,
     productTypes: [PRODUCT_CATEGORIES.ACCESORIOS, PRODUCT_CATEGORIES.FIGURAS, PRODUCT_CATEGORIES.LIBROS],
-    bannerName: 'hotd.webp'
+    bannerBackgroundName: 'hotd.webp',
+    bannerTextName: 'hotd-text.svg',
+    customStyleClassName: 'star-wars'
   }),
 ]);
 
