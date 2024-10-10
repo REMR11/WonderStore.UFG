@@ -451,3 +451,20 @@ body {
     border: 0;
   }
 }
+
+/* PARALLAX */
+
+/* 
+.parallax-america {
+  background: #fff fixed no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.titulo-america {
+  background-image: url(../img/america-header.jpg);
+  height: 400px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+} */
