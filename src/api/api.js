@@ -194,7 +194,7 @@ export function getProductDetail(id) {
   //{2: 14, 3: 43, 4: 29, 5: 14}
 
   const ratingPercentages = Object.keys(ratingCounts).reduce((percentages, rate) => {
-    percentages[rate] = Math.round((ratingCounts[rate] / totalRatings) * 100);
+    percentages[rate] = Math.round((ratingCounts[rate] / ratings.length) * 100);
     return percentages;
   }, {});
 
@@ -259,6 +259,8 @@ export function modifyCarrito(idProduct, cantidad){
   productInCart.quantity = productInCart.quantity + cantidad;
 
   productInCart.subTotal+= productInCart.quantity * productInDB.price;
+
+  carrito.total += productInCart.subTotal;
 
   localStorage.setItem('products', JSON.stringify(products));
   localStorage.setItem('carrito', JSON.stringify(carrito));
