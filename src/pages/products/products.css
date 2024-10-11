@@ -195,9 +195,8 @@ input[type="checkbox"]:checked {
 #filters-active{
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
-  display: block;
+  overflow-x: auto;
   transition: transform 0.5s ease-in;
 }
 
@@ -240,6 +239,7 @@ input[type="checkbox"]:checked {
     text-transform: capitalize;
     position: relative;
     left: 5%;
+    width: max-content;
   }
 
   .discart-filter-button{
@@ -283,6 +283,7 @@ input[type="checkbox"]:checked {
   
   #filters-active{
     display: flex;
+    flex-wrap: wrap;
   }
 
   #order-option {

@@ -205,7 +205,7 @@ function loadFilters(filters) {
 
       if (!filterElement) {
         let filterActive = `<article class="filter-active show-filter" id="filter-active-${filter.value}">
-        <p class="filter-text">${filter.value}</p>
+        <p class="filter-text">${filter.value.split('-').join(' ')}</p>
         <button data-filter="${filter.value}" title="Eliminar filtro" class="discart-filter-button material-symbols-outlined">
           close
         </button>
@@ -215,9 +215,8 @@ function loadFilters(filters) {
       } else {
         filterElement.classList.toggle('show-filter', filter.checked);
       }
-
-      if(!filter.checked){
-        deleteActiveFilter(filter.value)
+      if (!filter.checked) {
+        filterElement.remove();
       }
 
       // document.getElementById(`filter-active-${filter.value}`).classList.toggle('show-filter', filter.checked);
@@ -239,17 +238,7 @@ function hideActiveFilter() {
       filterCheckbox.checked = false;
 
       updateURL(1, filter, false);
-      document.getElementById(`filter-active-${filter}`).classList.remove('show-filter');
-
-
-      deleteActiveFilter(filter);
+      filterElement.remove();
     });
-  });
-}
-
-function deleteActiveFilter(filter){
-  const filterElement = document.getElementById(`filter-active-${filter}`);
-  filterElement.addEventListener('transitionend', () => {
-    filterElement.remove();
   });
 }
