@@ -1,6 +1,7 @@
-import { BASE_URL, CATEGORIES, TOPICS } from "../../utils/globalVariables.js";
+import { BASE_URL, CATEGORIES, PRODUCT_CATEGORIES, TOPICS } from "../../utils/globalVariables.js";
 
 const CURRENT_URL = new URL(window.location.href);
+const URL_PARAMS = new URLSearchParams(CURRENT_URL.search);
 
 document.addEventListener("DOMContentLoaded", function () {
   onLoadIMG();
@@ -30,11 +31,32 @@ function setBanner(bannerName, bannerTextName, className) {
   bannerContainer.classList.add(className);
 }
 
-function updateURL(option, value) {
+function updateURL(option, value, add = true) {
   switch (option) {
     case 1:
-      //Actualizamos el filtro
-      CURRENT_URL.searchParams.set('filter', value);
+      // Actualizamos el filtro
+      const currentFilters = URL_PARAMS.getAll('filter')?.[0]?.split(',') ?? [];
+      if (add) {
+        currentFilters.push(value);
+      } else {
+        const index = currentFilters.indexOf(value);
+        if (index !== -1) {
+          currentFilters.splice(index, 1);
+        }
+      }
+
+
+      // Actualizamos URL_PARAMS con el nuevo arreglo de filtros
+      if (currentFilters.length > 0) {
+        URL_PARAMS.set('filter', currentFilters.join(','));
+      } else {
+        URL_PARAMS.delete('filter');
+      }
+
+      // Actualizamos la URL con los nuevos parámetros
+      let newURL = `${CURRENT_URL.origin}${CURRENT_URL.pathname}${URL_PARAMS.toString() === '' ? '' : `?${URL_PARAMS}`}`;
+
+      window.history.replaceState({}, '', newURL);
       break;
     case 2:
       //Actualizamos el orden
@@ -47,7 +69,6 @@ function updateURL(option, value) {
     default:
       break;
   }
-  window.location.href = CURRENT_URL;
 }
 
 function onLoadIMG() {
@@ -86,12 +107,14 @@ function preparePage() {
 
   //Ya que existe seteamos el banner
   setBanner(categoryInfo.bannerBackgroundName, categoryInfo.bannerTextName, categoryInfo.customStyleClassName);
-  // const filter = CURRENT_URL.searchParams.get('filter');
+
+  //Cargamos los filtros
+  loadFilters(categoryInfo.productTypes);
   // const order = CURRENT_URL.searchParams.get('order');
   // const search = CURRENT_URL.searchParams.get('search');
 
   // if(filter){
-  //   const filterElement = document.getElementById(filter);
+  //   const filterElement = document.getElementById(filter.toLowerCase()+"-filter");
   //   if(filterElement){
   //     filterElement.checked = true;
   //   }
@@ -124,4 +147,77 @@ function efectoLoli(bannerName, bannerText) {
     }
     BANNER.classList.toggle('anime');
   }, 2000);
+}
+
+function loadFilters(filters) {
+  const filterContainer = document.getElementById('filter-options-list');
+  const activeFilterContainer = document.getElementById('filters-active');
+  let template = ``;
+  let activeFilterTemplate = '';
+  for (const filter of filters) {
+    const filterName = filter.toLocaleLowerCase().split(' ').join('-');
+
+    template += `
+      <li>
+        <input id="${filterName}" class="filter-option" type="checkbox" value="${filterName}">
+                <label for="${filterName}">${filter}</label>
+      </li>  
+    `;
+
+    // activeFilterTemplate += `
+    //     <article class="filter-active" id="filter-active-${filterName}">
+    //       <p class="filter-text">${filter}</p>
+    //       <button data-filter="${filterName}" title="Eliminar filtro" class="discart-filter-button material-symbols-outlined">
+    //         close
+    //       </button>
+    //     </article>`;
+  }
+
+  filterContainer.innerHTML = template;
+
+  // activeFilterContainer.innerHTML = activeFilterTemplate;
+
+  //Ponemos los filtros en base a la URL
+  const filtersURL = CURRENT_URL.searchParams.getAll('filter');
+  console.log(filtersURL);
+
+  //Añadimos evento de escucha a los filtros
+  document.querySelectorAll('.filter-option').forEach(filter => {
+
+    if (filter.value.length > 0 && filtersURL.some(el => el.includes(filter.value))) {
+      filter.checked = true;
+
+      // document.getElementById(`filter-active-${filter.value}`).classList.add('show-filter');
+
+      activeFilterTemplate += `
+        <article class="filter-active show-filter" id="filter-active-${filter.value}">
+          <p class="filter-text">${filter.value}</p>
+          <button data-filter="${filter.value}" title="Eliminar filtro" class="discart-filter-button material-symbols-outlined">
+            close
+          </button>
+        </article>`;
+    }
+
+    filter.addEventListener('change', (e) => {
+      updateURL(1, filter.value, filter.checked);
+
+      const filterElement = document.getElementById(`filter-active-${filter.value}`);
+
+      if (!filterElement) {
+        let filterActive = `<article class="filter-active show-filter" id="filter-active-${filter.value}">
+        <p class="filter-text">${filter.value}</p>
+        <button data-filter="${filter.value}" title="Eliminar filtro" class="discart-filter-button material-symbols-outlined">
+          close
+        </button>
+      </article>`
+        activeFilterContainer.insertAdjacentHTML('beforeend', filterActive);
+      } else {
+        filterElement.classList.toggle('show-filter', filter.checked);
+      }
+
+      // document.getElementById(`filter-active-${filter.value}`).classList.toggle('show-filter', filter.checked);
+    });
+  });
+
+  activeFilterContainer.innerHTML = activeFilterTemplate;
 }

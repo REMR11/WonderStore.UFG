@@ -57,7 +57,7 @@ function generateHeader(links){
         </nav>
         <div class="overlay"></div>
         <div class="shopping">
-          <a href="/carrito" title="Ir al carrito" id="shopping-button" data-count-item-shopping="999">
+          <a href="/carrito" title="Ir al carrito" id="shopping-button" data-count-item-shopping="0">
             <span class="material-symbols-outlined">
               shopping_cart
             </span>
@@ -75,6 +75,13 @@ function generateHeader(links){
   `
 
   return header
+}
+
+export async function recalculateCart(){
+  const {getCarrito} = await import("../utils/carrito.js");
+
+  const carrito = getCarrito();
+  document.getElementById("shopping-button").dataset.countItemShopping = carrito.cart.length;
 }
 
 (() => {

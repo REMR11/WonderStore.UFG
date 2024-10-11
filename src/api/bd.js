@@ -30,7 +30,10 @@ export const PRODUCTS = [
 export const CART = {
   cart: [
     {
-      id: crypto.randomUUID(),
+      idProduct: 1,
+      productName: "Flash Point",
+      productPrice: 25.00,
+      productImage: "https://m.media-amazon.com/images/I/91dXNvO2fML._AC_UF894,1000_QL80_.jpg",
       quantity: 10,
       subTotal: 25.00
     },
