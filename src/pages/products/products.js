@@ -211,8 +211,13 @@ function loadFilters(filters) {
         </button>
       </article>`
         activeFilterContainer.insertAdjacentHTML('beforeend', filterActive);
+        hideActiveFilter();
       } else {
         filterElement.classList.toggle('show-filter', filter.checked);
+      }
+
+      if(!filter.checked){
+        deleteActiveFilter(filter.value)
       }
 
       // document.getElementById(`filter-active-${filter.value}`).classList.toggle('show-filter', filter.checked);
@@ -220,4 +225,31 @@ function loadFilters(filters) {
   });
 
   activeFilterContainer.innerHTML = activeFilterTemplate;
+  hideActiveFilter();
+}
+
+function hideActiveFilter() {
+  document.querySelectorAll('.discart-filter-button').forEach(filterOption => {
+    const filter = filterOption.dataset.filter;
+    const filterContainer = document.getElementById('filter-options-list');
+    const filterElement = document.getElementById(`filter-active-${filter}`);
+    filterOption.addEventListener('click', () => {
+
+      const filterCheckbox = filterContainer.querySelector(`#${filter}`);
+      filterCheckbox.checked = false;
+
+      updateURL(1, filter, false);
+      document.getElementById(`filter-active-${filter}`).classList.remove('show-filter');
+
+
+      deleteActiveFilter(filter);
+    });
+  });
+}
+
+function deleteActiveFilter(filter){
+  const filterElement = document.getElementById(`filter-active-${filter}`);
+  filterElement.addEventListener('transitionend', () => {
+    filterElement.remove();
+  });
 }
