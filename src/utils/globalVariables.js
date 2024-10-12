@@ -16,8 +16,7 @@ export const PRODUCT_CATEGORIES = Object.freeze({
   COMIC: 'Comics',
   ACCESORIOS: 'Accesorios',
   MANGA: 'Mangas',
-  LIBROS: 'Libros',
-  VIDEOJUEGOS: 'Videojuegos'
+  LIBROS: 'Libros'
 });
 
 export const CATEGORIES = Object.freeze([
@@ -43,7 +42,7 @@ export const CATEGORIES = Object.freeze([
   }),
   Object.freeze({
     name: TOPICS.VIDEOJUEGOS,
-    productTypes: [PRODUCT_CATEGORIES.ACCESORIOS, PRODUCT_CATEGORIES.COMIC, PRODUCT_CATEGORIES.FIGURAS, PRODUCT_CATEGORIES.MANGA, PRODUCT_CATEGORIES.LIBROS, PRODUCT_CATEGORIES.VIDEOJUEGOS],
+    productTypes: [PRODUCT_CATEGORIES.ACCESORIOS, PRODUCT_CATEGORIES.COMIC, PRODUCT_CATEGORIES.FIGURAS, PRODUCT_CATEGORIES.MANGA, PRODUCT_CATEGORIES.LIBROS],
     bannerBackgroundName: 'videojuegos.webp',
     bannerTextName: 'videojuegos-text.svg'
   }),

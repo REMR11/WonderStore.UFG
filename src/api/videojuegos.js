@@ -3,18 +3,18 @@ import { PRODUCT_CATEGORIES, TOPICS } from "../utils/globalVariables";
 export const VIDEOJUEGOS = [
   {//1
     id: crypto.randomUUID(),
-    name: "Super Mario Odyssey",
+    name: "Super Mario Odyssey - Figura",
     quantity: 15,
-    description: "Un juego de aventuras en 3D donde Mario explora diferentes mundos.",
-    category: PRODUCT_CATEGORIES.VIDEOJUEGOS,
+    description: "Bowser ha secuestrado a Peach una vez más y Mario es el único que puede salvarla. Cargando profundamente en su castillo, Mario se ve obligado a enfrentar a Bowser y sus secuaces una vez más para salvar a la princesa Peach. Recrea tus escenas favoritas de Mario vs Bowser con estas figuras icónicas y auténticas de la línea de figuras Jakks Pacific Super Mario. Cada figura tiene múltiples puntos de articulación. Mario viene con 11 puntos de articulación, Bowers tiene 9 puntos de articulación y Bob-Omb tiene 3 puntos de articulación. Las figuras seguramente complacerán a niños y coleccionistas por igual. Colecciónalos todos. Para edades de 3 años en adelante.",
+    category: PRODUCT_CATEGORIES.FIGURAS,
     topic: TOPICS.VIDEOJUEGOS,
     price: 59.99,
     imgs: [
-      "https://juegosdigitaleselsalvador.com/files/images/productos/1644882134-1637878223-super-mario-odyssey.jpg",
-      "https://supermario.nintendo.com/assets/img/home/mario.png",
-      "https://platform.polygon.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/9541167/mario_odyssey_review_screen_1.jpg?quality=90&strip=all&crop=21.875,0,56.25,100",
-      "https://i.blogs.es/juegos/14037/mario_switch/fotos/noticias/mario_switch-3882396.jpg",
-      "https://cdn.forbes.com.mx/2017/11/1.jpg"
+      "https://m.media-amazon.com/images/I/61vFg+YuXPL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/51cx6WO5eJL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/51GpsJdM1uL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61vtymKDwvL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/619aU2BDPwL._AC_SX679_.jpg"
     ],
     quantitySell: 20,
     comments: [
@@ -43,18 +43,18 @@ export const VIDEOJUEGOS = [
   },
   {//2
     id: crypto.randomUUID(),
-    name: "The Legend of Zelda: Breath of the Wild",
+    name: "Espada de Link de The Legend of Zelda",
     quantity: 8,
-    description: "Un juego de mundo abierto con mecánicas de exploración y combate.",
-    category: PRODUCT_CATEGORIES.VIDEOJUEGOS,
+    description: "Conviértete en Link con su espada",
+    category: PRODUCT_CATEGORIES.ACCESORIOS,
     topic: TOPICS.VIDEOJUEGOS,
     price: 69.99,
     imgs: [
-      "https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg",
-      "https://i.pcmag.com/imagery/reviews/05kV0iHXtm9IkEu1PMkh9pX-4.fit_scale.size_760x427.v1569481406.jpg",
-      "https://img.tapimg.net/market/images/edb77013a1412751be594247fd7ce0c9.png?imageView2/2/w/720/h/720/q/80/format/jpg/interlace/1/ignore-error/1",
-      "https://m.media-amazon.com/images/I/71dbDXZOZXL.jpg",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZEhK22JCL5UrP5zD4qXXU2aKX7ojHC8z6ww&s"
+      "https://m.media-amazon.com/images/I/61q2BdW9bkL._AC_SY550_.jpg",
+      "https://m.media-amazon.com/images/I/51HTXJH9CZL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71Jd6M8-8jL._AC_SY550_.jpg",
+      "https://m.media-amazon.com/images/I/61JIRm-3RuL._AC_SY550_.jpg",
+      "https://m.media-amazon.com/images/I/71EEBttE+3L._AC_SY550_.jpg"
     ],
     quantitySell: 12,
     comments: [
@@ -67,7 +67,7 @@ export const VIDEOJUEGOS = [
       },
       {
         id: crypto.randomUUID(),
-        comment: "La exploración es impresionante, pero me perdí muchas veces.",
+        comment: "He salido a la calle con esta espada, pero me perdí muchas veces.",
         userName: "lostInHyrule",
         rate: 4,
         date: "18/02/2024"
@@ -83,18 +83,18 @@ export const VIDEOJUEGOS = [
   },
   {//3
     id: crypto.randomUUID(),
-    name: "God of War Ragnarök",
+    name: "God of War Fallen God",
     quantity: 20,
-    description: "La secuela de God of War con mitología nórdica y combates épicos.",
-    category: PRODUCT_CATEGORIES.VIDEOJUEGOS,
+    description: "Comic precuela de la secuela de God of War con mitología nórdica y combates épicos.",
+    category: PRODUCT_CATEGORIES.COMIC,
     topic: TOPICS.VIDEOJUEGOS,
     price: 79.99,
     imgs: [
-      "https://juegosdigitaleselsalvador.com/files/images/productos/1643413181-god-of-war-ragnarok-ps4-pre-orden.jpg",
-      "https://blog.playstation.com/tachyon/2024/09/c31c0e1cae38ef6a23c353e31d87e8b1cd57b700.jpeg",
-      "https://www.cnet.com/a/img/resize/89dbaa32a615424f1d2014b711c4b78132c789a7/hub/2022/11/03/fc97686c-2635-4cbc-a65a-a42965e01f98/1-5.png?auto=webp&fit=crop&height=675&width=1200",
-      "https://assetsio.gnwcdn.com/god-war-ragnarok-2799417.png?width=1200&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
-      "https://static1.srcdn.com/wordpress/wp-content/uploads/2022/11/God-of-War-Ragnarok-Kratos-Rage.jpg"
+      "https://imgs.search.brave.com/MMey9fGwowsm428Ypqx7hPmseuYz-Deo-OuY98DYRQw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMud2lraWEubm9j/b29raWUubmV0LzNj/NjE4ZjkwLTYyNmEt/NDZlNi1iMDA1LTUw/NjE5MDk3YWJiMS9z/Y2FsZS10by13aWR0/aC83NTU",
+      "https://imgs.search.brave.com/5CEkEPgHIi42WbUCHQ4EeMd22k04FQd4zNvWU3t71H4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMxLnRoZWdhbWVy/aW1hZ2VzLmNvbS93/b3JkcHJlc3Mvd3At/Y29udGVudC91cGxv/YWRzLzIwMjEvMDMv/Z29kLW9mLXdhci1j/b21pYy0yLmpwZw",
+      "https://imgs.search.brave.com/pNju-8a5S3hbRYvIkd7nkbrIxCMND7hgv0_psQfLLks/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMxLnNyY2RuLmNv/bS93b3JkcHJlc3Mv/d3AtY29udGVudC91/cGxvYWRzLzIwMjEv/MDMvS3JhdG9zLUJs/YWRlcy1vZi1DaGFv/cy5qcGc",
+      "https://imgs.search.brave.com/0vGKxFU9NwAP9yiSQbe_j7deHOoxSoY-5S-46Kg1J-Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMxLmNicmltYWdl/cy5jb20vd29yZHBy/ZXNzL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIxLzAzL0tyYXRv/cy1FeG9kdXMuanBn",
+      "https://imgs.search.brave.com/GabQlDN7Sn0URywC3D_Jg4O2vw911zP6-2AoJ86ZvI0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ldy5j/b20vdGhtYi85RFpY/cU9qUGJwOHdwTFRo/SUFQSkhka3dNWVU9/LzE1MDB4MC9maWx0/ZXJzOm5vX3Vwc2Nh/bGUoKTptYXhfYnl0/ZXMoMTUwMDAwKTpz/dHJpcF9pY2MoKS9n/d2FyLTEtcGctMDQt/MjAwMC0yOTIyODdk/M2YzZDI0MTVlYTIy/NWUwZGExMjU2NTg1/ZC5qcGc"
     ],
     quantitySell: 25,
     comments: [
@@ -123,38 +123,38 @@ export const VIDEOJUEGOS = [
   },
   {//4
     id: crypto.randomUUID(),
-    name: "Spider-Man: Miles Morales",
+    name: "Spider-Man: Miles Morales -Figura",
     quantity: 10,
-    description: "Un juego de acción donde controlas a Miles Morales como Spider-Man.",
-    category: PRODUCT_CATEGORIES.VIDEOJUEGOS,
+    description: "Con más de 80 años de historia del entretenimiento, Marvel se ha convertido en una piedra angular de las colecciones de fanáticos de todo el mundo. Con Marvel Legends, los personajes favoritos de Marvel Comic Universe y Marvel Cinematic Universe están diseñados con detalles y articulación premium para posar y exhibir. Esta figura coleccionable a escala de 6 pulgadas está detallada para parecerse a Miles Morales de Spider-Man: Into the Spider-Verse. Trae la emoción y la maravilla del universo de la zapa a tu colección con Hasbro Dale Legends Spider-Man y otras figuras de acción de la película y de la película de la película (los productos adicionales se venden por separado. Sujeto a disponibilidad.) © 2024 MARVEL © 2024 SPAI HASBRO y todas las marcas comerciales y logotipos relacionados son marcas comerciales de Hasbro, Inc.",
+    category: PRODUCT_CATEGORIES.FIGURAS,
     topic: TOPICS.VIDEOJUEGOS,
     price: 49.99,
     imgs: [
-      "https://www.juegosdigitaleselsalvador.com/files/images/productos/1700783848-marvel-spider-man-miles-morales-ps5-0.jpg",
-      "https://cdn2.unrealengine.com/inspiration-marvels-spider-man-miles-morales-3840x2160-ba596ec24d23.jpg",
-      "https://i.blogs.es/29f60b/00000/1366_2000.jpeg",
-      "https://i.ebayimg.com/images/g/~hcAAOSw2wJkbvBV/s-l1600.jpg",
-      "https://elcomercio.pe/resizer/f0E9DnA5Axlt6jVsceZIYgcRiwQ=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/VOWLYBAJRRA35HKTQHZPHUP3LQ.webp"
+      "https://m.media-amazon.com/images/I/61DhUUvV7NL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/81vb9ysYR7L._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61-TF1GPJfL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61cz1iZbXJL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61kXCobbFoL._AC_SX679_.jpg"
     ],
     quantitySell: 18,
     comments: [
       {
         id: crypto.randomUUID(),
-        comment: "Gran historia y jugabilidad, pero un poco corto.",
+        comment: "Me gusto",
         userName: "heroicspidey",
         rate: 4,
         date: "18/01/2024"
       },
       {
         id: crypto.randomUUID(),
-        comment: "El combate se siente fluido, pero la campaña es muy breve.",
+        comment: "Pesima calidad, no me sirvio.",
         userName: "actionFanatic",
         rate: 3,
         date: "20/01/2024"
       },
       {
         id: crypto.randomUUID(),
-        comment: "Muy entretenido, pero prefiero el juego original.",
+        comment: "Se la regale a mi sobrino de color, es fanatico de este Spiderman.",
         userName: "peterParkerFan",
         rate: 4,
         date: "22/01/2024"
@@ -163,38 +163,38 @@ export const VIDEOJUEGOS = [
   },
   {//5
     id: crypto.randomUUID(),
-    name: "Hogwarts Legacy",
+    name: "Libro para fans de Harry Potter",
     quantity: 12,
-    description: "Un RPG ambientado en el mundo mágico de Harry Potter.",
-    category: PRODUCT_CATEGORIES.VIDEOJUEGOS,
+    description: "Sos fan de Harry Potter? Entonces necesitas este libro.",
+    category: PRODUCT_CATEGORIES.LIBROS,
     topic: TOPICS.VIDEOJUEGOS,
     price: 69.99,
     imgs: [
-      "https://image.api.playstation.com/vulcan/ap/rnd/202208/0921/dR9KJAKDW2izPbptHQbh3rnj.png",
-      "https://variety.com/wp-content/uploads/2023/11/hogwarts-legacy-deluxe-edition-featured.jpg",
-      "https://assets.xboxservices.com/assets/f0/56/f056f9e2-ecdb-43fc-a6de-36ee781b1eaf.jpg?n=Hogwarts-Legacy_Gallery_7_1350x759.jpg",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGFeuYkNmgNta0nnld5N3AgHJ5of_AUnpDwA&s",
-      "https://images.ladbible.com/resize?type=webp&quality=70&width=3840&fit=contain&gravity=auto&url=https://images.ladbiblegroup.com/v3/assets/bltbc1876152fcd9f07/blt98425bf1d3e3dcf1/66a8c2470e336490d2236c51/hoggy.jpg"
+      "https://m.media-amazon.com/images/I/71Eqtn+vhzL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61-flK2eYCL.jpg",
+      "https://m.media-amazon.com/images/I/91HwvxLNp0L._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81+p24tsgtL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81FQxtk78ZL._SL1500_.jpg"
     ],
     quantitySell: 16,
     comments: [
       {
         id: crypto.randomUUID(),
-        comment: "Un juego mágico, perfecto para los fanáticos de Harry Potter.",
+        comment: "perfecto para los fanáticos de Harry Potter.",
         userName: "wizardMaster",
         rate: 5,
         date: "22/02/2024"
       },
       {
         id: crypto.randomUUID(),
-        comment: "El mundo es hermoso, pero las misiones son un poco repetitivas.",
+        comment: "El mundo es hermoso, y este libro lo es más.",
         userName: "spellCaster99",
         rate: 3,
         date: "25/02/2024"
       },
       {
         id: crypto.randomUUID(),
-        comment: "La magia se siente increíble, pero esperaba más interacción con personajes.",
+        comment: "La magia se siente increíble, pero esperaba más datos de los personajes.",
         userName: "hogwartsFan",
         rate: 4,
         date: "28/02/2024"
