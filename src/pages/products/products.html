@@ -43,7 +43,7 @@
         <section class="filters-orders">
           <div popover id="filter-options-panel" class="filter-options-panel">
             <ul id="filter-options-list">
-
+              
             </ul>
           </div>
           <button popovertarget="filter-options-panel" class="filter-order-button filter-option">
@@ -54,14 +54,23 @@
           </button>
 
 
-          <div popover id="order-options-panel" class="order-options-panel">
+          <div popover id="order-options-panel">
             <ul>
-              <li>Mayor precio</li>
-              <li>Menor precio</li>
-              <li>Todos</li>
+              <li>
+                <input type="radio" id="order-all" class="order-option" name="order-option" value="all" checked>
+                <label for="order-all">Todos</label>
+              </li>
+              <li>
+                <input type="radio" id="order-high-price" class="order-option" name="order-option" value="high-price">
+                <label for="order-high-price">Mayor precio</label>
+              </li>
+              <li>
+                <input type="radio" id="order-low-price" name="order-option" class="order-option" value="low-price">
+                <label for="order-low-price">Menor precio</label>
+              </li>
             </ul>
           </div>
-          <button class="filter-order-button order-option">
+          <button popovertarget="order-options-panel" class="filter-order-button order-option">
             <span class="material-symbols-outlined filter-order-icon">
               filter_list
             </span>
@@ -76,6 +85,8 @@
       <section id="filters-active">
 
       </section>
+
+      
     </div>
   </main>
   <script type="module" src="products.js"></script>
