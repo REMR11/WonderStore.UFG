@@ -21,6 +21,8 @@ const BANNER = document.getElementById('banner-category');
 const BANNER_TEXT = document.getElementById('banner-text-category');
 const FILTER_CONTAINER = document.getElementById('filter-options-list');
 const FILTERS_ACTIVE_CONTAINER = document.getElementById('filters-active');
+const PRODUCT_MODAL = document.getElementById('addCartModal');
+const CLOSE_MODAL_BUTTON = document.getElementById('close-modal');
 
 function setBanner(bannerName, bannerTextName, className) {
   BANNER.src = `${BASE_URL}/assets/banners/${bannerName}`;
@@ -69,8 +71,9 @@ function updateURL(option, value, add = true) {
       break;
     case 2:
       //Actualizamos el orden
-      CURRENT_URL.searchParams.set('order', value);
-      window.history.replaceState({}, '', CURRENT_URL.href);
+      URL_PARAMS.set('order', value);
+      let newURL2 = `${CURRENT_URL.origin}${CURRENT_URL.pathname}${URL_PARAMS.toString() === '' ? '' : `?${URL_PARAMS}`}`;
+      window.history.replaceState({}, '', newURL2);
       break;
     case 3:
       //Actualizamos la busqueda
@@ -339,3 +342,20 @@ function deleteAllFilters() {
     });
   }
 }
+
+//Para ahorrarme crear un evento de escucha en cada renderización
+//Creare una función y la insertare en el objeto window para ponerla en el onclick en el html de inserto
+//dinamicamente.
+function showAddToCartModalJ(id){
+  PRODUCT_MODAL.showModal();
+
+  document.body.classList.add('body-no-scroll-modal-opened');
+}
+
+window.showAddToCartModalJ = showAddToCartModalJ;
+
+
+CLOSE_MODAL_BUTTON.addEventListener('click', () => {
+  PRODUCT_MODAL.close();
+  document.body.classList.remove('body-no-scroll-modal-opened');
+});

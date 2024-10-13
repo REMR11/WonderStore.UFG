@@ -43,7 +43,7 @@
         <section class="filters-orders">
           <div popover id="filter-options-panel" class="filter-options-panel">
             <ul id="filter-options-list">
-              
+
             </ul>
           </div>
           <button popovertarget="filter-options-panel" class="filter-order-button filter-option">
@@ -86,9 +86,83 @@
 
       </section>
 
-      
+      <section id="products-container">
+        <article class="product-card">
+          <div class="product-img-container general-skeleton on-load-img-fn">
+            <img class="product-img" src="https://m.media-amazon.com/images/I/61vFg+YuXPL._AC_SX679_.jpg"
+              alt="Super Mario Odyssey - Figura">
+          </div>
+          <div class="product-info">
+            <h3 class="product-info-title">Super Mario Odyssey - Figura</h3>
+            <p class="product-info-category">Videojuegos</p>
+            <span class="product-info-price">59.99</span>
+            <button class="general-btn product-add-cart-btn">Agregar al carrito</button>
+          </div>
+        </article>
+        <article class="product-card product-skeleton">
+          <div class="product-img-container general-skeleton"></div>
+          <div class="product-info">
+            <h3 class="product-info-title general-skeleton general-skeleton-text"></h3>
+            <p class="product-info-category general-skeleton general-skeleton-text"></p>
+            <span class="product-info-price general-skeleton general-skeleton-text"></span>
+            <button class="general-btn product-add-cart-btn general-skeleton"></button>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-img-container on-load-img-fn">
+            <img class="product-img" src="https://m.media-amazon.com/images/I/61vFg+YuXPL._AC_SX679_.jpg"
+              alt="Super Mario Odyssey - Figura">
+          </div>
+          <div class="product-info">
+            <h3 class="product-info-title">Super Mario Odyssey - Figura</h3>
+            <p class="product-info-category">Videojuegos</p>
+            <span class="product-info-price">59.99</span>
+            <button class="general-btn product-add-cart-btn">Agregar al carrito</button>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-img-container on-load-img-fn">
+            <img class="product-img" src="https://m.media-amazon.com/images/I/61vFg+YuXPL._AC_SX679_.jpg"
+              alt="Super Mario Odyssey - Figura">
+          </div>
+          <div class="product-info">
+            <h3 class="product-info-title">Super Mario Odyssey - Figura</h3>
+            <p class="product-info-category">Videojuegos</p>
+            <span class="product-info-price">59.99</span>
+            <button onclick="showAddToCartModalJ(1)" class="general-btn product-add-cart-btn"
+              data-product-id="1">Agregar al carrito</button>
+          </div>
+        </article>
+      </section>
     </div>
   </main>
+  <dialog id="addCartModal">
+    <header>
+      <h1>Agregar al carrito</h1>
+      <button title="Cerrar modal" id="close-modal">X</button>
+    </header>
+    <section class="product-section">
+      <div class="product-img-container on-load-img-fn general-skeleton">
+        <img id="modal-product-img" class="product-img" src="https://m.media-amazon.com/images/I/61vFg+YuXPL._AC_SX679_.jpg"
+        alt="Super Mario Odyssey - Figura" alt="Imagen del producto a añadir">
+      </div>
+      <div class="product-details">
+        <h4 class="product-title">Nombre del producto</h4>
+        <div class="product-quantity-section">
+          <p>Cantidad:</p>
+          <div class="quantity-section">
+            <button class="quantity-btn" id="substract-quantity">-</button>
+            <span id="product-quantity">999</span>
+            <button class="quantity-btn" id="sum-quantity">+</button>
+          </div>
+          <footer class="confirm-add-product">
+            <p id="modal-product-price">$150</p>
+            <button class="general-btn">Agregar al carrito</button>
+          </footer>
+        </div>
+      </div>
+    </section>
+  </dialog>
   <script type="module" src="products.js"></script>
 </body>
 

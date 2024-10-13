@@ -1,3 +1,5 @@
+import { recalculateCart } from "../components/navbar.js";
+
 /*Función para setear los productos en el localStorage solo se ha de llamar
 una vez en caso de no haberse seteado antes.*/
 export default function setDB() {
@@ -320,6 +322,8 @@ export function modifyCarrito(idProduct, cantidad, set = false) {
 
   localStorage.setItem('products', JSON.stringify(products));
   localStorage.setItem('carrito', JSON.stringify(carrito));
+  //Recalculamos la cantidad en el carrito del navbar
+  recalculateCart();
 }
 
 /**
@@ -354,6 +358,8 @@ export function addProductInCart(idProduct, cantidad) {
 
   localStorage.setItem('products', JSON.stringify(products));
   localStorage.setItem('carrito', JSON.stringify(carrito));
+  //Recalculamos la cantidad en el carrito del navbar
+  recalculateCart();
 }
 
 /**
@@ -380,6 +386,8 @@ export function deleteProductInCart(idProduct) {
   carrito.cart = carrito.cart.filter(product => product.id != idProduct);
   localStorage.setItem('products', JSON.stringify(products));
   localStorage.setItem('carrito', JSON.stringify(carrito));
+  //Recalculamos la cantidad en el carrito del navbar
+  recalculateCart();
 }
 
 export function emptyCart() {
@@ -387,4 +395,7 @@ export function emptyCart() {
   carrito.cart = [];
   carrito.total = 0;
   localStorage.setItem('carrito', JSON.stringify(carrito));
+
+  //Recalculamos la cantidad en el carrito del navbar
+  recalculateCart();
 }
