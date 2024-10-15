@@ -70,6 +70,11 @@ export const SCRIPTS = Object.freeze([
     "src": BASE_URL + "/components/footer.js",
     "isModule": true,
     "isPrincipal": true
+  }),
+  Object.freeze({
+    "src": BASE_URL + "/components/totop.js",
+    "isModule": false,
+    "isPrincipal": true
   })
 ]);
 
