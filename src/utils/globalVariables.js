@@ -1,5 +1,3 @@
-import { VIDEOJUEGOS } from "../api/videojuegos";
-
 export const BASE_URL = window.location.origin;
 
 export const TOPICS = Object.freeze({
