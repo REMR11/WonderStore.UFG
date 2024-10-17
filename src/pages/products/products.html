@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" href="../assets/icons/page-icon.svg" type="img/svg">
+
+  <meta name="description" content="Wonder Store - Tienda en linea hecha por fans para fans. ¡Deja que te sorprenda!">
+
+  <meta property="og:title" content="Wonder Store - Tienda en linea hecha por fans para fans. ¡Deja que te sorprenda!">
+
+  <meta property="og:image" content="../assets/icons/page-icon.svg">
+
+  <meta property="og:image:alt" content="Icono de la tienda">
+
+  <title>WonderStore - Products</title>
+  <link rel="stylesheet" href="products.css">
+  <link rel="stylesheet" href="../../lib/paralax-vanilla-erikengervall/paralax.css">
+  <script type="module" src="../general.js"></script>
+</head>
+
+<body>
+  <main>
+    <header>
+      <section class="banner-container general-skeleton">
+        <div class="banner-bg on-load-img-fn">
+          <img id="banner-category" alt="Banner Background">
+        </div>
+
+        <div class="banner-content on-load-img-fn">
+          <img alt="Banner title" id="banner-text-category">
+        </div>
+      </section>
+
+      <!-- <section class="paralax-oscar bg-po">
+        <img src="../../assets/banners/anime-text.svg" alt="">
+      </section> -->
+
+      <div class="main-content-products-J">
+        <section class="filters-orders">
+          <div popover id="filter-options-panel" class="filter-options-panel">
+            <ul id="filter-options-list">
+
+            </ul>
+          </div>
+          <button popovertarget="filter-options-panel" class="filter-order-button filter-option">
+            <span class="material-symbols-outlined filter-order-icon">
+              filter_alt
+            </span>
+            <span class="filter-order-text">Filtrar</span>
+          </button>
+
+
+
+          <button class="filter-order-button order-option">
+            <span class="material-symbols-outlined filter-order-icon">
+              filter_list
+            </span>
+            <span class="filter-order-text">Ordernar por:</span>
+            <span id="order-option">Todos</span>
+          </button>
+        </section>
+      </div>
+    </header>
+
+    <div class="main-content-products-J">
+      <section id="filters-active">
+
+      </section>
+    </div>
+  </main>
+  <script type="module" src="products.js"></script>
+</body>
+
+</html>
