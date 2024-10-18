@@ -2,8 +2,8 @@ import { recalculateCart } from "../components/navbar.js";
 
 /*Función para setear los productos en el localStorage solo se ha de llamar
 una vez en caso de no haberse seteado antes.*/
-export default function setDB() {
-  // localStorage.setItem('products', JSON.stringify());  
+export default function setDB(products) {
+  localStorage.setItem('products', JSON.stringify(products));  
 }
 
 export function setCarrito() {

@@ -53,20 +53,21 @@ app.get('/:page', (req, res) => {
   }
 });
 
-// app.get('/:page*', (req, res) => {
-//   const url = req.url;
-//   const filePath = path.join(__dirname, 'pages', url);
-//   const fileDir = path.dirname(filePath);
-//   const fileName = path.basename(filePath, '.html');
-//   const fullFilePath = `${fileDir}${"\\"}${fileName}\\${fileName}.html`;
-//   console.log(fullFilePath);
-//   if (fs.existsSync(fullFilePath)) {
-//     res.sendFile(fullFilePath);
-//   } else {
-//     res.sendFile(__dirname + '/pages/404.html');
-//   }
-// });
-
+//SI LES DA ERROR UNA URL Y ESTAN SEGUROS QUE LAS HICIERON BIEN COMENTEN ESTE CODIGO
+app.get('/:page*', (req, res) => {
+  const url = req.url;
+  const filePath = path.join(__dirname, 'pages', url);
+  const fileDir = path.dirname(filePath);
+  const fileName = path.basename(filePath, '.html');
+  const fullFilePath = `${fileDir}${"\\"}${fileName}\\${fileName}.html`;
+  console.log(fullFilePath);
+  if (fs.existsSync(fullFilePath)) {
+    res.sendFile(fullFilePath);
+  } else {
+    res.sendFile(__dirname + '/pages/404.html');
+  }
+});
+//AQUI TERMINA XD
 
 app.use((req, res, next) => {
   res.status(404).sendFile(__dirname + '/pages/404.html');
