@@ -1,7 +1,6 @@
 import { SCRIPTS, LINKS_EXTERNAL } from "../utils/globalVariables.js";
 //Función autoejecutable para guardar los productos y el carrito en el localStorage
-(async ()=>{
-
+export async function initializeApp(){
   //Verificamos si los productos ya estan almacenados
   if(!localStorage.getItem('products')){
     const {default: setDB} = await import("../api/api.js");
@@ -15,6 +14,10 @@ import { SCRIPTS, LINKS_EXTERNAL } from "../utils/globalVariables.js";
     const {setCarrito} = await import("../api/api.js");
     setCarrito();
   }
+}
+
+(()=>{
+  initializeApp();
 })()
 
 document.addEventListener("DOMContentLoaded", async () => {
