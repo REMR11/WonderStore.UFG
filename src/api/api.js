@@ -1,6 +1,11 @@
+import { STAR_WARS } from "./star-wars.js";
+import { VIDEOJUEGOS } from "./videojuegos.js";
+
 /*Función para setear los productos en el localStorage solo se ha de llamar
 una vez en caso de no haberse seteado antes.*/
 export default function setDB() {
+  const products = [...VIDEOJUEGOS, ...STAR_WARS]
+
   // localStorage.setItem('products', JSON.stringify());  
 }
 
