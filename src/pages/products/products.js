@@ -1,7 +1,11 @@
-import { BASE_URL, CATEGORIES, PRODUCT_CATEGORIES, TOPICS } from "../../utils/globalVariables.js";
+import { getProductById, getProducts } from "../../api/api.js";
+import { sweetAlert } from "../../utils/alerts.js";
+import { BASE_URL, CATEGORIES, TOPICS } from "../../utils/globalVariables.js";
 
 const CURRENT_URL = new URL(window.location.href);
 const URL_PARAMS = new URLSearchParams(CURRENT_URL.search);
+
+let firstRender = false;
 
 document.addEventListener("DOMContentLoaded", function () {
   onLoadIMG();
@@ -17,12 +21,22 @@ window.addEventListener('scroll', () => {
   bannerBg.style.transform = `translateY(${scrollPosition * speed}px)`;
 });
 
+//Elementos del DOM
 const BANNER = document.getElementById('banner-category');
 const BANNER_TEXT = document.getElementById('banner-text-category');
 const FILTER_CONTAINER = document.getElementById('filter-options-list');
 const FILTERS_ACTIVE_CONTAINER = document.getElementById('filters-active');
 const PRODUCT_MODAL = document.getElementById('addCartModal');
 const CLOSE_MODAL_BUTTON = document.getElementById('close-modal');
+const NOT_FOUND_MESSAGE = document.getElementById('product-notFound');
+const PRODUCTS_CONTAINER = document.getElementById('products-container');
+const MODAL_PRODUCT_IMG = document.getElementById('modal-product-img');
+const SUBSTRACT_MODAL_BUTTON = document.getElementById('substract-quantity');
+const SUM_MODAL_BUTTON = document.getElementById('sum-quantity');
+const PRODUCT_QUANTITY_MODAL_INPUT = document.getElementById('product-quantity');
+const PRODUCT_PRICE_MODAL = document.getElementById('modal-product-price');
+const MODAL_ID_PRODUCT = document.getElementById('id-modal-input');
+const ADD_TO_CART_BUTTON = document.getElementById('add-to-cart-button');
 
 function setBanner(bannerName, bannerTextName, className) {
   BANNER.src = `${BASE_URL}/assets/banners/${bannerName}`;
@@ -36,10 +50,12 @@ function setBanner(bannerName, bannerTextName, className) {
 }
 
 function updateURL(option, value, add = true) {
+  //Obtenemos los filtros y orden de la URL
+  const currentFilters = URL_PARAMS.getAll('filter')?.[0]?.split(',') ?? [];
+  let currentOrder = URL_PARAMS.get('order');
   switch (option) {
     case 1:
       // Actualizamos el filtro
-      const currentFilters = URL_PARAMS.getAll('filter')?.[0]?.split(',') ?? [];
       if (add) {
         currentFilters.push(value);
       } else {
@@ -68,10 +84,10 @@ function updateURL(option, value, add = true) {
 
       window.history.replaceState({}, '', newURL);
       break;
-      break;
     case 2:
       //Actualizamos el orden
       URL_PARAMS.set('order', value);
+      currentOrder = value;
       let newURL2 = `${CURRENT_URL.origin}${CURRENT_URL.pathname}${URL_PARAMS.toString() === '' ? '' : `?${URL_PARAMS}`}`;
       window.history.replaceState({}, '', newURL2);
       break;
@@ -81,6 +97,10 @@ function updateURL(option, value, add = true) {
       break;
     default:
       break;
+  }
+
+  if(firstRender){
+    loadProducts(currentFilters, currentOrder);
   }
 }
 
@@ -134,21 +154,15 @@ function preparePage() {
 
   //Cargamos los filtros
   loadFilters(categoryInfo.productTypes);
+
+  //Cargamos los productos con un tiempo de espera para simular carga
+  setTimeout(() => {
+    let filtersURL = URL_PARAMS.getAll('filter')?.[0]?.split(',') ?? []
+
+    const order = URL_PARAMS.get('order');
+    loadProducts(filtersURL, order);
+  }, 1000);
   // const search = CURRENT_URL.searchParams.get('search');
-
-  // if(filter){
-  //   const filterElement = document.getElementById(filter.toLowerCase()+"-filter");
-  //   if(filterElement){
-  //     filterElement.checked = true;
-  //   }
-  // }
-
-  // if(order){
-  //   const orderElement = document.getElementById(order);
-  //   if(orderElement){
-  //     orderElement.checked = true;
-  //   }
-  // }
 
   // if(search){
   //   const searchElement = document.getElementById('search-input');
@@ -346,9 +360,21 @@ function deleteAllFilters() {
 //Para ahorrarme crear un evento de escucha en cada renderización
 //Creare una función y la insertare en el objeto window para ponerla en el onclick en el html de inserto
 //dinamicamente.
-function showAddToCartModalJ(id){
-  PRODUCT_MODAL.showModal();
+function showAddToCartModalJ(id) {
+  //Obtenemos el producto
+  const product = getProductById(id);
+  
+  if (!product) {
+    sweetAlert(3, 'No se pudo obtener información del producto en este momento');
+    return
+  }
 
+  MODAL_PRODUCT_IMG.src = product.imgs[0];
+  PRODUCT_MODAL.querySelector('.product-title').textContent = product.name;
+  PRODUCT_MODAL.showModal();
+  PRODUCT_PRICE_MODAL.textContent = product.price;
+  PRODUCT_QUANTITY_MODAL_INPUT.value = 1;
+  MODAL_ID_PRODUCT.value = id;
   document.body.classList.add('body-no-scroll-modal-opened');
 }
 
@@ -359,3 +385,68 @@ CLOSE_MODAL_BUTTON.addEventListener('click', () => {
   PRODUCT_MODAL.close();
   document.body.classList.remove('body-no-scroll-modal-opened');
 });
+
+async function loadProducts(filters = null, order = "all") {
+  firstRender = true;
+  try {
+    NOT_FOUND_MESSAGE.style.display = 'none';
+    const topic = URL_PARAMS.get('topic');
+    //Obtenemos los filtros, orden y tema en la URL
+    let products = getProducts();
+
+    //En caso de que no existan debemos cargar los productos
+    if (!products) {
+      const { initializeApp } = await import("../general.js");
+
+      initializeApp();
+    }
+
+    //Obtenemos los productos por el tema
+    products = products.filter(product => product.topic === topic);
+    //Filtramos los productos en caso se pida filtrar
+    if (filters && filters.length > 0) {
+      products = products.filter(product => filters.includes(product.category.toLowerCase().replaceAll(' ','-')));
+    }
+
+    //Ordenamos los productos si lo desea 
+    products.sort((a, b) => {
+      if (order === 'low-price') {
+        return a.price - b.price; // Orden ascendente por precio
+      } else if (order === 'high-price') {
+        return b.price - a.price; // Orden descendente por precio
+      }
+      return 0; // Sin orden
+    });
+
+    //Insertamos los productos en el contenedor
+    let template = '';
+
+    for (const product of products) {
+      template += `
+        <article class="product-card">
+          <div class="product-img-container on-load-img-fn">
+            <img class="product-img" src=${product.imgs[0]}
+              alt="${product.name}">
+          </div>
+          <div class="product-info">
+            <h3 class="product-info-title">${product.name}</h3>
+            <p class="product-info-category">${product.category}</p>
+            <span class="product-info-price">${product.price}</span>
+            <button title="Agregar al carrito" onclick="showAddToCartModalJ('${product.id}')" class="general-btn product-add-cart-btn"
+              data-product-id="${product.id}">Agregar al carrito</button>
+          </div>
+        </article>
+      `;
+    }
+
+    PRODUCTS_CONTAINER.innerHTML = template;
+
+    if(products.length === 0){
+      NOT_FOUND_MESSAGE.style.display = 'block';
+    }
+    onLoadIMG();
+  } catch (error) {
+    PRODUCTS_CONTAINER.innerHTML = '';
+    NOT_FOUND_MESSAGE.style.display = 'block';
+  }
+}

@@ -36,7 +36,7 @@ export function getProducts() {
 
 /**
  * 
- * @param {number} id del producto a buscar
+ * @param {string} id del producto a buscar
  * @returns {products} El producto que coincida con el id pasado por parámetro, con estas propiedades:
  *   - id: string
  *   - name: string

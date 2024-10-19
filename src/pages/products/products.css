@@ -7,6 +7,19 @@ main {
   overflow-y: hidden !important;
 }
 
+/* Para navegadores WebKit (Chrome, Safari) */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  /* Oculta los botones */
+}
+
+/* Para Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Cambia el estilo a un campo de texto */
+}
+
 .banner-container {
   width: 100%;
   overflow: hidden;
@@ -486,6 +499,11 @@ dialog[open] {
         text-align: center;
         text-decoration: underline;
         color: var(--text-color);
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 1rem;
       }
 
       .product-quantity-section {
@@ -517,6 +535,7 @@ dialog[open] {
   }
 
   #product-quantity {
+    text-align: center;
     width: 50%;
     display: grid;
     place-content: center;
@@ -530,6 +549,11 @@ dialog[open] {
     background-color: var(--primary-color);
     color: var(--text-color-revert);
     border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .quantity-btn:focus{
+    scale: 0.9;
   }
 
   #modal-product-price {
@@ -539,6 +563,16 @@ dialog[open] {
     font-weight: bold;
     font-size: large;
   }
+}
+
+/*Estilos para cuando no se encuentra un producto*/
+#product-notFound {
+  text-align: center;
+  display: none;
+}
+
+#id-modal-input {
+  display: none;
 }
 
 /*Media query para tablets en adelante*/
