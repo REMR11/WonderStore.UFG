@@ -363,6 +363,7 @@ div:where(.swal2-icon).custom-sweetAlert-icon{
   }
 }
 
+/*POP UP*/
 .custom-sweetAlert-popup{
   border: 7px solid var(--primary-color);
   max-width: 400px;

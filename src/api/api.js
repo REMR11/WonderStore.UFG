@@ -236,6 +236,8 @@ export function addProductComment(idProduct, comment) {
 export function getCarrito() {
   const carrito = JSON.parse(localStorage.getItem('carrito'));
 
+  if(carrito == null) return null;
+
   const productsInDB = getProducts();
 
   const productsInCart = carrito.cart.map(productInCart => {

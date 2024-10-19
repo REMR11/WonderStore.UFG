@@ -353,6 +353,8 @@ input[type="radio"]:checked::before {
     -5px -5px 10px #ffffff;
   padding: 30px;
   gap: 20px;
+  margin: 5px;
+  cursor: pointer;
 
   .product-img-container {
     height: 261px;
@@ -392,8 +394,14 @@ input[type="radio"]:checked::before {
 .product-card:hover {
   background-color: var(--secondary-color);
   border-width: 5px;
+  margin: 0;
 
   border-color: var(--secondary-border-color);
+}
+
+.product-card .product-add-cart-btn:hover{
+  transition: scale .3s ease;
+  scale: 1.1;
 }
 
 .product-card.product-skeleton:hover {
@@ -441,9 +449,6 @@ dialog[open] {
   }
 }
 
-#addCartModal::backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
-}
 
 #addCartModal {
   margin: auto;
@@ -552,8 +557,8 @@ dialog[open] {
     cursor: pointer;
   }
 
-  .quantity-btn:focus{
-    scale: 0.9;
+  .quantity-btn:focus {
+    scale: 0.8;
   }
 
   #modal-product-price {

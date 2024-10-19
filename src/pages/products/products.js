@@ -1,6 +1,7 @@
 import { getProductById, getProducts } from "../../api/api.js";
 import { sweetAlert } from "../../utils/alerts.js";
 import { BASE_URL, CATEGORIES, TOPICS } from "../../utils/globalVariables.js";
+import { noPaste } from "../../utils/validacionens.js";
 
 const CURRENT_URL = new URL(window.location.href);
 const URL_PARAMS = new URLSearchParams(CURRENT_URL.search);
@@ -10,6 +11,8 @@ let firstRender = false;
 document.addEventListener("DOMContentLoaded", function () {
   onLoadIMG();
   preparePage();
+
+  noPaste([PRODUCT_QUANTITY_MODAL_INPUT]);
 });
 
 // Para el efecto PARALAX
@@ -99,7 +102,7 @@ function updateURL(option, value, add = true) {
       break;
   }
 
-  if(firstRender){
+  if (firstRender) {
     loadProducts(currentFilters, currentOrder);
   }
 }
@@ -363,7 +366,7 @@ function deleteAllFilters() {
 function showAddToCartModalJ(id) {
   //Obtenemos el producto
   const product = getProductById(id);
-  
+
   if (!product) {
     sweetAlert(3, 'No se pudo obtener información del producto en este momento');
     return
@@ -405,7 +408,7 @@ async function loadProducts(filters = null, order = "all") {
     products = products.filter(product => product.topic === topic);
     //Filtramos los productos en caso se pida filtrar
     if (filters && filters.length > 0) {
-      products = products.filter(product => filters.includes(product.category.toLowerCase().replaceAll(' ','-')));
+      products = products.filter(product => filters.includes(product.category.toLowerCase().replaceAll(' ', '-')));
     }
 
     //Ordenamos los productos si lo desea 
@@ -423,7 +426,7 @@ async function loadProducts(filters = null, order = "all") {
 
     for (const product of products) {
       template += `
-        <article class="product-card">
+        <article class="product-card" data-id-product="${product.id}">
           <div class="product-img-container on-load-img-fn">
             <img class="product-img" src=${product.imgs[0]}
               alt="${product.name}">
@@ -441,12 +444,65 @@ async function loadProducts(filters = null, order = "all") {
 
     PRODUCTS_CONTAINER.innerHTML = template;
 
-    if(products.length === 0){
+    if (products.length === 0) {
       NOT_FOUND_MESSAGE.style.display = 'block';
     }
     onLoadIMG();
+    redirectToDetailsEvent();
   } catch (error) {
     PRODUCTS_CONTAINER.innerHTML = '';
     NOT_FOUND_MESSAGE.style.display = 'block';
   }
+}
+
+//Añadir evento escucha a los botones del modal
+SUM_MODAL_BUTTON.addEventListener('click', () => {
+  PRODUCT_QUANTITY_MODAL_INPUT.value = parseInt(PRODUCT_QUANTITY_MODAL_INPUT.value) + 1;
+  PRODUCT_QUANTITY_MODAL_INPUT.dispatchEvent(new Event('input')); 
+})
+
+SUBSTRACT_MODAL_BUTTON.addEventListener('click', () => {
+  if (parseInt(PRODUCT_QUANTITY_MODAL_INPUT.value) > 1) {
+    PRODUCT_QUANTITY_MODAL_INPUT.value = parseInt(PRODUCT_QUANTITY_MODAL_INPUT.value) - 1;
+    PRODUCT_QUANTITY_MODAL_INPUT.dispatchEvent(new Event('input')); 
+  }
+})
+
+//Evento para cuando cambie el input del modal
+PRODUCT_QUANTITY_MODAL_INPUT.addEventListener('input', (e) => {
+  let value = parseInt(e.target.value);
+
+  //En caso sea un número negativo o no sea un número se igualará a 1 su valor.
+  if(value <= 0 || isNaN(value)) {
+    PRODUCT_QUANTITY_MODAL_INPUT.value = 1;
+    value = 1;
+    return;
+  }
+
+  const product = getProductById(MODAL_ID_PRODUCT.value);
+
+  PRODUCT_PRICE_MODAL.innerText = (product.price * value).toFixed(2);
+});
+
+//Evento para añadir producto al carrito
+ADD_TO_CART_BUTTON.addEventListener('click', async () => {
+  const quantity = parseInt(PRODUCT_QUANTITY_MODAL_INPUT.value);
+  const idProduct = MODAL_ID_PRODUCT.value;
+
+  const {modifyCarrito} = await import("../../api/api.js");
+
+  modifyCarrito(idProduct, quantity);
+
+  PRODUCT_MODAL.close();
+  document.body.classList.remove('body-no-scroll-modal-opened');
+})
+
+//Evento que redirecciona a la página de detalles del producto
+function redirectToDetailsEvent(){
+  document.querySelectorAll('.product-card').forEach(productCard => {
+    productCard.addEventListener('click', () => {
+      const idProduct = productCard.dataset.idProduct;
+      window.location.href = `../details/?idProduct=${idProduct}`;
+    });
+  })
 }

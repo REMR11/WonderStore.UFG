@@ -163,7 +163,7 @@
           <p>Cantidad:</p>
           <div class="quantity-section">
             <button title="Restar" class="quantity-btn" id="substract-quantity">-</button>
-            <input type="number" id="product-quantity" value="1" />
+            <input type="number" id="product-quantity" value="1" min="1"/>
             <button title="Agregar" class="quantity-btn" id="sum-quantity">+</button>
           </div>
           <footer class="confirm-add-product">
@@ -175,6 +175,7 @@
       </div>
     </section>
   </dialog>
+  <div class="overlay"></div>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script type="module" src="products.js"></script>
 </body>
