@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon src/app.js",
-    "start": "node src/app.js",
+    "start": "cross-env NODE_ENV=production node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,10 +13,13 @@
   "license": "ISC",
   "description": "Proyecto de la UFG 4 ciclo de la materia Diseño Web, representa una tienda en linea",
   "dependencies": {
-    "express": "^4.21.0",
-    "morgan": "^1.10.0"
+    "express": "4.21.0",
+    "morgan": "1.10.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.7"
+    "connect-livereload": "0.6.1",
+    "cross-env": "^7.0.3",
+    "livereload": "0.9.3",
+    "nodemon": "3.1.7"
   }
 }
