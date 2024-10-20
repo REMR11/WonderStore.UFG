@@ -226,6 +226,7 @@ input[type=number] {
 
 .filter-options-panel,
 #order-options-panel {
+  display: none;
   width: max-content;
   /*Borrar si se usa anchor*/
   margin-top: 10px;
@@ -669,7 +670,6 @@ dialog[open] {
 
   #order-options-panel {
     left: calc(anchor(--order-options center));
-    ;
   }
 
   #order-options-panel:popover-open+.filter-order-button::after {
@@ -726,5 +726,9 @@ dialog[open] {
 
   #addCartModal {
     max-width: 600px;
+  }
+
+  .marvel .banner-bg img{
+    object-position: top ;
   }
 }
