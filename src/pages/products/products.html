@@ -41,42 +41,45 @@
 
       <div class="main-content-products-J">
         <section class="filters-orders">
-          <div popover id="filter-options-panel" class="filter-options-panel">
-            <ul id="filter-options-list">
 
-            </ul>
-          </div>
-          <button popovertarget="filter-options-panel" class="filter-order-button filter-option">
+          <input type="checkbox" class="checked-filter" id="filter-checked">
+          <label popovertarget="filter-options-panel" for="filter-checked"
+            class="filter-order-button filter-option-btn">
             <span class="material-symbols-outlined filter-order-icon">
               filter_alt
             </span>
             <span class="filter-order-text">Filtrar</span>
-          </button>
+            <div id="filter-options-panel" class="filter-options-panel">
+              <ul id="filter-options-list">
 
+              </ul>
+            </div>
+          </label>
 
-          <div popover id="order-options-panel">
-            <ul>
-              <li>
-                <input type="radio" id="order-all" class="order-option" name="order-option" value="all" checked>
-                <label for="order-all">Todos</label>
-              </li>
-              <li>
-                <input type="radio" id="order-high-price" class="order-option" name="order-option" value="high-price">
-                <label for="order-high-price">Mayor precio</label>
-              </li>
-              <li>
-                <input type="radio" id="order-low-price" name="order-option" class="order-option" value="low-price">
-                <label for="order-low-price">Menor precio</label>
-              </li>
-            </ul>
-          </div>
-          <button popovertarget="order-options-panel" class="filter-order-button order-option">
+          <input type="checkbox" class="checked-order" id="order-checked">
+          <label for="order-checked" class="filter-order-button order-option">
             <span class="material-symbols-outlined filter-order-icon">
               filter_list
             </span>
             <span class="filter-order-text">Ordernar por:</span>
             <span id="order-option">Todos</span>
-          </button>
+            <div id="order-options-panel">
+              <ul>
+                <li>
+                  <input type="radio" id="order-all" class="order-option" name="order-option" value="all" checked>
+                  <label for="order-all">Todos</label>
+                </li>
+                <li>
+                  <input type="radio" id="order-high-price" class="order-option" name="order-option" value="high-price">
+                  <label for="order-high-price">Mayor precio</label>
+                </li>
+                <li>
+                  <input type="radio" id="order-low-price" name="order-option" class="order-option" value="low-price">
+                  <label for="order-low-price">Menor precio</label>
+                </li>
+              </ul>
+            </div>
+          </label>
         </section>
         <form class="search-section" id="search-form">
           <input type="search" name="search" id="search-product-input">
@@ -158,8 +161,8 @@
     </header>
     <section class="product-section">
       <div class="product-img-container on-load-img-fn general-skeleton">
-        <img id="modal-product-img" class="product-img" src="https://m.media-amazon.com/images/I/61vFg+YuXPL._AC_SX679_.jpg"
-        alt="Imagen del producto a añadir">
+        <img id="modal-product-img" class="product-img"
+          src="https://m.media-amazon.com/images/I/61vFg+YuXPL._AC_SX679_.jpg" alt="Imagen del producto a añadir">
       </div>
       <div class="product-details">
         <h4 class="product-title">Nombre del producto</h4>
@@ -167,7 +170,7 @@
           <p>Cantidad:</p>
           <div class="quantity-section">
             <button title="Restar" class="quantity-btn" id="substract-quantity">-</button>
-            <input type="number" id="product-quantity" value="1" min="1"/>
+            <input type="number" id="product-quantity" value="1" min="1" />
             <button title="Agregar" class="quantity-btn" id="sum-quantity">+</button>
           </div>
           <footer class="confirm-add-product">

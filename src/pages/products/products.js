@@ -106,9 +106,9 @@ function updateURL(option, value, add = true) {
       break;
     case 3:
       //Actualizamos la busqueda
-      if(value.length <= 0){
+      if (value.length <= 0) {
         URL_PARAMS.delete('search');
-      }else{
+      } else {
         URL_PARAMS.set('search', value);
       }
 
@@ -177,7 +177,7 @@ function preparePage() {
 
   const search = CURRENT_URL.searchParams.get('search');
 
-  if(search){
+  if (search) {
     SEARCH_INPUT.value = search;
   }
 }
@@ -429,7 +429,7 @@ async function loadProducts(filters = null, order = "all") {
       return 0; // Sin orden
     });
 
-    if (searchParam && searchParam.length > 0){
+    if (searchParam && searchParam.length > 0) {
       products = products.filter(product => product.name.toLowerCase().includes(searchParam));
     }
 
@@ -532,3 +532,29 @@ document.getElementById('search-form').addEventListener('submit', (e) => {
 
   updateURL(3, SEARCH_INPUT.value.trim().toLocaleLowerCase());
 })
+
+document.addEventListener('click', function (event) {
+  const filterToggle = document.getElementById('filter-checked');
+  const filterPanel = document.querySelector('.filter-options-panel');
+  const filterButton = document.querySelector('.filter-option-btn');
+
+  const orderToggle = document.getElementById('order-checked');
+  const orderPanel = document.getElementById('order-options-panel');
+  const orderButton = document.querySelector('.order-option');
+
+  // Verifica si el clic fue fuera del botón y del panel
+  if (!filterButton.contains(event.target) && !filterPanel.contains(event.target) && !filterToggle.contains(event.target)) {
+    // Si el panel está visible, oculta el panel y desmarca el checkbox
+    if (filterToggle.checked) {
+      filterToggle.checked = false; // Desmarca el checkbox
+    }
+  }
+
+  // Verifica si el clic fue fuera del botón y del panel
+  if (!orderButton.contains(event.target) && !orderPanel.contains(event.target) && !orderToggle.contains(event.target)) {
+    // Si el panel está visible, oculta el panel y desmarca el checkbox
+    if (orderToggle.checked) {
+      orderToggle.checked = false; // Desmarca el checkbox
+    }
+  }
+});

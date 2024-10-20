@@ -142,11 +142,13 @@ input[type=number] {
     left: initial;
   }
 
-  .filter-option {
+  .filter-option-btn {
+    position: relative;
     justify-content: initial;
   }
 
   .order-option {
+    position: relative;
     width: fit-content;
   }
 }
@@ -158,21 +160,21 @@ input[type=number] {
   margin-left: 10px;
 }
 
-[popovertarget="filter-options-panel"] {
+/* [popovertarget="filter-options-panel"] {
   anchor-name: --filter-options;
-}
+} */
 
-[popovertarget="order-options-panel"] {
+/* [popovertarget="order-options-panel"] {
   anchor-name: --order-options;
-}
+} */
 
-#order-options-panel:popover-open+.filter-order-button::after {
+/* #order-options-panel:popover-open+.filter-order-button::after {
   width: 200px;
 }
 
 .filter-options-panel:popover-open+.filter-order-button::after {
   width: 90%;
-}
+} */
 
 #order-options-panel:popover-open {
   opacity: 1;
@@ -190,20 +192,57 @@ input[type=number] {
   }
 }
 
+/*CAMBIANDO TODO POR USAR ANCHOR*/
+.checked-filter,
+.checked-order {
+  display: none;
+}
+
+.checked-filter:checked+.filter-option-btn .filter-options-panel {
+  display: block;
+  opacity: 1;
+
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+.checked-order:checked+.order-option #order-options-panel {
+  display: block;
+  opacity: 1;
+
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+.checked-order:checked+.order-option::after {
+  width: calc(100% + 10px);
+}
+
+.checked-filter:checked+.filter-order-button::after {
+  width: 180px;
+}
 
 .filter-options-panel,
 #order-options-panel {
+  width: max-content;
+  /*Borrar si se usa anchor*/
   margin-top: 10px;
   position: absolute;
   padding: 4px 10px;
-  position-anchor: --filter-options;
-  left: anchor(--filter-options left);
-  top: anchor(--filter-options bottom);
+  /* position-anchor: --filter-options; */
+  /* left: anchor(--filter-options left); */
+  /* top: anchor(--filter-options bottom); */
+  top: 60px;
+  /*Borrar si se usa anchor*/
+  z-index: 30;
+  /*Borar si se usa anchor*/
   background-color: var(--secondary-color);
   border: 4px solid var(--primary-color);
   border-radius: 10px;
   opacity: 0;
-  transition: opacity .8s allow-discrete;
+  transition: opacity .3s allow-discrete;
   transform-origin: top left;
 
   ul {
@@ -215,9 +254,10 @@ input[type=number] {
 
 #order-options-panel {
   width: fit-content;
-  position-anchor: --order-options;
-  left: calc(anchor(--order-options left) + 20px);
-  top: anchor(--order-options bottom);
+  /* position-anchor: --order-options; */
+  /* left: calc(anchor(--order-options left) + 20px); */
+  /* top: anchor(--order-options bottom); */
+
 }
 
 input[type="checkbox"] {
@@ -400,7 +440,7 @@ input[type="radio"]:checked::before {
   border-color: var(--secondary-border-color);
 }
 
-.product-card .product-add-cart-btn:hover{
+.product-card .product-add-cart-btn:hover {
   transition: scale .3s ease;
   scale: 1.1;
 }
@@ -582,19 +622,19 @@ dialog[open] {
 }
 
 /*Estilos para cuando el formulario de busqueda*/
-.search-section{
+.search-section {
   width: 100%;
   display: inline-flex;
   justify-content: flex-end;
   gap: 5px;
   margin-bottom: 5px;
-  
-  .general-btn{
+
+  .general-btn {
     width: 50px;
   }
 }
 
-#search-product-input{
+#search-product-input {
   padding: 3px;
   border: 1px solid;
   border-radius: 7px;
@@ -602,11 +642,16 @@ dialog[open] {
 
 /*Media query para tablets en adelante*/
 @media (width >=768px) {
+  .filter-options-panel,
+  #order-options-panel{
+    top: 40px;/*Borrar si se usa anchor*/
+  } 
+  
   .banner-container {
     height: 350px;
   }
 
-  .filter-option {
+  .filter-option-btn {
     gap: 25%;
   }
 
