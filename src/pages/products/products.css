@@ -105,7 +105,7 @@ input[type=number] {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5px;
+  margin: 2rem 0 5px;
 
   .filter-order-button {
     cursor: pointer;
@@ -147,7 +147,7 @@ input[type=number] {
   }
 
   .order-option {
-    flex-grow: 0.5;
+    width: fit-content;
   }
 }
 
@@ -355,6 +355,7 @@ input[type="radio"]:checked::before {
   gap: 20px;
   margin: 5px;
   cursor: pointer;
+  /* max-width: 400px; */
 
   .product-img-container {
     height: 261px;
@@ -578,6 +579,25 @@ dialog[open] {
 
 #id-modal-input {
   display: none;
+}
+
+/*Estilos para cuando el formulario de busqueda*/
+.search-section{
+  width: 100%;
+  display: inline-flex;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-bottom: 5px;
+  
+  .general-btn{
+    width: 50px;
+  }
+}
+
+#search-product-input{
+  padding: 3px;
+  border: 1px solid;
+  border-radius: 7px;
 }
 
 /*Media query para tablets en adelante*/

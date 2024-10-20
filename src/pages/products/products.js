@@ -1,5 +1,6 @@
 import { getProductById, getProducts } from "../../api/api.js";
 import { sweetAlert } from "../../utils/alerts.js";
+import { debounce } from "../../utils/debounce.js";
 import { BASE_URL, CATEGORIES, TOPICS } from "../../utils/globalVariables.js";
 import { noPaste } from "../../utils/validacionens.js";
 
@@ -11,6 +12,13 @@ let firstRender = false;
 document.addEventListener("DOMContentLoaded", function () {
   onLoadIMG();
   preparePage();
+  //Cargamos los productos con un tiempo de espera para simular carga
+  setTimeout(() => {
+    let filtersURL = URL_PARAMS.getAll('filter')?.[0]?.split(',') ?? []
+
+    const order = URL_PARAMS.get('order');
+    loadProducts(filtersURL, order);
+  }, 1000);
 
   noPaste([PRODUCT_QUANTITY_MODAL_INPUT]);
 });
@@ -40,6 +48,7 @@ const PRODUCT_QUANTITY_MODAL_INPUT = document.getElementById('product-quantity')
 const PRODUCT_PRICE_MODAL = document.getElementById('modal-product-price');
 const MODAL_ID_PRODUCT = document.getElementById('id-modal-input');
 const ADD_TO_CART_BUTTON = document.getElementById('add-to-cart-button');
+const SEARCH_INPUT = document.getElementById('search-product-input');
 
 function setBanner(bannerName, bannerTextName, className) {
   BANNER.src = `${BASE_URL}/assets/banners/${bannerName}`;
@@ -55,6 +64,7 @@ function setBanner(bannerName, bannerTextName, className) {
 function updateURL(option, value, add = true) {
   //Obtenemos los filtros y orden de la URL
   const currentFilters = URL_PARAMS.getAll('filter')?.[0]?.split(',') ?? [];
+  let newURL = '';
   let currentOrder = URL_PARAMS.get('order');
   switch (option) {
     case 1:
@@ -83,7 +93,7 @@ function updateURL(option, value, add = true) {
       });
 
       // Actualizamos la URL con los nuevos parámetros
-      let newURL = `${CURRENT_URL.origin}${CURRENT_URL.pathname}${URL_PARAMS.toString() === '' ? '' : `?${URL_PARAMS}`}`;
+      newURL = `${CURRENT_URL.origin}${CURRENT_URL.pathname}${URL_PARAMS.toString() === '' ? '' : `?${URL_PARAMS}`}`;
 
       window.history.replaceState({}, '', newURL);
       break;
@@ -91,12 +101,19 @@ function updateURL(option, value, add = true) {
       //Actualizamos el orden
       URL_PARAMS.set('order', value);
       currentOrder = value;
-      let newURL2 = `${CURRENT_URL.origin}${CURRENT_URL.pathname}${URL_PARAMS.toString() === '' ? '' : `?${URL_PARAMS}`}`;
-      window.history.replaceState({}, '', newURL2);
+      newURL = `${CURRENT_URL.origin}${CURRENT_URL.pathname}${URL_PARAMS.toString() === '' ? '' : `?${URL_PARAMS}`}`;
+      window.history.replaceState({}, '', newURL);
       break;
     case 3:
       //Actualizamos la busqueda
-      CURRENT_URL.searchParams.set('search', value);
+      if(value.length <= 0){
+        URL_PARAMS.delete('search');
+      }else{
+        URL_PARAMS.set('search', value);
+      }
+
+      newURL = `${CURRENT_URL.origin}${CURRENT_URL.pathname}${URL_PARAMS.toString() === '' ? '' : `?${URL_PARAMS}`}`;
+      window.history.replaceState({}, '', newURL);
       break;
     default:
       break;
@@ -158,21 +175,11 @@ function preparePage() {
   //Cargamos los filtros
   loadFilters(categoryInfo.productTypes);
 
-  //Cargamos los productos con un tiempo de espera para simular carga
-  setTimeout(() => {
-    let filtersURL = URL_PARAMS.getAll('filter')?.[0]?.split(',') ?? []
+  const search = CURRENT_URL.searchParams.get('search');
 
-    const order = URL_PARAMS.get('order');
-    loadProducts(filtersURL, order);
-  }, 1000);
-  // const search = CURRENT_URL.searchParams.get('search');
-
-  // if(search){
-  //   const searchElement = document.getElementById('search-input');
-  //   if(searchElement){
-  //     searchElement.value = search;
-  //   }
-  // }
+  if(search){
+    SEARCH_INPUT.value = search;
+  }
 }
 
 function efectoLoli(bannerName, bannerText) {
@@ -394,6 +401,7 @@ async function loadProducts(filters = null, order = "all") {
   try {
     NOT_FOUND_MESSAGE.style.display = 'none';
     const topic = URL_PARAMS.get('topic');
+    const searchParam = URL_PARAMS.get('search');
     //Obtenemos los filtros, orden y tema en la URL
     let products = getProducts();
 
@@ -421,6 +429,10 @@ async function loadProducts(filters = null, order = "all") {
       return 0; // Sin orden
     });
 
+    if (searchParam && searchParam.length > 0){
+      products = products.filter(product => product.name.toLowerCase().includes(searchParam));
+    }
+
     //Insertamos los productos en el contenedor
     let template = '';
 
@@ -434,7 +446,7 @@ async function loadProducts(filters = null, order = "all") {
           <div class="product-info">
             <h3 class="product-info-title">${product.name}</h3>
             <p class="product-info-category">${product.category}</p>
-            <span class="product-info-price">${product.price}</span>
+            <span class="product-info-price">$${product.price}</span>
             <button title="Agregar al carrito" onclick="showAddToCartModalJ('${product.id}')" class="general-btn product-add-cart-btn"
               data-product-id="${product.id}">Agregar al carrito</button>
           </div>
@@ -458,13 +470,13 @@ async function loadProducts(filters = null, order = "all") {
 //Añadir evento escucha a los botones del modal
 SUM_MODAL_BUTTON.addEventListener('click', () => {
   PRODUCT_QUANTITY_MODAL_INPUT.value = parseInt(PRODUCT_QUANTITY_MODAL_INPUT.value) + 1;
-  PRODUCT_QUANTITY_MODAL_INPUT.dispatchEvent(new Event('input')); 
+  PRODUCT_QUANTITY_MODAL_INPUT.dispatchEvent(new Event('input'));
 })
 
 SUBSTRACT_MODAL_BUTTON.addEventListener('click', () => {
   if (parseInt(PRODUCT_QUANTITY_MODAL_INPUT.value) > 1) {
     PRODUCT_QUANTITY_MODAL_INPUT.value = parseInt(PRODUCT_QUANTITY_MODAL_INPUT.value) - 1;
-    PRODUCT_QUANTITY_MODAL_INPUT.dispatchEvent(new Event('input')); 
+    PRODUCT_QUANTITY_MODAL_INPUT.dispatchEvent(new Event('input'));
   }
 })
 
@@ -473,7 +485,7 @@ PRODUCT_QUANTITY_MODAL_INPUT.addEventListener('input', (e) => {
   let value = parseInt(e.target.value);
 
   //En caso sea un número negativo o no sea un número se igualará a 1 su valor.
-  if(value <= 0 || isNaN(value)) {
+  if (value <= 0 || isNaN(value)) {
     PRODUCT_QUANTITY_MODAL_INPUT.value = 1;
     value = 1;
     return;
@@ -489,7 +501,7 @@ ADD_TO_CART_BUTTON.addEventListener('click', async () => {
   const quantity = parseInt(PRODUCT_QUANTITY_MODAL_INPUT.value);
   const idProduct = MODAL_ID_PRODUCT.value;
 
-  const {modifyCarrito} = await import("../../api/api.js");
+  const { modifyCarrito } = await import("../../api/api.js");
 
   modifyCarrito(idProduct, quantity);
 
@@ -498,7 +510,7 @@ ADD_TO_CART_BUTTON.addEventListener('click', async () => {
 })
 
 //Evento que redirecciona a la página de detalles del producto
-function redirectToDetailsEvent(){
+function redirectToDetailsEvent() {
   document.querySelectorAll('.product-card').forEach(productCard => {
     productCard.addEventListener('click', () => {
       const idProduct = productCard.dataset.idProduct;
@@ -506,3 +518,17 @@ function redirectToDetailsEvent(){
     });
   })
 }
+
+const debounceSearch = debounce((event) => {
+  const value = event.target.value.trim().toLocaleLowerCase();
+
+  updateURL(3, value);
+}, 500);
+
+SEARCH_INPUT.addEventListener('input', debounceSearch);
+
+document.getElementById('search-form').addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  updateURL(3, SEARCH_INPUT.value.trim().toLocaleLowerCase());
+})
