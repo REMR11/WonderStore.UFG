@@ -196,32 +196,7 @@ function efectoLoli(bannerName, bannerText) {
   }, 2000);
 }
 
-function loadFilters(filters) {
-  let template = ``;
-  let activeFilterTemplate = '';
-  for (const filter of filters) {
-    const filterName = filter.toLocaleLowerCase().split(' ').join('-');
-
-    template += `
-      <li>
-        <input id="${filterName}" class="filter-option" type="checkbox" value="${filterName}">
-                <label for="${filterName}">${filter}</label>
-      </li>  
-    `;
-
-    // activeFilterTemplate += `
-    //     <article class="filter-active" id="filter-active-${filterName}">
-    //       <p class="filter-text">${filter}</p>
-    //       <button data-filter="${filterName}" title="Eliminar filtro" class="discart-filter-button material-symbols-outlined">
-    //         close
-    //       </button>
-    //     </article>`;
-  }
-
-  FILTER_CONTAINER.innerHTML = template;
-
-  // activeFilterContainer.innerHTML = activeFilterTemplate;
-
+function loadActiveFilters() {
   //Ponemos los filtros en base a la URL
   const filtersURL = CURRENT_URL.searchParams.getAll('filter');
 
@@ -232,15 +207,15 @@ function loadFilters(filters) {
     if (filter.value.length > 0 && filtersURL.some(el => el.includes(filter.value))) {
       filter.checked = true;
 
-      // document.getElementById(`filter-active-${filter.value}`).classList.add('show-filter');
-
-      activeFilterTemplate += `
-        <article class="filter-active show-filter" id="filter-active-${filter.value}">
-          <p class="filter-text">${filter.value}</p>
-          <button data-filter="${filter.value}" title="Eliminar filtro" class="discart-filter-button material-symbols-outlined">
-            close
-          </button>
-        </article>`;
+      document.getElementById(`filter-active-${filter.value}`).classList.add('show-filter');
+      // //Lo añadimos a la clase de escucha
+      // activeFilterTemplate += `
+      // <article class="filter-active show-filter" id="filter-active-${filter.value}">
+      //   <p class="filter-text">${filter.value}</p>
+      //   <button data-filter="${filter.value}" title="Eliminar filtro" class="discart-filter-button material-symbols-outlined">
+      //     close
+      //   </button>
+      // </article>`;
     }
 
     //Añadimos el evento aquí
@@ -250,55 +225,63 @@ function loadFilters(filters) {
 
       const filterElement = document.getElementById(`filter-active-${filter.value}`);
       //Añadimos o eliminamos el filtro al panel de filtros
-      if (!filterElement) {
-        let filterActive = `<article class="filter-active show-filter" id="filter-active-${filter.value}">
-        <p class="filter-text">${filter.value.split('-').join(' ')}</p>
-        <button data-filter="${filter.value}" title="Eliminar filtro" class="discart-filter-button material-symbols-outlined">
-          close
-        </button>
-      </article>`
 
-        const lastElement = FILTERS_ACTIVE_CONTAINER.lastElementChild;
-        //Dependiendo de si es el ultimo elemento lo añadimos despues del ultimo o al inicio
-        if (lastElement) {
-          lastElement.insertAdjacentHTML('beforebegin', filterActive);
-        } else {
-          FILTERS_ACTIVE_CONTAINER.insertAdjacentHTML('beforeend', filterActive);
-        }
-      } else {
-        //Como ya existe simplemente mostramos el filtro
-        filterElement.classList.toggle('show-filter', filter.checked);
-      }
       //En caso que se desmarque lo removemos
-      if (!filter.checked) {
-        filterElement.remove();
-      }
       //Ejecutamos los eventos para añadir eventos de escucha y añadir elemento de remover a los filtros recién renderizados
+      document.getElementById(`filter-active-${filter.value}`).classList.toggle('show-filter', filter.checked);
       addRemoveFilterOption()
       hideActiveFilter();
-      // document.getElementById(`filter-active-${filter.value}`).classList.toggle('show-filter', filter.checked);
     });
   });
 
-  //Añadimos los filtros activos al panel de filtros y asignamos eventos y boton de remover filtros
-  FILTERS_ACTIVE_CONTAINER.innerHTML = activeFilterTemplate;
   hideActiveFilter();
   addRemoveFilterOption();
+}
+
+function loadFilters(filters) {
+  let activeFilterTemplate = '';
+  let template = ``;
+  //Creamos el template con los filtros en el contenedor
+  for (const filter of filters) {
+    const filterName = filter.toLocaleLowerCase().split(' ').join('-');
+
+    template += `
+      <li>
+        <input id="${filterName}" class="filter-option" type="checkbox" value="${filterName}">
+                <label for="${filterName}">${filter}</label>
+      </li>  
+    `;
+
+    activeFilterTemplate += `
+        <article class="filter-active" id="filter-active-${filterName}">
+          <p class="filter-text">${filter}</p>
+          <button data-filter="${filterName}" title="Eliminar filtro" class="discart-filter-button material-symbols-outlined">
+            close
+          </button>
+        </article>`;
+  }
+
+  FILTER_CONTAINER.innerHTML = template;
+
+  //Añadimos los filtros activos al panel de filtros y asignamos eventos y boton de remover filtros
+  FILTERS_ACTIVE_CONTAINER.innerHTML = activeFilterTemplate;
+  loadActiveFilters();
 }
 
 //Función para añadir evento click a todos los filter list
 function hideActiveFilter() {
   //Obtenemos todos los botones para descartar filtros y añadimos evento de escucha
   document.querySelectorAll('.discart-filter-button').forEach(filterOption => {
-    const filter = filterOption.dataset.filter;
-    const filterElement = document.getElementById(`filter-active-${filter}`);
+    //Asignamos el evento de escucha
     filterOption.addEventListener('click', () => {
-
+      
+      const filter = filterOption.dataset.filter;
+      const filterElement = document.getElementById(`filter-active-${filter}`);
       const filterCheckbox = FILTER_CONTAINER.querySelector(`#${filter}`);
       filterCheckbox.checked = false;//Quitamos el check del panel de filtros
-
+      filterElement.classList.remove('show-filter');
       updateURL(1, filter, false);//Actualizamos la URL
-      filterElement.remove();//Removemos el filtro
+      // filterElement.remove();//Removemos el filtro
       addRemoveFilterOption()//Añadimos opción de remover a los filtros restantes
     });
   });
@@ -312,7 +295,11 @@ function addRemoveFilterOption() {
     deleteFilterElement.remove();
   };
 
-  //La creamos
+  //Validamos que hallan filtros activos
+  const filtersActive = FILTERS_ACTIVE_CONTAINER.querySelectorAll('.show-filter');
+  if(filtersActive.length <= 0)return;
+  
+  //La creamos ya que si hay filtros
   let template = `
     <article id="discart-filter-all-button" class="filter-active show-filter">
         <p class="filter-text">Borrar todo</p>
@@ -362,7 +349,10 @@ function deleteAllFilters() {
         filterCheckbox.checked = false;
         updateURL(1, filter, false);
       });
-      FILTERS_ACTIVE_CONTAINER.innerHTML = '';
+      //Removemos los filtros
+      FILTERS_ACTIVE_CONTAINER.querySelectorAll('.show-filter').forEach(filter => {
+        filter.classList.remove('show-filter');
+      });
     });
   }
 }
