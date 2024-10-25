@@ -234,28 +234,34 @@ export function addProductComment(idProduct, comment) {
  *   - total: int El total de la compra
  */
 export function getCarrito() {
-  const carrito = JSON.parse(localStorage.getItem('carrito'));
-
-  if(carrito == null) return null;
-
-  const productsInDB = getProducts();
-
-  const productsInCart = carrito.cart.map(productInCart => {
-    const productFinded = productsInDB.find(product => product.id == productInCart.id);
+  try {
+    const carrito = JSON.parse(localStorage.getItem('carrito'));
+  
+    if(carrito == null) return null;
+  
+    const productsInDB = getProducts();
+    const productsInCart = carrito.cart.map(productInCart => {
+      const productFinded = productsInDB.find(product => product.id == productInCart.id);
+      return {
+        id: productFinded.id,
+        productName: productFinded.name,
+        productPrice: productFinded.price,
+        productImage: productFinded.imgs[0],
+        quantity: productInCart.quantity,
+        subTotal: productInCart.subTotal
+      }
+    });
+  
     return {
-      id: productFinded.id,
-      productName: productFinded.name,
-      productPrice: productFinded.price,
-      productImage: productFinded.imgs[0],
-      quantity: productInCart.quantity,
-      subTotal: productInCart.subTotal
+      cart: productsInCart,
+      total: carrito.total
+    };
+  } catch (error) {
+    return{
+      cart: [],
+      total: 0
     }
-  });
-
-  return {
-    cart: productsInCart,
-    total: carrito.total
-  };
+  }
 }
 
 /**

@@ -8,6 +8,7 @@ const CURRENT_URL = new URL(window.location.href);
 const URL_PARAMS = new URLSearchParams(CURRENT_URL.search);
 
 let firstRender = false;
+let allProducts = [];
 
 document.addEventListener("DOMContentLoaded", function () {
   onLoadIMG();
@@ -49,6 +50,7 @@ const PRODUCT_PRICE_MODAL = document.getElementById('modal-product-price');
 const MODAL_ID_PRODUCT = document.getElementById('id-modal-input');
 const ADD_TO_CART_BUTTON = document.getElementById('add-to-cart-button');
 const SEARCH_INPUT = document.getElementById('search-product-input');
+const ORDER_OPTION_TEXT = document.getElementById('order-option');
 
 function setBanner(bannerName, bannerTextName, className) {
   BANNER.src = `${BASE_URL}/assets/banners/${bannerName}`;
@@ -120,7 +122,7 @@ function updateURL(option, value, add = true) {
   }
 
   if (firstRender) {
-    loadProducts(currentFilters, currentOrder);
+    renderProducts(allProducts,currentFilters, currentOrder);
   }
 }
 
@@ -274,7 +276,7 @@ function hideActiveFilter() {
   document.querySelectorAll('.discart-filter-button').forEach(filterOption => {
     //Asignamos el evento de escucha
     filterOption.addEventListener('click', () => {
-      
+
       const filter = filterOption.dataset.filter;
       const filterElement = document.getElementById(`filter-active-${filter}`);
       const filterCheckbox = FILTER_CONTAINER.querySelector(`#${filter}`);
@@ -297,8 +299,8 @@ function addRemoveFilterOption() {
 
   //Validamos que hallan filtros activos
   const filtersActive = FILTERS_ACTIVE_CONTAINER.querySelectorAll('.show-filter');
-  if(filtersActive.length <= 0)return;
-  
+  if (filtersActive.length <= 0) return;
+
   //La creamos ya que si hay filtros
   let template = `
     <article id="discart-filter-all-button" class="filter-active show-filter">
@@ -325,6 +327,18 @@ function addRemoveFilterOption() {
 
 function setOrder(order) {
   if (order == null) order = 'all';
+
+  switch(order) {
+    case 'high-price':
+      ORDER_OPTION_TEXT.innerText = "Mayor precio"
+      break;
+    case 'low-price':
+      ORDER_OPTION_TEXT.innerText = "Menor precio"
+      break;
+    default:
+        ORDER_OPTION_TEXT.innerText = "Todos";      
+      break;
+  }
 
   updateURL(2, order);
   const orderElement = document.getElementById(`order-${order}`);
@@ -369,6 +383,12 @@ function showAddToCartModalJ(id) {
     return
   }
 
+  if (product.quantity <= 0) {
+    sweetAlert(4, 'El producto se encuentra agotado');
+    location.reload();
+    return
+  }
+
   MODAL_PRODUCT_IMG.src = product.imgs[0];
   PRODUCT_MODAL.querySelector('.product-title').textContent = product.name;
   PRODUCT_MODAL.showModal();
@@ -386,71 +406,91 @@ CLOSE_MODAL_BUTTON.addEventListener('click', () => {
   document.body.classList.remove('body-no-scroll-modal-opened');
 });
 
+//Función para ordenar productos
+function orderProducts(products,order = "all") {
+  //Ordenamos los productos si lo desea 
+  return products.sort((a, b) => {
+    if (order === 'low-price') {
+      return a.price - b.price; // Orden ascendente por precio
+    } else if (order === 'high-price') {
+      return b.price - a.price; // Orden descendente por precio
+    }
+    return 0; // Sin orden
+  });
+}
+
+function filterProducts(products,filters = null) {
+  const topic = URL_PARAMS.get('topic');
+  const searchParam = URL_PARAMS.get('search');
+  return products
+    .filter(product => product.quantity > 0)
+    .filter(product => product.topic === topic)
+    .filter(product => {
+      if (filters && filters.length > 0) {
+        return filters.includes(product.category.toLowerCase().replaceAll(' ', '-'));
+      }
+      return true;
+    })
+    .filter(product => {
+      if (searchParam && searchParam.length > 0) {
+        return product.name.toLowerCase().includes(searchParam);
+      }
+      return true;
+    });
+}
+
+//Función para renderizar productos
+function renderProducts(products, filter = null, order = "all") {
+  NOT_FOUND_MESSAGE.style.display = 'none';
+  //Insertamos los productos en el contenedor
+  let template = '';
+
+  products = filterProducts(products, filter);
+  products = orderProducts(products, order);  
+
+  for (const product of products) {
+    template += `
+      <article class="product-card" data-id-product="${product.id}">
+        <div class="product-img-container on-load-img-fn">
+          <img class="product-img" src=${product.imgs[0]}
+            alt="${product.name}">
+        </div>
+        <div class="product-info">
+          <h3 class="product-info-title">${product.name}</h3>
+          <p class="product-info-category">${product.category}</p>
+          <span class="product-info-price">$${product.price}</span>
+          <button title="Agregar al carrito" onclick="showAddToCartModalJ('${product.id}')" class="general-btn product-add-cart-btn"
+            data-product-id="${product.id}">Agregar al carrito</button>
+        </div>
+      </article>
+    `;
+  }
+
+  PRODUCTS_CONTAINER.innerHTML = template;
+
+  if (products.length === 0) {
+    NOT_FOUND_MESSAGE.style.display = 'block';
+  }
+  onLoadIMG();
+  redirectToDetailsEvent();
+}
+
 async function loadProducts(filters = null, order = "all") {
   firstRender = true;
   try {
     NOT_FOUND_MESSAGE.style.display = 'none';
-    const topic = URL_PARAMS.get('topic');
-    const searchParam = URL_PARAMS.get('search');
     //Obtenemos los filtros, orden y tema en la URL
-    let products = getProducts();
-
+    const productsInDB = getProducts();
+    allProducts = productsInDB;
     //En caso de que no existan debemos cargar los productos
-    if (!products) {
+    if (!productsInDB) {
       const { initializeApp } = await import("../general.js");
 
-      initializeApp();
+      await initializeApp();
+      allProducts = getProducts();
     }
 
-    //Obtenemos los productos por el tema
-    products = products.filter(product => product.topic === topic);
-    //Filtramos los productos en caso se pida filtrar
-    if (filters && filters.length > 0) {
-      products = products.filter(product => filters.includes(product.category.toLowerCase().replaceAll(' ', '-')));
-    }
-
-    //Ordenamos los productos si lo desea 
-    products.sort((a, b) => {
-      if (order === 'low-price') {
-        return a.price - b.price; // Orden ascendente por precio
-      } else if (order === 'high-price') {
-        return b.price - a.price; // Orden descendente por precio
-      }
-      return 0; // Sin orden
-    });
-
-    if (searchParam && searchParam.length > 0) {
-      products = products.filter(product => product.name.toLowerCase().includes(searchParam));
-    }
-
-    //Insertamos los productos en el contenedor
-    let template = '';
-
-    for (const product of products) {
-      template += `
-        <article class="product-card" data-id-product="${product.id}">
-          <div class="product-img-container on-load-img-fn">
-            <img class="product-img" src=${product.imgs[0]}
-              alt="${product.name}">
-          </div>
-          <div class="product-info">
-            <h3 class="product-info-title">${product.name}</h3>
-            <p class="product-info-category">${product.category}</p>
-            <span class="product-info-price">$${product.price}</span>
-            <button title="Agregar al carrito" onclick="showAddToCartModalJ('${product.id}')" class="general-btn product-add-cart-btn"
-              data-product-id="${product.id}">Agregar al carrito</button>
-          </div>
-        </article>
-      `;
-    }
-
-    PRODUCTS_CONTAINER.innerHTML = template;
-
-    if (products.length === 0) {
-      NOT_FOUND_MESSAGE.style.display = 'block';
-    }
-    onLoadIMG();
-    redirectToDetailsEvent();
+    renderProducts(allProducts, filters, order);
   } catch (error) {
     PRODUCTS_CONTAINER.innerHTML = '';
     NOT_FOUND_MESSAGE.style.display = 'block';
@@ -523,6 +563,8 @@ document.getElementById('search-form').addEventListener('submit', (e) => {
   updateURL(3, SEARCH_INPUT.value.trim().toLocaleLowerCase());
 })
 
+
+//Método para simular lo que serían los filtros con popover y anchor (AUN NO TIENE SOPORTE)
 document.addEventListener('click', function (event) {
   const filterToggle = document.getElementById('filter-checked');
   const filterPanel = document.querySelector('.filter-options-panel');

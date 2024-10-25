@@ -36,8 +36,6 @@ function getListItem(linkArray, isExpandedItem = false) {
 
 function generateHeader(links){
   const carrito = getCarrito();
-  let quantity = carrito ? carrito.cart.length : 0;
-
   let header = `
     <header class="header-principal nav-container">
       <div class="nav-logo">
