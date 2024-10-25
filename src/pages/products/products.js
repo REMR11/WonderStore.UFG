@@ -52,6 +52,12 @@ const ADD_TO_CART_BUTTON = document.getElementById('add-to-cart-button');
 const SEARCH_INPUT = document.getElementById('search-product-input');
 const ORDER_OPTION_TEXT = document.getElementById('order-option');
 
+/**
+ * Método para setear el banner
+ * @param {string} bannerName Representa el nombre de la imagen del banner
+ * @param {string} bannerTextName representa el nombre del texto del banner
+ * @param {string} className Nombre de la clase personalizada para el banner 
+ */
 function setBanner(bannerName, bannerTextName, className) {
   BANNER.src = `${BASE_URL}/assets/banners/${bannerName}`;
   BANNER_TEXT.src = `${BASE_URL}/assets/banners/${bannerTextName}`;
@@ -63,6 +69,12 @@ function setBanner(bannerName, bannerTextName, className) {
   bannerContainer.classList.add(className);
 }
 
+/**
+ * Función para actualizar la URL de la página
+ * @param {number} option Número de la opción a actualizar {1: Filtros, 2: Orden, 3: Búsqueda} 
+ * @param {string} value Valor a actualizar 
+ * @param {boolean} add representa si el valor se añade o se quita 
+ */
 function updateURL(option, value, add = true) {
   //Obtenemos los filtros y orden de la URL
   const currentFilters = URL_PARAMS.getAll('filter')?.[0]?.split(',') ?? [];
@@ -122,10 +134,11 @@ function updateURL(option, value, add = true) {
   }
 
   if (firstRender) {
-    renderProducts(allProducts,currentFilters, currentOrder);
+    renderProducts(allProducts, currentFilters, currentOrder);
   }
 }
 
+//Método para añadir animación al cargar la imagen
 function onLoadIMG() {
   try {
     document.querySelectorAll('.on-load-img-fn').forEach(container => {
@@ -177,13 +190,14 @@ function preparePage() {
   //Cargamos los filtros
   loadFilters(categoryInfo.productTypes);
 
+  //Ponemos el dato por el cual se busca
   const search = CURRENT_URL.searchParams.get('search');
-
   if (search) {
     SEARCH_INPUT.value = search;
   }
 }
 
+//Función trol para añadir el efecto LOLI
 function efectoLoli(bannerName, bannerText) {
   BANNER.classList.add('anime');
   setInterval(() => {
@@ -198,11 +212,12 @@ function efectoLoli(bannerName, bannerText) {
   }, 2000);
 }
 
+//Función que muestra todos los filtros activos y les añade el evento a los filtros del panel
 function loadActiveFilters() {
   //Ponemos los filtros en base a la URL
   const filtersURL = CURRENT_URL.searchParams.getAll('filter');
 
-  //Añadimos evento de escucha a los filtros
+  //Añadimos evento de escucha a las opciones de filtro en el panel del filtro
   document.querySelectorAll('.filter-option').forEach(filter => {
 
     //Si el filtro esta en la URL lo añadimos directo al template y marcamos el filtro
@@ -220,7 +235,7 @@ function loadActiveFilters() {
       // </article>`;
     }
 
-    //Añadimos el evento aquí
+    //Añadimos el evento aquí para los filtros dentro del panel de filtros
     filter.addEventListener('change', (e) => {
       //Actualizamos la URL
       updateURL(1, filter.value, filter.checked);
@@ -231,15 +246,13 @@ function loadActiveFilters() {
       //En caso que se desmarque lo removemos
       //Ejecutamos los eventos para añadir eventos de escucha y añadir elemento de remover a los filtros recién renderizados
       document.getElementById(`filter-active-${filter.value}`).classList.toggle('show-filter', filter.checked);
-      addRemoveFilterOption()
-      hideActiveFilter();
+      addRemoveFilterOption();//Añadir el botón  de remover todos los filtros
     });
   });
-
-  hideActiveFilter();
-  addRemoveFilterOption();
+  addRemoveFilterOption();//Añadir el botón  de remover todos los filtros
 }
 
+//Cargar todos los filtros tanto en el panel como los active filter pero ocultarlos
 function loadFilters(filters) {
   let activeFilterTemplate = '';
   let template = ``;
@@ -263,14 +276,16 @@ function loadFilters(filters) {
         </article>`;
   }
 
+  //Añadir opciones de filtro
   FILTER_CONTAINER.innerHTML = template;
 
-  //Añadimos los filtros activos al panel de filtros y asignamos eventos y boton de remover filtros
+  //Añadimos los filtros al panel de filtros y asignamos eventos y boton de remover filtros
   FILTERS_ACTIVE_CONTAINER.innerHTML = activeFilterTemplate;
   loadActiveFilters();
+  hideActiveFilter();//Asignar el evento de escucha para ocultarlos filtros mediante su boton propio
 }
 
-//Función para añadir evento click a todos los filter list
+//Función para añadir evento click a todos los filter list para ocultarlos
 function hideActiveFilter() {
   //Obtenemos todos los botones para descartar filtros y añadimos evento de escucha
   document.querySelectorAll('.discart-filter-button').forEach(filterOption => {
@@ -316,19 +331,14 @@ function addRemoveFilterOption() {
     //Asignamos evento de escucha para eliminar todos los filtros
     deleteAllFilters()
   }
-  // else {
-  //   const FILTER_URL_PARAMS = CURRENT_URL.searchParams.getAll('filter');
-  //   if (FILTER_URL_PARAMS.length > 0) {
-  //     FILTERS_ACTIVE_CONTAINER.insertAdjacentHTML('beforeend', template);
-  //   }
-  // }
-  // deleteAllFilters();
 }
 
+//Función para setear el Orden
 function setOrder(order) {
   if (order == null) order = 'all';
 
-  switch(order) {
+  //Colocamos el texto
+  switch (order) {
     case 'high-price':
       ORDER_OPTION_TEXT.innerText = "Mayor precio"
       break;
@@ -336,11 +346,12 @@ function setOrder(order) {
       ORDER_OPTION_TEXT.innerText = "Menor precio"
       break;
     default:
-        ORDER_OPTION_TEXT.innerText = "Todos";      
+      ORDER_OPTION_TEXT.innerText = "Todos";
       break;
   }
-
-  updateURL(2, order);
+  
+  updateURL(2, order);//Actualizamos en la URL
+  //Lo seleccionamos en el panel
   const orderElement = document.getElementById(`order-${order}`);
   if (orderElement) {
     orderElement.checked = true;
@@ -407,7 +418,7 @@ CLOSE_MODAL_BUTTON.addEventListener('click', () => {
 });
 
 //Función para ordenar productos
-function orderProducts(products,order = "all") {
+function orderProducts(products, order = "all") {
   //Ordenamos los productos si lo desea 
   return products.sort((a, b) => {
     if (order === 'low-price') {
@@ -419,7 +430,7 @@ function orderProducts(products,order = "all") {
   });
 }
 
-function filterProducts(products,filters = null) {
+function filterProducts(products, filters = null) {
   const topic = URL_PARAMS.get('topic');
   const searchParam = URL_PARAMS.get('search');
   return products
@@ -446,7 +457,7 @@ function renderProducts(products, filter = null, order = "all") {
   let template = '';
 
   products = filterProducts(products, filter);
-  products = orderProducts(products, order);  
+  products = orderProducts(products, order);
 
   for (const product of products) {
     template += `
@@ -475,6 +486,7 @@ function renderProducts(products, filter = null, order = "all") {
   redirectToDetailsEvent();
 }
 
+//Función que carga todos los productos SIMULA EL FETCH
 async function loadProducts(filters = null, order = "all") {
   firstRender = true;
   try {
@@ -548,7 +560,7 @@ function redirectToDetailsEvent() {
     });
   })
 }
-
+//Función debounceSearch
 const debounceSearch = debounce((event) => {
   const value = event.target.value.trim().toLocaleLowerCase();
 
