@@ -1,4 +1,4 @@
-import { PRODUCT_CATEGORIES } from "../utils/globalVariables";
+import { PRODUCT_CATEGORIES, TOPICS } from "../utils/globalVariables.js";
 
 export const STAR_WARS = [
   {
@@ -8,6 +8,7 @@ export const STAR_WARS = [
     description:
       "The Mandalorian & Grogu - Figura de 12 pulgadas es un producto de Star Wars que captura la emocionante relación entre el cazarrecompensas Mandaloriano y el adorable Grogu. Esta figura de acción de alta calidad está hecha con atención a los detalles y es perfecta para los fanáticos de Star Wars. ¡Agrega esta figura a tu colección y revive las emocionantes aventuras de The Mandalorian!",
     category: PRODUCT_CATEGORIES.FIGURAS,
+    topic: TOPICS.STAR_WARS,
     price: 29.99,
     imgs: [
       "https://m.media-amazon.com/images/I/51R7i854mBL._AC_SL1278_.jpg",
@@ -48,6 +49,14 @@ export const STAR_WARS = [
     description:
       "Figura coleccionable a escala 1/6 de Anakin Skywalker, basada en la serie de animación de The Clone Wars. Incluye una escultura de cabeza detallada, traje confeccionado, protectores de armadura, sable de luz LED, manos intercambiables, detonador térmico, proyector de hologramas y figuras holográficas de Ahsoka Tano, Yoda y Obi-Wan Kenobi",
     category: PRODUCT_CATEGORIES.FIGURAS,
+    topic: TOPICS.STAR_WARS,
+    imgs: [
+      "https://m.media-amazon.com/images/I/61tHUUes8wL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+      "https://m.media-amazon.com/images/I/51bMq9ZnWgL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/617jdCr8ONL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/51xdJhxsAnL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/51X8R0IzJnL._AC_SX679_.jpg"
+    ],
     price: 265.0,
     quantitySell: 4,
     comments: [
@@ -82,12 +91,14 @@ export const STAR_WARS = [
     description:
       "Colección de libros de la serie Thrawn Ascendancy de Timothy Zahn, que sigue las aventuras del Gran Almirante Thrawn en el universo de Star Wars. Esta colección incluye los tres primeros libros de la serie, en edición pasta blanda, ofreciendo una visión profunda en la historia y el desarrollo del personaje más fascinante de la saga.",
     category: PRODUCT_CATEGORIES.LIBROS,
+    topic: TOPICS.STAR_WARS,
     price: 33.99,
     imgs: [
       "https://m.media-amazon.com/images/I/51UD9BxE8aL._SL1000_.jpg",
       "https://m.media-amazon.com/images/I/51r-x8RsWSL._SL1500_.jpg",
       "https://m.media-amazon.com/images/I/61UtozUwzXL._SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/61UtozUwzXL._SL1500_.jpg"
+      "https://m.media-amazon.com/images/I/61UtozUwzXL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51UD9BxE8aL.jpg"
     ],
     quantitySell: 15,
     comments: [
@@ -124,6 +135,7 @@ export const STAR_WARS = [
     description:
       "Réplica de sable de luz de Darth Vader de alta calidad, con efectos de sonido y luz realistas. Incluye un mango detallado y una empuñadura ergonómica para una experiencia de cosplay auténtica. Ideal para exhibir o para cosplay, esta réplica es un must-have para cualquier fan de Star Wars.",
     category: PRODUCT_CATEGORIES.ACCESORIOS,
+    topic: TOPICS.STAR_WARS,
     price: 279.99,
     imgs: [
       "https://m.media-amazon.com/images/I/61S07-XucbL._AC_SL1500_.jpg",
@@ -164,8 +176,9 @@ export const STAR_WARS = [
     description:
       "Star Wars: Darth Maul - Son of Dathomir es un emocionante cómic que sigue la historia del infame Lord Sith, Darth Maul. Después de ser traicionado por su antiguo maestro, Darth Sidious, Maul debe luchar por su supervivencia y vengarse. Este cómic revela los oscuros secretos de su pasado y su lucha por el poder en el inframundo criminal de la galaxia. Con impresionantes ilustraciones y una narrativa cautivadora, este cómic es imprescindible para los fans de Star Wars y de Darth Maul.",
     category: PRODUCT_CATEGORIES.COMIC,
+    topic: TOPICS.STAR_WARS,
     price: 15.99,
-    imgs: ["https://m.media-amazon.com/images/I/81YKvOca5bL._SL1500_.jpg"],
+    imgs: ["https://m.media-amazon.com/images/I/81YKvOca5bL._SL1500_.jpg", "https://static.wikia.nocookie.net/starwars/images/2/2b/Darth_Maul_Son_of_Dathomir_1.png/revision/latest?cb=20140811005253", "https://static.wikia.nocookie.net/starwars/images/6/6f/Darth_Maul_Son_of_Dathomir_4.png/revision/latest?cb=20140808205709", "https://static.wikia.nocookie.net/starwars/images/3/37/Darth_Maul_Son_of_Dathomir_3.png/revision/latest?cb=20140716171318", "https://static.wikia.nocookie.net/starwars/images/2/2a/Darth_Maul_Son_of_Dathomir_2.png/revision/latest?cb=20140811131101"],
     quantitySell: 12,
     comments: [
       {
@@ -199,12 +212,14 @@ export const STAR_WARS = [
     description:
       "Figura coleccionable de Luke Skywalker con Yoda de la serie Funko Pop!, perfecta para decorar o añadir a tu colección.",
     category: PRODUCT_CATEGORIES.FIGURAS,
+    topic: TOPICS.STAR_WARS,
     price: 11.99,
     imgs: [
       "https://m.media-amazon.com/images/I/710QFOna3nL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71FfUKlqMrS._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71FfUKlqMrS._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/51RiV03zgxL._AC_SL1100_.jpg"
+      "https://m.media-amazon.com/images/I/51RiV03zgxL._AC_SL1100_.jpg",
+      "https://resources.claroshop.com/medios-plazavip/s2/18440/2899795/60feae7590c97-70fd1966-5650-4852-9571-dcf95b691611-200x200.jpg"
     ],
     quantitySell: 30,
     comments: [
@@ -239,6 +254,7 @@ export const STAR_WARS = [
     description:
       "Este casco electrónico premium de Boba Fett de la serie Black es una réplica detallada y realista del icónico casco del famoso cazarrecompensas de Star Wars. Con acabados premium, efectos de desgaste y un visor ajustable, este casco es perfecto para los coleccionistas y fanáticos del rol. Además, cuenta con efectos de sonido electrónicos que recrean los sonidos auténticos del personaje en las películas.",
     category: PRODUCT_CATEGORIES.ACCESORIOS,
+    topic: TOPICS.STAR_WARS,
     price: 99.99,
     imgs: [
       "https://cdn.media.amplience.net/i/hasbropulse/E75435L00_SW_B_Helmet_6b_e05103a6-50d4-4919-8eb6-e6bd4c8008bc_pos01?w=1004&fmt=auto",
@@ -281,12 +297,14 @@ export const STAR_WARS = [
     description:
       "Esta figura de acción de Ahsoka Tano de 3.75 pulgadas (9.5 cm) está inspirada en la esperada serie de acción en vivo Star Wars: Ahsoka en Disney+. La figura cuenta con 2 accesorios de sables de luz, diseño premium y articulación completa, ideal para jugar o exhibir. El empaque está inspirado en los coleccionables originales de Star Wars de los años 70 y 80 con la marca y diseño de Kenner.",
     category: PRODUCT_CATEGORIES.FIGURAS,
+    topic: TOPICS.STAR_WARS,
     price: 16.99,
     imgs: [
       "https://cdn.media.amplience.net/i/hasbropulse/F7347_PROD_SW_VIN_DUBOIS_0005_pos02?w=1004&fmt=auto",
       "https://cdn.media.amplience.net/i/hasbropulse/F7347_PROD_SW_VIN_DUBOIS_0002_pos03?w=1004&fmt=auto",
       "https://cdn.media.amplience.net/i/hasbropulse/F7347_PROD_SW_VIN_DUBOIS_0006_pos04?w=1004&fmt=auto",
-      "https://cdn.media.amplience.net/i/hasbropulse/F7347_PROD_SW_VIN_DUBOIS_0007_pos05?w=1004&fmt=auto"
+      "https://cdn.media.amplience.net/i/hasbropulse/F7347_PROD_SW_VIN_DUBOIS_0007_pos05?w=1004&fmt=auto",
+      "https://m.media-amazon.com/images/I/61ZKRz+954L._AC_SX679_.jpg"
     ],
     quantitySell: 8,
     comments: [
@@ -321,6 +339,7 @@ export const STAR_WARS = [
     description:
       "Libro de arte que explora el proceso de creación visual de las películas de Star Wars. Este volumen abarca los años 1977-1983 y ofrece una mirada detallada a la creación de la trilogía original. Incluye entrevistas exclusivas, fotos detrás de cámaras, y arte conceptual nunca antes visto. Es una edición especial del 40 aniversario que celebra el legado de Star Wars con una presentación de lujo.",
     category: PRODUCT_CATEGORIES.LIBROS,
+    topic: TOPICS.STAR_WARS,
     price: 39.99,
     imgs: [
       "https://m.media-amazon.com/images/I/817vatsz0RL._SL1500_.jpg",
@@ -363,6 +382,7 @@ export const STAR_WARS = [
     description:
       "Perfectos para los fans de Star Wars que quieren añadir un toque galáctico a su cocina. Estos molinos son fáciles de usar y vienen con luces LED que se encienden cuando se muelen las especias.",
     category: PRODUCT_CATEGORIES.ACCESORIOS,
+    topic: TOPICS.STAR_WARS,
     price: 39.99,
     imgs: [
       "https://m.media-amazon.com/images/I/61feH7vgfqL._AC_SL1001_.jpg",
