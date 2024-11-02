@@ -1,7 +1,9 @@
+import { recalculateCart } from "../components/navbar.js";
+
 /*Función para setear los productos en el localStorage solo se ha de llamar
 una vez en caso de no haberse seteado antes.*/
-export default function setDB() {
-  // localStorage.setItem('products', JSON.stringify());  
+export default function setDB(products) {
+  localStorage.setItem('products', JSON.stringify(products));  
 }
 
 export function setCarrito() {
@@ -34,7 +36,7 @@ export function getProducts() {
 
 /**
  * 
- * @param {number} id del producto a buscar
+ * @param {string} id del producto a buscar
  * @returns {products} El producto que coincida con el id pasado por parámetro, con estas propiedades:
  *   - id: string
  *   - name: string
@@ -232,26 +234,34 @@ export function addProductComment(idProduct, comment) {
  *   - total: int El total de la compra
  */
 export function getCarrito() {
-  const carrito = JSON.parse(localStorage.getItem('carrito'));
-
-  const productsInDB = getProducts();
-
-  const productsInCart = carrito.cart.map(productInCart => {
-    const productFinded = productsInDB.find(product => product.id == productInCart.id);
+  try {
+    const carrito = JSON.parse(localStorage.getItem('carrito'));
+  
+    if(carrito == null) return null;
+  
+    const productsInDB = getProducts();
+    const productsInCart = carrito.cart.map(productInCart => {
+      const productFinded = productsInDB.find(product => product.id == productInCart.id);
+      return {
+        id: productFinded.id,
+        productName: productFinded.name,
+        productPrice: productFinded.price,
+        productImage: productFinded.imgs[0],
+        quantity: productInCart.quantity,
+        subTotal: productInCart.subTotal
+      }
+    });
+  
     return {
-      id: productFinded.id,
-      productName: productFinded.name,
-      productPrice: productFinded.price,
-      productImage: productFinded.imgs[0],
-      quantity: productInCart.quantity,
-      subTotal: productInCart.subTotal
+      cart: productsInCart,
+      total: carrito.total
+    };
+  } catch (error) {
+    return{
+      cart: [],
+      total: 0
     }
-  });
-
-  return {
-    cart: productsInCart,
-    total: carrito.total
-  };
+  }
 }
 
 /**
@@ -320,6 +330,8 @@ export function modifyCarrito(idProduct, cantidad, set = false) {
 
   localStorage.setItem('products', JSON.stringify(products));
   localStorage.setItem('carrito', JSON.stringify(carrito));
+  //Recalculamos la cantidad en el carrito del navbar
+  recalculateCart();
 }
 
 /**
@@ -354,6 +366,8 @@ export function addProductInCart(idProduct, cantidad) {
 
   localStorage.setItem('products', JSON.stringify(products));
   localStorage.setItem('carrito', JSON.stringify(carrito));
+  //Recalculamos la cantidad en el carrito del navbar
+  recalculateCart();
 }
 
 /**
@@ -380,6 +394,8 @@ export function deleteProductInCart(idProduct) {
   carrito.cart = carrito.cart.filter(product => product.id != idProduct);
   localStorage.setItem('products', JSON.stringify(products));
   localStorage.setItem('carrito', JSON.stringify(carrito));
+  //Recalculamos la cantidad en el carrito del navbar
+  recalculateCart();
 }
 
 export function emptyCart() {
@@ -387,4 +403,7 @@ export function emptyCart() {
   carrito.cart = [];
   carrito.total = 0;
   localStorage.setItem('carrito', JSON.stringify(carrito));
+
+  //Recalculamos la cantidad en el carrito del navbar
+  recalculateCart();
 }

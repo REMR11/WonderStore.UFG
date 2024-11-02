@@ -1,4 +1,24 @@
 import { SCRIPTS, LINKS_EXTERNAL } from "../utils/globalVariables.js";
+//Función autoejecutable para guardar los productos y el carrito en el localStorage
+export async function initializeApp(){
+  //Verificamos si los productos ya estan almacenados
+  if(!localStorage.getItem('products')){
+    const {default: setDB} = await import("../api/api.js");
+    const {PRODUCTS} = await import("../api/bd.js");
+
+    setDB([...PRODUCTS])
+  }
+
+  //Verificamos si los productos ya estan almacenados
+  if(!localStorage.getItem('carrito')){
+    const {setCarrito} = await import("../api/api.js");
+    setCarrito();
+  }
+}
+
+(()=>{
+  initializeApp();
+})()
 
 document.addEventListener("DOMContentLoaded", async () => {
   await loadLink();
@@ -61,4 +81,3 @@ function toggleMenu() {
     })
   }
 }
-
