@@ -1,0 +1,84 @@
+.main-content-info {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.9fr 1.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "infoproducto infoproducto infoproducto"
+        "buttons buttons buttons"
+        "description description description";
+    grid-area: info;
+
+    .main-content-info-section {
+        width: 100%;
+
+        .main-content-info-section-infoproduct {
+            grid-area: infoproducto;
+        }
+
+        .body-card-text {
+            border: solid 2px var(--primary-border-color);
+            background-color: var(--br-color);
+            border-radius: 10px;
+            padding: 15px;
+            width: 100%;
+        }
+
+        .main-content-info-section-buttons {
+            grid-area: buttons;
+
+            .bg-primary-button {
+                background-color: var(--primary-color);
+                color: var(--text-color-revert);
+            }
+
+            .bg-secondary-button {
+                background-color: var(--secondary-color);
+                color: var(--text-color);
+            }
+
+            .main-content-info-section-button {
+                align-items: center;
+                border-radius: 10px;
+                height: 3.5rem;
+                justify-content: flex-end;
+                margin-top: 10px;
+                padding: 20px;
+                width: 100%;
+            }
+
+            .main-content-info-section-buttons-actions {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                .main-content-info-section-input {
+                    border: solid 2px var(--primary-border-color);
+                    border-radius: 10px;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    margin-top: 10px;
+                    padding: 0;
+                    text-align: center;
+                }
+
+                .main-content-info-section-button {
+                    align-items: center;
+                    background-color: var(--primary-border-color);
+                    border-radius: 10px;
+                    display: flex;
+                    height: 2.5rem;
+                    justify-content: center;
+                    margin-top: 10px;
+                    padding: 0;
+                    width: 2.5rem;
+                }
+
+            }
+        }
+
+        .main-content-info-section-description {
+            margin-top: 10px;
+            grid-area: description;
+        }
+    }
+}
