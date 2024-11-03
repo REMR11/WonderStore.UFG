@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
+:root {
+    --bg-color: #F2F5F7;
+    --primary-color: #0E0F10;
+    --secondary-color: #FADE3C;
+    --bg-skeleton-color: #D9D9D9;
+    --primary-border-color: #878787;
+    --secondary-border-color: #000000;
+    --text-color: #000000;
+    --text-color-revert: #F2F5F7;
+    --text-accent-color: #868686;
+}
+
+
+body{
+    height: 100dvh !important;
+  }
+  
+  .banner-container {
+    width: 100%;
+    overflow: hidden;
+    height: 250px;
+    border-radius: 0 !important;
+    position: relative;
+    perspective: 1px;
+  }
+  
+  .banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+  }
+  
+  .banner-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2.2);
+    filter: brightness(0.45) !important;
+  }
+  
+  .banner-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner-content img {
+    max-width: 100%;
+    height: 53px;
+    z-index: 2;
+  }
+  
+  /* Estilos para animación de carga */
+.on-load-img-fn-loaded {
+  animation: none !important;
+  background-image: none !important;
+}
+
+.mi-carrito-container {
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.mi-carrito {
+  color: #000000;
+  text-align: center;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 54px;
+  line-height: 48px;
+  font-weight: 700;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-text-stroke: 1px #000000;
+}
+
+/* Contenedor principal */
+.contenedor-principal,
+#cart-items-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    align-items: center;
+    gap: 20px; 
+    padding: 5px;
+    width: 100%;
+}
+
+
+
+/* Estilo del contenedor de producto */
+.producto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center; 
+}
+
+/* Estilo para la sección de cantidad */
+.cantidad-container {
+    display: flex;
+    justify-content: center; 
+}
+
+/* Estilo para la sección de total */
+.total-container {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center; 
+}
+
+
+.producto, .cantidad, .total {
+    color: var(--text-color);
+    font-family: "Poppins-Bold", sans-serif;
+    font-size: clamp(16px, 2vw, 12px);
+    line-height: 1.2; 
+    font-weight: 700;
+}
+
+/* Margen específico para cada tipo de texto */
+.producto {
+    margin-left: 100px; 
+}
+
+.cantidad {
+    margin-right: 15px; 
+}
+
+.total{
+    margin-right: 100px; 
+}
+/* Tarjetas de los productos */
+#cart-items-container {
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  gap: 10px; 
+  align-items: center; 
+}
+
+.producto-cart {
+  display: flex;
+  align-items: center; 
+  gap: 10px; 
+  margin-left: 20px; 
+  padding-left: clamp(10px, 5vw, 40px);
+}
+
+.cart-item-image {
+  max-width: 100px; 
+  height: auto; 
+  border-radius: 5px; 
+  object-fit: cover; 
+}
+
+.producto-name {
+ 
+  font-size: clamp(14px, 2vw, 16px); 
+  color: var(--text-color); 
+  font-family: "Poppins-Bold", sans-serif;
+  padding-left: clamp(10px, 5vw, 40px);
+  font-weight: 600; 
+}
+@media (max-width: 600px) {
+  .producto-cart {
+      flex-direction: column; 
+      align-items: center; 
+  }
+
+  .producto {
+      padding-left: 0; 
+      text-align: center; 
+  }
+}
+.quantity-cart {
+display: flex;
+align-items: center; 
+justify-content: center; 
+}
+.quantity-button {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.quantity-button:hover {
+  background-color: var(--bg-skeleton-color); 
+}
+
+
+.cart-item-quantity {
+  width: 50px;
+  height: 20px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 16px;
+  color: var(--primary-color);
+  background-color: var(--bg-skeleton-color); 
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.total-cart {
+display: flex;
+align-items: flex-end;
+justify-content: flex-end; 
+}
+
+
+@media (max-width: 768px) {
+ 
+  .contenedor-principal,
+  #cart-items-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cart-item {
+      grid-template-columns: 1fr 1fr; 
+  }
+
+  
+  .producto {
+      margin-left: 0;
+  }
+
+  .cantidad {
+      margin-right: 0;
+  }
+
+  .total {
+      margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  
+  .contenedor-principal,
+  #cart-items-container {
+      grid-template-columns: repeat(3, 1fr);;
+  }
+
+  .cart-item {
+      grid-template-columns: 1fr; 
+  }
+
+  .cantidad-container, .total-container {
+      justify-content: center;
+  }
+}
+
+
+/* Línea divisoria */
+.line-1, .line-2 {
+  margin-top: 1px;
+  border-style: solid;
+  border-color: var(--yellow, #fade3c);
+  border-width: 5px 0 0 0;
+  width: 90%; 
+  height: 0;
+  position: relative;
+  left: 5%; 
+  display: flex;
+  flex-direction: column;
+}
+
+.subtotal-container {
+  display: flex;
+  justify-content: flex-end; 
+  gap: 10px; 
+  width: 90%; 
+  margin: 20px auto 0 auto; 
+  font-size: clamp(14px, 2vw, 16px); 
+  color: var(--text-color);
+  font-family: "Poppins-Bold", sans-serif;
+  padding-right: 10px; 
+}
+
+#subtotal-amount {
+  font-weight: bold;
+  color: var(--primary-color); 
+}
+
+/* Contenedor de los botones */
+.button-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  width: 90%;
+  margin: 20px auto 0 auto; 
+  gap: 10px;
+  flex-wrap: wrap; 
+}
+
+/* Estilo de los botones */
+.vaciar-carrito-button, .pago-button {
+  padding: 12px 24px;
+  font-size: clamp(16px, 1vw, 20px); 
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  min-width: 120px;
+  max-width: 200px;
+}
+
+.vaciar-carrito-button {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.pago-button {
+  background-color: var(--primary-color);
+  color: var(--text-color-revert);
+}
+
+.vaciar-carrito-button:hover, .pago-button:hover {
+  transform: scale(1.05);
+}
+/* Sección de recomendaciones */
+.cart__suggestions {
+  width: 100%;
+  text-align: center; 
+  margin-top: 30px;
+}
+
+/* Estilo del título h2 */
+.cart__suggestions h2 {
+  font-size: clamp(18px, 2.5vw, 24px); 
+  color: var(--primary-color);
+  font-family: "Poppins-Bold", sans-serif;
+  margin-bottom: 20px;
+}
