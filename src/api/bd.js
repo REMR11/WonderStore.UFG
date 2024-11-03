@@ -368,7 +368,7 @@ const Marvel = [
     topic: TOPICS.MARVEL,
     price: 90.00,
     imgs: [
-      "https://cdn.marvel.com/u/prod/marvel/i/mg/f/80/66a7f5 db1bc6f/clean.jpg",
+      "https://i.pinimg.com/564x/8c/2a/af/8c2aaf56e48af0d6142c9188bb2d5245.jpg",
       "https://cdn.marvel.com/u/prod/marvel/i/mg/2/30/66e1cebbdfc43/clean.jpg",
       "https://cdn.marvel.com/u/prod/marvel/i/mg/c/90/66e1cebb8926a/clean.jpg",
       "https://sm.ign.com/ign_es/photo/m/marvel-con/marvel-confirms-the-end-of-the-x-mens-krakoan-era-in-2024-ne_u6ze.jpg",

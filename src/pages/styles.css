@@ -329,6 +329,46 @@ body {
   left: 30%;
 }
 
+/*Estilos para los sweet alert*/
+/*Botón de success*/
+div:where(.swal2-icon).swal2-success.custom-sweetAlert-icon [class^=swal2-success-line]{
+  background-color: var(--secondary-color) !important;
+  z-index: 10;
+}
+
+.swal2-success.custom-sweetAlert-icon{
+  .swal2-success-ring{
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+}
+
+/*Botón de error*/
+div:where(.swal2-icon).swal2-error.custom-sweetAlert-icon [class^=swal2-x-mark-line]{
+  background-color: var(--secondary-color);
+}
+
+div:where(.swal2-icon).swal2-error.custom-sweetAlert-icon{
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background-color: var(--text-color);
+}
+
+/*Botón de warning e info*/
+div:where(.swal2-icon).custom-sweetAlert-icon{
+  border-color: var(--text-color) !important;
+  background-color: var(--primary-color);
+
+  .swal2-icon-content{
+    color: var(--secondary-color);
+  }
+}
+
+/*POP UP*/
+.custom-sweetAlert-popup{
+  border: 7px solid var(--primary-color);
+  max-width: 400px;
+}
 /*General Skeleton*/
 @keyframes loading-skeleton {
 
@@ -350,9 +390,25 @@ body {
   border-radius: 10px;
 }
 
+.general-skeleton-text{
+  padding: 10px;
+  width: 100%;
+  margin: 10px 0;
+}
+
 /*Método para evitar el scroll cuando el navbar esta activo*/
 .body-no-scroll {
   overflow-y: hidden;
+}
+
+/*Estilos para los botones en general*/
+.general-btn{
+  background-color: var(--primary-color);
+  color: var(--text-color-revert);
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 13px;
+  cursor: pointer;
 }
 
 @media (width >=1024px) {

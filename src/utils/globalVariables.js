@@ -22,7 +22,8 @@ export const CATEGORIES = Object.freeze([
     name: TOPICS.MARVEL,
     productTypes: [PRODUCT_CATEGORIES.ACCESORIOS, PRODUCT_CATEGORIES.COMIC, PRODUCT_CATEGORIES.MANGA, PRODUCT_CATEGORIES.FIGURAS],
     bannerBackgroundName: 'marvel-banner.webp',
-    bannerTextName: 'marvel-text.svg'
+    bannerTextName: 'marvel-text.svg',
+    customStyleClassName: 'marvel'
   }),
   Object.freeze({
     name: TOPICS.STAR_WARS,
