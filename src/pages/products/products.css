@@ -140,6 +140,12 @@ main {
   }
 }
 
+.filter-order-button:hover::after{
+  width: 180px;
+}
+.order-option:hover::after{
+  width: calc(100% + 10px);
+}
 
 #order-option {
   font-weight: bold;

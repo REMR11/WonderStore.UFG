@@ -1152,3 +1152,19 @@ footer {
   }
 
 }
+
+/*Mobile*/
+@media (width <=767px) {
+  .why-to-buy-card {
+    width: calc(100dvw - 30px);
+  }
+
+  .fav-products-title, .fav-products-caption{
+    width: calc(100dvw - 40px);
+    word-wrap: break-word;
+  }
+
+  .appear-favs-content{
+    width: calc(100dvw - 40px);
+  }
+}
