@@ -2,7 +2,7 @@ import { getCarrito } from "../api/api.js";
 import { BASE_URL } from "../utils/globalVariables.js";
 import ROUTES from "../utils/routes.js";
 
-function getListItem(linkArray, isExpandedItem = false) {
+export function getListItem(linkArray, isExpandedItem = false) {
   let links = "";
 
   for (const link of linkArray) {

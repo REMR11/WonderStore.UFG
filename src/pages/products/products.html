@@ -1,190 +1,282 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
+    <link rel="icon" href="../assets/icons/page-icon.svg" type="img/svg" />
 
-  <link rel="icon" href="../assets/icons/page-icon.svg" type="img/svg">
+    <meta
+      name="description"
+      content="Wonder Store - Tienda en linea hecha por fans para fans. ¡Deja que te sorprenda!"
+    />
 
-  <meta name="description" content="Wonder Store - Tienda en linea hecha por fans para fans. ¡Deja que te sorprenda!">
+    <meta
+      property="og:title"
+      content="Wonder Store - Tienda en linea hecha por fans para fans. ¡Deja que te sorprenda!"
+    />
 
-  <meta property="og:title" content="Wonder Store - Tienda en linea hecha por fans para fans. ¡Deja que te sorprenda!">
+    <meta property="og:image" content="../assets/icons/page-icon.svg" />
 
-  <meta property="og:image" content="../assets/icons/page-icon.svg">
+    <meta property="og:image:alt" content="Icono de la tienda" />
 
-  <meta property="og:image:alt" content="Icono de la tienda">
+    <title>WonderStore - Products</title>
+    <link rel="stylesheet" href="products.css" />
+    <link
+      rel="stylesheet"
+      href="../../lib/paralax-vanilla-erikengervall/paralax.css"
+    />
+    <script type="module" src="../general.js"></script>
+  </head>
 
-  <title>WonderStore - Products</title>
-  <link rel="stylesheet" href="products.css">
-  <link rel="stylesheet" href="../../lib/paralax-vanilla-erikengervall/paralax.css">
-  <script type="module" src="../general.js"></script>
-</head>
+  <body>
+    <main>
+      <header>
+        <section class="banner-container general-skeleton">
+          <div class="banner-bg on-load-img-fn">
+            <img id="banner-category" alt="Banner Background" />
+          </div>
 
-<body>
-  <main>
-    <header>
-      <section class="banner-container general-skeleton">
-        <div class="banner-bg on-load-img-fn">
-          <img id="banner-category" alt="Banner Background">
-        </div>
+          <div class="banner-content on-load-img-fn">
+            <img alt="Banner title" id="banner-text-category" />
+          </div>
+        </section>
 
-        <div class="banner-content on-load-img-fn">
-          <img alt="Banner title" id="banner-text-category">
-        </div>
-      </section>
-
-      <!-- <section class="paralax-oscar bg-po">
+        <!-- <section class="paralax-oscar bg-po">
         <img src="../../assets/banners/anime-text.svg" alt="">
       </section> -->
 
-      <div class="main-content-products-J">
-        <section class="filters-orders">
+        <div class="main-content-products-J">
+          <section class="filters-orders">
+            <input type="checkbox" class="checked-filter" id="filter-checked" />
+            <label
+              popovertarget="filter-options-panel"
+              for="filter-checked"
+              class="filter-order-button filter-option-btn"
+            >
+              <span class="material-symbols-outlined filter-order-icon">
+                filter_alt
+              </span>
+              <span class="filter-order-text">Filtrar</span>
+              <div id="filter-options-panel" class="filter-options-panel">
+                <ul id="filter-options-list"></ul>
+              </div>
+            </label>
 
-          <input type="checkbox" class="checked-filter" id="filter-checked">
-          <label popovertarget="filter-options-panel" for="filter-checked"
-            class="filter-order-button filter-option-btn">
-            <span class="material-symbols-outlined filter-order-icon">
-              filter_alt
-            </span>
-            <span class="filter-order-text">Filtrar</span>
-            <div id="filter-options-panel" class="filter-options-panel">
-              <ul id="filter-options-list">
-
-              </ul>
-            </div>
-          </label>
-
-          <input type="checkbox" class="checked-order" id="order-checked">
-          <label for="order-checked" class="filter-order-button order-option">
-            <span class="material-symbols-outlined filter-order-icon">
-              filter_list
-            </span>
-            <span class="filter-order-text">Ordernar por:</span>
-            <span id="order-option">Todos</span>
-            <div id="order-options-panel">
-              <ul>
-                <li>
-                  <input type="radio" id="order-all" class="order-option" name="order-option" value="all" checked>
-                  <label for="order-all">Todos</label>
-                </li>
-                <li>
-                  <input type="radio" id="order-high-price" class="order-option" name="order-option" value="high-price">
-                  <label for="order-high-price">Mayor precio</label>
-                </li>
-                <li>
-                  <input type="radio" id="order-low-price" name="order-option" class="order-option" value="low-price">
-                  <label for="order-low-price">Menor precio</label>
-                </li>
-              </ul>
-            </div>
-          </label>
-        </section>
-        <form class="search-section" id="search-form">
-          <input type="search" name="search" id="search-product-input">
-          <button title="Buscar Producto" class="general-btn material-symbols-outlined">search</button>
-        </form>
-      </div>
-    </header>
-
-    <div class="main-content-products-J">
-      <section id="filters-active">
-
-      </section>
-
-      <div id="product-notFound">
-        <h1>¡Lo sentimos no hay en inventario 😪, REGRESA PRONTO!</h1>
-      </div>
-      <section id="products-container">
-        <article class="product-card product-skeleton">
-          <div class="product-img-container general-skeleton"></div>
-          <div class="product-info">
-            <h3 class="product-info-title general-skeleton general-skeleton-text"></h3>
-            <p class="product-info-category general-skeleton general-skeleton-text"></p>
-            <span class="product-info-price general-skeleton general-skeleton-text"></span>
-            <button class="general-btn product-add-cart-btn general-skeleton"></button>
-          </div>
-        </article>
-        <article class="product-card product-skeleton">
-          <div class="product-img-container general-skeleton"></div>
-          <div class="product-info">
-            <h3 class="product-info-title general-skeleton general-skeleton-text"></h3>
-            <p class="product-info-category general-skeleton general-skeleton-text"></p>
-            <span class="product-info-price general-skeleton general-skeleton-text"></span>
-            <button class="general-btn product-add-cart-btn general-skeleton"></button>
-          </div>
-        </article>
-        <article class="product-card product-skeleton">
-          <div class="product-img-container general-skeleton"></div>
-          <div class="product-info">
-            <h3 class="product-info-title general-skeleton general-skeleton-text"></h3>
-            <p class="product-info-category general-skeleton general-skeleton-text"></p>
-            <span class="product-info-price general-skeleton general-skeleton-text"></span>
-            <button class="general-btn product-add-cart-btn general-skeleton"></button>
-          </div>
-        </article>
-        <article class="product-card product-skeleton">
-          <div class="product-img-container general-skeleton"></div>
-          <div class="product-info">
-            <h3 class="product-info-title general-skeleton general-skeleton-text"></h3>
-            <p class="product-info-category general-skeleton general-skeleton-text"></p>
-            <span class="product-info-price general-skeleton general-skeleton-text"></span>
-            <button class="general-btn product-add-cart-btn general-skeleton"></button>
-          </div>
-        </article>
-        <article class="product-card product-skeleton">
-          <div class="product-img-container general-skeleton"></div>
-          <div class="product-info">
-            <h3 class="product-info-title general-skeleton general-skeleton-text"></h3>
-            <p class="product-info-category general-skeleton general-skeleton-text"></p>
-            <span class="product-info-price general-skeleton general-skeleton-text"></span>
-            <button class="general-btn product-add-cart-btn general-skeleton"></button>
-          </div>
-        </article>
-        <article class="product-card product-skeleton">
-          <div class="product-img-container general-skeleton"></div>
-          <div class="product-info">
-            <h3 class="product-info-title general-skeleton general-skeleton-text"></h3>
-            <p class="product-info-category general-skeleton general-skeleton-text"></p>
-            <span class="product-info-price general-skeleton general-skeleton-text"></span>
-            <button class="general-btn product-add-cart-btn general-skeleton"></button>
-          </div>
-        </article>
-      </section>
-    </div>
-  </main>
-  <dialog id="addCartModal">
-    <header>
-      <h1>Agregar al carrito</h1>
-      <button title="Cerrar modal" id="close-modal">X</button>
-    </header>
-    <section class="product-section">
-      <div class="product-img-container on-load-img-fn general-skeleton">
-        <img id="modal-product-img" class="product-img"
-          src="https://m.media-amazon.com/images/I/61vFg+YuXPL._AC_SX679_.jpg" alt="Imagen del producto a añadir">
-      </div>
-      <div class="product-details">
-        <h4 class="product-title">Nombre del producto</h4>
-        <div class="product-quantity-section">
-          <p>Cantidad:</p>
-          <div class="quantity-section">
-            <button title="Restar" class="quantity-btn" id="substract-quantity">-</button>
-            <input type="number" id="product-quantity" value="1" min="1" />
-            <button title="Agregar" class="quantity-btn" id="sum-quantity">+</button>
-          </div>
-          <footer class="confirm-add-product">
-            <p id="modal-product-price">$150</p>
-            <input type="text" id="id-modal-input">
-            <button class="general-btn" id="add-to-cart-button">Agregar al carrito</button>
-          </footer>
+            <input type="checkbox" class="checked-order" id="order-checked" />
+            <label for="order-checked" class="filter-order-button order-option">
+              <span class="material-symbols-outlined filter-order-icon">
+                filter_list
+              </span>
+              <span class="filter-order-text">Ordernar por:</span>
+              <span id="order-option">Todos</span>
+              <div id="order-options-panel">
+                <ul>
+                  <li>
+                    <input
+                      type="radio"
+                      id="order-all"
+                      class="order-option"
+                      name="order-option"
+                      value="all"
+                      checked
+                    />
+                    <label for="order-all">Todos</label>
+                  </li>
+                  <li>
+                    <input
+                      type="radio"
+                      id="order-high-price"
+                      class="order-option"
+                      name="order-option"
+                      value="high-price"
+                    />
+                    <label for="order-high-price">Mayor precio</label>
+                  </li>
+                  <li>
+                    <input
+                      type="radio"
+                      id="order-low-price"
+                      name="order-option"
+                      class="order-option"
+                      value="low-price"
+                    />
+                    <label for="order-low-price">Menor precio</label>
+                  </li>
+                </ul>
+              </div>
+            </label>
+          </section>
+          <form class="search-section" id="search-form">
+            <input type="search" name="search" id="search-product-input" />
+            <button
+              title="Buscar Producto"
+              class="general-btn material-symbols-outlined"
+            >
+              search
+            </button>
+          </form>
         </div>
-      </div>
-    </section>
-  </dialog>
-  <div class="overlay"></div>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script type="module" src="products.js"></script>
-</body>
+      </header>
 
+      <div class="main-content-products-J">
+        <section id="filters-active"></section>
+
+        <div id="product-notFound">
+          <h1>¡Lo sentimos no hay en inventario 😪, REGRESA PRONTO!</h1>
+        </div>
+        <section id="products-container">
+          <article class="product-card product-skeleton">
+            <div class="product-img-container general-skeleton"></div>
+            <div class="product-info">
+              <h3
+                class="product-info-title general-skeleton general-skeleton-text"
+              ></h3>
+              <p
+                class="product-info-category general-skeleton general-skeleton-text"
+              ></p>
+              <span
+                class="product-info-price general-skeleton general-skeleton-text"
+              ></span>
+              <button
+                class="general-btn product-add-cart-btn general-skeleton"
+              ></button>
+            </div>
+          </article>
+          <article class="product-card product-skeleton">
+            <div class="product-img-container general-skeleton"></div>
+            <div class="product-info">
+              <h3
+                class="product-info-title general-skeleton general-skeleton-text"
+              ></h3>
+              <p
+                class="product-info-category general-skeleton general-skeleton-text"
+              ></p>
+              <span
+                class="product-info-price general-skeleton general-skeleton-text"
+              ></span>
+              <button
+                class="general-btn product-add-cart-btn general-skeleton"
+              ></button>
+            </div>
+          </article>
+          <article class="product-card product-skeleton">
+            <div class="product-img-container general-skeleton"></div>
+            <div class="product-info">
+              <h3
+                class="product-info-title general-skeleton general-skeleton-text"
+              ></h3>
+              <p
+                class="product-info-category general-skeleton general-skeleton-text"
+              ></p>
+              <span
+                class="product-info-price general-skeleton general-skeleton-text"
+              ></span>
+              <button
+                class="general-btn product-add-cart-btn general-skeleton"
+              ></button>
+            </div>
+          </article>
+          <article class="product-card product-skeleton">
+            <div class="product-img-container general-skeleton"></div>
+            <div class="product-info">
+              <h3
+                class="product-info-title general-skeleton general-skeleton-text"
+              ></h3>
+              <p
+                class="product-info-category general-skeleton general-skeleton-text"
+              ></p>
+              <span
+                class="product-info-price general-skeleton general-skeleton-text"
+              ></span>
+              <button
+                class="general-btn product-add-cart-btn general-skeleton"
+              ></button>
+            </div>
+          </article>
+          <article class="product-card product-skeleton">
+            <div class="product-img-container general-skeleton"></div>
+            <div class="product-info">
+              <h3
+                class="product-info-title general-skeleton general-skeleton-text"
+              ></h3>
+              <p
+                class="product-info-category general-skeleton general-skeleton-text"
+              ></p>
+              <span
+                class="product-info-price general-skeleton general-skeleton-text"
+              ></span>
+              <button
+                class="general-btn product-add-cart-btn general-skeleton"
+              ></button>
+            </div>
+          </article>
+          <article class="product-card product-skeleton">
+            <div class="product-img-container general-skeleton"></div>
+            <div class="product-info">
+              <h3
+                class="product-info-title general-skeleton general-skeleton-text"
+              ></h3>
+              <p
+                class="product-info-category general-skeleton general-skeleton-text"
+              ></p>
+              <span
+                class="product-info-price general-skeleton general-skeleton-text"
+              ></span>
+              <button
+                class="general-btn product-add-cart-btn general-skeleton"
+              ></button>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+    <dialog id="addCartModal">
+      <header>
+        <h1>Agregar al carrito</h1>
+        <button title="Cerrar modal" id="close-modal">X</button>
+      </header>
+      <section class="product-section">
+        <div class="product-img-container on-load-img-fn general-skeleton">
+          <img
+            id="modal-product-img"
+            class="product-img"
+            src="https://m.media-amazon.com/images/I/61vFg+YuXPL._AC_SX679_.jpg"
+            alt="Imagen del producto a añadir"
+          />
+        </div>
+        <div class="product-details">
+          <h4 class="product-title">Nombre del producto</h4>
+          <div class="product-quantity-section">
+            <p>Cantidad:</p>
+            <div class="quantity-section">
+              <button
+                title="Restar"
+                class="quantity-btn"
+                id="substract-quantity"
+              >
+                -
+              </button>
+              <input type="number" id="product-quantity" value="1" min="1" />
+              <button title="Agregar" class="quantity-btn" id="sum-quantity">
+                +
+              </button>
+            </div>
+            <footer class="confirm-add-product">
+              <p id="modal-product-price">$150</p>
+              <input type="text" id="id-modal-input" />
+              <button class="general-btn" id="add-to-cart-button">
+                Agregar al carrito
+              </button>
+            </footer>
+          </div>
+        </div>
+      </section>
+    </dialog>
+    <div class="overlay"></div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../../utils/product-modal-utils.js"></script>
+    <script type="module" src="products.js"></script>
+  </body>
 </html>
