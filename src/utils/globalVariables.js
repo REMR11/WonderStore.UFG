@@ -103,11 +103,6 @@ export const SCRIPTS = Object.freeze([
     src: BASE_URL + "/components/totop.js",
     isModule: false,
     isPrincipal: true
-  }),
-  Object.freeze({
-    src: "../utils/product-modal-functions.js",
-    isModule: true,
-    isPrincipal: false
   })
 ]);
 

@@ -166,6 +166,8 @@ function getCategoryInfo(category) {
 function preparePage() {
   //Obtenemos la categoria actual e info en caso de existir
   const category = CURRENT_URL.searchParams.get("topic");
+  if(!category) window.location.replace("/404");
+  
   const categoryInfo = getCategoryInfo(category.toLowerCase());
 
   //Validamos que no exista

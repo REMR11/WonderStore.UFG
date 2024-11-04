@@ -11,12 +11,16 @@ import {
 //Evento que redirecciona a la página de detalles del producto
 export function redirectToDetailsEvent() {
   document.querySelectorAll(".product-card").forEach((productCard) => {
-    productCard.addEventListener("click", () => {
+    productCard.addEventListener("click", (event) => {
+      // Evita que el clic en el botón propague al `article`
+      if (event.target.closest('.product-add-cart-btn')) return;
+
       const idProduct = productCard.dataset.idProduct;
-      // window.location.href = `../details/?idProduct=${idProduct}`;
+      window.location.href = `../details/?idProduct=${idProduct}`;
     });
   });
 }
+
 
 export function ProductCard(product, isSwiper = false) {
   return `
