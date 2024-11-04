@@ -1,6 +1,7 @@
 import { PRODUCT_CATEGORIES, TOPICS } from "../utils/globalVariables.js";
 
-export const ANIME_PRODUCTS = [{
+export const ANIME_PRODUCTS = [
+  {
     id: crypto.randomUUID(),
     name: "Attack on Titan",
     quantity: 25,
