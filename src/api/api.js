@@ -3,21 +3,19 @@ import { recalculateCart } from "../components/navbar.js";
 /*Función para setear los productos en el localStorage solo se ha de llamar
 una vez en caso de no haberse seteado antes.*/
 export default function setDB(products) {
-  localStorage.setItem('products', JSON.stringify(products));  
+  localStorage.setItem("products", JSON.stringify(products));
 }
 
 export function setCarrito() {
   const carritoTemplate = {
-    cart: [
-
-    ],
+    cart: [],
     total: 0
-  }
-  localStorage.setItem('carrito', JSON.stringify(carritoTemplate));
+  };
+  localStorage.setItem("carrito", JSON.stringify(carritoTemplate));
 }
 
 /**
- * 
+ *
  * @returns {Array<products>} Arreglo de objetos de los productos del localStorage con estas propiedades
  *   - id: string
  *   - name: string
@@ -31,11 +29,11 @@ export function setCarrito() {
  *   - comments: Array<Object>
  */
 export function getProducts() {
-  return JSON.parse(localStorage.getItem('products'));
+  return JSON.parse(localStorage.getItem("products"));
 }
 
 /**
- * 
+ *
  * @param {string} id del producto a buscar
  * @returns {products} El producto que coincida con el id pasado por parámetro, con estas propiedades:
  *   - id: string
@@ -51,11 +49,11 @@ export function getProducts() {
  */
 export function getProductById(id) {
   const products = getProducts();
-  return products.find(product => product.id == id);
+  return products.find((product) => product.id == id);
 }
 
 /**
- * 
+ *
  * @param {Array<products>} products - Arreglo de objetos con las siguientes propiedades:
  *   - id: string
  *   - name: string
@@ -67,7 +65,7 @@ export function getProductById(id) {
  *   - imgs: string[]
  *   - quantitySell: number
  *   - comments: Array<Object>
- * @param {string} category Categoría por la cual se va filtrar 
+ * @param {string} category Categoría por la cual se va filtrar
  * @returns {products} Los productos que coincidan con la categoría pasada por parámetro con las siguientes propiedades:
  *   - id: string
  *   - name: string
@@ -81,7 +79,7 @@ export function getProductById(id) {
  *   - comments: Array<Object>
  */
 export function getProductsByCategory(products, category) {
-  return products.filter(product => product.category === category);
+  return products.filter((product) => product.category === category);
 }
 /**
  *
@@ -110,7 +108,9 @@ export function getProductsByCategory(products, category) {
  *   - comments: Array<Object>
  */
 export function getProductsBySearch(products, search) {
-  return products.filter(product => product.name.toLowerCase().includes(search.toLowerCase()));
+  return products.filter((product) =>
+    product.name.toLowerCase().includes(search.toLowerCase())
+  );
 }
 
 /**
@@ -140,7 +140,36 @@ export function getProductsBySearch(products, search) {
  *   - comments: Array<Object>
  */
 export function getProductsByTopic(products, topic) {
-  return products.filter(product => product.topic === topic);
+  return products.filter((product) => product.topic === topic);
+}
+
+/**
+ * Función que obtiene los productos con el promedio de calificación más alto
+ * @param {Array<products>} products Arreglo de productos a ordenar
+ * @returns {Array<products>} Arreglo de los primeros 7 productos con mayor promedio de calificación
+ */
+export function getMostRatedProducts(products) {
+  return products
+    .sort((a, b) => {
+      const { productRate: productRateA } = getProductRatings(a);
+      const { productRate: productRateB } = getProductRatings(b);
+      return productRateB - productRateA;
+    })
+    .slice(0, 7);
+}
+
+/**
+ * Función que obtiene las calificaciones de un producto y el promedio de calificación
+ * @param {Object} product Objeto que representa el producto
+ * @returns {Object} Objeto con las siguientes propiedades:
+ *   - ratings: Arreglo de números que representan las calificaciones del producto
+ *   - productRate: Número que representa el promedio de calificación del producto
+ */
+export function getProductRatings(product) {
+  const ratings = product.comments.map((comment) => comment.rate);
+  const productRate =
+    ratings.reduce((suma, rate) => suma + rate, 0) / ratings.length;
+  return { ratings, productRate };
 }
 
 /**
@@ -155,19 +184,16 @@ export function getProductsByTopic(products, topic) {
 
  */
 export function getProductDetail(id) {
-  const products = getProducts();//Obtenemos los productos
-  const product = products.find(product => product.id == id);//Buscamos el producto por el id
+  const products = getProducts(); //Obtenemos los productos
+  const product = products.find((product) => product.id == id); //Buscamos el producto por el id
 
   //Validamos que exista
   if (!product) {
     return null;
   }
 
-  //Obtenemos todas las calificaciones de los comentarios y las introducimos en un arreglo.
-  const ratings = product.comments.map(comment => comment.rate);//Devuelve un arreglo
-
-  //Obtenemos el promedio de calificación del producto (SU CALIFICACIÓN)
-  const productRate = ratings.reduce((suma, rate) => suma + rate, 0) / ratings.length;
+  // Se obtienen todas las calificaciones de un producto (en un arreglo) y el promedio de calificación
+  const { ratings, productRate } = getProductRatings(product);
 
   //Obteniendo los porcentajes
   /**
@@ -180,42 +206,50 @@ export function getProductDetail(id) {
    *  5: 6
    * }
    */
-  const ratingCounts = ratings.reduce((counts, rate) => {
-    counts[rate] = (counts[rate] ?? 0) + 1; //El ?? indica que si counts[rate] no existe entonces se ponga 0
-    return counts;
-  }, {
-    "0": 0,
-    "1": 0,
-    "2": 0,
-    "3": 0,
-    "4": 0,
-    "5": 0
-  });
+  const ratingCounts = ratings.reduce(
+    (counts, rate) => {
+      counts[rate] = (counts[rate] ?? 0) + 1; //El ?? indica que si counts[rate] no existe entonces se ponga 0
+      return counts;
+    },
+    {
+      0: 0,
+      1: 0,
+      2: 0,
+      3: 0,
+      4: 0,
+      5: 0
+    }
+  );
 
   //Obtenemos los porcentajes ejemplo:
   //{2: 14, 3: 43, 4: 29, 5: 14}
 
-  const ratingPercentages = Object.keys(ratingCounts).reduce((percentages, rate) => {
-    percentages[rate] = Math.round((ratingCounts[rate] / ratings.length) * 100);
-    return percentages;
-  }, {});
+  const ratingPercentages = Object.keys(ratingCounts).reduce(
+    (percentages, rate) => {
+      percentages[rate] = Math.round(
+        (ratingCounts[rate] / ratings.length) * 100
+      );
+      return percentages;
+    },
+    {}
+  );
 
   return {
     product,
     productRate,
     totalRatings: ratings.length,
     ratingPercentages
-  }
+  };
 }
 
 /**
- * 
+ *
  * @param {number} idProduct Representa el id del producto a modificar
  * @param {Object} comentario Representa el objeto que es el comentario a añadir
  */
 export function addProductComment(idProduct, comment) {
   const products = getProducts();
-  const product = products.find(product => product.id == idProduct);//Buscamos el producto por el id
+  const product = products.find((product) => product.id == idProduct); //Buscamos el producto por el id
 
   //Validamos que exista
   if (!product) {
@@ -224,7 +258,7 @@ export function addProductComment(idProduct, comment) {
 
   product.comments.push(comment);
 
-  localStorage.setItem('products', JSON.stringify(products));
+  localStorage.setItem("products", JSON.stringify(products));
 }
 
 /**
@@ -235,13 +269,15 @@ export function addProductComment(idProduct, comment) {
  */
 export function getCarrito() {
   try {
-    const carrito = JSON.parse(localStorage.getItem('carrito'));
-  
-    if(carrito == null) return null;
-  
+    const carrito = JSON.parse(localStorage.getItem("carrito"));
+
+    if (carrito == null) return null;
+
     const productsInDB = getProducts();
-    const productsInCart = carrito.cart.map(productInCart => {
-      const productFinded = productsInDB.find(product => product.id == productInCart.id);
+    const productsInCart = carrito.cart.map((productInCart) => {
+      const productFinded = productsInDB.find(
+        (product) => product.id == productInCart.id
+      );
       return {
         id: productFinded.id,
         productName: productFinded.name,
@@ -249,18 +285,18 @@ export function getCarrito() {
         productImage: productFinded.imgs[0],
         quantity: productInCart.quantity,
         subTotal: productInCart.subTotal
-      }
+      };
     });
-  
+
     return {
       cart: productsInCart,
       total: carrito.total
     };
   } catch (error) {
-    return{
+    return {
       cart: [],
       total: 0
-    }
+    };
   }
 }
 
@@ -276,12 +312,12 @@ export function getCarrito() {
 export function modifyCarrito(idProduct, cantidad, set = false) {
   const products = getProducts();
 
-  const productInDB = products.find(product => product.id == idProduct);
+  const productInDB = products.find((product) => product.id == idProduct);
 
   if (!productInDB) return null;
 
   const carrito = getCarrito();
-  const productInCart = carrito.cart.find(product => product.id == idProduct);
+  const productInCart = carrito.cart.find((product) => product.id == idProduct);
   const newSubTotal = cantidad * productInDB.price;
   let currentSubtotal = 0;
   let isNewProduct = false;
@@ -296,7 +332,7 @@ export function modifyCarrito(idProduct, cantidad, set = false) {
       //Si tiene 5 y se le pasa 1 ->  5 + 1 = 6
       productInCart.quantity = productInCart.quantity + cantidad;
 
-      productInCart.subTotal = currentSubtotal + newSubTotal;//Seteamos el nuevo subTotal
+      productInCart.subTotal = currentSubtotal + newSubTotal; //Seteamos el nuevo subTotal
     } else {
       //Se setean los nuevos valores
       const currentQuantity = productInCart.quantity;
@@ -319,17 +355,16 @@ export function modifyCarrito(idProduct, cantidad, set = false) {
     isNewProduct = true;
   }
 
-
   //Restamos o sumamos la nueva cantidad
-  //Si tiene 10 y se le pasa -1 -> 10 - (-1) = 11 
+  //Si tiene 10 y se le pasa -1 -> 10 - (-1) = 11
   //Si tiene 10 y se le pasa 1 -> 10 - 1 = 9
   productInDB.quantity -= cantidad;
 
   carrito.total -= currentSubtotal;
   carrito.total += isNewProduct ? newSubTotal : productInCart.subTotal;
 
-  localStorage.setItem('products', JSON.stringify(products));
-  localStorage.setItem('carrito', JSON.stringify(carrito));
+  localStorage.setItem("products", JSON.stringify(products));
+  localStorage.setItem("carrito", JSON.stringify(carrito));
   //Recalculamos la cantidad en el carrito del navbar
   recalculateCart();
 }
@@ -343,10 +378,10 @@ export function modifyCarrito(idProduct, cantidad, set = false) {
 export function addProductInCart(idProduct, cantidad) {
   const products = getProducts();
 
-  const productInDB = products.find(product => product.id == idProduct);
+  const productInDB = products.find((product) => product.id == idProduct);
 
-  if (!productInDB) throw new Error("No se encontro el producto en la base de datos");
-
+  if (!productInDB)
+    throw new Error("No se encontro el producto en la base de datos");
 
   const carrito = getCarrito();
   const subTotal = productInDB.price * cantidad;
@@ -364,26 +399,27 @@ export function addProductInCart(idProduct, cantidad) {
 
   productInDB.quantity = productInDB.quantity - cantidad;
 
-  localStorage.setItem('products', JSON.stringify(products));
-  localStorage.setItem('carrito', JSON.stringify(carrito));
+  localStorage.setItem("products", JSON.stringify(products));
+  localStorage.setItem("carrito", JSON.stringify(carrito));
   //Recalculamos la cantidad en el carrito del navbar
   recalculateCart();
 }
 
 /**
- * 
- * @param {number} idProduct 
+ *
+ * @param {number} idProduct
  * @throws {Error} Si el producto no se encontró
  */
 export function deleteProductInCart(idProduct) {
   const products = getProducts();
 
-  const productInDB = products.find(product => product.id == idProduct);
+  const productInDB = products.find((product) => product.id == idProduct);
 
-  if (!productInDB) throw new Error("No existe el producto en la base de datos");
+  if (!productInDB)
+    throw new Error("No existe el producto en la base de datos");
 
   const carrito = getCarrito();
-  const productInCart = carrito.cart.find(product => product.id == idProduct);
+  const productInCart = carrito.cart.find((product) => product.id == idProduct);
 
   if (!productInCart) throw new Error("El producto no existe en el carrito");
 
@@ -391,9 +427,9 @@ export function deleteProductInCart(idProduct) {
   productInDB.quantity += productInCart.quantity;
 
   carrito.total -= currentSubtotal;
-  carrito.cart = carrito.cart.filter(product => product.id != idProduct);
-  localStorage.setItem('products', JSON.stringify(products));
-  localStorage.setItem('carrito', JSON.stringify(carrito));
+  carrito.cart = carrito.cart.filter((product) => product.id != idProduct);
+  localStorage.setItem("products", JSON.stringify(products));
+  localStorage.setItem("carrito", JSON.stringify(carrito));
   //Recalculamos la cantidad en el carrito del navbar
   recalculateCart();
 }
@@ -402,7 +438,7 @@ export function emptyCart() {
   const carrito = getCarrito();
   carrito.cart = [];
   carrito.total = 0;
-  localStorage.setItem('carrito', JSON.stringify(carrito));
+  localStorage.setItem("carrito", JSON.stringify(carrito));
 
   //Recalculamos la cantidad en el carrito del navbar
   recalculateCart();

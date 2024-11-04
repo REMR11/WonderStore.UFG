@@ -1,9 +1,16 @@
+import { getMostRatedProducts, getProducts } from "../api/api.js";
+import {
+  ProductCard,
+  redirectToDetailsEvent
+} from "../components/product-card.js";
+import { sweetAlert } from "../utils/alerts.js";
+
 window.addEventListener("DOMContentLoaded", function () {
   renderCards();
   renderSwiper();
 });
 
-function generateWhyToBuyCard(title, description, icon) {
+function WhyToBuyCard(title, description, icon) {
   return `
     <div class="why-to-buy-card">
       <h3 class="why-to-buy-card-title">${title}</h3>
@@ -26,7 +33,7 @@ async function renderCards() {
   const reasonsToBuy = await getReasonsToBuy();
 
   reasonsToBuy.forEach((reason) => {
-    whyToBuyCardsContainer.innerHTML += generateWhyToBuyCard(
+    whyToBuyCardsContainer.innerHTML += WhyToBuyCard(
       reason.title,
       reason.description,
       reason.icon
@@ -35,22 +42,20 @@ async function renderCards() {
 }
 
 function renderSwiper() {
-  const swiperContainer = document.getElementById("fav-products-swiper");
+  const SWIPER_CONTAINER = document.getElementById("fav-products-swiper");
+  let template = "";
+  const allProducts = getProducts();
+  const mostRatedProducts = getMostRatedProducts(allProducts);
 
-  const products = [
-    { name: "Producto 1", description: "Descripción del producto 1" },
-    { name: "Producto 2", description: "Descripción del producto 2" },
-    { name: "Producto 3", description: "Descripción del producto 3" }
-    // Add more products as needed
-  ];
+  for (const product of mostRatedProducts) {
+    template += ProductCard(product, true);
+  }
 
-  products.forEach((product) => {
-    const slide = document.createElement("div");
-    slide.className = "swiper-slide";
-    slide.innerHTML = `
-      <h2>${product.name}</h2>
-      <p>${product.description}</p>
-    `;
-    swiperContainer.appendChild(slide);
-  });
+  SWIPER_CONTAINER.innerHTML += template;
+  redirectToDetailsEvent();
+}
+
+export function submitNewsletterForm(event) {
+  event.preventDefault();
+  sweetAlert(1, "¡Gracias por suscribirte!");
 }
