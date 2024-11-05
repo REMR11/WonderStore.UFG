@@ -1,7 +1,8 @@
+import { getCarrito } from "../api/api.js";
 import { BASE_URL } from "../utils/globalVariables.js";
 import ROUTES from "../utils/routes.js";
 
-function getListItem(linkArray, isExpandedItem = false) {
+export function getListItem(linkArray, isExpandedItem = false) {
   let links = "";
 
   for (const link of linkArray) {
@@ -34,6 +35,7 @@ function getListItem(linkArray, isExpandedItem = false) {
 }
 
 function generateHeader(links){
+  const carrito = getCarrito();
   let header = `
     <header class="header-principal nav-container">
       <div class="nav-logo">
@@ -57,7 +59,7 @@ function generateHeader(links){
         </nav>
         <div class="overlay"></div>
         <div class="shopping">
-          <a href="/carrito" title="Ir al carrito" id="shopping-button" data-count-item-shopping="0">
+          <a href="/carrito" title="Ir al carrito" id="shopping-button" data-count-item-shopping="${carrito ? carrito.cart.length : 0}">
             <span class="material-symbols-outlined">
               shopping_cart
             </span>
@@ -78,8 +80,6 @@ function generateHeader(links){
 }
 
 export async function recalculateCart(){
-  const {getCarrito} = await import("../utils/carrito.js");
-
   const carrito = getCarrito();
   document.getElementById("shopping-button").dataset.countItemShopping = carrito.cart.length;
 }

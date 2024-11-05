@@ -50,6 +50,13 @@ export const STAR_WARS = [
       "Figura coleccionable a escala 1/6 de Anakin Skywalker, basada en la serie de animación de The Clone Wars. Incluye una escultura de cabeza detallada, traje confeccionado, protectores de armadura, sable de luz LED, manos intercambiables, detonador térmico, proyector de hologramas y figuras holográficas de Ahsoka Tano, Yoda y Obi-Wan Kenobi",
     category: PRODUCT_CATEGORIES.FIGURAS,
     topic: TOPICS.STAR_WARS,
+    imgs: [
+      "https://m.media-amazon.com/images/I/61tHUUes8wL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+      "https://m.media-amazon.com/images/I/51bMq9ZnWgL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/617jdCr8ONL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/51xdJhxsAnL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/51X8R0IzJnL._AC_SX679_.jpg"
+    ],
     price: 265.0,
     quantitySell: 4,
     comments: [
@@ -90,7 +97,8 @@ export const STAR_WARS = [
       "https://m.media-amazon.com/images/I/51UD9BxE8aL._SL1000_.jpg",
       "https://m.media-amazon.com/images/I/51r-x8RsWSL._SL1500_.jpg",
       "https://m.media-amazon.com/images/I/61UtozUwzXL._SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/61UtozUwzXL._SL1500_.jpg"
+      "https://m.media-amazon.com/images/I/61UtozUwzXL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51UD9BxE8aL.jpg"
     ],
     quantitySell: 15,
     comments: [
@@ -170,7 +178,7 @@ export const STAR_WARS = [
     category: PRODUCT_CATEGORIES.COMIC,
     topic: TOPICS.STAR_WARS,
     price: 15.99,
-    imgs: ["https://m.media-amazon.com/images/I/81YKvOca5bL._SL1500_.jpg"],
+    imgs: ["https://m.media-amazon.com/images/I/81YKvOca5bL._SL1500_.jpg", "https://static.wikia.nocookie.net/starwars/images/2/2b/Darth_Maul_Son_of_Dathomir_1.png/revision/latest?cb=20140811005253", "https://static.wikia.nocookie.net/starwars/images/6/6f/Darth_Maul_Son_of_Dathomir_4.png/revision/latest?cb=20140808205709", "https://static.wikia.nocookie.net/starwars/images/3/37/Darth_Maul_Son_of_Dathomir_3.png/revision/latest?cb=20140716171318", "https://static.wikia.nocookie.net/starwars/images/2/2a/Darth_Maul_Son_of_Dathomir_2.png/revision/latest?cb=20140811131101"],
     quantitySell: 12,
     comments: [
       {
@@ -210,7 +218,8 @@ export const STAR_WARS = [
       "https://m.media-amazon.com/images/I/710QFOna3nL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71FfUKlqMrS._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71FfUKlqMrS._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/51RiV03zgxL._AC_SL1100_.jpg"
+      "https://m.media-amazon.com/images/I/51RiV03zgxL._AC_SL1100_.jpg",
+      "https://resources.claroshop.com/medios-plazavip/s2/18440/2899795/60feae7590c97-70fd1966-5650-4852-9571-dcf95b691611-200x200.jpg"
     ],
     quantitySell: 30,
     comments: [
@@ -294,7 +303,8 @@ export const STAR_WARS = [
       "https://cdn.media.amplience.net/i/hasbropulse/F7347_PROD_SW_VIN_DUBOIS_0005_pos02?w=1004&fmt=auto",
       "https://cdn.media.amplience.net/i/hasbropulse/F7347_PROD_SW_VIN_DUBOIS_0002_pos03?w=1004&fmt=auto",
       "https://cdn.media.amplience.net/i/hasbropulse/F7347_PROD_SW_VIN_DUBOIS_0006_pos04?w=1004&fmt=auto",
-      "https://cdn.media.amplience.net/i/hasbropulse/F7347_PROD_SW_VIN_DUBOIS_0007_pos05?w=1004&fmt=auto"
+      "https://cdn.media.amplience.net/i/hasbropulse/F7347_PROD_SW_VIN_DUBOIS_0007_pos05?w=1004&fmt=auto",
+      "https://m.media-amazon.com/images/I/61ZKRz+954L._AC_SX679_.jpg"
     ],
     quantitySell: 8,
     comments: [

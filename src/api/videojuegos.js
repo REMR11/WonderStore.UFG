@@ -1,4 +1,4 @@
-import { PRODUCT_CATEGORIES, TOPICS } from "../utils/globalVariables";
+import { PRODUCT_CATEGORIES, TOPICS } from "../utils/globalVariables.js";
 
 export const VIDEOJUEGOS = [
   {//1
