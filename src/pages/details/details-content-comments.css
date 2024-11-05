@@ -1,26 +1,25 @@
 .main-content-comments {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
     grid-template-areas:
         "Califications newComment newComment"
         "Califications PublicComments PublicComments"
         "Califications PublicComments PublicComments";
     grid-area: comment;
     margin-top: 20px;
-    overflow: auto;
+
     .section-califications {
         padding: 15px;
         grid-area: Califications;
-        .califications-div{
+
+        .califications-div {
             width: 100%;
+
             .rating-bar {
                 display: flex;
                 align-items: center;
                 margin-top: 10px;
                 margin-bottom: 10px;
-    
+
                 .progress-container {
                     width: 60%;
                     background-color: var(--primary-color);
@@ -28,7 +27,7 @@
                     overflow: hidden;
                     height: 17px;
                     margin: 5px;
-    
+
                     .progress-bar {
                         border-radius: 10px;
                         width: 50%;
@@ -37,7 +36,7 @@
                         transition: width 0.3s ease;
                     }
                 }
-    
+
                 .rating-label {
                     width: 100px;
                 }
@@ -59,7 +58,7 @@
             flex-direction: column;
             gap: 15px;
 
-            
+
             .form-group {
                 display: flex;
                 align-items: center;
@@ -68,10 +67,10 @@
                 .form-input {
                     flex: 1;
                     padding: 5px;
-                        border: none;
-                        border-bottom: 3px solid var(--secondary-borer-color);
-                        outline: none;
-                        font-size: 16px;
+                    border: none;
+                    border-bottom: 3px solid var(--secondary-borer-color);
+                    outline: none;
+                    font-size: 16px;
 
 
                     .rating {
@@ -95,7 +94,7 @@
 
             .form-actions {
                 display: flex;
-                justify-content: flex-end;
+                justify-content: center ;
                 gap: 10px;
 
                 .btn {
@@ -120,28 +119,29 @@
     }
 
     .sections-publicComents {
+        max-height: 500px;
+        overflow: auto;
         background-color: green;
         grid-area: PublicComments;
 
-        .postedComments{
-            padding: 10px;
+        padding: 10px;
 
-            .aComment{
+        .aComment {
+            display: flex;
+            flex-direction: row;
+            padding-top: 10px;
+
+            .comment-info {
+                margin: 0 15px;
+                padding: 0 15px;
                 display: flex;
-                flex-direction: row;
-                padding-top: 10px;
-                .comment-info{
-                    margin: 0 15px ;
-                    padding: 0 15px ;
-                    display: flex;
-                    flex-direction: column;
-                    .userComment{
-                        color: var(--text-accent-color);
-                        font-weight: bold;
-                    }
+                flex-direction: column;
+
+                .userComment {
+                    color: var(--text-accent-color);
+                    font-weight: bold;
                 }
             }
         }
     }
 }
-

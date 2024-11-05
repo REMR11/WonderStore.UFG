@@ -1,7 +1,6 @@
-    .main-content-info {
+.main-content-info {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 0.9fr 1.1fr;
-    gap: 0px 0px;
     grid-template-areas:
         "infoproducto infoproducto infoproducto"
         "buttons buttons buttons"
@@ -15,14 +14,15 @@
             grid-area: infoproducto;
         }
 
-        .section-product-info{
+        .section-product-info {
             display: flex;
             flex-direction: row;
 
-            p{
+            p {
                 padding: 5px;
             }
         }
+
         .body-card-text {
             border: solid 2px var(--primary-border-color);
             background-color: var(--br-color);
@@ -86,7 +86,8 @@
 
         .section-description {
             margin-top: 10px;
-            grid-area: description;
+            overflow: auto;
+            max-height: 253.2px;
         }
     }
 }
