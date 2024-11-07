@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>WonderStore</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../assets/icons/page-icon.svg" type="img/svg">
+        <link rel="stylesheet" href="style.css">
+        
+        <script type="module" src="../general.js"></script>
+    </head>
+    <body>
+      
+        <main class="cart">
+            <div class="mi-carrito-container">
+                <div class="mi-carrito">Mi Carrito</div>
+            </div>
+
+            <div class="contenedor-principal">
+                <div class="producto-container">
+                    <span class="producto">Producto</span>
+                </div>
+                <div class="tcantidad-container">
+                    <span class="cantidad">Cantidad</span>
+                </div>
+                <div class="total-container">
+                    <span class="total">Total</span>
+                </div>
+            </div>
+        
+            <div class="line-1"></div>
+        
+            <div id="cart-items-container">
+                <!-- Aquí se mostrarán los productos del carrito -->
+                
+            </div>
+            
+            <div class="line-2"></div>
+            
+            <div class="subtotal-container">
+                <span>Subtotal:</span>
+                <span id="subtotal-amount">$</span> <!-- Subtotal total -->
+            </div>
+        
+            <div class="button-container">
+                <button class="vaciar-carrito-button">Vaciar Carrito</button>
+                <button class="pago-button">Hacer Pedido</button>
+            </div>
+        
+        </main> 
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script type="module" src="carrito.js"></script> 
+    </body>
+</html>
