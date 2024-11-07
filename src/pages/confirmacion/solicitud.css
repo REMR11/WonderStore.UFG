@@ -1,91 +1,98 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-
-
+.section-return {
+    padding: 24px 2.5% 10px;
 }
-.solicitud{
-    width: 40px;
-    padding: 30px;
-    margin: auto;
 
+.info-form{
+    margin: 2rem 0;
 }
-.centrado{
-    padding: 12px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow';
-    font-size: 2em;
-    justify-content: center;
-    align-items: center;
+
+.return-button {
     display: flex;
-
-}
-.formulario{
-    margin-bottom: 20px;
-    margin: auto;
-    margin-top: 100px;
-    font-family: 'Courier New', Courier, monospace;
-    box-sizing: border-box;
-}
-.elementos{
-    width: 10cm;
-    padding: 20px;
-    border-radius: 6px;
-    margin-bottom: 16px;
-    justify-content: center;
+    gap: 5px;
     align-items: center;
-    display: block;
-    
-}
-.nuevo{
-    width: 6cm;
-    padding: 20px;
-    border-radius: 6px;
-    margin-bottom: 16px;
-    margin-left: 2px;
-}
-.button-arrow-left {
-    display: inline-flex;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 30px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    font-size: larger;
 }
 
-.button-arrow-left:hover {
-    background-color: rgb(230, 229, 229);
-    transform: translateX(-5px);
+.section-forms{
+    padding: 0 5%;
 }
 
-.button-arrow-left i {
-    margin-right: 10px;
-}
-.contenedor{
+.section-confirm{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
 }
-.entorno{
-     
-     justify-content: center;
-     flex-direction: column;
-     align-items: center;
-     height: 100vh;
-     padding:20px ;
-     border: 2px;
+
+.section-confirm-total label{
+    font-weight: bold;
+    font-size: larger;
 }
-.enviar{
-    width: 10cm;
-    height: 2cm;
-    border-radius: 6px;
-    background-color: black;
-    color: white;
-    font-size: 0.7cm;
+
+.section-confirm-total input{
+    background: transparent;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    width: fit-content;
+}
+
+.general-btn{
+    width: 50%;
+    margin: 1rem 0;
+}
+
+.input-container-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 25px 60px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container input, .input-container textarea {
+    width: 100%;
+    resize: none;
+}
+
+.input-container label {
+    font-size: small;
+    position: absolute;
+    left: 14px;
+    top: 25px;
+    pointer-events: none;
+    color: var(--primary-border-color);
+    transition: all 0.2s ease;
+}
+
+.input-container input:is(:focus, :valid, :invalid)~label, .input-container textarea:is(:focus, :valid)~label{
+    transform: translateY(-20px);
+    padding-inline: -10px;
+}
+
+.input-confirmacion-gr {
+    padding: 25px 14px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.full-g-row {
+    grid-column: 1 / -1;
+}
+
+@media (width >=768px) {
+    .input-container-layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (width >= 1024px){
+    .section-forms{
+        padding: 0 25%;
+    }
 }
