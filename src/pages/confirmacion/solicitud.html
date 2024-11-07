@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>solicitud</title>
+    <link rel="stylesheet" href="solicitud.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script type="module" src="solicitud.js"></script>
+</head>
+<body>
+    <button class="button-arrow-left">
+        <i class="fas fa-arrow-left"></i> regresar
+       </button> 
+       <h2 class="centrado">informacion  y entrega</h2>
+    <section class="solicitud">
+       
+        <div class="entorno">  
+            <form action="formulario"></form>
+            <div class="contenedor">
+                 <input class="nuevo" type="text" placeholder="nombre" required>
+                 <input class="nuevo"type="text" placeholder="apellido" required>
+            </div>
+        <input class="elementos" type="email" placeholder="correo" required>
+        <input class="elementos" type="text" placeholder="direccion" required>
+
+    </form>
+    <h2>Pago</h2>
+    <form action="formulario">
+        <div class="contenedor">
+        <input class="nuevo" type="text" placeholder="mes">
+        <input class="nuevo" type="number" placeholder="año"> 
+        </div>
+       
+        <input class="elementos " type="number" type="number"placeholder="numero de targeta">
+        <input class="elementos" type="text" placeholder="cvc">
+          <button class="enviar">Confirmar pago</button>
+
+    </form>
+        </div>
+        <div class="counter">
+            <p id="contador">0</p>
+            <button id="incrementar">Subtotal de los productos</button>
+            <button id="decrementar">Decrementar</button>
+            <button id="resetear">Resetear</button>
+        </div>
+    
+        <script>
+            
+            let count = 0;
+    
+            
+            const contadorElement = document.getElementById('contador');
+            const botonIncrementar = document.getElementById('incrementar');
+            const botonDecrementar = document.getElementById('decrementar');
+            const botonResetear = document.getElementById('resetear');
+    
+            
+            function actualizarContador() {
+                contadorElement.textContent = count;
+            }
+
+            botonIncrementar.addEventListener('click', () => {
+                count++;
+                actualizarContador();
+            });
+    
+            botonDecrementar.addEventListener('click', () => {
+                count--;
+                actualizarContador();
+            });
+
+            botonResetear.addEventListener('click', () => {
+                count = 0;
+                actualizarContador();
+            });
+            actualizarContador();
+        </script>
+    </section>
+    <script type="module" src="solicitud.js"></script>
+
+</body>
+</html>
