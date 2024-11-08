@@ -8,20 +8,24 @@ body{
     background:  rgb(251, 246, 197);
 }
 #container{
-  
+    display: flex;
+    padding:15% 10% 10%;
     align-items: center;
     justify-content: center;
+    position: relative;
     flex-direction: column;
-    
-
 }
 .texto{
+    padding: 50px;
     margin-right: 20px;
-  display: flex;
+    display: flex;
+  text-align: center;
+  justify-content: center;
 }
 .error{
-    padding-top: 5%;
-    font-size: 10rem;
+    width: 12cm;
+    flex: 5cm;
+    font-size: 50rem;
     text-align: center;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -29,21 +33,26 @@ body{
 }
 .subtitulo{
     font-weight: bold;
-    font-size:2rem;
+    font-size:17rem;
     text-align: center;
     justify-content: center;
+    font-family:sans-serif;
     
 }
 p{
+
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 12rem;
     text-align: justify;
    
 }
 
 img{
-
+    
     border-radius: 100%;
     margin-left: 50%;
+    width: 40cm;
+    height: auto;
+    position: absolute;
 
 }
