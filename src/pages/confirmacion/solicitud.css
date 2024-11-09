@@ -2,55 +2,80 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> e1a951208c0de698536a9234e34f8c2796907cb5
 }
 .solicitud{
-    width: 40px;
-    padding: 30px;
+    width: 400px;
     margin: auto;
+    padding: 20px;
+    margin-bottom: 10px;
+ 
+    
 
 }
 .centrado{
-    padding: 12px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow';
-    font-size: 2em;
+    padding: 10px 10px 10px;
+    width: auto;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 20px;
     justify-content: center;
-    align-items: center;
+    align-items:normal;
     display: flex;
 
 }
 .formulario{
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     margin: auto;
-    margin-top: 100px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family:'Franklin Gothic Medium';
     box-sizing: border-box;
-}
-.elementos{
-    width: 10cm;
-    padding: 20px;
-    border-radius: 6px;
-    margin-bottom: 16px;
-    justify-content: center;
-    align-items: center;
-    display: block;
+   vertical-align: auto;
     
 }
-.nuevo{
-    width: 6cm;
-    padding: 20px;
+.elementos{
+    width: 9cm;
+    height: 30px;
     border-radius: 6px;
-    margin-bottom: 16px;
-    margin-left: 2px;
+    margin-bottom: 10px;
+    text-align: center; 
+    display:inline;
+}
+.nuevo{
+    width:4cm;
+    height: 30px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    margin-right: 24px;
+    text-align: center; 
+  
+}
+.contenedor{
+    padding:12px 30px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+.grupo{
+    padding:12px 30px 30px;
+    display:grid;
+    justify-content: center;
+    align-items:center;
+    height: 20px;
+    margin-bottom: 30px;
 }
 .button-arrow-left {
     display: inline-flex;
     align-items: center;
-    padding: 20px 40px;
+    padding: 30px 40px;
     background-color: white;
     color: black;
     border: none;
     border-radius: 30px;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
 }
@@ -63,26 +88,31 @@
 .button-arrow-left i {
     margin-right: 10px;
 }
-.contenedor{
-    display: flex;
-    justify-content: center;
+#enviar{
+
+    width: 10cm;
+    border-radius: 18px;
+    background-color: black;
+    color:white;
+    text-align: center;
     align-items: center;
-    gap: 10px;
+    padding:12px 30px 30px;
+    display:grid;
+    justify-content: center;
+    height: 20px;
+    margin-bottom: 30px;
 }
+
 .entorno{
-     
      justify-content: center;
      flex-direction: column;
      align-items: center;
-     height: 100vh;
+     height: 200px;
      padding:20px ;
      border: 2px;
+
 }
-.enviar{
-    width: 10cm;
-    height: 2cm;
-    border-radius: 6px;
-    background-color: black;
-    color: white;
-    font-size: 0.7cm;
+div{
+    padding: 20px;
+    display: grid;
 }
