@@ -49,7 +49,7 @@ app.get('/:page', (req, res) => {
   if (fs.existsSync(filePath)) {
     res.sendFile(filePath);
   } else {
-    res.sendFile(__dirname + '/pages/error/404');
+    res.sendFile(__dirname + '/pages/error/404','error.css','image .png');
   }
 });
 
@@ -64,7 +64,7 @@ app.get('/:page*', (req, res) => {
   if (fs.existsSync(fullFilePath)) {
     res.sendFile(fullFilePath);
   } else {
-    res.sendFile(__dirname + '/pages/error/404');
+    res.sendFile(__dirname + '/pages/error/404/error.html','error.css','image .png');
   }
 });
 //AQUI TERMINA XD
