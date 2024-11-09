@@ -6,8 +6,10 @@ const productId = URL_PARAMS.get("idProduct");
 
 // Elementos del DOM
 const principalImage = document.getElementById('principal-image');
+console.log(getProductById(productId))
 const containerImages = document.getElementById('image-section-container');
 const quantitySell = document.getElementById('quantitySell');
+const productName = document.getElementById('product_Name');
 
 // Carga inicial del producto
 (async function loadProduct() {
@@ -39,3 +41,4 @@ function changePrincipalImage(imageUrl) { principalImage.src = imageUrl; }
 
 // Carga la cantidad de ventas del producto
 function loadQuantitySell(quantity) { quantitySell.textContent = quantity; }
+
