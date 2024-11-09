@@ -56,10 +56,10 @@
           <article class="infoproduct body-card-text">
             <h3 id="product_Name">Nombre del producto</h3>
             <div class="section-product-info">
-              <p>Estado: <span>zi</span></p>
-              <p>Calificacion: <span>★★★★★</span></p>
+              <p>Estado: <span>Activo</span></p>
+              <p id="rate_Product"></p>
             </div>
-            <h3 class="product-price">$ 10000.0</h3>
+            <h3 id="producto_Price" class="product-price">$ 10000.0</h3>
           </article>
           <article class="section-buttons">
             <button class="section-button bg-primary-button" type="button">
@@ -69,14 +69,14 @@
               Agregar al carrito
             </button>
             <div class="buttons-actions">
-              <button class="section-button" type="button">+</button>
-              <input class="section-input" type="number" value="1" min="1" />
-              <button class="section-button" type="button">-</button>
+              <button id="increaseButton" class="section-button" type="button">+</button>
+              <input id="counterInput" class="section-input" type="number" value="1" min="1" />
+              <button id="decreaseButton" class="section-button" type="button">-</button>
             </div>
           </article>
           <article class="section-description body-card-text">
             <h3>Descripción</h3>
-            <p>
+            <p id="description_Content">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
               aut iste quidem aliquam mollitia saepe, consequuntur eos
               accusantium debitis? Veniam aspernatur voluptate vero rerum rem
