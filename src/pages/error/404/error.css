@@ -8,11 +8,9 @@ body{
     background:  rgb(251, 246, 197);
 }
 #container{
-  
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
 
 }
 .texto{
