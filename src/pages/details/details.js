@@ -9,17 +9,18 @@ const principalImage = document.getElementById("principal-image");
 const containerImages = document.getElementById("image-section-container");
 const quantitySell = document.getElementById("quantitySell");
 const productName = document.getElementById("product_Name");
-const productRate = document.getElementById("rate_Product");
 const productPrice = document.getElementById("producto_Price");
 const descriptionContent = document.getElementById("description_Content");
 const counterInput = document.getElementById("counterInput");
 const increaseButton = document.getElementById("increaseButton");
 const decreaseButton = document.getElementById("decreaseButton");
+const overallRating = document.getElementById("overall_ratings");
 
 // Carga inicial del producto
 (async function loadProduct() {
     try {
         const product = await getProductById(productId);
+        console.log(product);
         if (!product) throw new Error("Producto no encontrado");
 
         displayImages(product.imgs);
@@ -28,6 +29,8 @@ const decreaseButton = document.getElementById("decreaseButton");
         displayPrice(product.price);
         displayRating(calculateAverageRating(product.comments));
         displayDescription(product.description);
+        displayGlobalQuantities(product.comments.length);
+        updateProgressBars(countRatings(product.comments));
 
     } catch (error) {
         console.error("Error al cargar el producto:", error);
@@ -75,7 +78,12 @@ function calculateAverageRating(comments = []) {
 function displayRating(rate) {
     const filledStars = "★".repeat(Math.round(rate));
     const emptyStars = "☆".repeat(5 - filledStars.length);
-    productRate.innerHTML = `Calificación: ${filledStars}${emptyStars}`;
+    const productRates = document.querySelectorAll(".rate_Product");
+
+    // Itera sobre cada elemento y actualiza su contenido
+    productRates.forEach((element) => {
+        element.innerHTML = `Calificación: ${filledStars}${emptyStars}`;
+    });
 }
 
 // Función para mostrar el precio del producto
@@ -99,4 +107,37 @@ function updateCounter(change) {
     let currentValue = parseInt(counterInput.value) || 1;
     const newValue = currentValue + change;
     if (newValue >= 1) counterInput.value = newValue;
+}
+
+function displayGlobalQuantities(quantity){
+    overallRating.innerHTML = `<span>${quantity}</span> Calificaciones globales`
+}
+
+
+function countRatings(pRatings) {
+    const ratings = pRatings.map(comment => comment.rate);
+    const counts = [0, 0, 0, 0, 0]; // Contadores para 1, 2, 3, 4, 5 estrellas
+
+    ratings.forEach(rating => {
+        if (rating >= 1 && rating <= 5) {
+            counts[rating - 1]++; // Incrementar el contador correspondiente
+        }
+    });
+
+    return counts;
+}
+
+// Función para calcular el porcentaje y actualizar las barras de progreso
+function updateProgressBars(counts) {
+
+    const sortCounts =counts.sort((a, b) => b - a);
+    const totalRatings = sortCounts.reduce((sum, count) => sum + count, 0);
+
+    // Seleccionamos todas las barras de progreso
+    const progressBars = document.querySelectorAll('.progress-bar');
+
+    counts.forEach((count, index) => {
+        const percentage = totalRatings > 0 ? (count / totalRatings) * 100 : 0; // Calcular porcentaje
+        progressBars[index].style.width = `${percentage}%`; // Actualizar el ancho de la barra
+    });
 }
