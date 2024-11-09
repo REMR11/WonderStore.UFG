@@ -29,8 +29,7 @@ body{
     font-size: 10rem;
     text-align: center;
     justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    
+    font-family: Arial, Helvetica;
 }
 .subtitulo{
     font-weight: bold;
@@ -48,7 +47,7 @@ p{
 
 img{
 
-    border-radius: 100%;
+    border-radius: 100px;
     margin-left: 50%;
-
+    
 }
