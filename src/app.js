@@ -70,7 +70,7 @@ app.get('/:page*', (req, res) => {
 //AQUI TERMINA XD
 
 app.use((req, res, next) => {
-  res.status(404).sendFile(__dirname + '/pages/eerror/404/rror/');
+  res.status(404).sendFile(__dirname + '/pages/error/404/error.html');
 });
 
 const port = 3000;
