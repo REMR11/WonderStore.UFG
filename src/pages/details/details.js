@@ -15,6 +15,7 @@ const counterInput = document.getElementById("counterInput");
 const increaseButton = document.getElementById("increaseButton");
 const decreaseButton = document.getElementById("decreaseButton");
 const overallRating = document.getElementById("overall_ratings");
+const publicComments = document.getElementById("public_Comments");
 
 // Carga inicial del producto
 (async function loadProduct() {
@@ -31,6 +32,7 @@ const overallRating = document.getElementById("overall_ratings");
         displayDescription(product.description);
         displayGlobalQuantities(product.comments.length);
         updateProgressBars(countRatings(product.comments));
+        displayComments(product.comments);
 
     } catch (error) {
         console.error("Error al cargar el producto:", error);
@@ -135,9 +137,38 @@ function updateProgressBars(counts) {
 
     // Seleccionamos todas las barras de progreso
     const progressBars = document.querySelectorAll('.progress-bar');
+    const percentageLabels = document.querySelectorAll('.rating-percentage');
 
     counts.forEach((count, index) => {
         const percentage = totalRatings > 0 ? (count / totalRatings) * 100 : 0; // Calcular porcentaje
         progressBars[index].style.width = `${percentage}%`; // Actualizar el ancho de la barra
+         // Actualizar el texto del porcentaje en la etiqueta
+         percentageLabels[index].textContent = `${Math.round(percentage.toFixed(2))}%`;
     });
+}
+
+
+function displayComments(comments = []) {
+    // Verifica si comments es un array y si no está vacío
+    if (!Array.isArray(comments) || comments.length === 0) return;
+
+    // Generar el HTML para cada comentario
+    const commentsHTML = comments.map(comment => {
+        return `
+            <div class="aComment">
+                <div class="comment-info">
+                    <span class="userComment">${comment.userName}</span>
+                    <p><span>${'★'.repeat(comment.rate)}${'☆'.repeat(5 - comment.rate)}</span></p>
+                </div>
+                <div class="comment-body">
+                    <p>${comment.comment}</p>
+                    <p>${comment.date}</p>
+                </div>
+            </div>
+        `;
+    }).join(''); // Unir todos los comentarios en una sola cadena
+
+    // Insertar el HTML generado en el contenedor de comentarios
+    const publicComments = document.getElementById('public_Comments');
+    publicComments.innerHTML = commentsHTML;
 }
