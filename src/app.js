@@ -49,7 +49,7 @@ app.get('/:page', (req, res) => {
   if (fs.existsSync(filePath)) {
     res.sendFile(filePath);
   } else {
-    res.sendFile(__dirname + '/pages/404.html');
+    res.sendFile(__dirname + '/pages/error.html');
   }
 });
 
@@ -64,13 +64,13 @@ app.get('/:page*', (req, res) => {
   if (fs.existsSync(fullFilePath)) {
     res.sendFile(fullFilePath);
   } else {
-    res.sendFile(__dirname + '/pages/404.html');
+    res.sendFile(__dirname + '/pages/error/404/error.html');
   }
 });
 //AQUI TERMINA XD
 
 app.use((req, res, next) => {
-  res.status(404).sendFile(__dirname + '/pages/404.html');
+  res.status(404).sendFile(__dirname + '/pages/eerror/404/rror/');
 });
 
 const port = 3000;
