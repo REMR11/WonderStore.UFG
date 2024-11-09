@@ -49,7 +49,7 @@ app.get('/:page', (req, res) => {
   if (fs.existsSync(filePath)) {
     res.sendFile(filePath);
   } else {
-    res.sendFile(__dirname + '/pages/error/404/error.html/error.css');
+    res.sendFile(__dirname + '/pages/error/404/error.html');
   }
 });
 
