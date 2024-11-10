@@ -3,6 +3,7 @@ import {
   addProductComment,
   modifyCarrito,
 } from "../../api/api.js";
+import { sweetAlert } from "../../utils/alerts.js";
 
 // Constantes de URL y elementos del DOM
 const CURRENT_URL = new URL(window.location.href);
@@ -26,7 +27,6 @@ const userComment = document.getElementById("userComment").value;
 const rating = document.querySelector(".star.selected")
   ? parseInt(document.querySelector(".star.selected").dataset.value)
   : 0;
-const productValue = document.getElementById("counterInput").value;
 
 // Carga inicial del producto
 (async function loadProduct() {
@@ -44,7 +44,6 @@ const productValue = document.getElementById("counterInput").value;
     displayGlobalQuantities(product.comments.length);
     updateProgressBars(countRatings(product.comments));
     displayComments(product.comments);
-    modifyCarrito(productId, productValue);
   } catch (error) {
     console.error("Error al cargar el producto:", error);
   }
@@ -209,7 +208,7 @@ document
     const rating = document.querySelector(".star.selected")
       ? parseInt(document.querySelector(".star.selected").dataset.value)
       : 0;
-    
+
     // Generar un ID único
     const id = generateUUID();
 
@@ -265,12 +264,13 @@ document.querySelectorAll('.star').forEach((star, index) => {
 document
 .getElementById("AddCar")
 .addEventListener("click", function (event) {
+  const productValue =  parseInt(document.getElementById("counterInput").value);
   modifyCarrito(productId, productValue);
+  sweetAlert(1, "Producto agregado al carrito correctamente.")
 });
 
 document
 .getElementById("ComprarAhora")
 .addEventListener("click", function (event) {
-    modifyCarrito(productId, productValue);
     window.location.href="/carrito"
   });
