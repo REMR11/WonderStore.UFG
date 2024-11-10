@@ -41,10 +41,17 @@ async function renderCards() {
   });
 }
 
-function renderSwiper() {
+async function renderSwiper() {
   const SWIPER_CONTAINER = document.getElementById("fav-products-swiper");
   let template = "";
   const allProducts = getProducts();
+
+  if(!allProducts){
+    const { initializeApp } = await import("../general.js");
+    await initializeApp();
+    allProducts = getProducts();
+  }
+
   const mostRatedProducts = getMostRatedProducts(allProducts);
 
   for (const product of mostRatedProducts) {
