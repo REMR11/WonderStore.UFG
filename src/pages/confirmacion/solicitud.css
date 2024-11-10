@@ -70,7 +70,7 @@
     transition: all 0.2s ease;
 }
 
-.input-container input:is(:focus, :valid, :invalid)~label, .input-container textarea:is(:focus, :valid)~label{
+.input-container input:is(:focus, :valid)~label, .input-container textarea:is(:focus, :valid)~label{
     transform: translateY(-20px);
     padding-inline: -10px;
 }
