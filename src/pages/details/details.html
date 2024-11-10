@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="icon" href="../assets/icons/page-icon.svg" type="img/svg" />
+
+    <meta
+      name="description"
+      content="Wonder Store - Tienda en linea hecha por fans para fans. ¡Deja que te sorprenda!"
+    />
+
+    <meta
+      property="og:title"
+      content="Wonder Store - Tienda en linea hecha por fans para fans. ¡Deja que te sorprenda!"
+    />
+
+    <meta property="og:image" content="../assets/icons/page-icon.svg" />
+
+    <meta property="og:image:alt" content="Icono de la tienda" />
+    <title>WonderStore - Product details</title>
+    <script type="module" src="../general.js"></script>
+    <link rel="stylesheet" href="details-content-image.css" />
+    <link rel="stylesheet" href="details-content-info.css" />
+    <link rel="stylesheet" href="details-content-comments.css" />
+  </head>
+  <body>
+    <main>
+      <section class="main-content-image">
+        <div class="image-section">
+          <article id="image-section-container" class="section-images">
+            <img class="section-image" src="" alt="Imagen" />
+            <img class="section-image" src="" alt="Imagen" />
+            <img class="section-image" src="" alt="Imagen" />
+            <img class="section-image" src="" alt="Imagen" />
+            <img class="section-image" src="" alt="Imagen" />
+          </article>
+          <article class="section-column">
+            <img
+              id="principal-image"
+              class="section-image"
+              src=""
+              alt="Imagen principal"
+            />
+            <div class="section-shopping">
+              <h4>A la gente le gusta esto?</h4>
+              <p><span id="quantitySell"></span> personas han comprado este producto</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="main-content-info">
+        <div class="info-section">
+          <article class="infoproduct body-card-text">
+            <h3 id="product_Name">Nombre del producto</h3>
+            <div class="section-product-info">
+              <p>Estado: <span>Activo</span></p>
+              <p class="rate_Product"></p>
+            </div>
+            <h3 id="producto_Price" class="product-price">$ 10000.0</h3>
+          </article>
+          <article class="section-buttons">
+            <button id="ComprarAhora" class="section-button bg-primary-button" type="button">
+              Comprar ahora!
+            </button>
+            <button id="AddCar" class="section-button bg-secondary-button" type="button">
+              Agregar al carrito
+            </button>
+            <div class="buttons-actions">
+              <button id="increaseButton" class="section-button" type="button">+</button>
+              <input id="counterInput" class="section-input" type="number" value="1" min="1" />
+              <button id="decreaseButton" class="section-button" type="button">-</button>
+            </div>
+          </article>
+          <article class="section-description body-card-text">
+            <h3>Descripción</h3>
+            <p id="description_Content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
+              aut iste quidem aliquam mollitia saepe, consequuntur eos
+              accusantium debitis? Veniam aspernatur voluptate vero rerum rem
+              necessitatibus ipsam ut ad esse.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="main-content-comments">
+        <article class="section-califications">
+          <h2>Opiniones de clientes</h2>
+          <p class="rate_Product">Calificacion</p>
+          <p id="overall_ratings"><span>10000</span> Calificaciones globales</p>
+          <div class="califications-div">
+            <div class="rating-bar">
+              <span class="rating-label">5 Estrellas</span>
+              <div class="progress-container">
+                <div class="progress-bar"></div>
+              </div>
+              <span class="rating-percentage">10%</span>
+            </div>
+            <div class="rating-bar">
+              <span class="rating-label">4 Estrellas</span>
+              <div class="progress-container">
+                <div class="progress-bar"></div>
+              </div>
+              <span class="rating-percentage">10%</span>
+            </div>
+            <div class="rating-bar">
+              <span class="rating-label">3 Estrellas</span>
+              <div class="progress-container">
+                <div class="progress-bar"></div>
+              </div>
+              <span class="rating-percentage">10%</span>
+            </div>
+            <div class="rating-bar">
+              <span class="rating-label">2 Estrellas</span>
+              <div class="progress-container">
+                <div class="progress-bar"></div>
+              </div>
+              <span class="rating-percentage">10%</span>
+            </div>
+            <div class="rating-bar">
+              <span class="rating-label">1 Estrella</span>
+              <div class="progress-container">
+                <div class="progress-bar"></div>
+              </div>
+              <span class="rating-percentage">10%</span>
+            </div>
+          </div>
+        </article>
+        <article class="section-newComment">
+          <h2>Comentarios</h2>
+          <form class="comments-form" id="commentsForm">
+            <div class="form-input">
+                <div class="form-group form-group-inputs">
+                    <input type="text" placeholder="Nombre..." class="form-input" id="userName" />
+                    <input type="text" placeholder="Añade un comentario..." class="form-input" id="userComment" />
+                </div>
+                <div class="form-group form-califications">
+                    <label for="rating">Calificación:</label>
+                    <div class="rating">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="button" class="btn btn-cancel">Cancelar</button>
+                <button type="submit" class="btn btn-save">Guardar</button>
+            </div>
+        </form>
+        </article>
+        <article id="public_Comments" class="sections-publicComents">
+          <div class="aComment">
+            <div class="comment-info">
+              <span class="userComment">User</span>
+              <p><span>★★★★★</span></p>
+            </div>
+            <div class="comment-body">
+              <p>
+                Comments Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Ea temporibus omnis quibusdam amet quasi, minus, explicabo
+                harum quod illo, qui vero repellat praesentium. Eius nisi totam
+                magni, dicta vero ipsa!
+              </p>
+              <p>01/01/2024</p>
+            </div>
+          </div>
+          <div class="aComment">
+            <div class="comment-info">
+              <span class="userComment">User</span>
+              <p><span>★★★★★</span></p>
+            </div>
+            <div class="comment-body">
+              <p>
+                Comments Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Ea temporibus omnis quibusdam amet quasi, minus, explicabo
+                harum quod illo, qui vero repellat praesentium. Eius nisi totam
+                magni, dicta vero ipsa!
+              </p>
+              <p>01/01/2024</p>
+            </div>
+          </div>
+          <div class="aComment">
+            <div class="comment-info">
+              <span class="userComment">User</span>
+              <p ><span>★★★★★</span></p>
+            </div>
+            <div class="comment-body">
+              <p>
+                Comments Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Ea temporibus omnis quibusdam amet quasi, minus, explicabo
+                harum quod illo, qui vero repellat praesentium. Eius nisi totam
+                magni, dicta vero ipsa!
+              </p>
+              <p>01/01/2024</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <script type="module" src="details.js"></script>
+  </body>
+</html>
