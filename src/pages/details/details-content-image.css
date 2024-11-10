@@ -162,3 +162,15 @@ main {
     }
   }
 }
+
+.rating .star{
+  transition: color 200ms ease-in-out;
+}
+
+.rating .star.selected{
+  color: var(--secondary-color);
+}
+
+.rating .star.active {
+  color: var(--secondary-color); /* Color de las estrellas activas */
+}

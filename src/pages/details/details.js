@@ -222,7 +222,7 @@ document.getElementById('commentsForm').addEventListener('submit', function(even
     updateProgressBars(countRatings(product.comments));
     // Limpiar el formulario
     this.reset();
-    window.reload();
+    window.location.reload();
 });
 
 // Función para generar un UUID
@@ -234,9 +234,19 @@ function generateUUID() {
 }
 
 // Manejo de la selección de estrellas
-document.querySelectorAll('.star').forEach(star => {
-    star.addEventListener('click', function() {
-        document.querySelectorAll('.star').forEach(s => s.classList.remove('selected'));
-        this.classList.add('selected');
-    });
+document.querySelectorAll('.star').forEach((star, index) => {
+  star.addEventListener('click', function() {
+      // Limpiar las clases existentes
+      document.querySelectorAll('.star').forEach((s) => {
+          s.classList.remove('selected', 'active');
+      });
+      
+      // Añadir la clase 'active' a todas las estrellas anteriores y a la seleccionada
+      for (let i = 0; i <= index; i++) {
+          document.querySelectorAll('.star')[i].classList.add('active');
+      }
+      
+      // Añadir la clase 'selected' a la estrella clickeada
+      this.classList.add('selected');
+  });
 });
