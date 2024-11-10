@@ -16,5 +16,5 @@ document.addEventListener("DOMContentLoaded", () => {
 document.getElementById("form-confirm").addEventListener("submit", function(e){
   e.preventDefault();
   emptyCart();
-  sweetAlert(1, "Confirmar compra", "/");
+  sweetAlert(1, "Compra realizada", "/");
 });

@@ -1,19 +1,19 @@
-import { getCarrito, addProductInCart, deleteProductInCart, modifyCarrito } from "../../api/api.js"; 
+import { getCarrito, deleteProductInCart, modifyCarrito, emptyCart } from "../../api/api.js";
 import { sweetAlert } from "../utils/alerts.js";
 
 // Función para actualizar el carrito en la vista
 function updateCartView() {
     const cartItemsContainer = document.getElementById("cart-items-container");
-    const carrito = getCarrito(); 
-    
-    
+    const carrito = getCarrito();
+
+
     cartItemsContainer.innerHTML = '';
-  
+
     if (carrito.cart.length === 0) {
         cartItemsContainer.innerHTML = '<p>Tu carrito está vacío.</p>';
         return;
     }
-  
+
     carrito.cart.forEach(product => {
         const productCard = document.createElement("div");
         productCard.classList.add("producto-cart");
@@ -71,58 +71,63 @@ function updateCartView() {
         productCard.append(productInfo, productQuantity, productActions);
         cartItemsContainer.appendChild(productCard);
     });
-     const subtotalAmount = document.getElementById("subtotal-amount");
-     subtotalAmount.textContent = `$${carrito.total.toFixed(2)}`;
+    const subtotalAmount = document.getElementById("subtotal-amount");
+    subtotalAmount.textContent = `$${carrito.total.toFixed(2)}`;
 }
-  
+
 // Función para modificar la cantidad de un producto
 function modifyProductQuantity(id, change) {
-    const carrito = getCarrito(); 
+    const carrito = getCarrito();
     const product = carrito.cart.find(item => item.id === id);
-  
+
     if (product) {
         let newQuantity = product.quantity + change;
-  
+
         if (newQuantity <= 0) {
-            newQuantity = 1; 
+            newQuantity = 1;
         }
-        modifyCarrito(id, newQuantity - product.quantity, false);  
-        updateCartView();  
+        modifyCarrito(id, newQuantity - product.quantity, false);
+        updateCartView();
     }
 }
-  // Función para actualizar el subtotal del carrito en la vista
+// Función para actualizar el subtotal del carrito en la vista
 function updateCartSubtotal() {
-  const carrito = getCarrito();
-  const subtotalAmount = document.getElementById("subtotal-amount");
-  subtotalAmount.textContent = `$${carrito.total}`;
+    const carrito = getCarrito();
+    const subtotalAmount = document.getElementById("subtotal-amount");
+    subtotalAmount.textContent = `$${carrito.total}`;
 }
 // Función para eliminar un producto del carrito
 function removeProductFromCart(id) {
-  
-  sweetAlert(1, "Producto eliminado del carrito correctamente.");
-  deleteProductInCart(id);  
-  updateCartView(); 
-  updateCartSubtotal();  
+
+    sweetAlert(1, "Producto eliminado del carrito correctamente.");
+    deleteProductInCart(id);
+    updateCartView();
+    updateCartSubtotal();
 }
-  
+
 // Función para vaciar el carrito
 function clearCart() {
-    localStorage.removeItem('carrito');
-    updateCartView();  
-    updateCartSubtotal();  
+    emptyCart();
+    updateCartView();
+    updateCartSubtotal();
 }
-  
+
 
 function checkout() {
-    window.location.href = '/confirmation.html'; 
+    const carrito = getCarrito();
+    if (carrito.cart.length === 0) {
+        sweetAlert(4, "El carrito está vacío.");
+        return;
+    }else{
+        window.location.href = '/confirmacion';
+    }
 }
-  
 //  actualizar el carrito al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
     updateCartView();
     const clearCartButton = document.querySelector('.vaciar-carrito-button');
     const checkoutButton = document.querySelector('.pago-button');
-  
+
     clearCartButton.addEventListener('click', clearCart);
     checkoutButton.addEventListener('click', checkout);
 });

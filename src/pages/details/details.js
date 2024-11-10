@@ -209,7 +209,7 @@ document
     const rating = document.querySelector(".star.selected")
       ? parseInt(document.querySelector(".star.selected").dataset.value)
       : 0;
-
+    
     // Generar un ID único
     const id = generateUUID();
 
