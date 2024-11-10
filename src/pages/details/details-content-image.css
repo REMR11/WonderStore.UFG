@@ -45,7 +45,6 @@ main {
         width: 100%;
 
         .section-image {
-          width: 100% ;
           border-radius: 10px;
           max-height: 700px;
           min-height: 300px;
