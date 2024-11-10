@@ -31,7 +31,7 @@ function updateCartView() {
         productName.classList.add("producto-name");
 
         const productPrice = document.createElement("span");
-        productPrice.textContent = `Precio: $${product.productPrice}`;
+        productPrice.textContent = `Precio: $${product.productPrice.toFixed(2)}`;
         productPrice.classList.add("product-price");
 
         productInfo.append(productImage, productName, productPrice);
@@ -59,7 +59,7 @@ function updateCartView() {
         productActions.classList.add("total-container");
 
         const productSubTotal = document.createElement("span");
-        productSubTotal.textContent = ` $${product.subTotal}`;
+        productSubTotal.textContent = ` $${product.subTotal.toFixed(2)}`;
         productSubTotal.classList.add("cart-item-total");
 
         const btnDelete = document.createElement("button");
@@ -94,7 +94,7 @@ function modifyProductQuantity(id, change) {
 function updateCartSubtotal() {
     const carrito = getCarrito();
     const subtotalAmount = document.getElementById("subtotal-amount");
-    subtotalAmount.textContent = `$${carrito.total}`;
+    subtotalAmount.textContent = `$${carrito.total.toFixed(2)}`;
 }
 // Función para eliminar un producto del carrito
 function removeProductFromCart(id) {
