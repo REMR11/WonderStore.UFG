@@ -73,7 +73,7 @@ app.use((req, res, next) => {
   res.status(404).sendFile(__dirname + '/pages/404.html');
 });
 
-const port = 3000;
+const port = 8080;
 
 function findAvailablePort() {
   return new Promise((resolve, reject) => {
