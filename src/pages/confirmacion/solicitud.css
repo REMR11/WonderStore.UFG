@@ -1,0 +1,98 @@
+.section-return {
+    padding: 24px 2.5% 10px;
+}
+
+.info-form{
+    margin: 2rem 0;
+}
+
+.return-button {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    text-decoration: none;
+    font-size: larger;
+}
+
+.section-forms{
+    padding: 0 5%;
+}
+
+.section-confirm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-confirm-total label{
+    font-weight: bold;
+    font-size: larger;
+}
+
+.section-confirm-total input{
+    background: transparent;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    width: fit-content;
+}
+
+.general-btn{
+    width: 50%;
+    margin: 1rem 0;
+}
+
+.input-container-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 25px 60px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container input, .input-container textarea {
+    width: 100%;
+    resize: none;
+}
+
+.input-container label {
+    font-size: small;
+    position: absolute;
+    left: 14px;
+    top: 25px;
+    pointer-events: none;
+    color: var(--primary-border-color);
+    transition: all 0.2s ease;
+}
+
+.input-container input:is(:focus, :valid)~label, .input-container textarea:is(:focus, :valid)~label{
+    transform: translateY(-20px);
+    padding-inline: -10px;
+}
+
+.input-confirmacion-gr {
+    padding: 25px 14px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.full-g-row {
+    grid-column: 1 / -1;
+}
+
+@media (width >=768px) {
+    .input-container-layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (width >= 1024px){
+    .section-forms{
+        padding: 0 25%;
+    }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirmar compra</title>
+    <link rel="icon" href="../assets/icons/page-icon.svg" type="img/svg" />
+
+    <meta name="description"
+        content="Wonder Store - Tienda en linea hecha por fans para fans. ¡Deja que te sorprenda!" />
+
+    <meta property="og:title"
+        content="Wonder Store - Tienda en linea hecha por fans para fans. ¡Deja que te sorprenda!" />
+
+    <meta property="og:image" content="../assets/icons/page-icon.svg" />
+
+    <meta property="og:image:alt" content="Icono de la tienda" />
+    <link rel="stylesheet" href="solicitud.css">
+    <script type="module" src="../general.js"></script>
+</head>
+
+<body>
+    <main>
+        <section class="section-return">
+            <a href="/carrito" class="return-button">
+                <span class="material-symbols-outlined">
+                    arrow_left_alt
+                </span>
+                Regresar
+            </a>
+        </section>
+        <section class="section-forms">
+            <form id="form-confirm">
+                <h1 class="info-form">Informacion de entrega</h1>
+                <div class="input-container-layout">
+                    <div class="input-container">
+                        <input class="input-confirmacion-gr" type="text" required>
+                        <label>Nombre</label>
+                    </div>
+                    <div class="input-container">
+                        <input class="input-confirmacion-gr" type="text" required>
+                        <label>Apellido</label>
+                    </div>
+                    <div class="input-container full-g-row">
+                        <input class="input-confirmacion-gr" type="email" required>
+                        <label>Correo Electrónico</label>
+                    </div>
+                    <div class="input-container full-g-row">
+                        <input class="input-confirmacion-gr" required list="lista-paises" required>
+                        <label>País/Region</label>
+                        <datalist id="lista-paises">
+                            <option value="Argentina"></option>
+                            <option value="Brasil"></option>
+                            <option value="Chile"></option>
+                            <option value="Colombia"></option>
+                            <option value="México"></option>
+                            <option value="España"></option>
+                            <option value="Francia"></option>
+                            <option value="Italia"></option>
+                            <option value="Estados Unidos"></option>
+                            <option value="Canadá"></option>
+                            <option value="El Salvador"></option>
+                        </datalist>
+                    </div>
+                    <div class="input-container full-g-row">
+                        <textarea required class="input-confirmacion-gr"></textarea>
+                        <label>Dirección</label>
+                    </div>
+                </div>
+                <h1 class="info-form">Pago</h1>
+                <div class="input-container-layout">
+                    <div class="input-container full-g-row">
+                        <input class="input-confirmacion-gr" type="number" required>
+                        <label>Numero de tarjeta</label>
+                    </div>
+                    <div class="input-container">
+                        <input class="input-confirmacion-gr" required list="lista-meses" required>
+                        <label>Mes</label>
+                        <datalist id="lista-meses">
+                            <option value="Enero"></option>
+                            <option value="Febrero"></option>
+                            <option value="Marzo"></option>
+                            <option value="Abril"></option>
+                            <option value="Mayo"></option>
+                            <option value="Junio"></option>
+                            <option value="Julio"></option>
+                            <option value="Agosto"></option>
+                            <option value="Septiembre"></option>
+                            <option value="Octubre"></option>
+                            <option value="Noviembre"></option>
+                            <option value="Diciembre"></option>
+                        </datalist>
+                    </div>
+                    <div class="input-container">
+                        <input minlength="4" maxlength="4" class="input-confirmacion-gr" type="number" required>
+                        <label>Año</label>
+                    </div>
+                    <div class="input-container">
+                        <input maxlength="4" class="input-confirmacion-gr" type="number" required>
+                        <label>CVC</label>
+                    </div>
+                </div>
+                <section class="section-confirm">
+                    <div class="section-confirm-total">
+                        <label>Total:</label>
+                        <input readonly id="total-carrito">
+                    </div>
+                    <button class="general-btn">Confirmar Pago</button>
+                </section>
+            </form>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="solicitud.js"></script>
+</body>
+
+</html>
