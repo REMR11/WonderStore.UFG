@@ -1,4 +1,8 @@
-import { getProductById, addProductComment } from "../../api/api.js";
+import {
+  getProductById,
+  addProductComment,
+  modifyCarrito,
+} from "../../api/api.js";
 
 // Constantes de URL y elementos del DOM
 const CURRENT_URL = new URL(window.location.href);
@@ -22,6 +26,7 @@ const userComment = document.getElementById("userComment").value;
 const rating = document.querySelector(".star.selected")
   ? parseInt(document.querySelector(".star.selected").dataset.value)
   : 0;
+const productValue = document.getElementById("counterInput").value;
 
 // Carga inicial del producto
 (async function loadProduct() {
@@ -39,6 +44,7 @@ const rating = document.querySelector(".star.selected")
     displayGlobalQuantities(product.comments.length);
     updateProgressBars(countRatings(product.comments));
     displayComments(product.comments);
+    modifyCarrito(productId, productValue);
   } catch (error) {
     console.error("Error al cargar el producto:", error);
   }
@@ -192,27 +198,31 @@ function displayComments(comments = []) {
 }
 
 // Agregar evento al formulario de comentarios
-document.getElementById('commentsForm').addEventListener('submit', function(event) {
+document
+  .getElementById("commentsForm")
+  .addEventListener("submit", function (event) {
     event.preventDefault(); // Prevenir el envío del formulario
 
     // Obtener los valores del formulario
-    const userName = document.getElementById('userName').value;
-    const userComment = document.getElementById('userComment').value;
-    const rating = document.querySelector('.star.selected') ? parseInt(document.querySelector('.star.selected').dataset.value) : 0;
+    const userName = document.getElementById("userName").value;
+    const userComment = document.getElementById("userComment").value;
+    const rating = document.querySelector(".star.selected")
+      ? parseInt(document.querySelector(".star.selected").dataset.value)
+      : 0;
 
     // Generar un ID único
     const id = generateUUID();
 
     // Obtener la fecha actual
-    const date = new Date().toLocaleDateString('es-ES');
+    const date = new Date().toLocaleDateString("es-ES");
 
     // Crear el objeto del comentario
     const comentario = {
-        id: id,
-        comment: userComment,
-        userName: userName,
-        rate: rating,
-        date: date
+      id: id,
+      comment: userComment,
+      userName: userName,
+      rate: rating,
+      date: date,
     };
 
     // Agregar el comentario al producto
@@ -223,20 +233,36 @@ document.getElementById('commentsForm').addEventListener('submit', function(even
     // Limpiar el formulario
     this.reset();
     window.reload();
-});
+  });
 
 // Función para generar un UUID
 function generateUUID() {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-        const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
-        return v.toString(16);
-    });
+  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+    const r = (Math.random() * 16) | 0,
+      v = c === "x" ? r : (r & 0x3) | 0x8;
+    return v.toString(16);
+  });
 }
 
 // Manejo de la selección de estrellas
-document.querySelectorAll('.star').forEach(star => {
-    star.addEventListener('click', function() {
-        document.querySelectorAll('.star').forEach(s => s.classList.remove('selected'));
-        this.classList.add('selected');
-    });
+document.querySelectorAll(".star").forEach((star) => {
+  star.addEventListener("click", function () {
+    document
+      .querySelectorAll(".star")
+      .forEach((s) => s.classList.remove("selected"));
+    this.classList.add("selected");
+  });
 });
+
+document
+.getElementById("AddCar")
+.addEventListener("click", function (event) {
+  modifyCarrito(productId, productValue);
+});
+
+document
+.getElementById("ComprarAhora")
+.addEventListener("click", function (event) {
+    modifyCarrito(productId, productValue);
+    window.location.href="/carrito"
+  });
