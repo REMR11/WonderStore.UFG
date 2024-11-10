@@ -47,7 +47,7 @@ main {
         .section-image {
           border-radius: 10px;
           max-height: 700px;
-          min-height: 300px;
+          max-width: 500px;
           object-fit: cover;
 
         }
