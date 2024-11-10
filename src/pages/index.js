@@ -55,7 +55,10 @@ function renderSwiper() {
   redirectToDetailsEvent();
 }
 
-export function submitNewsletterForm(event) {
+function submitNewsletterForm(event) {
+  console.log("submitNewsletterForm");
   event.preventDefault();
   sweetAlert(1, "¡Gracias por suscribirte!");
 }
+
+window.submitNewsletterForm = submitNewsletterForm;

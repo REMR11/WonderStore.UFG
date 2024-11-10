@@ -41,7 +41,12 @@ export function sweetAlert(type, text, url = null) {
             allowOutsideClick: false,
             confirmButtonText: 'Aceptar',
             background: '#FFDA03',
-            confirmButtonColor: 'green',
+            confirmButtonColor: 'black',
+            customClass: {
+                container: 'custom-sweetAlert-container',
+                icon: 'custom-sweetAlert-icon', // Clase personalizada para el ícono
+                popup: 'custom-sweetAlert-popup',
+            }
         }).then(function () {
             location.href = url
         });
