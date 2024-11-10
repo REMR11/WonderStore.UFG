@@ -22,9 +22,10 @@ if (!isProduction) {
       liveReloadServer.refresh("/");
     }, 100); // Evitar parpadeo al inicio
   })
-  //Permitir usar recursos de las diferentes carpetas
-  app.use(connectLivereload()); // Agregar middleware de LiveReload
 }
+
+//Permitir usar recursos de las diferentes carpetas
+app.use(connectLivereload()); // Agregar middleware de LiveReload
 app.use(express.static(path.join(__dirname, 'pages')));
 app.use('/api', express.static(path.join(__dirname, 'api')));
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
