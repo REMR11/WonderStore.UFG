@@ -63,9 +63,9 @@ async function renderSwiper() {
 }
 
 function submitNewsletterForm(event) {
-  console.log("submitNewsletterForm");
   event.preventDefault();
   sweetAlert(1, "¡Gracias por suscribirte!");
+  document.querySelector(".newsletter-form").reset();
 }
 
 window.submitNewsletterForm = submitNewsletterForm;
