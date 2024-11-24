@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" href="../assets/icons/page-icon.svg" type="img/svg" />
+
+  <meta name="description" content="Wonder Store - Tienda en linea hecha por fans para fans. ¡Deja que te sorprenda!" />
+
+  <meta property="og:title"
+    content="Wonder Store - Tienda en linea hecha por fans para fans. ¡Deja que te sorprenda!" />
+
+  <meta property="og:image" content="../assets/icons/page-icon.svg" />
+
+  <meta property="og:image:alt" content="Icono de la tienda" />
+
+  <title>WonderStore - Sobre nosotros</title>
+  <link rel="stylesheet" href="about.css">
+  <script type="module" src="../general.js"></script>
+</head>
+
+<body>
+  <main>
+    <h1>Sobre nosotros</h1>
+    <p>La página web WonderStore fue realizada por estudiantes de la universidad Francisco con el objetivo de diseñar un
+      sitio web que combine las modas populares con una tienda en linea, donde fans pudieran comprar de manera rápida e
+      intuitiva diversos productos.</p>
+    <p>Lo que nos llevo a diseñar dicha aplicación es que todos en el equipo deseaban diseñar una página web donde se
+      pudieran comprar sus cosas favoritas. <strong>¿El problema? R//</strong> Resulta que cada uno de nosotros tenia
+      diferentes gustos por ende empezamos a penar en un sitio donde se juntaran todos nuestros gustos</p>
+
+    <br>
+    <h2>¡Empezó la idea!</h2>
+    <p>Nos sentamos y empezamos a planificar como sería el sitio web, y señalamos algunos puntos importantes</p>
+    <ol>
+      <li>Que fuese fácil de usar</li>
+      <li>Que fuese amigable a la vista con colores que resaltarán pero no molestasen a los ojos</li>
+      <li>Sin necesidad de login, directo a la compra como el sitio de Mr Beast</li>
+    </ol>
+
+    <p>Luego de tener en claro nuestras ideas empezamos a diseñar los mockups del sitio web en Figma, para luego
+      desarrollar el sitio web con las tecnologías más básicas del desarrollo web: <strong>HTML, CSS y JS</strong></p>
+
+    <h2>Conócenos</h2>
+    <section class="members-container">
+      <article class="member-card">
+        <div class="member-img-container on-load-img-fn">
+          <img class="member-img" src="../../assets/imgs/melanie-profile.jpg" alt="Melanie foto" height="200px" width="100%">
+        </div>
+        <div class="member-info-container">
+          <h3>Melanie Adrian Cruz Garcia</h3>
+          <h4>CG100223</h4>
+          <div class="member-info apodo">
+            <span>Apodo:</span>
+            <p>Ronald aquí haces tu magia</p>
+          </div>
+          <div class="member-info">
+            <span>Frase celebre:</span>
+            <p>Ya subí los cambios</p>
+          </div>
+        </div>
+      </article>
+      <article class="member-card">
+        <div class="member-img-container on-load-img-fn">
+          <img class="member-img" src="../../assets/imgs/jesus-profile.jpg" alt="Melanie foto" height="200px" width="100%">
+        </div>
+        <div class="member-info-container">
+          <h3>Jesús Gerardo Esquivel Ramírez</h3>
+          <h4>CG100223</h4>
+          <div class="member-info apodo">
+            <span>Apodo:</span>
+            <p>Ronald aquí haces tu magia</p>
+          </div>
+          <div class="member-info">
+            <span>Frase celebre:</span>
+            <p>¿Como vas?</p>
+          </div>
+        </div>
+      </article>
+      <article class="member-card">
+        <div class="member-img-container on-load-img-fn">
+          <img class="member-img" src="../../assets/imgs/ronald-profile.jpg" alt="Melanie foto" height="200px" width="100%">
+        </div>
+        <div class="member-info-container">
+          <h3>Ronald Eduardo Mejia Reinosa</h3>
+          <h4>MR100823</h4>
+          <div class="member-info apodo">
+            <span>Apodo:</span>
+            <p>Oso de chocolate</p>
+          </div>
+          <div class="member-info">
+            <span>Frase celebre:</span>
+            <p>Ya me tenes harto</p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+  <script>
+    //Método para añadir animación al cargar la imagen
+    document.addEventListener('DOMContentLoaded',()=>{
+      try {
+        document.querySelectorAll(".on-load-img-fn").forEach((container) => {
+          const img = container.querySelector("img");
+          function loaded() {
+            container.classList.add("on-load-img-fn-loaded");
+          }
+
+          if (img.complete) {
+            loaded();
+          } else {
+            img.addEventListener("load", loaded);
+          }
+        });
+      } catch (error) { }
+    })
+  </script>
+</body>
+
+</html>
