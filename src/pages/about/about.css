@@ -130,4 +130,5 @@ h2{
 
 .member-info.apodo{
   display: flex;
+  gap: 5px;
 }
