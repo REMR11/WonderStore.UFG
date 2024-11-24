@@ -34,8 +34,8 @@ export function getListItem(linkArray, isExpandedItem = false) {
   return links;
 }
 
-function generateHeader(links){
-  const carrito = getCarrito();
+async function generateHeader(links){
+  const carrito = await getCarrito();
   let header = `
     <header class="header-principal nav-container">
       <div class="nav-logo">
@@ -80,13 +80,12 @@ function generateHeader(links){
 }
 
 export async function recalculateCart(){
-  const carrito = getCarrito();
+  const carrito = await getCarrito();
   document.getElementById("shopping-button").dataset.countItemShopping = carrito.cart.length;
 }
 
-(() => {
+(async () => {
   const links = getListItem(ROUTES);
-  const header = generateHeader(links);
-
+  const header = await generateHeader(links);
   document.body.insertAdjacentHTML("afterbegin", header);
 })();

@@ -1,4 +1,5 @@
 import { recalculateCart } from "../components/navbar.js";
+import { BASE_URL } from "../utils/globalVariables.js";
 
 /*Función para setear los productos en el localStorage solo se ha de llamar
 una vez en caso de no haberse seteado antes.*/
@@ -28,8 +29,13 @@ export function setCarrito() {
  *   - quantitySell: number
  *   - comments: Array<Object>
  */
-export function getProducts() {
-  return JSON.parse(localStorage.getItem("products"));
+export async function getProducts() {
+  const res = await fetch(BASE_URL + "/api/products");
+
+  if (!res.ok) {
+    throw new Error('Error fetching products');
+  }
+  return await res.json();
 }
 
 /**
@@ -47,9 +53,14 @@ export function getProducts() {
  *   - quantitySell: number
  *   - comments: Array<Object>
  */
-export function getProductById(id) {
-  const products = getProducts();
-  return products.find((product) => product.id == id);
+export async function getProductById(id) {
+  const response = await fetch(`${BASE_URL}/api/products/${id}`);
+  if (response.ok) {
+    const product = await response.json();
+    return product;
+  } else {
+    return null;
+  }
 }
 
 /**
@@ -183,8 +194,8 @@ export function getProductRatings(product) {
  *   - ratingPercentages[rate]: int El porcentaje de calificación del producto
 
  */
-export function getProductDetail(id) {
-  const products = getProducts(); //Obtenemos los productos
+export async function getProductDetail(id) {
+  const products = await getProducts(); //Obtenemos los productos
   const product = products.find((product) => product.id == id); //Buscamos el producto por el id
 
   //Validamos que exista
@@ -247,18 +258,27 @@ export function getProductDetail(id) {
  * @param {number} idProduct Representa el id del producto a modificar
  * @param {Object} comentario Representa el objeto que es el comentario a añadir
  */
-export function addProductComment(idProduct, comment) {
-  const products = getProducts();
-  const product = products.find((product) => product.id == idProduct); //Buscamos el producto por el id
-
+export async function addProductComment(idProduct, comment) {
+  const product = await getProductById(idProduct);
   //Validamos que exista
   if (!product) {
     return null;
   }
 
-  product.comments.push(comment);
+  //Guardamos el comentario en el producto
+  const response = await fetch(`${BASE_URL}/api/products/${idProduct}/comments`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ comment })
+  });
 
-  localStorage.setItem("products", JSON.stringify(products));
+  if (!response.ok) {
+    const errorData = await response.json();
+    console.error('Error:', errorData.message);
+  } else {
+  }
 }
 
 /**
@@ -267,13 +287,13 @@ export function addProductComment(idProduct, comment) {
  *   - cart: Array de objetos con los productos en el carrito
  *   - total: int El total de la compra
  */
-export function getCarrito() {
+export async function getCarrito() {
   try {
     const carrito = JSON.parse(localStorage.getItem("carrito"));
 
     if (carrito == null) return null;
 
-    const productsInDB = getProducts();
+    const productsInDB = await getProducts();
     const productsInCart = carrito.cart.map((productInCart) => {
       const productFinded = productsInDB.find(
         (product) => product.id == productInCart.id
@@ -309,14 +329,14 @@ export function getCarrito() {
  * @param {boolean} set Por defecto es false, si es true se setea la cantidad directamente
  * @throws {Error} Si el producto no se encontró
  */
-export function modifyCarrito(idProduct, cantidad, set = false) {
-  const products = getProducts();
+export async function modifyCarrito(idProduct, cantidad, set = false) {
+  const products = await getProducts();
 
   const productInDB = products.find((product) => product.id == idProduct);
 
   if (!productInDB) return null;
 
-  const carrito = getCarrito();
+  const carrito = await getCarrito();
   const productInCart = carrito.cart.find((product) => product.id == idProduct);
   const newSubTotal = cantidad * productInDB.price;
   let currentSubtotal = 0;
@@ -363,7 +383,19 @@ export function modifyCarrito(idProduct, cantidad, set = false) {
   carrito.total -= currentSubtotal;
   carrito.total += isNewProduct ? newSubTotal : productInCart.subTotal;
 
-  localStorage.setItem("products", JSON.stringify(products));
+  //Cargamos los productos en la API
+  const res = await fetch(`${BASE_URL}/api/products`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ products })
+  });
+
+  if (!res.ok) {
+    console.log("Ocurrio un error reiniciar los productos")
+  }
+
   localStorage.setItem("carrito", JSON.stringify(carrito));
   //Recalculamos la cantidad en el carrito del navbar
   recalculateCart();
@@ -375,15 +407,15 @@ export function modifyCarrito(idProduct, cantidad, set = false) {
  * @param {number} cantidad Representa la cantidad del producto
  * @throws {Error} Si el producto no se encontró
  */
-export function addProductInCart(idProduct, cantidad) {
-  const products = getProducts();
+export async function addProductInCart(idProduct, cantidad) {
+  const products = await getProducts();
 
   const productInDB = products.find((product) => product.id == idProduct);
 
   if (!productInDB)
     throw new Error("No se encontro el producto en la base de datos");
 
-  const carrito = getCarrito();
+  const carrito = await getCarrito();
   const subTotal = productInDB.price * cantidad;
 
   carrito.cart.push({
@@ -399,7 +431,18 @@ export function addProductInCart(idProduct, cantidad) {
 
   productInDB.quantity = productInDB.quantity - cantidad;
 
-  localStorage.setItem("products", JSON.stringify(products));
+  //Cargamos los productos en la API
+  const res = await fetch(`${BASE_URL}/api/products`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ products })
+  });
+
+  if (!res.ok) {
+    console.log("Ocurrio un error reiniciar los productos")
+  }
   localStorage.setItem("carrito", JSON.stringify(carrito));
   //Recalculamos la cantidad en el carrito del navbar
   recalculateCart();
@@ -410,15 +453,15 @@ export function addProductInCart(idProduct, cantidad) {
  * @param {number} idProduct
  * @throws {Error} Si el producto no se encontró
  */
-export function deleteProductInCart(idProduct) {
-  const products = getProducts();
+export async function deleteProductInCart(idProduct) {
+  const products = await getProducts();
 
   const productInDB = products.find((product) => product.id == idProduct);
 
   if (!productInDB)
     throw new Error("No existe el producto en la base de datos");
 
-  const carrito = getCarrito();
+  const carrito = await getCarrito();
   const productInCart = carrito.cart.find((product) => product.id == idProduct);
 
   if (!productInCart) throw new Error("El producto no existe en el carrito");
@@ -428,15 +471,30 @@ export function deleteProductInCart(idProduct) {
 
   carrito.total -= currentSubtotal;
   carrito.cart = carrito.cart.filter((product) => product.id != idProduct);
-  localStorage.setItem("products", JSON.stringify(products));
+
+  //Cargamos los productos en la API
+  const res = await fetch(`${BASE_URL}/api/products`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ products })
+  });
+
+  console.log(res);
+
+  if (!res.ok) {
+    console.log("Ocurrio un error reiniciar los productos")
+  }
+
   localStorage.setItem("carrito", JSON.stringify(carrito));
   //Recalculamos la cantidad en el carrito del navbar
   recalculateCart();
 }
 
-export function emptyCart() {
-  const carrito = getCarrito();
-  const products = getProducts();
+export async function emptyCart() {
+  const carrito = await getCarrito();
+  const products = await getProducts();
 
   //Retornamos todas las cantidades a su valor
   carrito.cart.forEach((product) => {
@@ -448,7 +506,20 @@ export function emptyCart() {
   carrito.cart = [];
   carrito.total = 0;
   localStorage.setItem("carrito", JSON.stringify(carrito));
-  localStorage.setItem("products", JSON.stringify(products));
+
+  //Cargamos los productos en la API
+  const res = await fetch(`${BASE_URL}/api/products/`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ products })
+  });
+
+  if (!res.ok) {
+    console.log("Ocurrio un error reiniciar los productos")
+  }
+
   //Recalculamos la cantidad en el carrito del navbar
   recalculateCart();
 }

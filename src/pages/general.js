@@ -1,4 +1,3 @@
-import { setCarrito } from "../api/api.js";
 import { SCRIPTS, LINKS_EXTERNAL } from "../utils/globalVariables.js";
 
 //Función autoejecutable para guardar los productos y el carrito en el localStorage

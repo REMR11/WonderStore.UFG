@@ -6,8 +6,8 @@ import { emptyCart, getCarrito } from "../../api/api.js";
 //   sweetAlert(1,"Confirmar compra");
 // }) 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const carrito = getCarrito();
+document.addEventListener("DOMContentLoaded", async () => {
+  const carrito = await getCarrito();
   const total = document.getElementById("total-carrito");
   console.log(total, carrito)
   total.value = carrito.total.toFixed(2);

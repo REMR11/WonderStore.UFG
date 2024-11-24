@@ -19,9 +19,9 @@ const ADD_TO_CART_BUTTON = document.getElementById("add-to-cart-button");
 //Para ahorrarme crear un evento de escucha en cada renderización
 //Creare una función y la insertare en el objeto window para ponerla en el onclick en el html de inserto
 //dinamicamente.
-export function showAddToCartModal(id) {
+export async function showAddToCartModal(id) {
   //Obtenemos el producto
-  const product = getProductById(id);
+  const product = await getProductById(id);
   if (!product) {
     sweetAlert(
       3,
@@ -35,7 +35,6 @@ export function showAddToCartModal(id) {
     location.reload();
     return;
   }
-  console.log(product.quantity)
 
   MODAL_PRODUCT_IMG.src = product.imgs[0];
   PRODUCT_MODAL.querySelector(".product-title").textContent = product.name;
@@ -90,7 +89,7 @@ async function addToCart() {
 
   const { modifyCarrito } = await import("../../api/api.js");
 
-  modifyCarrito(idProduct, quantity);
+  await modifyCarrito(idProduct, quantity);
 
   PRODUCT_MODAL.close();
   document.body.classList.remove("body-no-scroll-modal-opened");

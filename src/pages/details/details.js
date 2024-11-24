@@ -2,6 +2,7 @@ import {
   getProductById,
   addProductComment,
   modifyCarrito,
+  getProductDetail
 } from "../../api/api.js";
 import { sweetAlert } from "../../utils/alerts.js";
 
@@ -157,7 +158,7 @@ function countRatings(pRatings) {
 }
 
 // Función para calcular el porcentaje y actualizar las barras de progreso
-function updateProgressBars(counts) {
+async function updateProgressBars(counts) {
   const sortCounts = counts.sort((a, b) => b - a);
   const totalRatings = sortCounts.reduce((sum, count) => sum + count, 0);
 
@@ -165,13 +166,19 @@ function updateProgressBars(counts) {
   const progressBars = document.querySelectorAll(".progress-bar");
   const percentageLabels = document.querySelectorAll(".rating-percentage");
 
+  const details = await getProductDetail(productId);
+  console.log(details.ratingPercentages);
+
+  let start = 5;
+
   counts.forEach((count, index) => {
-    const percentage = totalRatings > 0 ? (count / totalRatings) * 100 : 0; // Calcular porcentaje
+    const percentage = details.ratingPercentages[start]; // Calcular porcentaje
     progressBars[index].style.width = `${percentage}%`; // Actualizar el ancho de la barra
     // Actualizar el texto del porcentaje en la etiqueta
     percentageLabels[index].textContent = `${Math.round(
       percentage.toFixed(2)
     )}%`;
+    start--;
   });
 }
 
@@ -207,7 +214,7 @@ function displayComments(comments = []) {
 // Agregar evento al formulario de comentarios
 document
   .getElementById("commentsForm")
-  .addEventListener("submit", function (event) {
+  .addEventListener("submit", async function (event) {
     event.preventDefault(); // Prevenir el envío del formulario
 
     // Obtener los valores del formulario
@@ -234,7 +241,7 @@ document
 
     // Agregar el comentario al producto
     addProductComment(productId, comentario);
-    const product = getProductById(productId);
+    const product = await getProductById(productId);
     displayGlobalQuantities(product.comments.length);
     updateProgressBars(countRatings(product.comments));
     // Limpiar el formulario
@@ -271,7 +278,7 @@ document.querySelectorAll('.star').forEach((star, index) => {
 
 document
   .getElementById("AddCar")
-  .addEventListener("click", function (event) {
+  .addEventListener("click", async function (event) {
     const productValue = parseInt(document.getElementById("counterInput").value);
 
     if(productValue <= 0){
@@ -282,20 +289,20 @@ document
       return;
     }
 
-    modifyCarrito(productId, productValue);
+    await modifyCarrito(productId, productValue);
     sweetAlert(1, "Producto agregado al carrito correctamente.")
   });
 
 document
   .getElementById("ComprarAhora")
-  .addEventListener("click", function (event) {
-    const product = getProductById(productId);
+  .addEventListener("click", async function (event) {
+    const product = await getProductById(productId);
 
     if(product.quantity <= 0){
       sweetAlert(3, "El producto se encuentra agotado", "/carrito");
       return;
     }
 
-    modifyCarrito(productId, 1);
+    await modifyCarrito(productId, 1);
     sweetAlert(1, "Producto agregado al carrito correctamente.", "/carrito")
   });

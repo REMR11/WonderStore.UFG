@@ -2,9 +2,9 @@ import { getCarrito, deleteProductInCart, modifyCarrito, emptyCart, getProductBy
 import { sweetAlert } from "../utils/alerts.js";
 
 // Función para actualizar el carrito en la vista
-function updateCartView() {
+async function updateCartView() {
     const cartItemsContainer = document.getElementById("cart-items-container");
-    const carrito = getCarrito();
+    const carrito = await getCarrito();
 
 
     cartItemsContainer.innerHTML = '';
@@ -76,10 +76,10 @@ function updateCartView() {
 }
 
 // Función para modificar la cantidad de un producto
-function modifyProductQuantity(id, change) {
-    const carrito = getCarrito();
+async function modifyProductQuantity(id, change) {
+    const carrito = await getCarrito();
     const product = carrito.cart.find(item => item.id === id);
-    const productInDB = getProductById(id);
+    const productInDB = await getProductById(id);
 
     if (product) {
         let newQuantity = product.quantity + change;
@@ -90,35 +90,35 @@ function modifyProductQuantity(id, change) {
             sweetAlert(3, "La cantidad de productos no puede ser mayor a la cantidad de productos disponibles.")
             return;
         }
-        modifyCarrito(id, newQuantity - product.quantity, false);
+        await modifyCarrito(id, newQuantity - product.quantity, false);
         updateCartView();
     }
 }
 // Función para actualizar el subtotal del carrito en la vista
-function updateCartSubtotal() {
-    const carrito = getCarrito();
+async function updateCartSubtotal() {
+    const carrito = await getCarrito();
     const subtotalAmount = document.getElementById("subtotal-amount");
     subtotalAmount.textContent = `$${carrito.total.toFixed(2)}`;
 }
 // Función para eliminar un producto del carrito
-function removeProductFromCart(id) {
+async function removeProductFromCart(id) {
 
     sweetAlert(1, "Producto eliminado del carrito correctamente.");
-    deleteProductInCart(id);
+    await deleteProductInCart(id);
     updateCartView();
     updateCartSubtotal();
 }
 
 // Función para vaciar el carrito
-function clearCart() {
-    emptyCart();
+async function clearCart() {
+    await emptyCart();
     updateCartView();
     updateCartSubtotal();
 }
 
 
-function checkout() {
-    const carrito = getCarrito();
+async function checkout() {
+    const carrito = await getCarrito();
     if (carrito.cart.length === 0) {
         sweetAlert(4, "El carrito está vacío.");
         return;

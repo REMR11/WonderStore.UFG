@@ -469,14 +469,15 @@ async function loadProducts(filters = null, order = "all") {
   try {
     NOT_FOUND_MESSAGE.style.display = "none";
     //Obtenemos los filtros, orden y tema en la URL
-    const productsInDB = getProducts();
+    const productsInDB = await getProducts();
     allProducts = productsInDB;
     //En caso de que no existan debemos cargar los productos
     if (!productsInDB) {
       const { initializeApp } = await import("../general.js");
 
       await initializeApp();
-      allProducts = getProducts();
+      allProducts = await getProducts();
+      console.log("Cargando productos");
     }
 
     renderProducts(allProducts, filters, order);

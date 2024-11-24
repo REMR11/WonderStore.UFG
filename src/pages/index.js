@@ -44,12 +44,12 @@ async function renderCards() {
 async function renderSwiper() {
   const SWIPER_CONTAINER = document.getElementById("fav-products-swiper");
   let template = "";
-  const allProducts = getProducts();
+  const allProducts = await getProducts();
 
   if(!allProducts){
     const { initializeApp } = await import("../general.js");
     await initializeApp();
-    allProducts = getProducts();
+    allProducts = await getProducts();
   }
 
   const mostRatedProducts = getMostRatedProducts(allProducts);
