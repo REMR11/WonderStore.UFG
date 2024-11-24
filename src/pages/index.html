@@ -28,18 +28,12 @@
   <body>
     <main>
       <section class="hero-banner container">
+        <video class="hero-banner-video" autoplay muted>
+          <source src="../assets/home/home-banner.mp4" type="video/mp4">
+          Tu navegador no soporta el elemento de video.
+        </video>
         <div class="hero-banner-content">
-          <h1 class="hero-banner-title">Tu universo de coleccionables</h1>
-          <img
-            src="../assets/home/home-stars-path.svg"
-            alt="Hero banner stars path"
-          />
-        </div>
-        <div class="hero-banner-logo">
-          <img
-            src="../assets/home/home-star-logo.svg"
-            alt="Logo de la tienda"
-          />
+          <h1 class="hero-banner-title">Tu universo de <br> coleccionables</h1>
         </div>
       </section>
 
@@ -92,10 +86,13 @@
             <label for="email">Correo</label>
             <input type="email" id="email" name="email" required />
           </div>
+          <div class="form-group terms">
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms">Acepto los términos y condiciones</label>
+          </div>
           <button
             type="submit"
             class="general-btn"
-            onclick="submitNewsletterForm(event)"
           >
             Suscribirse
           </button>
