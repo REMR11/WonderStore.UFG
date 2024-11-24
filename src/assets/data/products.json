@@ -1,0 +1,2768 @@
+[
+  {
+      "id": "dd0b0cad-605d-49d1-a157-cf4e1f148fd7",
+      "name": "Attack on Titan",
+      "quantity": 25,
+      "description": "En un mundo donde la humanidad vive dentro de ciudades amuralladas para protegerse de los gigantes devoradores de hombres, Eren Yeager y sus amigos Mikasa y Armin se unen a la milicia para luchar contra estos monstruos.",
+      "category": "Mangas",
+      "topic": "anime",
+      "price": 85.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/91VlIW1pn8L._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81jfHZNF43L._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/71++xYy6KvL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/71-b7FETzIL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/71-b7FETzIL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81s7Dq6cjgL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81SWGoZxqJL._SL1500_.jpg"
+      ],
+      "quantitySell": 300,
+      "comments": [
+          {
+              "id": "d5c3dcbe-8769-43a8-a9ec-c3a615915529",
+              "comment": "Increíble trama y personajes, no puedo esperar a la próxima temporada.",
+              "userName": "Wonder123",
+              "rate": 5,
+              "date": "05/03/2024"
+          },
+          {
+              "id": "05451346-3a9c-4f4b-b2e2-aa06a5f96e29",
+              "comment": "La animación es espectacular, pero a veces es muy oscura.",
+              "userName": "animeFan456",
+              "rate": 4,
+              "date": "06/03/2024"
+          },
+          {
+              "id": "db40b2fd-343c-43e0-aa32-dded43b38778",
+              "comment": "Demasiados giros, pero eso es lo que lo hace emocionante.",
+              "userName": "ErenLover",
+              "rate": 5,
+              "date": "07/03/2024"
+          },
+          {
+              "id": "b2736316-7570-4386-ab67-792c7700ce7e",
+              "comment": "Me encanta, pero algunos personajes son difíciles de seguir.",
+              "userName": "MikasaForever",
+              "rate": 4,
+              "date": "08/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "1b0a6029-fe78-4f14-a6b5-6dd3fb72b819",
+      "name": "Fullmetal Alchemist: Brotherhood",
+      "quantity": 64,
+      "description": "La historia sigue a dos hermanos, Edward y Alphonse Elric, que son alquimistas estatales en busca de la Piedra Filosofal para restaurar sus cuerpos después de un intento fallido de traer de vuelta a la vida a su madre mediante la alquimia.",
+      "category": "Mangas",
+      "topic": "anime",
+      "price": 120.5,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/41RTcYyXFXL._SY445_SX342_.jpg",
+          "https://m.media-amazon.com/images/I/51WhAAf0EXL._SY445_SX342_.jpg",
+          "https://m.media-amazon.com/images/I/717iw0tucML._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/71rSsOJkvAL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/61f4LC0S5NL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/71vK7LxK7yL._SL1500_.jpg"
+      ],
+      "quantitySell": 250,
+      "comments": [
+          {
+              "id": "d2dcc9e5-c73e-4fe0-bc22-44af29fa0bf7",
+              "comment": "Una obra maestra, cada episodio es un deleite.",
+              "userName": "Alchemist77",
+              "rate": 5,
+              "date": "05/03/2024"
+          },
+          {
+              "id": "0d17e751-ecb1-4d1f-9ee7-57b300e4a82e",
+              "comment": "El desarrollo de los personajes es excepcional.",
+              "userName": "BrotherhoodFan",
+              "rate": 5,
+              "date": "06/03/2024"
+          },
+          {
+              "id": "eabbd4f5-9c02-45a9-beda-f37d6aad1774",
+              "comment": "Me gustó mucho, aunque el final me dejó con ganas de más.",
+              "userName": "EdwardElric99",
+              "rate": 4,
+              "date": "07/03/2024"
+          },
+          {
+              "id": "a9124224-eb30-4f59-882a-b9f15cef8a8a",
+              "comment": "Recomiendo verlo a todos los fans del anime.",
+              "userName": "AnimeLover88",
+              "rate": 5,
+              "date": "08/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "cbc328dd-2314-428a-8326-4fa58a8e213d",
+      "name": "Death Note",
+      "quantity": 37,
+      "description": "La historia sigue a Light Yagami, un estudiante de secundaria que descubre un cuaderno sobrenatural llamado Death Note que le permite matar a cualquier persona cuyo nombre escriba en él.",
+      "category": "Mangas",
+      "topic": "anime",
+      "price": 45.75,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/71-DDPOB76L._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/51S7T9tAe6L._SY445_SX342_.jpg",
+          "https://m.media-amazon.com/images/I/71teEs2FRpL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81iDNjn-r3L._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/61Kx4vs5yCL._SY445_SX342_.jpg",
+          "https://m.media-amazon.com/images/I/81+P+MsigBL._SL1500_.jpg"
+      ],
+      "quantitySell": 150,
+      "comments": [
+          {
+              "id": "5ff85d90-64f9-4e63-afa9-fcdb138c57c4",
+              "comment": "Un thriller psicológico impresionante, la tensión es constante.",
+              "userName": "LightFan2024",
+              "rate": 5,
+              "date": "05/03/2024"
+          },
+          {
+              "id": "4d3d917b-43f7-4616-bc90-d699841fc419",
+              "comment": "Me encanta cómo se desarrolla la historia, realmente adictivo.",
+              "userName": "ShinigamiKing",
+              "rate": 5,
+              "date": "06/03/2024"
+          },
+          {
+              "id": "860c8793-4cbb-4542-9b49-8d2e99976107",
+              "comment": "El final me sorprendió, pero creo que podría haber sido mejor.",
+              "userName": "KiraSupporter",
+              "rate": 4,
+              "date": "07/03/2024"
+          },
+          {
+              "id": "3b1785b7-2e9c-4575-b155-4ee2ce2d14ff",
+              "comment": "Los personajes son complejos y bien desarrollados.",
+              "userName": "MisaMisaFan",
+              "rate": 5,
+              "date": "08/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "cfbc97a1-ecc3-4c9f-b8a9-4f37daee4371",
+      "name": "My Hero Academia",
+      "quantity": 50,
+      "description": "En un mundo donde la mayoría de la población tiene superpoderes, Izuku Midoriya, un chico sin poderes, sueña con convertirse en un héroe. A pesar de su falta de habilidades, recibe la oportunidad de asistir a la prestigiosa U.A. High School.",
+      "category": "Mangas",
+      "topic": "anime",
+      "price": 79.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/81fCzl5vTtL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81HJRXI4cDL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81G4Gy7S4xL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/811WD+Wwf9L._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81d6Cqu7GoL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81RTlZu0GJL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81eenB2p1pL._SL1500_.jpg"
+      ],
+      "quantitySell": 600,
+      "comments": [
+          {
+              "id": "6364ea98-209a-4fd7-b193-cf849ab3345b",
+              "comment": "Inspirador y lleno de acción, me encanta cada episodio.",
+              "userName": "HeroicFan",
+              "rate": 5,
+              "date": "05/03/2024"
+          },
+          {
+              "id": "a9730280-5a86-4e4a-bd17-7b92fea47b8a",
+              "comment": "Los personajes son entrañables y la historia es emocionante.",
+              "userName": "DekuLover",
+              "rate": 4,
+              "date": "06/03/2024"
+          },
+          {
+              "id": "ccc09419-de30-4f2c-a56a-2579e7d27173",
+              "comment": "Algunos arcos son más lentos, pero en general es genial.",
+              "userName": "VillainWatcher",
+              "rate": 3,
+              "date": "07/03/2024"
+          },
+          {
+              "id": "476c28dd-93ba-47bd-a797-a6f25350f5e4",
+              "comment": "Me encanta el desarrollo de Midoriya, un verdadero héroe.",
+              "userName": "AllmightFan",
+              "rate": 5,
+              "date": "08/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "fb3857ce-f975-424d-b17d-a4b9bcbe637b",
+      "name": "Demon Slayer",
+      "quantity": 45,
+      "description": "Tanjiro Kamado, un joven vendedor de carbón, se convierte en cazador de demonios después de que su familia es asesinada por demonios y su hermana Nezuko es transformada en uno de ellos. Juntos, luchan contra las fuerzas del mal.",
+      "category": "Mangas",
+      "topic": "anime",
+      "price": 89.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/810Isi4YasS._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/91HqtrlVF3L._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/91xdWQkp9UL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81zhRsRZCaL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81Qj2qAfAzL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81OZ2Y2COjL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81Qj2qAfAzL._SL1500_.jpg"
+      ],
+      "quantitySell": 459,
+      "comments": [
+          {
+              "id": "27f25718-054d-44d2-a043-ef7a19ad063c",
+              "comment": "La animación es impresionante, una de las mejores que he visto.",
+              "userName": "TanjiroFan",
+              "rate": 5,
+              "date": "05/03/2024"
+          },
+          {
+              "id": "4c949c7e-d9fa-4fee-bcd8-d75af8544963",
+              "comment": "Los personajes son entrañables y la historia es muy emotiva.",
+              "userName": "NezukoLover",
+              "rate": 5,
+              "date": "06/03/2024"
+          },
+          {
+              "id": "1d31f897-9465-4acd-8929-7578384df65b",
+              "comment": "Algunos episodios son un poco lentos, pero la acción es increíble.",
+              "userName": "DemonHunter",
+              "rate": 4,
+              "date": "07/03/2024"
+          },
+          {
+              "id": "c6a19571-0574-40e7-96ed-3de59dd9b50f",
+              "comment": "Me encanta la relación entre Tanjiro y Nezuko, muy conmovedora.",
+              "userName": "SisterBond",
+              "rate": 5,
+              "date": "08/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "e2f3129d-b1b7-486c-bd26-6c67964a9e72",
+      "name": "One Piece",
+      "quantity": 100,
+      "description": "La historia sigue a Monkey D. Luffy y su tripulación en su búsqueda del One Piece, el tesoro más grande del mundo, mientras enfrentan enemigos poderosos y descubren islas misteriosas.",
+      "category": "Mangas",
+      "topic": "anime",
+      "price": 39.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/81u8P2490RL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/816mA4AA0PL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81zoRUxk26S._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81nZRYqsKPL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81AJ50vbaIL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/91c5+SaxrhL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/91NxYvUNf6L._SL1500_.jpg"
+      ],
+      "quantitySell": 590,
+      "comments": [
+          {
+              "id": "dd106492-ffe2-4b6a-9d27-35ea9f67d407",
+              "comment": "Una aventura épica que nunca decepciona, siempre me hace reír.",
+              "userName": "StrawHatFan",
+              "rate": 5,
+              "date": "05/03/2024"
+          },
+          {
+              "id": "8a2b3e10-861c-46fb-8f42-40f69ca0e928",
+              "comment": "El desarrollo de la historia es impresionante, cada arco es único.",
+              "userName": "Nakama2024",
+              "rate": 5,
+              "date": "06/03/2024"
+          },
+          {
+              "id": "763a2ad7-aef2-4fc0-a608-af0384fbad6b",
+              "comment": "Algunos episodios son un poco largos, pero vale la pena.",
+              "userName": "PirateLover",
+              "rate": 4,
+              "date": "07/03/2024"
+          },
+          {
+              "id": "75dca020-5ae0-449a-babc-e5362a8b62a1",
+              "comment": "Los personajes son memorables y la música es genial.",
+              "userName": "MusicFan",
+              "rate": 5,
+              "date": "08/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "2c33f1c0-462e-4c46-9cc7-f19a285377bd",
+      "name": "Sword Art Online",
+      "quantity": 30,
+      "description": "En el año 2022, miles de jugadores quedan atrapados en un videojuego de realidad virtual. Si mueren en el juego, también mueren en la vida real. Kirito, un jugador solitario, debe encontrar la manera de escapar.",
+      "category": "Mangas",
+      "topic": "anime",
+      "price": 75,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/81mVoZWR6wL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/812OptdrRAL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81ijaH0yoEL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81smunDUWqL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/811b5NNRnnL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81snt4rC9aL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/8192k0UH1lL._SL1500_.jpg"
+      ],
+      "quantitySell": 910,
+      "comments": [
+          {
+              "id": "77bf08c0-73e1-464a-a82f-cc2b7d2b202e",
+              "comment": "Una premisa fascinante y emocionante, me mantuvo al borde del asiento.",
+              "userName": "KiritoFan",
+              "rate": 5,
+              "date": "05/03/2024"
+          },
+          {
+              "id": "f93590fd-92da-47a0-a69a-1a2c4ed62c5e",
+              "comment": "Los personajes son interesantes, pero algunos arcos son un poco lentos.",
+              "userName": "AsunaSupporter",
+              "rate": 4,
+              "date": "06/03/2024"
+          },
+          {
+              "id": "92c71353-626e-4e5d-bce7-ee545e95d793",
+              "comment": "La animación es hermosa, especialmente en las escenas de batalla.",
+              "userName": "GameLover",
+              "rate": 5,
+              "date": "07/03/2024"
+          },
+          {
+              "id": "515afa67-efd3-4052-803e-a7456b428612",
+              "comment": "Me gusta la mezcla de acción y romance, aunque a veces es predecible.",
+              "userName": "RomanceFan",
+              "rate": 3,
+              "date": "08/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "fb83cb30-f3c6-4e25-877e-739a1a39a69a",
+      "name": "Hunter x Hunter",
+      "quantity": 55,
+      "description": "Gon Freecss, un joven que busca convertirse en un Hunter para encontrar a su padre, se embarca en una aventura llena de desafíos y encuentros extraordinarios.",
+      "category": "Mangas",
+      "topic": "anime",
+      "price": 62.5,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/815uHbvvu1L._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81Pf2GSz0-L._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81049wToL4L._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81HlaWFVKdL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/815cvOmanIL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/814iJ38ANPL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81QotZtmbcL._SL1500_.jpg"
+      ],
+      "quantitySell": 104,
+      "comments": [
+          {
+              "id": "64bcd2c0-83d0-450d-b87b-47df1494134c",
+              "comment": "Una de las mejores historias de aventura que he visto, llena de giros.",
+              "userName": "GonFan",
+              "rate": 5,
+              "date": "05/03/2024"
+          },
+          {
+              "id": "8f000195-92da-485d-8200-8a8ec0099883",
+              "comment": "El desarrollo de los personajes es increíble, cada uno tiene su propia historia.",
+              "userName": "KilluaLover",
+              "rate": 5,
+              "date": "06/03/2024"
+          },
+          {
+              "id": "d64bdd46-508d-4a41-b29b-c1d27499cee3",
+              "comment": "Algunos arcos son más lentos, pero la historia es satisfactoria en general.",
+              "userName": "ZoldyckFan",
+              "rate": 4,
+              "date": "07/03/2024"
+          },
+          {
+              "id": "7077be7a-9a27-4f95-84d5-118e63b85db4",
+              "comment": "Los combates son estratégicos y emocionantes, me encanta.",
+              "userName": "BattleFan",
+              "rate": 5,
+              "date": "08/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "081f6ed1-b215-481c-847c-527f207a2a3f",
+      "name": "Attack on Titan",
+      "quantity": 40,
+      "description": "En un mundo donde la humanidad está al borde de la extinción debido a gigantes devoradores de hombres, Eren Yeager y sus amigos se unen a la lucha para liberar a la humanidad de esta amenaza.",
+      "category": "Figuras de acción",
+      "topic": "anime",
+      "price": 99.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/619QqcluEML._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/71CXK0zvNRL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/71CXK0zvNRL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/61m6viu3i5L._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81vGteMDQBL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/71TkKatJhIL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/819ysDlDmdL._AC_SL1500_.jpg"
+      ],
+      "quantitySell": 414,
+      "comments": [
+          {
+              "id": "9de0abab-c03e-4ff0-a253-88ffa489e020",
+              "comment": "Una historia intensa y llena de giros, no puedo dejar de ver.",
+              "userName": "ErenFan",
+              "rate": 5,
+              "date": "05/03/2024"
+          },
+          {
+              "id": "567e5407-1e63-4f34-aeeb-1e8f12036c18",
+              "comment": "Los personajes son profundos y la trama es muy intrigante.",
+              "userName": "MikasaLover",
+              "rate": 5,
+              "date": "06/03/2024"
+          },
+          {
+              "id": "1080ed99-b42a-40cc-aecb-31f3f6d52732",
+              "comment": "La animación es espectacular, especialmente en las escenas de acción.",
+              "userName": "TitanHunter",
+              "rate": 4,
+              "date": "07/03/2024"
+          },
+          {
+              "id": "146c372b-802e-4b11-ae40-0cd4828b95b4",
+              "comment": "Algunos episodios son muy oscuros, pero eso lo hace único.",
+              "userName": "DarkFan",
+              "rate": 4,
+              "date": "08/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "b8a40ac0-fedd-412f-bea3-9e96cc2c0337",
+      "name": "Fullmetal Alchemist: Brotherhood",
+      "quantity": 60,
+      "description": "Los hermanos Edward y Alphonse Elric utilizan la alquimia en su búsqueda para recuperar lo que han perdido tras un experimento fallido. La historia explora temas de sacrificio, amistad y redención.",
+      "category": "Figuras de acción",
+      "topic": "anime",
+      "price": 89.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/71XxKM+GmFL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/71XxKM+GmFL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/41BbkPBaU2L._AC_.jpg",
+          "https://m.media-amazon.com/images/I/41Xw5ZbYaSL._AC_.jpg",
+          "https://m.media-amazon.com/images/I/515M8Epf34L._AC_.jpg",
+          "https://m.media-amazon.com/images/I/51KZxPOaPjL._AC_.jpg"
+      ],
+      "quantitySell": 146,
+      "comments": [
+          {
+              "id": "b5411a47-1d44-400e-936d-07c6f54256ba",
+              "comment": "Una obra maestra, la historia es profunda y conmovedora.",
+              "userName": "AlchemistFan",
+              "rate": 5,
+              "date": "05/03/2024"
+          },
+          {
+              "id": "7b3a232d-6860-4a4d-aabc-b1bf32f97e77",
+              "comment": "Los personajes son memorables y la animación es de alta calidad.",
+              "userName": "BrotherhoodLover",
+              "rate": 5,
+              "date": "06/03/2024"
+          },
+          {
+              "id": "46e1b5df-f407-418d-a2a2-34e14de07aba",
+              "comment": "La mezcla de acción y drama es perfecta, altamente recomendable.",
+              "userName": "EpicFan",
+              "rate": 5,
+              "date": "07/03/2024"
+          },
+          {
+              "id": "7138a735-26da-44ce-bd26-8ce02aa9deb2",
+              "comment": "Algunos episodios son más lentos, pero la historia compensa.",
+              "userName": "StorySeeker",
+              "rate": 4,
+              "date": "08/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "ccdf6adb-3053-4191-bf81-e3123dc912b9",
+      "name": "My Hero Academia",
+      "quantity": 70,
+      "description": "En un mundo donde la mayoría de las personas tienen superpoderes, Izuku Midoriya, un chico sin poderes, sueña con convertirse en un héroe. Su vida cambia cuando conoce al héroe número uno, All Might.",
+      "category": "Figuras de acción",
+      "topic": "anime",
+      "price": 79.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/61lQOPZHVUL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/71EMBw-zcuL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/71QxPJ1XHgL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/71UP7aH4W9L._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/61iXYfVxf3L._AC_SL1500_.jpg",
+          ""
+      ],
+      "quantitySell": 467,
+      "comments": [
+          {
+              "id": "7f960d09-52fe-47dd-829b-71f10a9f91e2",
+              "comment": "Un anime inspirador con personajes entrañables y emocionantes.",
+              "userName": "HeroFan",
+              "rate": 5,
+              "date": "05/03/2024"
+          },
+          {
+              "id": "d25e4846-61d1-49a0-a7a5-e84312b2cb6f",
+              "comment": "La evolución de los personajes es impresionante, siempre hay algo nuevo.",
+              "userName": "MidoriyaSupporter",
+              "rate": 5,
+              "date": "06/03/2024"
+          },
+          {
+              "id": "d6012998-70ab-4ed9-8c5d-c6a93ff1a60a",
+              "comment": "Algunos episodios son un poco repetitivos, pero la acción es genial.",
+              "userName": "ActionLover",
+              "rate": 4,
+              "date": "07/03/2024"
+          },
+          {
+              "id": "c50332bf-e06b-4d07-9a51-538430f9dbed",
+              "comment": "Me encanta la mezcla de humor y acción, muy entretenido.",
+              "userName": "ComedyFan",
+              "rate": 5,
+              "date": "08/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "80bef172-56cd-470a-bbd4-de57ebbe2432",
+      "name": "My Hero Academia",
+      "quantity": 70,
+      "description": "En un mundo donde la mayoría de las personas tienen superpoderes, Izuku Midoriya, un chico sin poderes, sueña con convertirse en un héroe. Su vida cambia cuando conoce al héroe número uno, All Might.",
+      "category": "Figuras de acción",
+      "topic": "anime",
+      "price": 79.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/61ixcOIgAJL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/6100fl3rKTL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/61qUnqkp4TL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/61QDmEoXMUL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/61ixcOIgAJL._AC_SL1500_.jpg"
+      ],
+      "quantitySell": 467,
+      "comments": [
+          {
+              "id": "ff2506ce-1f00-47b2-94e7-571494d6b54f",
+              "comment": "Un anime inspirador con personajes entrañables y emocionantes.",
+              "userName": "HeroFan",
+              "rate": 5,
+              "date": "05/03/2024"
+          },
+          {
+              "id": "a61d8246-4f96-420a-92b5-c16303d9846b",
+              "comment": "La evolución de los personajes es impresionante, siempre hay algo nuevo.",
+              "userName": "MidoriyaSupporter",
+              "rate": 5,
+              "date": "06/03/2024"
+          },
+          {
+              "id": "06a1378f-ea22-42fb-ba34-96470b4b7ab7",
+              "comment": "Algunos episodios son un poco repetitivos, pero la acción es genial.",
+              "userName": "ActionLover",
+              "rate": 4,
+              "date": "07/03/2024"
+          },
+          {
+              "id": "0d6bac35-4d66-4116-b272-4c0870cd3b24",
+              "comment": "Me encanta la mezcla de humor y acción, muy entretenido.",
+              "userName": "ComedyFan",
+              "rate": 5,
+              "date": "08/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "cbd91939-082d-42a9-b78f-cae0cd6693ee",
+      "name": "Death Note",
+      "quantity": 50,
+      "description": "Un estudiante de secundaria, Light Yagami, encuentra un cuaderno que le permite matar a cualquier persona cuyo nombre escriba en él. Su lucha contra el detective L se convierte en un juego mortal de ingenio.",
+      "category": "Figuras de acción",
+      "topic": "anime",
+      "price": 69.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/61r-WUXGLQL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/6168cQ8eNeL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/61yg8nentbL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/71hh3IRkD6L._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/71hHnNlXYtL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81YXBNycYwL._AC_SL1500_.jpg"
+      ],
+      "quantitySell": 679,
+      "comments": [
+          {
+              "id": "b9e5d4ed-a5eb-4061-b598-8092466f95d2",
+              "comment": "Una trama intrigante y llena de giros inesperados, no puedes dejar de mirar.",
+              "userName": "LightFan",
+              "rate": 5,
+              "date": "05/03/2024"
+          },
+          {
+              "id": "351cd399-500c-497e-9da5-07aa10aea2e8",
+              "comment": "Los personajes son complejos y la historia es muy profunda.",
+              "userName": "LoverOfThrills",
+              "rate": 5,
+              "date": "06/03/2024"
+          },
+          {
+              "id": "86ad16fe-f521-479b-a97f-9a1a266a79b8",
+              "comment": "Es un poco oscuro, pero eso lo hace único y fascinante.",
+              "userName": "DarkStoryFan",
+              "rate": 4,
+              "date": "07/03/2024"
+          },
+          {
+              "id": "cba8af95-da26-4f27-9c83-3f4bd786a019",
+              "comment": "El duelo intelectual entre Light y L es brillante.",
+              "userName": "MindGames",
+              "rate": 5,
+              "date": "08/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "cc8a6812-7539-49af-88d4-d9ffe7d685c6",
+      "name": "Death Note 2",
+      "quantity": 50,
+      "description": "Un estudiante de secundaria, Light Yagami, encuentra un cuaderno que le permite matar a cualquier persona cuyo nombre escriba en él. Su lucha contra el detective L se convierte en un juego mortal de ingenio.",
+      "category": "Figuras de acción",
+      "topic": "anime",
+      "price": 69.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/61kqyt3gB2L._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/61yMhg2L0zL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/61KTmcmjQfL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/614ikEWUL0L._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/61hGeDcNftL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81GmzQ8VeVL._AC_SL1500_.jpg"
+      ],
+      "quantitySell": 679,
+      "comments": [
+          {
+              "id": "bf247c45-0780-4dfc-b6fd-6e079181d7b7",
+              "comment": "Una trama intrigante y llena de giros inesperados, no puedes dejar de mirar.",
+              "userName": "LightFan",
+              "rate": 5,
+              "date": "05/03/2024"
+          },
+          {
+              "id": "0b6d812d-b4e6-4399-b43a-98787420a4d0",
+              "comment": "Los personajes son complejos y la historia es muy profunda.",
+              "userName": "LoverOfThrills",
+              "rate": 5,
+              "date": "06/03/2024"
+          },
+          {
+              "id": "b94c34c9-764f-4e59-93b6-93cfae36b9dd",
+              "comment": "Es un poco oscuro, pero eso lo hace único y fascinante.",
+              "userName": "DarkStoryFan",
+              "rate": 4,
+              "date": "07/03/2024"
+          },
+          {
+              "id": "18681b14-6a2b-4cf2-8eef-de3982cb7bee",
+              "comment": "El duelo intelectual entre Light y L es brillante.",
+              "userName": "MindGames",
+              "rate": 5,
+              "date": "08/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "66e1a379-fda2-4a71-ab8f-e3d1440315ef",
+      "name": "Demon Slayer: Kimetsu no Yaiba",
+      "quantity": 80,
+      "description": "Tanjiro Kamado, un joven cazador de demonios, busca venganza y la cura para su hermana Nezuko, quien ha sido transformada en un demonio. Juntos, enfrentan poderosos enemigos en su viaje.",
+      "category": "Figuras de acción",
+      "topic": "anime",
+      "price": 85,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/715e-WFSAqL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/51xlIM2i8rL._AC_SL1333_.jpg",
+          "https://m.media-amazon.com/images/I/51zOaoV7zRL._AC_SL1000_.jpg",
+          "https://m.media-amazon.com/images/I/51aYKitoxpL._AC_SL1000_.jpg",
+          "https://m.media-amazon.com/images/I/51QcfArqU7L._AC_SL1000_.jpg"
+      ],
+      "quantitySell": 793,
+      "comments": [
+          {
+              "id": "8b8ce849-3c0c-47a5-b1b9-b35372de741a",
+              "comment": "La animación es impresionante, especialmente en las escenas de batalla.",
+              "userName": "TanjiroFan",
+              "rate": 5,
+              "date": "05/03/2024"
+          },
+          {
+              "id": "3f293f6f-9845-455a-9429-483ef7b5a118",
+              "comment": "Una historia conmovedora sobre la familia y la lucha contra el mal.",
+              "userName": "NezukoSupporter",
+              "rate": 5,
+              "date": "06/03/2024"
+          },
+          {
+              "id": "a22ec90a-3c17-4b4e-944e-3e83200ae425",
+              "comment": "Los personajes son entrañables y la trama es emocionante.",
+              "userName": "DemonHunter",
+              "rate": 4,
+              "date": "07/03/2024"
+          },
+          {
+              "id": "8765ec3a-d94d-4969-b608-2c690fc5d40f",
+              "comment": "Me encanta la mezcla de acción y emociones, muy bien logrado.",
+              "userName": "ActionFan",
+              "rate": 5,
+              "date": "08/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "761dbddc-36c7-4c5a-8643-9fef475b7c15",
+      "name": "Demon Slayer: Kimetsu no Yaiba 2",
+      "quantity": 80,
+      "description": "Tanjiro Kamado, un joven cazador de demonios, busca venganza y la cura para su hermana Nezuko, quien ha sido transformada en un demonio. Juntos, enfrentan poderosos enemigos en su viaje.",
+      "category": "Figuras de acción",
+      "topic": "anime",
+      "price": 85,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/71jZWeVWFlL._AC_SL1428_.jpg",
+          "https://m.media-amazon.com/images/I/516Ih4w5NOL._AC_SL1333_.jpg",
+          "https://m.media-amazon.com/images/I/41TR2omhnuL._AC_SL1050_.jpg",
+          "https://m.media-amazon.com/images/I/41AQ5t-gmDL._AC_SL1050_.jpg",
+          "https://m.media-amazon.com/images/I/41kI5DQo1wL._AC_SL1050_.jpg",
+          "https://m.media-amazon.com/images/I/41stMzwWuQL._AC_SL1050_.jpg"
+      ],
+      "quantitySell": 793,
+      "comments": [
+          {
+              "id": "c09c5148-8c23-419a-b89c-2b6d09374af9",
+              "comment": "La animación es impresionante, especialmente en las escenas de batalla.",
+              "userName": "TanjiroFan",
+              "rate": 5,
+              "date": "05/03/2024"
+          },
+          {
+              "id": "d01d47ae-f8f2-47d4-a944-b36c9298a47e",
+              "comment": "Una historia conmovedora sobre la familia y la lucha contra el mal.",
+              "userName": "NezukoSupporter",
+              "rate": 5,
+              "date": "06/03/2024"
+          },
+          {
+              "id": "63e77bbc-f43c-4ecc-a3b6-0b66d5fbef06",
+              "comment": "Los personajes son entrañables y la trama es emocionante.",
+              "userName": "DemonHunter",
+              "rate": 4,
+              "date": "07/03/2024"
+          },
+          {
+              "id": "1358b4e0-6ab2-46e1-9069-e33624bcd7cf",
+              "comment": "Me encanta la mezcla de acción y emociones, muy bien logrado.",
+              "userName": "ActionFan",
+              "rate": 5,
+              "date": "08/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "7ff8c794-440a-4c70-8110-636b01b3a968",
+      "name": "Jon Snow - Figura de acción 1/6",
+      "quantity": 12,
+      "description": "Figura detallada de Jon Snow en escala 1/6, fabricada por ThreeZero. Incluye su icónica espada 'Longclaw' y armadura.",
+      "category": "Figuras de acción",
+      "topic": "got",
+      "price": 79.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/713kRHjWJlL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+          "https://th.bing.com/th/id/OIP.OyVvy7aMzhApYXp-PJ5w7wHaHa?pid=ImgDet&w=203&h=203&c=7&dpr=1,3",
+          "https://famaolias.files.wordpress.com/2023/09/jon-snow-dark-horse.jpg",
+          "https://m.media-amazon.com/images/I/71zhYRKlYPL._AC_SY879_.jpg",
+          "https://m.media-amazon.com/images/I/61YJ4KdESeL._AC_SY879_.jpg"
+      ],
+      "quantitySell": 5,
+      "comments": [
+          {
+              "id": "48a6f09e-a93a-4d40-95c8-8b9e25f8587d",
+              "comment": "Impresionante detalle y calidad, vale la pena el precio.",
+              "userName": "gotcollector",
+              "rate": 5,
+              "date": "12/03/2024"
+          },
+          {
+              "id": "5835bea0-2d22-4b8e-99a4-8cf98e46e320",
+              "comment": "Es un poco costoso, pero excelente para coleccionistas.",
+              "userName": "collector87",
+              "rate": 4,
+              "date": "15/03/2024"
+          },
+          {
+              "id": "5bb2a2b5-108f-4738-ab34-764bf957d2b1",
+              "comment": "Una gran adición a mi colección de Game of Thrones.",
+              "userName": "snowfan",
+              "rate": 5,
+              "date": "18/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "58e09cff-57af-46db-b549-af0f736be5db",
+      "name": "Collar Stark - Accesorio",
+      "quantity": 30,
+      "description": "Un elegante collar con el emblema de la Casa Stark, fabricado en acero inoxidable.",
+      "category": "Accesorios",
+      "topic": "got",
+      "price": 14.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/31jfjzDupmL._AC_US40_.jpg",
+          "https://m.media-amazon.com/images/I/71LMi4ejZxL._AC_SY535_.jpg",
+          "https://th.bing.com/th/id/OIP.Zz2WaYqS4W54WHvn-eA5ZAHaHa?w=480&h=480&rs=1&pid=ImgDetMain",
+          "https://th.bing.com/th/id/OIP.PIP7r-fbfQ-9H_JByS737AHaJ4?w=600&h=800&rs=1&pid=ImgDetMain",
+          "https://m.media-amazon.com/images/I/51y5ar7W-jL._AC_.jpg"
+      ],
+      "quantitySell": 10,
+      "comments": [
+          {
+              "id": "b25fdc13-fbbf-45cf-8017-4c9af27aa3df",
+              "comment": "El diseño es increíble, muy satisfecho con mi compra.",
+              "userName": "starkfan",
+              "rate": 5,
+              "date": "10/01/2024"
+          },
+          {
+              "id": "c5282459-ea29-4a8c-9a24-4f33cdd0ea74",
+              "comment": "El material podría ser mejor, pero está bien por el precio.",
+              "userName": "budgetbuyer",
+              "rate": 3,
+              "date": "15/01/2024"
+          },
+          {
+              "id": "91976795-d6fc-4b7c-8af2-abbec7bb60db",
+              "comment": "Lo uso todos los días, ¡es mi accesorio favorito!",
+              "userName": "gotaccessories",
+              "rate": 4,
+              "date": "20/01/2024"
+          }
+      ]
+  },
+  {
+      "id": "6f7962af-0dd2-4e70-a3b8-b917a9f2cde6",
+      "name": "Funko Pop! Rey de la Noche",
+      "quantity": 50,
+      "description": "Figura Funko Pop! del Rey de la Noche, el villano helado de Game of Thrones. Ideal para los coleccionistas de Funko.",
+      "category": "Figuras de acción",
+      "topic": "got",
+      "price": 12.99,
+      "imgs": [
+          "https://th.bing.com/th/id/R.9995d75d06d83975dbb2acb5e5f3f0ab?rik=8vDbgW2%2b%2fMT3ww&pid=ImgRaw&r=0",
+          "https://th.bing.com/th/id/OIP.79j9rRwbPYO0PZxOoNvPmgHaHa?w=1000&h=1000&rs=1&pid=ImgDetMain",
+          "https://th.bing.com/th/id/OIP.wd4XW301qZiv3Q3Pp10GdgHaJ_?w=1360&h=1836&rs=1&pid=ImgDetMain",
+          "https://images.tcdn.com.br/img/img_prod/300946/nighy_king_44_game_of_thrones_funko_pop_2349_3_20190530152858.jpg",
+          "https://cdn.gameplanet.com/wp-content/uploads/2022/09/01084527/figura-funko-pop-game-of-throne-night-king-02.jpg"
+      ],
+      "quantitySell": 25,
+      "comments": [
+          {
+              "id": "57d03655-059f-446b-98a9-662a27e8b63a",
+              "comment": "Un Funko icónico para mi colección, ¡me encanta!",
+              "userName": "funkofanatic",
+              "rate": 5,
+              "date": "01/03/2024"
+          },
+          {
+              "id": "4b7a0487-8833-4156-bc52-592c4f917722",
+              "comment": "Está bien hecho, pero esperaba más detalles.",
+              "userName": "collector123",
+              "rate": 3,
+              "date": "05/03/2024"
+          },
+          {
+              "id": "55d2199f-044e-4641-9661-fdc4f28c6df2",
+              "comment": "Es el Funko perfecto para cualquier fan de Game of Thrones.",
+              "userName": "gotlover",
+              "rate": 4,
+              "date": "07/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "2fdab79c-f513-4cc5-919a-36fa2a5ee79b",
+      "name": "Poster: Mapa de Westeros",
+      "quantity": 40,
+      "description": "Un gran póster con el mapa detallado de los Siete Reinos de Westeros, ideal para decorar cualquier habitación.",
+      "category": "Accesorios",
+      "topic": "got",
+      "price": 19.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/51eqtYI8fEL._AC_US40_.jpg",
+          "https://www.picclickimg.com/7~YAAOSwVk5lWZy1/Game-Of-Thrones-Westeros-Karte-Poster-30x20-cm.webp",
+          "https://th.bing.com/th/id/OIP.8Z7d_tK8Nl1AJCBZQz65CAHaHa?w=1024&h=1024&rs=1&pid=ImgDetMain",
+          "https://th.bing.com/th/id/OIP.rQ7VCj2T8ZkuDxONa7WxZAHaLn?w=497&h=780&rs=1&pid=ImgDetMain",
+          "https://th.bing.com/th/id/OIP.zzqdRSKyHa1W2eHcvZ_BXAHaHZ?w=1624&h=1623&rs=1&pid=ImgDetMain"
+      ],
+      "quantitySell": 12,
+      "comments": [
+          {
+              "id": "bad59287-30d7-461b-bd83-80812910424b",
+              "comment": "El póster es de excelente calidad, con gran detalle.",
+              "userName": "mapenthusiast",
+              "rate": 5,
+              "date": "15/03/2024"
+          },
+          {
+              "id": "81a22977-2ac4-47e7-8391-3d4fd0936a13",
+              "comment": "Es muy grande, perfecto para mi pared.",
+              "userName": "decofan",
+              "rate": 4,
+              "date": "17/03/2024"
+          },
+          {
+              "id": "1eac171d-18d2-4bbb-8238-20e5079be846",
+              "comment": "El mapa tiene un diseño genial, pero el papel podría ser más grueso.",
+              "userName": "artlover",
+              "rate": 3,
+              "date": "18/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "91c62d67-12b2-423e-82e6-23caf4af2ebc",
+      "name": "A Game of Thrones (A Song of Ice and Fire, Book 1)",
+      "quantity": 20,
+      "description": "El primer libro de la saga 'A Song of Ice and Fire' de George R.R. Martin. Sigue las intrigas políticas y la lucha por el Trono de Hierro.",
+      "category": "Libros",
+      "topic": "got",
+      "price": 19.99,
+      "imgs": [
+          "https://is1-ssl.mzstatic.com/image/thumb/Publication4/v4/db/3e/e7/db3ee734-bfe1-56e3-26b3-727e77a2a86a/9780345535559.jpg/1200x630wz.png",
+          "https://th.bing.com/th/id/OIP.fjiCdPpaJ9abA7MLcaWmsgAAAA?w=450&h=450&rs=1&pid=ImgDetMain",
+          "https://www.geekalerts.com/u/Game-of-Thrones-The-World-of-Ice-Fire-The-Untold-History-of-Westeros-Hardcover-Book-400x400.jpg",
+          "https://th.bing.com/th/id/OIP.97m_e4l_a81ZqPKnAxtnbwHaIw?w=846&h=1000&rs=1&pid=ImgDetMain",
+          "https://pictures.abebooks.com/inventory/md/md31282293338.jpg"
+      ],
+      "quantitySell": 12,
+      "comments": [
+          {
+              "id": "020b8858-5827-4ae3-9eee-5bede0eeb566",
+              "comment": "Un clásico de la fantasía moderna, lo recomiendo a todos.",
+              "userName": "fantasylover",
+              "rate": 5,
+              "date": "05/02/2024"
+          },
+          {
+              "id": "c0ebbeea-7986-47c2-b69a-3a863b8df0b7",
+              "comment": "La trama es genial, aunque el estilo de escritura puede ser denso.",
+              "userName": "bookworm84",
+              "rate": 4,
+              "date": "10/02/2024"
+          },
+          {
+              "id": "8d825db8-545f-48e1-b173-827f22a722b3",
+              "comment": "Me encantó el desarrollo de los personajes, aunque el ritmo es lento.",
+              "userName": "gotreader",
+              "rate": 4,
+              "date": "15/02/2024"
+          }
+      ]
+  },
+  {
+      "id": "7c4e95f0-ebe5-48dd-8c42-d3101822576e",
+      "name": "A Clash of Kings (A Song of Ice and Fire, Book 2)",
+      "quantity": 15,
+      "description": "Segundo libro de la saga 'A Song of Ice and Fire', donde la guerra civil en los Siete Reinos se intensifica.",
+      "category": "Libros",
+      "topic": "got",
+      "price": 21.99,
+      "imgs": [
+          "https://th.bing.com/th/id/OIP.JUSAqvNuiqirRa4ZL3HVAgHaLG?rs=1&pid=ImgDetMain",
+          "https://th.bing.com/th/id/OIP.JUSAqvNuiqirRa4ZL3HVAgHaLG?rs=1&pid=ImgDetMain",
+          "https://th.bing.com/th/id/OIP.X_DVzUyYjclN3DLgQ61OpQHaIX?w=566&h=640&rs=1&pid=ImgDetMain",
+          "https://imgs.search.brave.com/XpFWJW3h5T6XqonC16MijfEsD1RAYWe08EDR_ezbKrY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTF4K1QzMGd4Skwu/anBn",
+          "https://imgs.search.brave.com/4ZCqKheljF0U0ybv_LP9nP3SJbX5O41XyQH7tFmfxDs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxNEV4b2ZlS0pM/LmpwZw"
+      ],
+      "quantitySell": 10,
+      "comments": [
+          {
+              "id": "04472810-6b8c-4fa2-83c4-c98199f9b2fc",
+              "comment": "La política y la acción se vuelven aún más emocionantes.",
+              "userName": "westerosfan",
+              "rate": 5,
+              "date": "20/02/2024"
+          },
+          {
+              "id": "692feb8b-53d8-4b47-a4ef-879f9a11162a",
+              "comment": "Un buen libro, pero un poco más complicado de seguir que el primero.",
+              "userName": "bookaddict",
+              "rate": 4,
+              "date": "22/02/2024"
+          },
+          {
+              "id": "98391242-c7a0-4bab-97fd-b60857bfa5de",
+              "comment": "Los múltiples puntos de vista enriquecen la narrativa.",
+              "userName": "multiPOVreader",
+              "rate": 4,
+              "date": "25/02/2024"
+          }
+      ]
+  },
+  {
+      "id": "16513b07-d0f5-4433-99ad-9cceb8332dc6",
+      "name": "Daenerys Targaryen - Figura Funko Pop",
+      "quantity": 25,
+      "description": "Figura Funko Pop de Daenerys Targaryen, madre de dragones y uno de los personajes clave de Game of Thrones.",
+      "category": "Figuras de acción",
+      "topic": "got",
+      "price": 13.99,
+      "imgs": [
+          "https://th.bing.com/th/id/OIP.BEK7z9yuKHELW5p4EYvd2AHaHa?rs=1&pid=ImgDetMain",
+          "https://th.bing.com/th/id/OIP.-NhiUBFl7ptAGIxJQAtXWgHaHa?rs=1&pid=ImgDetMain",
+          "https://s13emagst.akamaized.net/products/36675/36674678/images/res_dd651e418dd5eb3ba60432d17b883ff1.jpg",
+          "https://m.media-amazon.com/images/I/21Dyi79KYVL._AC_.jpg",
+          "https://moni-pops.com.mx/wp-content/uploads/2024/03/Funko-Pop-TV-Game-Of-Thrones-%E2%80%93-Daenerys-Targaryen-Bata-Blanca.png"
+      ],
+      "quantitySell": 15,
+      "comments": [
+          {
+              "id": "723cc6fc-d59d-4cfd-b0b8-05e63ddb9389",
+              "comment": "Gran adición a mi colección de Daenerys.",
+              "userName": "dragonqueenfan",
+              "rate": 5,
+              "date": "15/03/2024"
+          },
+          {
+              "id": "8d0a21b4-eb6c-4aef-aba6-a078da18df42",
+              "comment": "Muy buena calidad, aunque la pintura podría mejorar.",
+              "userName": "figurecritic",
+              "rate": 4,
+              "date": "16/03/2024"
+          },
+          {
+              "id": "f94127a1-244e-4bdd-9c68-0cb24cd728f3",
+              "comment": "Me encanta, pero podría ser un poco más detallada.",
+              "userName": "collector34",
+              "rate": 3,
+              "date": "17/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "5cbb6a5f-f562-4b34-9a6b-9bc3e9dea3fb",
+      "name": "Llavero de dragon Targaryen",
+      "quantity": 35,
+      "description": "Llavero metálico de dragon Targaryen.",
+      "category": "Accesorios",
+      "topic": "got",
+      "price": 7.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/51rr5gFNrTL._AC_SX569_.jpg",
+          "https://m.media-amazon.com/images/I/51FyQkUIBQL._AC_SR38,50_.jpg",
+          "https://m.media-amazon.com/images/I/51zu9XxA1TL._AC_SR38,50_.jpg",
+          "https://m.media-amazon.com/images/I/41F87OkO36L._AC_SR38,50_.jpg",
+          "https://m.media-amazon.com/images/I/71lpavkal2L._AC_SY879_.jpg"
+      ],
+      "quantitySell": 20,
+      "comments": [
+          {
+              "id": "2e69309e-4cd9-46e7-b2fa-901f943d59d6",
+              "comment": "Me encanta llevar el trono en mi llavero, excelente detalle.",
+              "userName": "keychainlover",
+              "rate": 5,
+              "date": "16/03/2024"
+          },
+          {
+              "id": "f1889596-f2e3-47d7-a20b-ae868fdeedbc",
+              "comment": "Es de buen tamaño y se siente sólido.",
+              "userName": "tinycollector",
+              "rate": 4,
+              "date": "17/03/2024"
+          },
+          {
+              "id": "a3244058-3aa2-4948-9d38-9c019a2e1fbb",
+              "comment": "El metal es un poco más ligero de lo que esperaba.",
+              "userName": "metalhead",
+              "rate": 3,
+              "date": "18/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "e4f4902d-24e9-4429-95dd-7e13e1033917",
+      "name": "Collar de Daenerys - Accesorio",
+      "quantity": 50,
+      "description": "Un collar inspirado en el dragon, hecho con materiales de alta calidad y perfecto para los fanáticos de Game of Thrones.",
+      "category": "Accesorios",
+      "topic": "got",
+      "price": 14.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/51OAUWoH0nL._AC_SY695_.jpg",
+          "https://m.media-amazon.com/images/I/415qisRqlHL._AC_US40_.jpg",
+          "https://th.bing.com/th/id/OIP.aldtlR6Nk_zn0-4AIK0NVgHaHa?w=600&h=600&rs=1&pid=ImgDetMain",
+          "https://m.media-amazon.com/images/I/51A6V1kURwL._AC_SY535_.jpg",
+          "https://m.media-amazon.com/images/I/61OT1lvpktL._AC_SY535_.jpg"
+      ],
+      "quantitySell": 35,
+      "comments": [
+          {
+              "id": "f0a49448-52b5-4993-940e-50275d4928fa",
+              "comment": "Hermoso diseño y muy bien hecho, lo uso a diario.",
+              "userName": "starkfan",
+              "rate": 5,
+              "date": "02/07/2024"
+          },
+          {
+              "id": "cd0f1d64-122f-426a-b7ea-70f726f916a8",
+              "comment": "Excelente calidad, representa perfectamente el espíritu de los Stark.",
+              "userName": "winteriscoming",
+              "rate": 5,
+              "date": "05/07/2024"
+          },
+          {
+              "id": "c94e7f36-f67e-4575-bf97-d6a960b524e7",
+              "comment": "Un regalo perfecto para cualquier seguidor de la Casa Stark.",
+              "userName": "giftbuyer",
+              "rate": 4,
+              "date": "08/07/2024"
+          }
+      ]
+  },
+  {
+      "id": "481c1beb-4f06-4dcf-8cee-b936626b668e",
+      "name": "Funko Pop Daenerys Targaryen con Drogon",
+      "quantity": 25,
+      "description": "Funko Pop de Daenerys Targaryen montada en Drogon, uno de los dragones de la legendaria reina de los dragones en Game of Thrones. Este Funko captura la esencia de Daenerys con su fiel compañero y es un imprescindible para los fanáticos de la serie.",
+      "category": "Figuras de acción",
+      "topic": "got",
+      "price": 14.99,
+      "imgs": [
+          "https://th.bing.com/th/id/R.ba93f2b9f6fe555410d2f07a3e8cbeed?rik=O2Igb1vXQ84PQg&pid=ImgRaw&r=0",
+          "https://th.bing.com/th/id/OIP.PfLehAHpHojv6khALQWfkQHaHa?w=567&h=567&rs=1&pid=ImgDetMain",
+          "https://http2.mlstatic.com/daenerys-e-drogon-game-of-thrones-funko-pop-series-original-D_NQ_NP_797621-MLB25956973330_092017-F.jpg",
+          "https://th.bing.com/th/id/OIP.LUZhu_CMHlV90CII-s1LigHaJ_?w=1360&h=1836&rs=1&pid=ImgDetMain",
+          "https://m.media-amazon.com/images/I/61KjTaXWDAL._AC_SX679_.jpg"
+      ],
+      "quantitySell": 20,
+      "comments": [
+          {
+              "id": "56b8750c-4735-42da-a3f5-42a67f1f98bd",
+              "comment": "Es adorable y refleja bien el vínculo entre Daenerys y Drogon.",
+              "userName": "dragonlover",
+              "rate": 5,
+              "date": "10/08/2024"
+          },
+          {
+              "id": "37fa4a74-4420-4ffa-a59c-f22c87e50a07",
+              "comment": "Muy bien hecho y llegó en perfectas condiciones.",
+              "userName": "funkofanatic",
+              "rate": 5,
+              "date": "12/08/2024"
+          },
+          {
+              "id": "fc7894d4-a81a-4744-840d-75188dc2e274",
+              "comment": "El precio es excelente para un Funko Pop tan detallado.",
+              "userName": "collector87",
+              "rate": 4,
+              "date": "15/08/2024"
+          }
+      ]
+  },
+  {
+      "id": "5a0d7528-5904-45c1-bcd0-aeaae5c01907",
+      "name": "Daemon Targaryen - Figura de acción 10 pulgadas",
+      "quantity": 15,
+      "description": "Una detallada figura de acción de Daemon Targaryen de 10 pulgadas, con múltiples puntos de articulación y accesorios.",
+      "category": "Figuras de acción",
+      "topic": "hotd",
+      "price": 34.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/41g3jCulHeL._AC_US40_.jpg",
+          "https://sm.ign.com/t/ign_in/photo/default/hotd-daemon-af-06-1702927594478_m6ay.1080.jpg",
+          "https://cdn.fanbase.hu/images/products/game-of-thrones-house-of-the-dragon-daemon-targaryen-figura-18cm-23693410.webp",
+          "https://th.bing.com/th/id/OIP.seDO3tEcH6R_AoLKLLRuJAHaHa?pid=ImgDet&w=60&h=60&c=7&dpr=1,3&rs=1",
+          "https://cdn11.bigcommerce.com/s-csqcv5l47s/images/stencil/804x804/products/3552/7437/HotD_Daemon_AF_07__91789.1702488535.jpg?c=1"
+      ],
+      "quantitySell": 5,
+      "comments": [
+          {
+              "id": "5c47f48c-bef2-44ea-a011-79d215cd50ba",
+              "comment": "Gran calidad en los detalles de la armadura.",
+              "userName": "collectorKing",
+              "rate": 5,
+              "date": "12/01/2024"
+          },
+          {
+              "id": "95a72e4c-58b5-45bd-9ffb-93d6a1cabc01",
+              "comment": "La articulación de la figura es excelente, fácil de posicionar.",
+              "userName": "figurefan",
+              "rate": 4,
+              "date": "20/01/2024"
+          },
+          {
+              "id": "a95cd57a-d4b5-4355-874c-924ef70a4b0e",
+              "comment": "Me gustaría que fuera más grande, pero los detalles son buenos.",
+              "userName": "actionfigurecritic",
+              "rate": 4,
+              "date": "22/01/2024"
+          }
+      ]
+  },
+  {
+      "id": "28fd35cf-acb1-43b0-bbc4-14800ba56ce4",
+      "name": "Rhaenyra Targaryen - Funko Pop",
+      "quantity": 20,
+      "description": "La versión Funko Pop de Rhaenyra Targaryen, perfecta para cualquier fanático de House of the Dragon.",
+      "category": "Figuras de acción",
+      "topic": "hotd",
+      "price": 12.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/61JqzOKMcLL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+          "https://m.media-amazon.com/images/I/81bSRZO9UiL._AC_SY879_.jpg",
+          "https://m.media-amazon.com/images/I/41yhw4QTYPL._AC_.jpg",
+          "https://m.media-amazon.com/images/I/71FKmIxbfRL._AC_SX679_.jpg",
+          "https://popcollector.fr/cdn/shop/products/house-of-dragon-06-rhaenyra-targaryen-diamond_1024x.jpg?v=1668523122"
+      ],
+      "quantitySell": 8,
+      "comments": [
+          {
+              "id": "add94a74-80ee-4754-97f7-4ee17803890d",
+              "comment": "Adorable y detallado, se ve genial en mi estante.",
+              "userName": "poplover",
+              "rate": 4,
+              "date": "15/02/2024"
+          },
+          {
+              "id": "0280fabb-255b-4cb2-b254-7b6dfa4cd528",
+              "comment": "Me encanta el diseño, se parece mucho al personaje.",
+              "userName": "funkofan",
+              "rate": 5,
+              "date": "18/02/2024"
+          },
+          {
+              "id": "8d99a271-e6c4-41ad-b19a-eb76e920624d",
+              "comment": "Es muy bonito, pero la pintura podría ser mejor.",
+              "userName": "collectorcritic",
+              "rate": 3,
+              "date": "20/02/2024"
+          }
+      ]
+  },
+  {
+      "id": "25a25350-d4df-4e1a-861d-1e6b526935ab",
+      "name": "Juego de Huevo de Dragón - Réplica",
+      "quantity": 10,
+      "description": "Un set de huevo de dragón en réplica, perfectos para los fanáticos de Game of Thrones y House of the Dragon.",
+      "category": "Accesorios",
+      "topic": "hotd",
+      "price": 49.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/51zVP3JVUqS._AC_US40_.jpg",
+          "https://m.media-amazon.com/images/I/71ZG3YZo+yS._AC_SL1000_.jpg",
+          "https://m.media-amazon.com/images/I/61bWjJ-T06L._AC_SX679_.jpg",
+          "https://m.media-amazon.com/images/I/5159GCHa1US._AC_US40_.jpg",
+          "https://m.media-amazon.com/images/I/514TqyUbFBS._AC_US40_.jpg"
+      ],
+      "quantitySell": 6,
+      "comments": [
+          {
+              "id": "fffd01cb-2d7d-4b60-9f24-a88a1e6582b8",
+              "comment": "Los detalles de los huevos son impresionantes, muy realistas.",
+              "userName": "dragoncollector",
+              "rate": 5,
+              "date": "25/02/2024"
+          },
+          {
+              "id": "e4579550-ef79-4ff1-9995-8e632cb4e701",
+              "comment": "Gran calidad, pero los huevos son más pequeños de lo que esperaba.",
+              "userName": "replicafan",
+              "rate": 4,
+              "date": "27/02/2024"
+          },
+          {
+              "id": "b1d4d19c-5cda-4e5c-a09e-d28314549e22",
+              "comment": "Están bien hechos, pero algo caros para el tamaño.",
+              "userName": "detailcritic",
+              "rate": 3,
+              "date": "28/02/2024"
+          }
+      ]
+  },
+  {
+      "id": "a9218f84-29cb-44a8-8484-3aea9be89e87",
+      "name": "Pin de la Mano del Rey",
+      "quantity": 50,
+      "description": "Un pin réplica de la Mano del Rey, tal como se ve en la serie House of the Dragon.",
+      "category": "Accesorios",
+      "topic": "hotd",
+      "price": 9.99,
+      "imgs": [
+          "https://elenanofriki.com/3489-thickbox_default/pin-mano-del-rey-juego-de-tronos.jpg",
+          "https://http2.mlstatic.com/D_Q_NP_723839-MLC41040634935_032020-R.webp",
+          "https://c1-ebgames.eb-cdn.com.au/merchandising/images/packshots/90e2e6d78d3c44cdaabbc730628eed1a_Large.jpg",
+          "https://th.bing.com/th/id/OIP.oeOfZnG7MOjZhQK21n9IcQHaHa?w=800&h=800&rs=1&pid=ImgDetMain",
+          "https://m.media-amazon.com/images/I/71aepnYkh9L._AC_SX675_.jpg"
+      ],
+      "quantitySell": 20,
+      "comments": [
+          {
+              "id": "b105dfaa-9d90-40aa-a67a-6863fcbf99ce",
+              "comment": "El diseño es excelente, se ve muy auténtico.",
+              "userName": "kinghand",
+              "rate": 4,
+              "date": "02/03/2024"
+          },
+          {
+              "id": "eaf22c79-b2d4-4bb7-8ec9-7ddd12841d11",
+              "comment": "Buen precio por la calidad, parece muy resistente.",
+              "userName": "pinlover",
+              "rate": 5,
+              "date": "05/03/2024"
+          },
+          {
+              "id": "af24886d-7455-457d-8630-26c24c271db5",
+              "comment": "Es bonito, pero esperaba que fuera más pesado.",
+              "userName": "criticpin",
+              "rate": 3,
+              "date": "07/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "470d2489-019f-4d6a-9662-ccc4442cb31d",
+      "name": "Caraxes - Figura de Dragón",
+      "quantity": 8,
+      "description": "Caraxes, el dragón de Daemon Targaryen, ahora en una figura detallada de 12 pulgadas.",
+      "category": "Figuras de acción",
+      "topic": "hotd",
+      "price": 59.99,
+      "imgs": [
+          "https://th.bing.com/th/id/OIP.2EwLXIzer8UMyWRn-ZSkawHaHa?rs=1&pid=ImgDetMain",
+          "https://th.bing.com/th/id/OIP.ER3tbk8Er768aMXLOJCbxQHaHa?pid=ImgDet&w=60&h=60&c=7&dpr=1,3&rs=1",
+          "https://sw6.elbenwald.de/media/cb/0c/36/1678319156/E1075253_2.jpg",
+          "https://th.bing.com/th/id/OIP.TpjNbiMATLyYRLUp0Nv83wAAAA?pid=ImgDet&w=474&h=214&rs=1",
+          "https://m.media-amazon.com/images/I/81zKlHU+IkL._AC_SY300_SX300_.jpg"
+      ],
+      "quantitySell": 4,
+      "comments": [
+          {
+              "id": "b958c601-c6a6-4cfa-bf10-8a040aaf1f6d",
+              "comment": "La figura del dragón es asombrosa, se ve feroz y realista.",
+              "userName": "dragonmaster",
+              "rate": 5,
+              "date": "10/03/2024"
+          },
+          {
+              "id": "afcecfe8-a87e-487c-aa1b-fa5e0ec87d17",
+              "comment": "Los detalles en las alas y escamas son increíbles.",
+              "userName": "figurelover",
+              "rate": 4,
+              "date": "12/03/2024"
+          },
+          {
+              "id": "4ef9881c-6fb6-43d7-a138-89e5fe68f383",
+              "comment": "Es muy buena, pero un poco cara para su tamaño.",
+              "userName": "pricedragon",
+              "rate": 3,
+              "date": "15/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "b429e522-b23c-4429-b401-ac6caf3732df",
+      "name": "House of the Dragon: Temporada 1 - Libro de arte",
+      "quantity": 25,
+      "description": "Este libro de arte contiene imágenes exclusivas de la primera temporada de House of the Dragon.",
+      "category": "Libros",
+      "topic": "hotd",
+      "price": 39.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/81WS74aySpL._SY466_.jpg",
+          "https://m.media-amazon.com/images/I/81JguVwbfjL._SX679_.jpg",
+          "https://m.media-amazon.com/images/I/71neMebDsIL._SX679_.jpg",
+          "https://m.media-amazon.com/images/I/81-LSFG1pOL._SX679_.jpg",
+          "https://m.media-amazon.com/images/I/81YaX1wueuL._SX679_.jpg"
+      ],
+      "quantitySell": 12,
+      "comments": [
+          {
+              "id": "dbab92aa-0ff3-470d-8dfb-8421502f6348",
+              "comment": "Me encanta el arte, muy bien impreso y con mucho contenido.",
+              "userName": "artlover",
+              "rate": 5,
+              "date": "05/03/2024"
+          },
+          {
+              "id": "d33435d4-71fc-4c72-8b2e-f540aa129656",
+              "comment": "Los detalles de las imágenes son fantásticos, vale cada centavo.",
+              "userName": "dragonfanatic",
+              "rate": 4,
+              "date": "10/03/2024"
+          },
+          {
+              "id": "7ff31b9d-10a5-4732-83b5-b21deb8a2c74",
+              "comment": "Excelente colección de arte, aunque algunas páginas podrían tener mejor calidad.",
+              "userName": "criticalreader",
+              "rate": 3,
+              "date": "12/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "f095ae18-eb7a-466d-b83a-987bde8c7633",
+      "name": "Collar Targaryen - Accesorio",
+      "quantity": 40,
+      "description": "Un elegante collar con el emblema de la Casa Targaryen.",
+      "category": "Accesorios",
+      "topic": "hotd",
+      "price": 14.99,
+      "imgs": [
+          "https://th.bing.com/th/id/OIP.Um_vLCP5PgLV2bzjSaFz0AHaJt?rs=1&pid=ImgDetMain",
+          "https://www.accesoriosmexicali.com/cdn/shop/products/19512000_av1_2048x2048.jpg?v=1661976703",
+          "https://media.entertainmentearth.com/assets/images/c8bde2769a6e4d708e0589d21c2a8c2flg.jpg",
+          "https://images-eu.ssl-images-amazon.com/images/I/41Wp43zC4OL._AC_UL260_SR200,260_.jpg",
+          "https://m.media-amazon.com/images/I/61E2UKUbb-L.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+      ],
+      "quantitySell": 16,
+      "comments": [
+          {
+              "id": "01471559-e604-4345-8587-685253cb3930",
+              "comment": "Muy bien hecho, lo uso todo el tiempo.",
+              "userName": "accessoryfan",
+              "rate": 4,
+              "date": "12/03/2024"
+          },
+          {
+              "id": "a4d95192-7204-45dd-8ecf-09ff3f901b58",
+              "comment": "Es elegante y resistente, me encanta.",
+              "userName": "targaryenlover",
+              "rate": 5,
+              "date": "14/03/2024"
+          },
+          {
+              "id": "10934476-b51e-46b5-aeed-1c631ab74c43",
+              "comment": "Bonito diseño pero un poco pesado para usar todo el día.",
+              "userName": "jewelrycritic",
+              "rate": 3,
+              "date": "16/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "74283a8b-de9e-4d66-9431-05a9b4dfad7e",
+      "name": "Funko Pop! Caraxes",
+      "quantity": 18,
+      "description": "Caraxes, el dragón de Daemon, en formato Funko Pop. Adorable y feroz al mismo tiempo.",
+      "category": "Figuras de acción",
+      "topic": "hotd",
+      "price": 15.99,
+      "imgs": [
+          "https://th.bing.com/th/id/OIP.sv1xC9cTl_Y6UYkPbVwERgHaEK?w=1280&h=720&rs=1&pid=ImgDetMain",
+          "https://th.bing.com/th/id/R.6b31791d597eb5ef5488cc0c7dfc3563?rik=eVO1aTdkSnpkWA&pid=ImgRaw&r=0",
+          "https://th.bing.com/th/id/OIP.I9wrNoWTgv6_UcVnB8qYDQHaHC?w=500&h=475&rs=1&pid=ImgDetMain",
+          "https://149361057.v2.pressablecdn.com/wp-content/uploads/2022/11/dr2.png",
+          "https://m.media-amazon.com/images/I/81bV-4ew4oL._AC_UF894,1000_QL80_.jpg"
+      ],
+      "quantitySell": 7,
+      "comments": [
+          {
+              "id": "52f58d23-0996-4579-9806-10d66743a8c2",
+              "comment": "El Funko de Caraxes es una excelente adición a mi colección.",
+              "userName": "funkocollector",
+              "rate": 5,
+              "date": "15/03/2024"
+          },
+          {
+              "id": "859ecd20-5545-42fb-a402-2cadfa256533",
+              "comment": "Adorable y con muy buen detalle, me encanta.",
+              "userName": "dragonfan",
+              "rate": 4,
+              "date": "17/03/2024"
+          },
+          {
+              "id": "09a52d91-c1c8-4c4a-b118-2fd0f90722c4",
+              "comment": "Es un poco más pequeño de lo que esperaba, pero aún así genial.",
+              "userName": "popfanatic",
+              "rate": 4,
+              "date": "19/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "3d44d040-e123-41e0-868c-68bf251a0b7b",
+      "name": "Fire & Blood - Crónica de los Targaryen",
+      "quantity": 40,
+      "description": "El libro 'Fire & Blood' de George R.R. Martin, que narra la historia completa de la Casa Targaryen desde su ascenso hasta su caída.",
+      "category": "Libros",
+      "topic": "hotd",
+      "price": 29.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/81tHMXw4PxL._SY466_.jpg",
+          "https://m.media-amazon.com/images/I/71LyprPOslL._SL1222_.jpg",
+          "https://th.bing.com/th/id/OIP.5p9CCPE8QG-Foa-9yeHVzwHaHa?w=640&h=640&rs=1&pid=ImgDetMain",
+          "https://th.bing.com/th/id/OIP.FVj3x9q4lPrbIi8q2J9cGwHaHa?w=600&h=600&rs=1&pid=ImgDetMain",
+          "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1532828095l/39943621.jpg"
+      ],
+      "quantitySell": 20,
+      "comments": [
+          {
+              "id": "5c307d9c-32e1-42a4-8da8-10ac13755a52",
+              "comment": "Imprescindible para cualquier fanático de la saga.",
+              "userName": "bookworm",
+              "rate": 5,
+              "date": "08/03/2024"
+          },
+          {
+              "id": "cce9b3d6-239c-45a0-9e9b-bbaaaca02473",
+              "comment": "La narrativa es fascinante, aunque puede ser densa en algunos momentos.",
+              "userName": "storylover",
+              "rate": 4,
+              "date": "15/03/2024"
+          },
+          {
+              "id": "54273029-8791-44a9-835f-11a55368ab73",
+              "comment": "El libro es genial, pero esperaba más ilustraciones.",
+              "userName": "illustrationfan",
+              "rate": 4,
+              "date": "18/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "82c7c154-5133-4694-926e-9c882392b6c4",
+      "name": "The World of Ice & Fire - Enciclopedia Ilustrada",
+      "quantity": 15,
+      "description": "Un libro ilustrado que abarca la historia y los misterios de los Siete Reinos y más allá, con detalles sobre la Casa Targaryen.",
+      "category": "Libros",
+      "topic": "hotd",
+      "price": 49.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/91zPl1u1ngL._SY466_.jpg",
+          "https://m.media-amazon.com/images/I/A1qK0t8nfcL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/91IyoFJmAkL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/A1SxHJ3+WvL._SL1500_.jpg",
+          "https://juegodetronos.club/wp-content/uploads/2014/08/210648_900.jpg.webp"
+      ],
+      "quantitySell": 5,
+      "comments": [
+          {
+              "id": "4d0c8c91-e35e-41fc-a59e-195909810022",
+              "comment": "El arte y la información son una delicia para cualquier fan de la saga.",
+              "userName": "encyclopediaFan",
+              "rate": 5,
+              "date": "12/03/2024"
+          },
+          {
+              "id": "55357e2d-3c68-4fbe-8358-b78f14deaaff",
+              "comment": "Es un libro asombroso, pero demasiado grande para llevar a todos lados.",
+              "userName": "heavylifter",
+              "rate": 4,
+              "date": "16/03/2024"
+          },
+          {
+              "id": "8834c9fe-0db0-4c16-ab5f-959d1a44cde8",
+              "comment": "Gran información, pero algunas partes parecen repetitivas.",
+              "userName": "detailcritic",
+              "rate": 3,
+              "date": "20/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "ebf34182-1054-4876-aff0-4b0f3b6844b7",
+      "name": "The Mandalorian & Grogu - Figura de 12 pulgadas",
+      "quantity": 25,
+      "description": "The Mandalorian & Grogu - Figura de 12 pulgadas es un producto de Star Wars que captura la emocionante relación entre el cazarrecompensas Mandaloriano y el adorable Grogu. Esta figura de acción de alta calidad está hecha con atención a los detalles y es perfecta para los fanáticos de Star Wars. ¡Agrega esta figura a tu colección y revive las emocionantes aventuras de The Mandalorian!",
+      "category": "Figuras de acción",
+      "topic": "star-wars",
+      "price": 29.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/51R7i854mBL._AC_SL1278_.jpg",
+          "https://m.media-amazon.com/images/I/61juwi5CjiL._AC_SL1278_.jpg",
+          "https://m.media-amazon.com/images/I/71qU6VoQ8uL._AC_SL1278_.jpg",
+          "https://m.media-amazon.com/images/I/71wWQNNRkuL._AC_SL1278_.jpg",
+          "https://m.media-amazon.com/images/I/71bRGPYsw4L._AC_SL1278_.jpg"
+      ],
+      "quantitySell": 42,
+      "comments": [
+          {
+              "id": "19c7a5f4-b77f-456c-b1c3-30d14d00d75c",
+              "comment": "Excelente figura, la calidad es impecable.",
+              "userName": "starWarsFan1",
+              "rate": 5,
+              "date": "10/10/2024"
+          },
+          {
+              "id": "34b20b02-9ba6-4a72-a1a6-753376dc1d41",
+              "comment": "La figura es muy buena, ojalá el título de la próxima película lo fuese también.",
+              "userName": "starWarsFan2",
+              "rate": 2,
+              "date": "12/10/2024"
+          },
+          {
+              "id": "bd0bf4b8-8989-4ac1-8064-2bb2244f0bb7",
+              "comment": "Me encanta esta figura, es una pieza de colección.",
+              "userName": "starWarsFan3",
+              "rate": 4,
+              "date": "15/10/2024"
+          }
+      ]
+  },
+  {
+      "id": "985095d5-f1d6-4fdc-b0bb-9b1088169427",
+      "name": "Hot Toys 1:6 Anakin Skywalker",
+      "quantity": 10,
+      "description": "Figura coleccionable a escala 1/6 de Anakin Skywalker, basada en la serie de animación de The Clone Wars. Incluye una escultura de cabeza detallada, traje confeccionado, protectores de armadura, sable de luz LED, manos intercambiables, detonador térmico, proyector de hologramas y figuras holográficas de Ahsoka Tano, Yoda y Obi-Wan Kenobi",
+      "category": "Figuras de acción",
+      "topic": "star-wars",
+      "imgs": [
+          "https://m.media-amazon.com/images/I/61tHUUes8wL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+          "https://m.media-amazon.com/images/I/51bMq9ZnWgL._AC_SX679_.jpg",
+          "https://m.media-amazon.com/images/I/617jdCr8ONL._AC_SX679_.jpg",
+          "https://m.media-amazon.com/images/I/51xdJhxsAnL._AC_SX679_.jpg",
+          "https://m.media-amazon.com/images/I/51X8R0IzJnL._AC_SX679_.jpg"
+      ],
+      "price": 265,
+      "quantitySell": 4,
+      "comments": [
+          {
+              "id": "96ccccab-5fe2-459f-8dd4-abe8d064eaa2",
+              "comment": "La figura de Anakin es increíblemente detallada y realista.",
+              "userName": "jedimaster99",
+              "rate": 5,
+              "date": "12/10/2024"
+          },
+          {
+              "id": "333f6a93-2bd7-4123-83db-1ca9eec17269",
+              "comment": "La figura es tan realista que ni siquiera tiene el rango de Maestro Jedi.",
+              "userName": "im_not_windu",
+              "rate": 4,
+              "date": "15/10/2024"
+          },
+          {
+              "id": "0cb3fa16-1161-428d-8dce-92509fc3ef53",
+              "comment": "Recibí la caja llena de arena y sin la figura. Pésimo servicio.",
+              "userName": "tatooine_resident",
+              "rate": 1,
+              "date": "17/10/2024"
+          }
+      ]
+  },
+  {
+      "id": "2ca8d83d-207a-44bc-9900-a4ae6286453e",
+      "name": "Star Wars: Thrawn Ascendancy (Libros 1-3)",
+      "quantity": 8,
+      "description": "Colección de libros de la serie Thrawn Ascendancy de Timothy Zahn, que sigue las aventuras del Gran Almirante Thrawn en el universo de Star Wars. Esta colección incluye los tres primeros libros de la serie, en edición pasta blanda, ofreciendo una visión profunda en la historia y el desarrollo del personaje más fascinante de la saga.",
+      "category": "Libros",
+      "topic": "star-wars",
+      "price": 33.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/51UD9BxE8aL._SL1000_.jpg",
+          "https://m.media-amazon.com/images/I/51r-x8RsWSL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/61UtozUwzXL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/61UtozUwzXL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/51UD9BxE8aL.jpg"
+      ],
+      "quantitySell": 15,
+      "comments": [
+          {
+              "id": "2fc1f400-3c22-4930-92ad-59aec2dee059",
+              "comment": "Una lectura emocionante que te sumerge en el universo de Star Wars.",
+              "userName": "starwars_reader",
+              "rate": 5,
+              "date": "20/10/2024"
+          },
+          {
+              "id": "959e338d-1757-4f85-9362-5a65db0fa96a",
+              "comment": "Thrawn es un personaje fascinante. Un verdadero genio y estratega.",
+              "userName": "thrawn_fan",
+              "rate": 4,
+              "date": "22/10/2024"
+          },
+          {
+              "id": "e7e3892b-c05d-41e3-ba09-2bb46abacc77",
+              "comment": "Ojalá en Ahsoka hubiésemos visto el mismo Thrawn que en estos libros... no a Elon Musk.",
+              "userName": "ahsoka_hater",
+              "rate": 2,
+              "date": "25/10/2024"
+          }
+      ]
+  },
+  {
+      "id": "376f3e7c-38a5-4847-b95d-6cd295f7457b",
+      "name": "Star Wars Black Series Darth Vader Lightsaber Replica",
+      "quantity": 5,
+      "description": "Réplica de sable de luz de Darth Vader de alta calidad, con efectos de sonido y luz realistas. Incluye un mango detallado y una empuñadura ergonómica para una experiencia de cosplay auténtica. Ideal para exhibir o para cosplay, esta réplica es un must-have para cualquier fan de Star Wars.",
+      "category": "Accesorios",
+      "topic": "star-wars",
+      "price": 279.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/61S07-XucbL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/61UT3WXo9DL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/51LSXbsIo+L._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/61cHgzyjt6L._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/61IM7Fe6eRL._AC_SL1500_.jpg"
+      ],
+      "quantitySell": 5,
+      "comments": [
+          {
+              "id": "d50400d9-9cf6-493a-9b81-6321e6c9b7b0",
+              "comment": "Creo que no debería dejar a mi hijo acercarse a esta réplica en mi museo.",
+              "userName": "slayer3000",
+              "rate": 5,
+              "date": "24/10/2024"
+          },
+          {
+              "id": "e27cb277-bba3-4aee-83e9-e636d35768b8",
+              "comment": "Me siento como un verdadero Sith.",
+              "userName": "lord_caraxes",
+              "rate": 4,
+              "date": "26/10/2024"
+          },
+          {
+              "id": "1fc8b904-d423-4fe2-ae31-76a86097a688",
+              "comment": "La réplica es muy pesada, ideal para defenderme.",
+              "userName": "defender_of_the_empire",
+              "rate": 4,
+              "date": "28/10/2024"
+          }
+      ]
+  },
+  {
+      "id": "7ac3a186-e210-41da-8c5b-6aa0e18fe7cf",
+      "name": "Star Wars: Darth Maul - Son of Dathomir",
+      "quantity": 25,
+      "description": "Star Wars: Darth Maul - Son of Dathomir es un emocionante cómic que sigue la historia del infame Lord Sith, Darth Maul. Después de ser traicionado por su antiguo maestro, Darth Sidious, Maul debe luchar por su supervivencia y vengarse. Este cómic revela los oscuros secretos de su pasado y su lucha por el poder en el inframundo criminal de la galaxia. Con impresionantes ilustraciones y una narrativa cautivadora, este cómic es imprescindible para los fans de Star Wars y de Darth Maul.",
+      "category": "Comics",
+      "topic": "star-wars",
+      "price": 15.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/81YKvOca5bL._SL1500_.jpg",
+          "https://static.wikia.nocookie.net/starwars/images/2/2b/Darth_Maul_Son_of_Dathomir_1.png/revision/latest?cb=20140811005253",
+          "https://static.wikia.nocookie.net/starwars/images/6/6f/Darth_Maul_Son_of_Dathomir_4.png/revision/latest?cb=20140808205709",
+          "https://static.wikia.nocookie.net/starwars/images/3/37/Darth_Maul_Son_of_Dathomir_3.png/revision/latest?cb=20140716171318",
+          "https://static.wikia.nocookie.net/starwars/images/2/2a/Darth_Maul_Son_of_Dathomir_2.png/revision/latest?cb=20140811131101"
+      ],
+      "quantitySell": 12,
+      "comments": [
+          {
+              "id": "93ea98f3-0f13-4c10-842e-1d50d60cd231",
+              "comment": "KENOOOOOOBIIIIII",
+              "userName": "tusken_raider22",
+              "rate": 5,
+              "date": "01/11/2024"
+          },
+          {
+              "id": "5f3eb3f7-4901-41db-be54-4056adebf4e0",
+              "comment": "Las ilustraciones son impresionantes, pero la historia es un poco corta.",
+              "userName": "comicfan",
+              "rate": 4,
+              "date": "03/11/2024"
+          },
+          {
+              "id": "8ebf676a-e207-4679-9d63-7ea5d13c0e9a",
+              "comment": "Me encanta Maul, no es el más afortunado, ni el más fuerte, ni el más listo, ni el más...pero tiene la entrada más épica de la saga.",
+              "userName": "duel_of_the_fates",
+              "rate": 3,
+              "date": "05/11/2024"
+          }
+      ]
+  },
+  {
+      "id": "e3a50c47-7c44-46da-aaf4-772454dc197a",
+      "name": "Funko Pop! Star Wars: Luke Skywalker with Yoda (Entrenamiento)",
+      "quantity": 20,
+      "description": "Figura coleccionable de Luke Skywalker con Yoda de la serie Funko Pop!, perfecta para decorar o añadir a tu colección.",
+      "category": "Figuras de acción",
+      "topic": "star-wars",
+      "price": 11.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/710QFOna3nL._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/71FfUKlqMrS._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/71FfUKlqMrS._AC_SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/51RiV03zgxL._AC_SL1100_.jpg",
+          "https://resources.claroshop.com/medios-plazavip/s2/18440/2899795/60feae7590c97-70fd1966-5650-4852-9571-dcf95b691611-200x200.jpg"
+      ],
+      "quantitySell": 30,
+      "comments": [
+          {
+              "id": "6992fe60-5210-4a63-b9d1-00ed061777fc",
+              "comment": "¡Me encanta! Una figura icónica de Star Wars.",
+              "userName": "funkofan",
+              "rate": 4,
+              "date": "22/03/2024"
+          },
+          {
+              "id": "c8e7ba6c-a652-4ec2-bb0f-2f96e2984ba0",
+              "comment": "Esta escena me encantó cuando la vi por primera vez en el cine.",
+              "userName": "collector_77",
+              "rate": 5,
+              "date": "25/03/2024"
+          },
+          {
+              "id": "1ca598cd-3cea-498a-b49b-60b7ba50e4c2",
+              "comment": "Me da mucha risa recordar que en la película casi utilizaron un mono para representar a Yoda.",
+              "userName": "starwarsfanatic",
+              "rate": 3,
+              "date": "27/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "12844241-01bf-46a7-919a-33c4d2c09c61",
+      "name": "Casco de Boba Fett The Black Series Premium",
+      "quantity": 3,
+      "description": "Este casco electrónico premium de Boba Fett de la serie Black es una réplica detallada y realista del icónico casco del famoso cazarrecompensas de Star Wars. Con acabados premium, efectos de desgaste y un visor ajustable, este casco es perfecto para los coleccionistas y fanáticos del rol. Además, cuenta con efectos de sonido electrónicos que recrean los sonidos auténticos del personaje en las películas.",
+      "category": "Accesorios",
+      "topic": "star-wars",
+      "price": 99.99,
+      "imgs": [
+          "https://cdn.media.amplience.net/i/hasbropulse/E75435L00_SW_B_Helmet_6b_e05103a6-50d4-4919-8eb6-e6bd4c8008bc_pos01?w=1004&fmt=auto",
+          "https://cdn.media.amplience.net/i/hasbropulse/E75435L00_SW_B_Helmet_4_4654775d-bac4-46cc-a349-6def262323d4_pos02?w=1004&fmt=auto",
+          "https://cdn.media.amplience.net/i/hasbropulse/E75435L00_SW_B_Helmet_2_2b9be77a-b60a-4e01-8a33-53b142e41d7b_pos05?w=1004&fmt=auto",
+          "https://cdn.media.amplience.net/i/hasbropulse/E75435L00_SW_E5_B_Helmet1_19_2000px_300DPI_pos06?w=1004&fmt=auto",
+          "https://cdn.media.amplience.net/i/hasbropulse/E75435L00_5010993638895_pkg_20_8430746aeb59e1c38af06cf4c19e49732537c084_pos10_18078_withclip?w=1004&fmt=auto"
+      ],
+      "quantitySell": 4,
+      "comments": [
+          {
+              "id": "d529ddf3-8d25-4a2e-8ffd-35f27f8181b5",
+              "comment": "Casco de calidad superior, perfecto para coleccionistas.",
+              "userName": "bountyhunter",
+              "rate": 4,
+              "date": "28/03/2024"
+          },
+          {
+              "id": "62cfe412-b27f-49b3-9f5b-9828763eb1d6",
+              "comment": "Espero que este casco me ayude a sobrevivir por si algún día caigo dentro de un Sarlacc.",
+              "userName": "helmet_lover",
+              "rate": 4,
+              "date": "29/03/2024"
+          },
+          {
+              "id": "96cef99e-6267-4d94-a230-8363300e87a7",
+              "comment": "Se parece mucho al que sale rodando en la pelea de Geonosis...",
+              "userName": "mace_windu_fan",
+              "rate": 4,
+              "date": "30/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "b18b28ca-fcad-448d-994d-701c41b40242",
+      "name": "Ahsoka Tano - Figura de acción The Vintage Collection",
+      "quantity": 10,
+      "description": "Esta figura de acción de Ahsoka Tano de 3.75 pulgadas (9.5 cm) está inspirada en la esperada serie de acción en vivo Star Wars: Ahsoka en Disney+. La figura cuenta con 2 accesorios de sables de luz, diseño premium y articulación completa, ideal para jugar o exhibir. El empaque está inspirado en los coleccionables originales de Star Wars de los años 70 y 80 con la marca y diseño de Kenner.",
+      "category": "Figuras de acción",
+      "topic": "star-wars",
+      "price": 16.99,
+      "imgs": [
+          "https://cdn.media.amplience.net/i/hasbropulse/F7347_PROD_SW_VIN_DUBOIS_0005_pos02?w=1004&fmt=auto",
+          "https://cdn.media.amplience.net/i/hasbropulse/F7347_PROD_SW_VIN_DUBOIS_0002_pos03?w=1004&fmt=auto",
+          "https://cdn.media.amplience.net/i/hasbropulse/F7347_PROD_SW_VIN_DUBOIS_0006_pos04?w=1004&fmt=auto",
+          "https://cdn.media.amplience.net/i/hasbropulse/F7347_PROD_SW_VIN_DUBOIS_0007_pos05?w=1004&fmt=auto",
+          "https://m.media-amazon.com/images/I/61ZKRz+954L._AC_SX679_.jpg"
+      ],
+      "quantitySell": 8,
+      "comments": [
+          {
+              "id": "c9f7f407-1e83-467c-a4b7-59a080f5df8e",
+              "comment": "Tiene la misma cara de amargada que en la serie. No sé si eso es bueno o malo...",
+              "userName": "ahsoka_fan",
+              "rate": 3,
+              "date": "30/03/2024"
+          },
+          {
+              "id": "5eefae29-2df8-4974-a015-2da59042c86a",
+              "comment": "¡Me encanta, una figura más de Sabionda para mi colección!",
+              "userName": "sky_guy",
+              "rate": 5,
+              "date": "02/04/2024"
+          },
+          {
+              "id": "dc50e456-ced8-45e5-8908-f074a218b2dc",
+              "comment": "Me encantó la serie y me encanta la figura.",
+              "userName": "fulcrum",
+              "rate": 4,
+              "date": "02/04/2024"
+          }
+      ]
+  },
+  {
+      "id": "dbc90db5-19d0-490b-9934-682fa87ef1f2",
+      "name": "The Star Wars Archives. 1977-1983: Edición 40 aniversario",
+      "quantity": 12,
+      "description": "Libro de arte que explora el proceso de creación visual de las películas de Star Wars. Este volumen abarca los años 1977-1983 y ofrece una mirada detallada a la creación de la trilogía original. Incluye entrevistas exclusivas, fotos detrás de cámaras, y arte conceptual nunca antes visto. Es una edición especial del 40 aniversario que celebra el legado de Star Wars con una presentación de lujo.",
+      "category": "Libros",
+      "topic": "star-wars",
+      "price": 39.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/817vatsz0RL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81ww6Er0BEL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/815fgG8c3IL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81DFKZbzqXL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81pG5QYigxL._SL1500_.jpg"
+      ],
+      "quantitySell": 21,
+      "comments": [
+          {
+              "id": "3c9374be-1f24-4e99-a9bb-84a2a9a72ec7",
+              "comment": "Este libro es una verdadera reliquia para los fans de Star Wars.",
+              "userName": "original_trilogy_fan",
+              "rate": 5,
+              "date": "01/04/2024"
+          },
+          {
+              "id": "6b326ae4-eca1-4a85-a6df-3f54668bf7e2",
+              "comment": "Star Wars es lo mejor que pasó en mi vida.",
+              "userName": "jedi_master",
+              "rate": 5,
+              "date": "03/04/2024"
+          },
+          {
+              "id": "5ea1112a-7568-4092-b5d7-1f5c03a3830c",
+              "comment": "Es impresionante ver cómo George Lucas revolucionó la industria cinematográfica con su visión única.",
+              "userName": "cinematic_genius",
+              "rate": 5,
+              "date": "04/04/2024"
+          }
+      ]
+  },
+  {
+      "id": "6c8ad467-243a-412c-9888-7eb20320adf0",
+      "name": "Molinos eléctricos de sal y pimienta de Star Wars (paquete de 2)",
+      "quantity": 10,
+      "description": "Perfectos para los fans de Star Wars que quieren añadir un toque galáctico a su cocina. Estos molinos son fáciles de usar y vienen con luces LED que se encienden cuando se muelen las especias.",
+      "category": "Accesorios",
+      "topic": "star-wars",
+      "price": 39.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/61feH7vgfqL._AC_SL1001_.jpg",
+          "https://m.media-amazon.com/images/I/71YDKeFiyWL._AC_SL1001_.jpg",
+          "https://m.media-amazon.com/images/I/61KlDUejBSL._AC_SL1001_.jpg",
+          "https://m.media-amazon.com/images/I/61HjXqS3yML._AC_SL1001_.jpg",
+          "https://m.media-amazon.com/images/I/713O1jqqRFL._AC_SL1001_.jpg"
+      ],
+      "quantitySell": 40,
+      "comments": [
+          {
+              "id": "82a86758-c107-442d-b52b-0eca57c919a9",
+              "comment": "Estoy seguro que utilizando estos molinos para cocinar me convertiré en Maestro Jedi",
+              "userName": "starwars_chef",
+              "rate": 5,
+              "date": "01/04/2024"
+          },
+          {
+              "id": "c8091f78-69c8-4762-885f-ebd13276ddf9",
+              "comment": "Mi esposa no quería que comprara estas genialidades para nuestra cocina. Ahora los usa siempre.",
+              "userName": "owen_lars",
+              "rate": 5,
+              "date": "02/04/2024"
+          },
+          {
+              "id": "734ea936-e257-4e21-93c5-b7b46632b368",
+              "comment": "¡Soy un adulto independiente, con gustos... bien dementes!",
+              "userName": "dexter_jettster",
+              "rate": 4,
+              "date": "03/04/2024"
+          }
+      ]
+  },
+  {
+      "id": "fce6ab4b-9a04-43b1-9e18-82911c4910a2",
+      "name": "Super Mario Odyssey - Figura",
+      "quantity": 15,
+      "description": "Bowser ha secuestrado a Peach una vez más y Mario es el único que puede salvarla. Cargando profundamente en su castillo, Mario se ve obligado a enfrentar a Bowser y sus secuaces una vez más para salvar a la princesa Peach. Recrea tus escenas favoritas de Mario vs Bowser con estas figuras icónicas y auténticas de la línea de figuras Jakks Pacific Super Mario. Cada figura tiene múltiples puntos de articulación. Mario viene con 11 puntos de articulación, Bowers tiene 9 puntos de articulación y Bob-Omb tiene 3 puntos de articulación. Las figuras seguramente complacerán a niños y coleccionistas por igual. Colecciónalos todos. Para edades de 3 años en adelante.",
+      "category": "Figuras de acción",
+      "topic": "videojuegos",
+      "price": 59.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/61vFg+YuXPL._AC_SX679_.jpg",
+          "https://m.media-amazon.com/images/I/51cx6WO5eJL._AC_SX679_.jpg",
+          "https://m.media-amazon.com/images/I/51GpsJdM1uL._AC_SX679_.jpg",
+          "https://m.media-amazon.com/images/I/61vtymKDwvL._AC_SX679_.jpg",
+          "https://m.media-amazon.com/images/I/619aU2BDPwL._AC_SX679_.jpg"
+      ],
+      "quantitySell": 20,
+      "comments": [
+          {
+              "id": "7c85c08b-d0af-4c47-a505-6d348cebb1ee",
+              "comment": "Es un juego increíble, lo mejor de la serie de Mario.",
+              "userName": "gamer123",
+              "rate": 5,
+              "date": "05/03/2024"
+          },
+          {
+              "id": "1f7c40b1-1906-4655-b49d-6a55b0e0b444",
+              "comment": "Un clásico moderno, muy entretenido.",
+              "userName": "marioFan99",
+              "rate": 4,
+              "date": "10/03/2024"
+          },
+          {
+              "id": "899a0ab1-7c3f-49fa-aa84-f67f8ebefec8",
+              "comment": "Me gustó, pero algunos niveles son muy fáciles.",
+              "userName": "casualGamer",
+              "rate": 3,
+              "date": "15/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "fd59094c-4c2f-4ab5-90ae-140704a4a7cf",
+      "name": "Espada de Link de The Legend of Zelda",
+      "quantity": 8,
+      "description": "Conviértete en Link con su espada",
+      "category": "Accesorios",
+      "topic": "videojuegos",
+      "price": 69.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/61q2BdW9bkL._AC_SY550_.jpg",
+          "https://m.media-amazon.com/images/I/51HTXJH9CZL._AC_SX679_.jpg",
+          "https://m.media-amazon.com/images/I/71Jd6M8-8jL._AC_SY550_.jpg",
+          "https://m.media-amazon.com/images/I/61JIRm-3RuL._AC_SY550_.jpg",
+          "https://m.media-amazon.com/images/I/71EEBttE+3L._AC_SY550_.jpg"
+      ],
+      "quantitySell": 12,
+      "comments": [
+          {
+              "id": "4399f242-961a-4399-9a30-8f85491c1a85",
+              "comment": "El mejor juego de la franquicia de Zelda, con una historia increíble.",
+              "userName": "zeldaFan95",
+              "rate": 5,
+              "date": "14/02/2024"
+          },
+          {
+              "id": "4b5e0bef-9cf3-486c-b0b3-d6b1a06380ee",
+              "comment": "He salido a la calle con esta espada, pero me perdí muchas veces.",
+              "userName": "lostInHyrule",
+              "rate": 4,
+              "date": "18/02/2024"
+          },
+          {
+              "id": "d3200120-a21e-4caf-bc5c-af442b4a0648",
+              "comment": "Un buen juego, pero algo sobrevalorado en mi opinión.",
+              "userName": "criticalGamer",
+              "rate": 3,
+              "date": "20/02/2024"
+          }
+      ]
+  },
+  {
+      "id": "1c314764-cf3a-4efd-a648-08c975eef785",
+      "name": "God of War Fallen God",
+      "quantity": 20,
+      "description": "Comic precuela de la secuela de God of War con mitología nórdica y combates épicos.",
+      "category": "Comics",
+      "topic": "videojuegos",
+      "price": 79.99,
+      "imgs": [
+          "https://imgs.search.brave.com/MMey9fGwowsm428Ypqx7hPmseuYz-Deo-OuY98DYRQw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMud2lraWEubm9j/b29raWUubmV0LzNj/NjE4ZjkwLTYyNmEt/NDZlNi1iMDA1LTUw/NjE5MDk3YWJiMS9z/Y2FsZS10by13aWR0/aC83NTU",
+          "https://imgs.search.brave.com/5CEkEPgHIi42WbUCHQ4EeMd22k04FQd4zNvWU3t71H4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMxLnRoZWdhbWVy/aW1hZ2VzLmNvbS93/b3JkcHJlc3Mvd3At/Y29udGVudC91cGxv/YWRzLzIwMjEvMDMv/Z29kLW9mLXdhci1j/b21pYy0yLmpwZw",
+          "https://imgs.search.brave.com/pNju-8a5S3hbRYvIkd7nkbrIxCMND7hgv0_psQfLLks/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMxLnNyY2RuLmNv/bS93b3JkcHJlc3Mv/d3AtY29udGVudC91/cGxvYWRzLzIwMjEv/MDMvS3JhdG9zLUJs/YWRlcy1vZi1DaGFv/cy5qcGc",
+          "https://imgs.search.brave.com/0vGKxFU9NwAP9yiSQbe_j7deHOoxSoY-5S-46Kg1J-Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMxLmNicmltYWdl/cy5jb20vd29yZHBy/ZXNzL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIxLzAzL0tyYXRv/cy1FeG9kdXMuanBn",
+          "https://imgs.search.brave.com/GabQlDN7Sn0URywC3D_Jg4O2vw911zP6-2AoJ86ZvI0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ldy5j/b20vdGhtYi85RFpY/cU9qUGJwOHdwTFRo/SUFQSkhka3dNWVU9/LzE1MDB4MC9maWx0/ZXJzOm5vX3Vwc2Nh/bGUoKTptYXhfYnl0/ZXMoMTUwMDAwKTpz/dHJpcF9pY2MoKS9n/d2FyLTEtcGctMDQt/MjAwMC0yOTIyODdk/M2YzZDI0MTVlYTIy/NWUwZGExMjU2NTg1/ZC5qcGc"
+      ],
+      "quantitySell": 25,
+      "comments": [
+          {
+              "id": "26ba13dd-8b0c-49a4-a2a0-f5ef34d4dd78",
+              "comment": "Kratos está de regreso y esta vez mejor que nunca.",
+              "userName": "viking_warrior",
+              "rate": 5,
+              "date": "10/03/2024"
+          },
+          {
+              "id": "9508f685-4892-4d98-8bc5-1ca777ad8ff6",
+              "comment": "El combate es excelente, pero la historia no me enganchó tanto.",
+              "userName": "combatMaster",
+              "rate": 4,
+              "date": "12/03/2024"
+          },
+          {
+              "id": "3857b3cf-7682-48d6-94dc-53ea7d0adbad",
+              "comment": "Visualmente impresionante, pero esperaba más.",
+              "userName": "gameCritic",
+              "rate": 3,
+              "date": "14/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "2341c51e-47ae-48be-9c73-9450c6e45966",
+      "name": "Spider-Man: Miles Morales -Figura",
+      "quantity": 10,
+      "description": "Con más de 80 años de historia del entretenimiento, Marvel se ha convertido en una piedra angular de las colecciones de fanáticos de todo el mundo. Con Marvel Legends, los personajes favoritos de Marvel Comic Universe y Marvel Cinematic Universe están diseñados con detalles y articulación premium para posar y exhibir. Esta figura coleccionable a escala de 6 pulgadas está detallada para parecerse a Miles Morales de Spider-Man: Into the Spider-Verse. Trae la emoción y la maravilla del universo de la zapa a tu colección con Hasbro Dale Legends Spider-Man y otras figuras de acción de la película y de la película de la película (los productos adicionales se venden por separado. Sujeto a disponibilidad.) © 2024 MARVEL © 2024 SPAI HASBRO y todas las marcas comerciales y logotipos relacionados son marcas comerciales de Hasbro, Inc.",
+      "category": "Figuras de acción",
+      "topic": "videojuegos",
+      "price": 49.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/61DhUUvV7NL._AC_SX679_.jpg",
+          "https://m.media-amazon.com/images/I/81vb9ysYR7L._AC_SX679_.jpg",
+          "https://m.media-amazon.com/images/I/61-TF1GPJfL._AC_SX679_.jpg",
+          "https://m.media-amazon.com/images/I/61cz1iZbXJL._AC_SX679_.jpg",
+          "https://m.media-amazon.com/images/I/61kXCobbFoL._AC_SX679_.jpg"
+      ],
+      "quantitySell": 18,
+      "comments": [
+          {
+              "id": "4420163a-ae85-4685-8192-dd9e4fd4208d",
+              "comment": "Me gusto",
+              "userName": "heroicspidey",
+              "rate": 4,
+              "date": "18/01/2024"
+          },
+          {
+              "id": "c0dd79b0-8fcc-4d65-b13f-78bafb0c1d8f",
+              "comment": "Pesima calidad, no me sirvio.",
+              "userName": "actionFanatic",
+              "rate": 3,
+              "date": "20/01/2024"
+          },
+          {
+              "id": "b85ea248-3bc0-4364-8123-2e2bad410e75",
+              "comment": "Se la regale a mi sobrino de color, es fanatico de este Spiderman.",
+              "userName": "peterParkerFan",
+              "rate": 4,
+              "date": "22/01/2024"
+          }
+      ]
+  },
+  {
+      "id": "29e4457a-18af-4dbb-bdd3-6b5cac7544fb",
+      "name": "Libro para fans de Harry Potter",
+      "quantity": 12,
+      "description": "Sos fan de Harry Potter? Entonces necesitas este libro.",
+      "category": "Libros",
+      "topic": "videojuegos",
+      "price": 69.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/71Eqtn+vhzL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/61-flK2eYCL.jpg",
+          "https://m.media-amazon.com/images/I/91HwvxLNp0L._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81+p24tsgtL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81FQxtk78ZL._SL1500_.jpg"
+      ],
+      "quantitySell": 16,
+      "comments": [
+          {
+              "id": "cf389f64-b597-405a-8ef2-f37ffec05f57",
+              "comment": "perfecto para los fanáticos de Harry Potter.",
+              "userName": "wizardMaster",
+              "rate": 5,
+              "date": "22/02/2024"
+          },
+          {
+              "id": "2b7bbb5c-86e8-4d4a-8f70-621b485c2e58",
+              "comment": "El mundo es hermoso, y este libro lo es más.",
+              "userName": "spellCaster99",
+              "rate": 3,
+              "date": "25/02/2024"
+          },
+          {
+              "id": "441185ba-a9ef-4155-94bf-a4dba348b3fb",
+              "comment": "La magia se siente increíble, pero esperaba más datos de los personajes.",
+              "userName": "hogwartsFan",
+              "rate": 4,
+              "date": "28/02/2024"
+          }
+      ]
+  },
+  {
+      "id": "ed518b2f-bc7d-4173-be5e-3633372324bb",
+      "name": "Figura de Kratos",
+      "quantity": 30,
+      "description": "Figura de acción de Kratos en su versión de GoW 4 y GoW Ragnarok.",
+      "category": "Figuras de acción",
+      "topic": "videojuegos",
+      "price": 35.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/61Vb-YMeptL._AC_SY879_.jpg",
+          "https://m.media-amazon.com/images/I/51Hy2enR3VL._AC_.jpg",
+          "https://m.media-amazon.com/images/I/51Z7xMzIEFL._AC_.jpg",
+          "https://m.media-amazon.com/images/I/51Fx26ByKKL._AC_.jpg",
+          "https://m.media-amazon.com/images/I/81WJgi64WKL._AC_SX679_.jpg"
+      ],
+      "quantitySell": 40,
+      "comments": [
+          {
+              "id": "2efd9f70-6afe-4e89-be8b-ce220bb14f8a",
+              "comment": "Excelente calidad, se parece mucho al videojuego.",
+              "userName": "otakuCollector",
+              "rate": 5,
+              "date": "15/03/2024"
+          },
+          {
+              "id": "93e44eaf-fb64-4119-b0a5-f5b7a57232b1",
+              "comment": "Me encantó la figura, pero el tamaño es más pequeño de lo esperado.",
+              "userName": "dbzFan",
+              "rate": 4,
+              "date": "18/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "9a357680-bb06-401a-a1fb-4562103393c0",
+      "name": "The Art of Star Wars Jedi: Survivor",
+      "quantity": 25,
+      "description": "El primer volumen del famoso juego Star Wars Jedi: Survivor.",
+      "category": "Libros",
+      "topic": "videojuegos",
+      "price": 9.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/81orIeCT0WL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/71nZfTxIFpL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/71rtRRgZFWL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/81tG7BrPp3L._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/71j1n8s7+bL._SL1500_.jpg"
+      ],
+      "quantitySell": 30,
+      "comments": [
+          {
+              "id": "603e5947-3332-4340-8ae3-537015ed6328",
+              "comment": "Un clásico, perfecto para empezar con el juego.",
+              "userName": "shinobiReader",
+              "rate": 5,
+              "date": "10/04/2024"
+          },
+          {
+              "id": "893900c6-a978-4cc9-876e-d2aecd2d4428",
+              "comment": "Me atrapó la historia desde el primer juego.",
+              "userName": "ninjalover",
+              "rate": 5,
+              "date": "12/04/2024"
+          },
+          {
+              "id": "7e98270e-e6d5-4343-b363-440f7829ca16",
+              "comment": "Soy animeFan prefiero los juegos de ninjas pero me compre este libro para ver si me animo, osea el juego usa espadas por ende pense que podria jugarle. QUIERO SENTIRME UN NINJA KAWAII.",
+              "userName": "animeFan",
+              "rate": 4,
+              "date": "15/04/2024"
+          }
+      ]
+  },
+  {
+      "id": "d915373e-4b41-46be-99d9-42b52fc6326c",
+      "name": "Control Inalámbrico PS5",
+      "quantity": 50,
+      "description": "El controlador inalámbrico para PlayStation 5 con vibración háptica.",
+      "category": "Accesorios",
+      "topic": "videojuegos",
+      "price": 69.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/51PmeLGEkML._SX522_.jpg",
+          "https://m.media-amazon.com/images/I/51s-PN6gcGL._SX522_.jpg",
+          "https://m.media-amazon.com/images/I/41ep9IdP-jL._SX522_.jpg",
+          "https://m.media-amazon.com/images/I/719RuhyQX4L._SX522_.jpg",
+          "https://m.media-amazon.com/images/I/61-VE22RMCL._SX522_.jpg"
+      ],
+      "quantitySell": 70,
+      "comments": [
+          {
+              "id": "ce0ff7d2-b0c8-45c2-9787-cbca6d78a9ea",
+              "comment": "El mejor control que he usado, la vibración es increíble.",
+              "userName": "proGamer",
+              "rate": 5,
+              "date": "20/03/2024"
+          },
+          {
+              "id": "20efc41d-5c90-478d-9c27-2fd9ac4a1152",
+              "comment": "Es muy cómodo, aunque se siente un poco caro.",
+              "userName": "casualPlayer",
+              "rate": 4,
+              "date": "22/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "c51062f9-332e-4b00-ab17-e038a2e3f276",
+      "name": "Halo Encyclopedia",
+      "quantity": 10,
+      "description": "El universo de Halo es increíblemente vasto en escala y sorprendentemente elaborado en detalles, contando historias ricas llenas de personajes audaces, mundos impresionantes y conflictos emocionantes. Para celebrar el 20.º aniversario de Halo, Dark Horse y 343 Industries se han unido para ofrecer la guía más definitiva del universo hasta el momento. La Enciclopedia de Halo, que abarca más de cien milenios y más de cien mil años luz, captura dos décadas de narración con arte asombroso e inédito y la exploración más detallada de los numerosos personajes, mundos y tecnologías del universo que se haya creado jamás.",
+      "category": "Comics",
+      "topic": "videojuegos",
+      "price": 14.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/81XTeFyj9KL._SL1500_.jpg",
+          "https://m.media-amazon.com/images/I/61yB6rtHxkL._SL1000_.jpg",
+          "https://m.media-amazon.com/images/I/71TVTmuUkyL._SL1333_.jpg",
+          "https://m.media-amazon.com/images/I/71ar0TOGpFL._SL1333_.jpg",
+          "https://m.media-amazon.com/images/I/71RSjAA0npL._SL1333_.jpg"
+      ],
+      "quantitySell": 20,
+      "comments": [
+          {
+              "id": "5263e0e2-aa8d-4f19-b73c-7e3621481519",
+              "comment": "Una de las mejores enciclopedias del universo de Halo.",
+              "userName": "haloFan",
+              "rate": 5,
+              "date": "02/03/2024"
+          },
+          {
+              "id": "cfd39ee1-73cb-4ec0-8f9d-7ab5668abaff",
+              "comment": "Es un buen cómic, pero muy oscuro para mi gusto.",
+              "userName": "comicReader",
+              "rate": 3,
+              "date": "05/03/2024"
+          },
+          {
+              "id": "73e2ca9f-c401-438d-b1b0-69757d516c29",
+              "comment": "Obligatorio para cualquier fan de Halo.",
+              "userName": "jokerLover",
+              "rate": 5,
+              "date": "10/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "cbc025fa-6e38-4119-85ac-0bb22abe6dfe",
+      "name": "Exquisite Gaming: Borderlands 3: Claptrap - Soporte original para teléfono móvil y controlador de juegos, soporte para dispositivos, cable Guys, figura con licencia de caja de cambios",
+      "quantity": 20,
+      "description": "Figura del juego Borderland.",
+      "category": "Figuras de acción",
+      "topic": "videojuegos",
+      "price": 19.99,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/61tQjwKs8bL._AC_SY879_.jpg",
+          "https://m.media-amazon.com/images/I/61jJL2MHjEL._AC_SY879_.jpg",
+          "https://m.media-amazon.com/images/I/61o0ONcmXcL._AC_SY879_.jpg",
+          "https://m.media-amazon.com/images/I/617FA15nnuL._AC_SY879_.jpg",
+          "https://m.media-amazon.com/images/I/61-T-MlKKjL._AC_SY879_.jpg"
+      ],
+      "quantitySell": 35,
+      "comments": [
+          {
+              "id": "0f1600b8-182d-4936-88b4-541247a016d5",
+              "comment": "Una excelente figura para cualquier amante de los videojuegos y la cultura pop.",
+              "userName": "retroGamer",
+              "rate": 5,
+              "date": "12/04/2024"
+          },
+          {
+              "id": "ac79accd-2c3f-4138-83e2-892b76e247ac",
+              "comment": "Muy interesante, aunque si le cae leche encima cuesta quitar la mancha.",
+              "userName": "scifiReader",
+              "rate": 4,
+              "date": "15/04/2024"
+          },
+          {
+              "id": "ebf54526-d8ae-47d8-b10e-f583bae3a355",
+              "comment": "La trama del juego es entretenida, ahora quier algo que me recuerde al juego cerca.",
+              "userName": "jeffBuff",
+              "rate": 3,
+              "date": "18/04/2024"
+          }
+      ]
+  },
+  {
+      "id": "81a76f17-a7f7-46fd-8156-f77d9398007b",
+      "name": "the amazing spider-man (2022)#61",
+      "quantity": 20,
+      "description": "¡LAS 8 MUERTES DE SPIDER-MAN COMIENZAN! El mundo ha cambiado, Doctor Doom es el Hechicero Supremo, pero no tiene planes de pasar su tiempo como su predecesor... Cada año, Doctor Strange usaría cada onza de su poder y experiencia para salvar al mundo de un dios malvado y sus vástagos. Este año, Doom está delegando esta tarea a... ¡¿SPIDER-MAN?! ¡El líder de Latveria le ha dado a Spider-Man un nuevo traje con poderes mágicos y OCHO VIDAS EXTRA con las que salvar al mundo! Verdadero creyente, no serán suficientes...",
+      "category": "Comics",
+      "topic": "marvel",
+      "price": 20,
+      "imgs": [
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/f/03/66c72182c4578/clean.jpg",
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/5/03/66c72183641d1/clean.jpg",
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/9/e0/66e1ced8f3734/clean.jpg",
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/c/80/66e1cedc371e6/clean.jpg",
+          "https://atomicbooks.com/cdn/shop/products/amspiderman61b_1600x.jpg?v=1615243920"
+      ],
+      "quantitySell": 30,
+      "comments": [
+          {
+              "id": "0be8a36c-cc6e-41ef-92e1-a4a3fba5698c",
+              "comment": "parece que otra vez veremos sufrir a nuestra araña favorita es una pena..",
+              "userName": "peterbparker",
+              "rate": 4,
+              "date": "06/05/2024"
+          },
+          {
+              "id": "7efe08f2-edeb-47d3-a869-6bcf95154779",
+              "comment": "Las ocho muertes de spiderman suena muy emocionante ",
+              "userName": "marvellove",
+              "rate": 5,
+              "date": "07/05/2024"
+          },
+          {
+              "id": "894cb400-422e-4933-b4d5-275e03a4f109",
+              "comment": "que les pasa a los creadores no lo quieren pobrecito",
+              "userName": "ilovepeter",
+              "rate": 5,
+              "date": "06/05/2024"
+          },
+          {
+              "id": "211aedbf-03f4-4f88-9708-f8a327f8628b",
+              "comment": "doctor Doom es el hechicero",
+              "userName": "doctordoom",
+              "rate": 5,
+              "date": "06/05/2024"
+          }
+      ]
+  },
+  {
+      "id": "b04e61cd-3a06-4ae1-893c-6daa3f0a0e3c",
+      "name": "wolverine(2024)#1",
+      "quantity": 20,
+      "description": "¡LA LEYENDA COMIENZA DE NUEVO EN LA NUEVA SERIE EN CURSO RESISTENTE AL ADAMANTIUM! Hay un asesino en el bosque, y cuando el intento de WOLVERINE de reconciliarse se ve frustrado, un VIEJO ENEMIGO resurgirá y surgirá un NUEVO VILLANO que llevará a LOGAN al borde de su furia berserker. Pero NIGHTCRAWLER sabe que su viejo amigo es capaz de hacer lo correcto y, en poco tiempo, Logan tendrá que desatar sus garras, llevar su factor de curación al límite y demostrar que es el mejor en lo que hace de una vez por todas. ¡Qué bien! ¡La legendaria serie en curso de WOLVERINE comienza de nuevo con el equipo creativo superestrella de Saladin Ahmed (DAREDEVIL, MS. MARVEL) y Martín Cóccolo (DEADPOOL, IMMORTAL THOR) que comienza su viaje épico con Logan! Nota del coleccionista: ¡Una PRIMERA APARICIÓN clave y una importante incorporación a la historia de Wolverine en este número!",
+      "category": "Comics",
+      "topic": "marvel",
+      "price": 25,
+      "imgs": [
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/d/e0/67068368c7304/clean.jpg",
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/d/e0/67068368c7304/clean.jpg",
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/3/40/66c721613e3f2/clean.jpg",
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/f/c0/66e1ceb68f1ee/clean.jpg",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKyAlHof6oQRNTKrb5eGoD-RIJKxe9rSJFAg&s"
+      ],
+      "quantitySell": 20,
+      "comments": [
+          {
+              "id": "91b9516f-958d-43d5-a929-8d689da17ad7",
+              "comment": "mi x men favorito",
+              "userName": "ilovelogan",
+              "rate": 4,
+              "date": "04/03/2024"
+          },
+          {
+              "id": "a08c0f11-26b8-4b4c-8ca7-8801c90bb558",
+              "comment": "toco desvelarse para leer",
+              "userName": "tuxmanfavorito",
+              "rate": 5,
+              "date": "07/05/2024"
+          },
+          {
+              "id": "d6c643e9-dc47-4e3f-b9a1-d9c85c893b9c",
+              "comment": "sii amo a logan",
+              "userName": "ciclope",
+              "rate": 5,
+              "date": "06/05/2024"
+          }
+      ]
+  },
+  {
+      "id": "8e5c407a-0899-4beb-8dbf-9c17abc0349b",
+      "name": "garras de wolverine 25 cm",
+      "quantity": 10,
+      "description": "son replicas de las garras de wolverine sientete como un heroe",
+      "category": "Accesorios",
+      "topic": "marvel",
+      "price": 40,
+      "imgs": [
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8ACTwpK8zwleQVuJUfDV4e9prvRLPJlstpA&s",
+          "https://marvelofficial.com/wp-content/uploads/2020/04/171BF784-4CF6-4CD9-A468-B174F565445B.jpeg",
+          "https://marvelofficial.com/wp-content/uploads/2020/04/3326A85C-DEF3-41BF-816F-EFD776BEBC26-768x768.jpeg",
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/c/80/66e1cedc371e6/clean.jpg",
+          "https://images.tcdn.com.br/img/img_prod/460977/replica_garras_wolverine_the_wolverine_25cm_marvel_comics_mkp_131699_1_0326ea0b914ec188f219c726780df37a.jpeg"
+      ],
+      "quantitySell": 30,
+      "comments": [
+          {
+              "id": "01e9b7e4-314a-4d19-b011-d345886b4dd1",
+              "comment": "mi x men favorito",
+              "userName": "xman",
+              "rate": 4,
+              "date": "04/03/2024"
+          },
+          {
+              "id": "760c786b-04c0-409a-8381-3f150777b79e",
+              "comment": "quiero",
+              "userName": "usuario",
+              "rate": 5,
+              "date": "07/05/2024"
+          },
+          {
+              "id": "e5483bf4-b48d-40de-8ff7-6e59350e88ba",
+              "comment": "slas garras de wolverine",
+              "userName": "ciclope23",
+              "rate": 5,
+              "date": "10/06/2024"
+          }
+      ]
+  },
+  {
+      "id": "418faddd-c317-40ad-8a75-7f4c5fc926f2",
+      "name": "sueter",
+      "quantity": 15,
+      "description": "sueter con el logo de marvel multicoles",
+      "category": "Accesorios",
+      "topic": "marvel",
+      "price": 60,
+      "imgs": [
+          "https://moviesshopco.vtexassets.com/arquivos/ids/177550-1600-1600?v=638639091436470000&width=1600&height=1600&aspect=true",
+          "https://moviesshopco.vtexassets.com/arquivos/ids/177553-1600-1600?v=638639091877030000&width=1600&height=1600&aspect=true",
+          "https://m.media-amazon.com/images/I/81J6K8kQxWL._AC_SY550_.jpg",
+          "https://m.media-amazon.com/images/I/81BuXTRuMfL._AC_SX466_.jpg",
+          "https://m.media-amazon.com/images/I/81Vg+-Wp2xL._AC_SX466_.jpg"
+      ],
+      "quantitySell": 24,
+      "comments": [
+          {
+              "id": "20450689-a333-4b53-8e2a-7112a6b5c4d6",
+              "comment": "me gusta el estilo",
+              "userName": "luis@beltran",
+              "rate": 4,
+              "date": "06/04/2024"
+          },
+          {
+              "id": "e4a1fed6-64da-407c-a3b6-34142ea14c61",
+              "comment": "para la temporada de frio",
+              "userName": "usuario",
+              "rate": 5,
+              "date": "07/05/2024"
+          },
+          {
+              "id": "ad658708-c475-4f1d-8eb2-c8ce0348f470",
+              "comment": "se ve calientito",
+              "userName": "fanmarvel",
+              "rate": 5,
+              "date": "06/05/2024"
+          }
+      ]
+  },
+  {
+      "id": "9fcdb3b8-88c4-46dd-bf90-4a187e518130",
+      "name": "Moon Knight: Fist of Khonshu (2024) #1",
+      "quantity": 20,
+      "description": "MARC SPECTOR... ¡DE VUELTA DEL MÁS ALLÁ! Como avatar y agente del dios egipcio de la Luna, Khonshu, el ex mercenario MARC SPECTOR ha muerto y vuelto a la vida en más de una ocasión. Para los ignorantes, su destino más allá de las g arras de la muerte puede parecer idílico, ¡pero ser elegido como Puño de Khonshu tiene un alto precio! Y, como huesos en una pelea callejera, Marc Spector y las multitudes que lo componen pueden estar a punto de romperse.",
+      "category": "Comics",
+      "topic": "marvel",
+      "price": 35,
+      "imgs": [
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/7/10/67068368bcae9/clean.jpg",
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/3/70/66c721e291b19/clean.jpg",
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/6/20/66e1ce210834e/clean.jpg",
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/7/03/667c7744d0240/clean.jpg",
+          "https://i0.wp.com/aiptcomics.com/wp-content/uploads/2024/06/MKNIGHTFISTK2024_Design-scaled.jpg?ssl=1"
+      ],
+      "quantitySell": 40,
+      "comments": [
+          {
+              "id": "64000f79-6816-41a6-8907-222aa5a85a97",
+              "comment": "espero que no se agoten tan rapido",
+              "userName": "usuario23",
+              "rate": 4,
+              "date": "04/03/2024"
+          },
+          {
+              "id": "d7afc02c-5d94-469a-9ca5-58b8c95c4207",
+              "comment": "quiero",
+              "userName": "usuario14",
+              "rate": 5,
+              "date": "07/05/2024"
+          },
+          {
+              "id": "94217e6d-723c-44a8-bc1f-2970aa6f1967",
+              "comment": "me gusta",
+              "userName": "usuario122",
+              "rate": 5,
+              "date": "10/05/2024"
+          }
+      ]
+  },
+  {
+      "id": "0cdd0806-df07-4cc4-8039-51aa890c5209",
+      "name": "Deadpool",
+      "quantity": 30,
+      "description": "DEADPOOL MATA... ¡¿UNA PLAGA DE SIMBIOTAS?! El mercenario bocazas mordió más de lo que podía masticar: ¡una horda llena de ZOMBIETAS voraces! ¿A quién no le ha jodido Wade lo suficiente como para que le dé una mano? ¡El guionista favorito de los fans de DEADPOOL, CULLEN BUNN, está de vuelta para más caos mercenario!",
+      "category": "Comics",
+      "topic": "marvel",
+      "price": 20,
+      "imgs": [
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/e/10/66e3481097555/clean.jpg",
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/3/80/67068368c12ad/clean.jpg",
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/2/03/66c721447e004/clean.jpg",
+          "https://m.media-amazon.com/images/I/71F+hUWkXHL._AC_UF894,1000_QL80_.jpg",
+          "https://preview.redd.it/oh-god-oh-f-ck-its-back-venom-war-deadpool-v0-c2evhqwp3mpd1.jpeg?auto=webp&s=e58cee0b2e72b115cca7ffe9afedde5dbcba104c"
+      ],
+      "quantitySell": 20,
+      "comments": [
+          {
+              "id": "290ef574-fd3b-42ce-9f03-4eb33dd0bb0c",
+              "comment": "lo voy a mirar se ve bueno",
+              "userName": "usuario213",
+              "rate": 4,
+              "date": "04/03/2024"
+          },
+          {
+              "id": "dffce77e-015f-4d36-849f-3477e838e020",
+              "comment": "quiero",
+              "userName": "usuario14",
+              "rate": 5,
+              "date": "19/05/2024"
+          },
+          {
+              "id": "a478e796-94a2-4905-b577-bcb4872e7a77",
+              "comment": "sii lo comprare",
+              "userName": "ciclope23",
+              "rate": 5,
+              "date": "10/03/2024"
+          }
+      ]
+  },
+  {
+      "id": "a2b2ebf9-22c3-4ef9-b6bf-cc98ec44dc2c",
+      "name": "Loki",
+      "quantity": 17,
+      "description": "accesorio de loki para vestirse en halloween",
+      "category": "Accesorios",
+      "topic": "marvel",
+      "price": 20,
+      "imgs": [
+          "https://m.media-amazon.com/images/I/51H83KWgRxL.__AC_SX300_SY300_QL70_ML2_.jpg",
+          "https://m.media-amazon.com/images/I/61+OS8uTdgL._AC_SX679_.jpg",
+          "https://m.media-amazon.com/images/I/81aAjuBAfpL._AC_SX679_.jpg",
+          "https://m.media-amazon.com/images/I/71dWW9E-zTL._AC_SY741_.jpg",
+          "https://m.media-amazon.com/images/I/71OlUh6cnsL._AC_SY550_.jpg"
+      ],
+      "quantitySell": 20,
+      "comments": [
+          {
+              "id": "c766d6d1-3741-4c8b-9816-19edc06c5348",
+              "comment": "si podre disfrazarme de el en halloween",
+              "userName": "usuario23",
+              "rate": 4,
+              "date": "05/05/2024"
+          },
+          {
+              "id": "17f3779f-c643-414c-aa33-082eaa84da0e",
+              "comment": "quiero",
+              "userName": "dotordoom",
+              "rate": 5,
+              "date": "02/05/2024"
+          },
+          {
+              "id": "07fb07e1-971a-4c57-a014-eb236588061b",
+              "comment": "lo quieroo",
+              "userName": "loki123",
+              "rate": 5,
+              "date": "17/05/2024"
+          }
+      ]
+  },
+  {
+      "id": "f815d285-ed81-4b78-a77c-e929b3111dbe",
+      "name": "avengers",
+      "quantity": 27,
+      "description": "acomics de avengers",
+      "category": "Comics",
+      "topic": "marvel",
+      "price": 30,
+      "imgs": [
+          "https://cdn.marvel.com/content/1x/default/comic-no-img.jpg",
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/c/a0/4bc468c3f19dd/standard_incredible.jpg",
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/f/d0/5c1934200c851/clean.jpg",
+          "https://upload.wikimedia.org/wikipedia/en/2/2b/Avengers_%28Marvel_Comics%29_vol_3_num_38.jpg",
+          "https://i1.whakoom.com/large/15/1f/5f92a0c4537040d0bcfe0c1f79e3ed13.jpg"
+      ],
+      "quantitySell": 20,
+      "comments": [
+          {
+              "id": "0b46a0b3-807a-4878-8063-a4a459bfc5a9",
+              "comment": "me guastan esta de una buena calidad",
+              "userName": "usuario23",
+              "rate": 4,
+              "date": "05/05/2024"
+          },
+          {
+              "id": "4876d286-d842-44e8-b488-b554f431645a",
+              "comment": "al fin los comprare",
+              "userName": "dotordoom234",
+              "rate": 5,
+              "date": "02/05/2024"
+          },
+          {
+              "id": "310fa8f8-dfb0-49a7-a9d0-5764dc7a7a0c",
+              "comment": "lo quieroo",
+              "userName": "thor23",
+              "rate": 5,
+              "date": "17/05/2024"
+          }
+      ]
+  },
+  {
+      "id": "480bac99-3d50-43b6-a4da-9e5372857b20",
+      "name": "x-men",
+      "quantity": 20,
+      "description": "¡DE LAS CENIZAS! Krakoa ha desaparecido, ORCHIS ha caído... pero los X-Men permanecen, siempre. Cyclops lidera, porque eso es lo que hace. Beast construye, porque eso es lo que hace. Y desde su nuevo hogar en Alaska, los X-Men levantan una bandera de desafío. Los negocios mutantes son su negocio. Únete a CYCLOPS, BEAST, MAGNETO, PSYLOCKE, KID OMEGA, TEMPER, MAGIK y JUGGERNAUT mientras nuevas fuerzas en el mundo se posicionan, luchando por el destino y la filosofía de la especie mutante.",
+      "category": "Comics",
+      "topic": "marvel",
+      "price": 90,
+      "imgs": [
+          "https://i.pinimg.com/564x/8c/2a/af/8c2aaf56e48af0d6142c9188bb2d5245.jpg",
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/2/30/66e1cebbdfc43/clean.jpg",
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/c/90/66e1cebb8926a/clean.jpg",
+          "https://sm.ign.com/ign_es/photo/m/marvel-con/marvel-confirms-the-end-of-the-x-mens-krakoan-era-in-2024-ne_u6ze.jpg",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReWsC2CTaK0JT_Nv2sc-lyIb6Tw1nGlk_kUg&s"
+      ],
+      "quantitySell": 10,
+      "comments": [
+          {
+              "id": "d30c0209-ca26-4c1d-8f5e-6c6368cbf0d2",
+              "comment": "lo comprare",
+              "userName": "usuario43",
+              "rate": 4,
+              "date": "05/05/2024"
+          },
+          {
+              "id": "78e5feb5-d80d-481b-b5fe-d269a1825b9b",
+              "comment": "lo voy a comprar",
+              "userName": "dotordoom234",
+              "rate": 5,
+              "date": "02/05/2024"
+          },
+          {
+              "id": "1913b26e-2044-4cdb-97be-e7961aedda29",
+              "comment": "lo quieroo",
+              "userName": "thor23",
+              "rate": 5,
+              "date": "17/05/2024"
+          }
+      ]
+  },
+  {
+      "id": "2cd9ab97-65b5-433f-bba9-0c7905f0919e",
+      "name": "Venom (2021) #38",
+      "quantity": 20,
+      "description": "¡LA BÚSQUEDA EN EL TIEMPO DEL VIEJO VENOM CONTINÚA! La aventura del anciano Dylan Brock a través del tiempo para poner fin a la Guerra de Venom lo lleva a uno de los lugares más oscuros: ¡el reino de Chthon! ¿Podrá incluso el Doctor Strange ayudarlo cuando se enfrente a la máxima tentación del mal?",
+      "category": "Comics",
+      "topic": "marvel",
+      "price": 90,
+      "imgs": [
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/6/e0/66fc0891407ef/clean.jpg",
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/7/10/66fc476ae9461/clean.jpg",
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/3/a0/66fc476c91510/clean.jpg",
+          "https://m.media-amazon.com/images/I/61dFx0zu7tL.null_SY250_.jpg",
+          "https://cdn.marvel.com/u/prod/marvel/i/mg/b/f0/66d0820ae8bbb/portrait_uncanny.jpg"
+      ],
+      "quantitySell": 10,
+      "comments": [
+          {
+              "id": "82a9eb50-0fe2-4907-a0db-31b5703cdc6e",
+              "comment": "lo comprare",
+              "userName": "usuario43",
+              "rate": 4,
+              "date": "05/05/2024"
+          },
+          {
+              "id": "6d3ca94a-1339-4634-aae7-89dfa9c76352",
+              "comment": "lo voy a comprar",
+              "userName": "dotordoom234",
+              "rate": 5,
+              "date": "02/05/2024"
+          },
+          {
+              "id": "20d1f1fe-cec8-4823-864f-488f9aa57080",
+              "comment": "lo quieroo",
+              "userName": "thor23",
+              "rate": 5,
+              "date": "17/05/2024"
+          }
+      ]
+  }
+]

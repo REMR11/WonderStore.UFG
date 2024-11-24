@@ -39,6 +39,7 @@ input[type=number]::-webkit-outer-spin-button {
 /* Para Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+  appearance: textfield;
   /* Cambia el estilo a un campo de texto */
 }
 
@@ -595,6 +596,7 @@ div:where(.swal2-icon).custom-sweetAlert-icon {
     .product-info-title {
       display: -webkit-box;
       -webkit-line-clamp: 3;
+      line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
@@ -729,6 +731,7 @@ dialog[open] {
         color: var(--text-color);
         display: -webkit-box;
         -webkit-line-clamp: 3;
+        line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
         margin-bottom: 1rem;
@@ -1102,6 +1105,7 @@ footer {
       background: var(--bg-color);
       background: linear-gradient(to right, var(--bg-color) 0%, var(--secondary-color) 100%);
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
   }

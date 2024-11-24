@@ -1,13 +1,3 @@
-import { getProductById } from "../../api/api.js";
-import { sweetAlert } from "../../utils/alerts.js";
-import {
-  MODAL_ID_PRODUCT,
-  MODAL_PRODUCT_IMG,
-  PRODUCT_MODAL,
-  PRODUCT_PRICE_MODAL,
-  PRODUCT_QUANTITY_MODAL_INPUT
-} from "../utils/product-modal-utils.js";
-  
 //Evento que redirecciona a la página de detalles del producto
 export function redirectToDetailsEvent() {
   document.querySelectorAll(".product-card").forEach((productCard) => {

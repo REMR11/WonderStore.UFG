@@ -1,4 +1,4 @@
-import { BASE_URL, TOPICS,  } from "./globalVariables.js";
+import { BASE_URL, TOPICS, } from "./globalVariables.js";
 
 //Esta era la propuesta de Oscar la comentare de momento  por falta de rutas
 
@@ -87,6 +87,11 @@ const ROUTES = [
         "isExpandableContainer": false
       }
     ]
+  }, 
+  {
+    title: "Sobre nosotros",
+    "URL": `${BASE_URL}/about`,
+    "isExpandableContainer": false
   }
 ]
 
