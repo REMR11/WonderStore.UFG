@@ -1,4 +1,4 @@
-import { getProductById, getProducts } from "../../api/api.js";
+import { getProducts } from "../../api/api.js";
 import {
   ProductCard,
   redirectToDetailsEvent

@@ -93,7 +93,7 @@ main {
 
           .section-image {
             max-height: 600px;
-            width: 100%; 
+            width: 100%;
             padding: 10px;
             object-fit: contain;
           }
@@ -163,10 +163,36 @@ main {
   }
 }
 
-.rating .star{
+.rating .star {
   transition: color 200ms ease-in-out;
 }
 
-.rating .star.selected, .star.active{
+.rating .star.selected,
+.star.active {
   color: var(--secondary-color);
+}
+
+@media (max-width: 768px){
+  main{
+    width: 100dvw;
+    /* overflow: hidden; */
+  }
+
+  .section-column{
+    width: fit-content !important;
+  }
+
+  .section-shopping{
+    width: 93dvw !important;
+    align-self: flex-start;
+  }
+
+  #principal-image{
+    width: initial;
+    align-self: flex-start;
+  }
+
+  #image-section-container{
+    flex-wrap: wrap;
+  }
 }

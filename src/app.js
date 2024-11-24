@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import livereload from 'livereload';
 import connectLivereload from 'connect-livereload';
+import productsRoute from './routes.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -32,6 +33,8 @@ app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/components', express.static(path.join(__dirname, 'components')));
 app.use('/lib', express.static(path.join(__dirname, 'lib')));
 app.use('/utils', express.static(path.join(__dirname, 'utils')));
+
+app.use('/api/products', productsRoute)
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + 'pages/index.html');

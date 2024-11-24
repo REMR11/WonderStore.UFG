@@ -28,12 +28,21 @@ const rating = document.querySelector(".star.selected")
   ? parseInt(document.querySelector(".star.selected").dataset.value)
   : 0;
 
+//Variable para almacenar la información del producto
+let productInfo = null;
+
 // Carga inicial del producto
 (async function loadProduct() {
   try {
     const product = await getProductById(productId);
     console.log(product);
     if (!product) throw new Error("Producto no encontrado");
+    productInfo = product;
+
+    if(productInfo.quantity <= 0){
+      sweetAlert(3, "El producto se encuentra agotado", "/");
+      return;
+    }
 
     displayImages(product.imgs);
     displayQuantitySell(product.quantitySell);
@@ -59,8 +68,7 @@ function displayImages(images = []) {
   containerImages.innerHTML = images
     .map(
       (url, index) =>
-        `<img class="section-image" src="${url}" alt="Imagen del producto ${
-          index + 1
+        `<img class="section-image" src="${url}" alt="Imagen del producto ${index + 1
         }" />`
     )
     .join("");
@@ -232,7 +240,7 @@ document
     // Limpiar el formulario
     this.reset();
     window.location.reload();
-});
+  });
 
 // Función para generar un UUID
 function generateUUID() {
@@ -245,32 +253,49 @@ function generateUUID() {
 
 // Manejo de la selección de estrellas
 document.querySelectorAll('.star').forEach((star, index) => {
-  star.addEventListener('click', function() {
-      // Limpiar las clases existentes
-      document.querySelectorAll('.star').forEach((s) => {
-          s.classList.remove('selected', 'active');
-      });
-      
-      // Añadir la clase 'active' a todas las estrellas anteriores y a la seleccionada
-      for (let i = 0; i <= index; i++) {
-          document.querySelectorAll('.star')[i].classList.add('active');
-      }
-      
-      // Añadir la clase 'selected' a la estrella clickeada
-      this.classList.add('selected');
+  star.addEventListener('click', function () {
+    // Limpiar las clases existentes
+    document.querySelectorAll('.star').forEach((s) => {
+      s.classList.remove('selected', 'active');
+    });
+
+    // Añadir la clase 'active' a todas las estrellas anteriores y a la seleccionada
+    for (let i = 0; i <= index; i++) {
+      document.querySelectorAll('.star')[i].classList.add('active');
+    }
+
+    // Añadir la clase 'selected' a la estrella clickeada
+    this.classList.add('selected');
   });
 });
 
 document
-.getElementById("AddCar")
-.addEventListener("click", function (event) {
-  const productValue =  parseInt(document.getElementById("counterInput").value);
-  modifyCarrito(productId, productValue);
-  sweetAlert(1, "Producto agregado al carrito correctamente.")
-});
+  .getElementById("AddCar")
+  .addEventListener("click", function (event) {
+    const productValue = parseInt(document.getElementById("counterInput").value);
+
+    if(productValue <= 0){
+      sweetAlert(3, "La cantidad de productos debe ser mayor a 0.")
+      return;
+    } else if(productValue > productInfo.quantity){
+      sweetAlert(3, "La cantidad de productos no puede ser mayor a la cantidad de productos disponibles.")
+      return;
+    }
+
+    modifyCarrito(productId, productValue);
+    sweetAlert(1, "Producto agregado al carrito correctamente.")
+  });
 
 document
-.getElementById("ComprarAhora")
-.addEventListener("click", function (event) {
-    window.location.href="/carrito"
+  .getElementById("ComprarAhora")
+  .addEventListener("click", function (event) {
+    const product = getProductById(productId);
+
+    if(product.quantity <= 0){
+      sweetAlert(3, "El producto se encuentra agotado", "/carrito");
+      return;
+    }
+
+    modifyCarrito(productId, 1);
+    sweetAlert(1, "Producto agregado al carrito correctamente.", "/carrito")
   });

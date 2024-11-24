@@ -322,12 +322,11 @@ input[type="radio"]:checked::before {
   align-items: center;
   justify-content: flex-end;
   margin-bottom: 10px;
-  transition: opacity, display, transform;
-  transition-duration: .5s;
-  transition-behavior: ease-in-out;
+  transition: opacity .5s ease-in-out, display .5s allow-discrete, transform .5s ease;
+  /* transition-duration: .5s;
+  transition-behavior: ease-in-out; */
   display: none;
   opacity: 0;
-
   @starting-style {
     opacity: 1;
   }
@@ -422,6 +421,28 @@ input[type="radio"]:checked::before {
   border-radius: 7px;
 }
 
+/*Animación de entrada de las card*/
+@keyframes showProductsCardJ{
+  from{
+    opacity: 0;
+    scale: 10%;
+  }
+
+  to{
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+/*Asignando estilos a las cards*/
+.product-card{
+  view-timeline: --reveal-card;
+  animation-name: showProductsCardJ;
+  animation-fill-mode: both;
+  animation-timeline: --reveal-card;
+  animation-range: entry 25% cover 35%;
+}
+
 /*Media query para tablets en adelante*/
 @media (width >=768px) {
 
@@ -472,7 +493,15 @@ input[type="radio"]:checked::before {
     height: 200px;
   }
 
+  .product-card{
+    animation-range: entry 25% cover 50%;
+  }
+}
 
+@media(width >=950px){
+  .product-card{
+    animation-range: entry 1% cover 20%;
+  }
 }
 
 .paralax-oscar {
@@ -506,5 +535,9 @@ input[type="radio"]:checked::before {
 
   .marvel .banner-bg img {
     object-position: top;
+  }
+
+  .product-card{
+    animation-range: entry 1% cover 24%;
   }
 }
