@@ -1,0 +1,134 @@
+main{
+  padding: 5%;
+}
+
+ol{
+  list-style-position: inside;
+}
+
+main > h1{
+  text-align: center;
+  text-decoration: underline;
+}
+
+main > p{
+  text-align: justify;
+}
+
+h2{
+  text-align: center;
+}
+
+/*Estilos para animación de carga*/
+.on-load-img-fn-loaded {
+  animation: none !important;
+  background-image: none !important;
+}
+
+.on-load-img-fn>img {
+  opacity: 0;
+  filter: blur(4px);
+  transition: opacity 200ms ease-out, filter 3s ease-out;
+}
+
+.on-load-img-fn-loaded>img {
+  filter: blur(0);
+  opacity: 1;
+}
+
+/*Parte de los miembros del equipo*/
+.members-container{/*Contenedor*/
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+/*Cards*/
+.member-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  color: var(--text-color-revert);
+  box-shadow: 5px 5px 10px #b0b0b0
+}
+
+.member-card:nth-child(even){
+  color: var(--text-color);
+}
+
+.member-card::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  top: 40%;
+  left: 0;
+  right: 0;
+  background-color: var(--primary-color);
+  border-radius: 10px 10px 0 0;
+}
+
+.member-card:nth-child(even)::before{
+  background-color: var(--secondary-color);
+}
+
+.member-img-container{
+  aspect-ratio: 2/3;
+  height: 250px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .member-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.member-info-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  color: inherit;
+  margin-top: 10px;
+  height: max-content;
+  h3{
+    color: inherit;
+    text-align: center;
+  }
+
+  h4{
+    color: inherit;
+    text-align: center;
+  }
+
+  .member-info{
+    color: inherit;
+  }
+}
+
+.member-info{
+  p, span{
+    color: inherit;
+    font-size: clamp(0.875rem, 1.5vw + 0.5rem, 1.125rem); /* Descripción */
+  }
+
+  span{
+    font-weight: bold;
+  }
+
+  p{
+    text-align: center;
+  }
+}
+
+.member-info.apodo{
+  display: flex;
+  gap: 5px;
+}

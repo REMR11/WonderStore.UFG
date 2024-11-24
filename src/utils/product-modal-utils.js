@@ -35,11 +35,13 @@ export function showAddToCartModal(id) {
     location.reload();
     return;
   }
+  console.log(product.quantity)
 
   MODAL_PRODUCT_IMG.src = product.imgs[0];
   PRODUCT_MODAL.querySelector(".product-title").textContent = product.name;
   PRODUCT_MODAL.showModal();
   PRODUCT_PRICE_MODAL.textContent = product.price;
+  PRODUCT_QUANTITY_MODAL_INPUT.max = product.quantity;
   PRODUCT_QUANTITY_MODAL_INPUT.value = 1;
   MODAL_ID_PRODUCT.value = id;
   document.body.classList.add("body-no-scroll-modal-opened");
@@ -64,11 +66,15 @@ function onClickSubstractBtn() {
 //Evento para cuando cambie el input del modal
 PRODUCT_QUANTITY_MODAL_INPUT.addEventListener("input", (e) => {
   let value = parseInt(e.target.value);
-
+  const maxValue = parseInt(e.target.max);
   //En caso sea un número negativo o no sea un número se igualará a 1 su valor.
   if (value <= 0 || isNaN(value)) {
     PRODUCT_QUANTITY_MODAL_INPUT.value = 1;
     value = 1;
+    return;
+  }// Si el valor excede el máximo permitido, se igualará a su valor actual
+  else if (value > maxValue) {
+    PRODUCT_QUANTITY_MODAL_INPUT.value = maxValue;
     return;
   }
 

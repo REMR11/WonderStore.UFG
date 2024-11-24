@@ -1,4 +1,4 @@
-import { getCarrito, deleteProductInCart, modifyCarrito, emptyCart } from "../../api/api.js";
+import { getCarrito, deleteProductInCart, modifyCarrito, emptyCart, getProductById } from "../../api/api.js";
 import { sweetAlert } from "../utils/alerts.js";
 
 // Función para actualizar el carrito en la vista
@@ -79,12 +79,16 @@ function updateCartView() {
 function modifyProductQuantity(id, change) {
     const carrito = getCarrito();
     const product = carrito.cart.find(item => item.id === id);
+    const productInDB = getProductById(id);
 
     if (product) {
         let newQuantity = product.quantity + change;
 
         if (newQuantity <= 0) {
             newQuantity = 1;
+        } else if (productInDB.quantity <= 0) {
+            sweetAlert(3, "La cantidad de productos no puede ser mayor a la cantidad de productos disponibles.")
+            return;
         }
         modifyCarrito(id, newQuantity - product.quantity, false);
         updateCartView();

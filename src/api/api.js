@@ -436,10 +436,19 @@ export function deleteProductInCart(idProduct) {
 
 export function emptyCart() {
   const carrito = getCarrito();
+  const products = getProducts();
+
+  //Retornamos todas las cantidades a su valor
+  carrito.cart.forEach((product) => {
+    const productInDB = products.find((p) => p.id == product.id);
+    productInDB.quantity += product.quantity;
+    console.log(productInDB);
+  });
+
   carrito.cart = [];
   carrito.total = 0;
   localStorage.setItem("carrito", JSON.stringify(carrito));
-
+  localStorage.setItem("products", JSON.stringify(products));
   //Recalculamos la cantidad en el carrito del navbar
   recalculateCart();
 }
