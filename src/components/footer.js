@@ -18,13 +18,13 @@ function generateFooter(links) {
                  © 2024. Todos los derechos reservados
                 </p>
                 <div class="social-icons">
-                  <a href="#" class="social-icon">
+                  <a href="https://www.facebook.com/" target="_blank" class="social-icon">
                     <img src="../assets/icons/social/facebook.svg" alt="facebook">
                   </a>
-                  <a href="#" class="social-icon">
+                  <a href="https://www.instagram.com/" target="_blank" class="social-icon">
                     <img src="../assets/icons/social/instagram.svg" alt="instagram">
                   </a>
-                  <a href="#" class="social-icon">
+                  <a href="https://www.tiktok.com/" target="_blank" class="social-icon">
                     <img src="../assets/icons/social/tiktok.svg" alt="tiktok">
                   </a>
                 </div>
