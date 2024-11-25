@@ -855,7 +855,7 @@ dialog[open] {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    opacity: 0.5;
+    /* opacity: 0.5; */
   }
 
   .hero-banner-content {
@@ -865,6 +865,7 @@ dialog[open] {
     .hero-banner-title {
       font-size: 80px;
       font-weight: 600;
+      text-shadow: 0 0 10px var(--secondary-color);
     }
   }
 }
