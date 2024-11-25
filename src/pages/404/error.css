@@ -7,18 +7,41 @@
   display: flex;
   
 }
+
+title {
+  visibility: hidden;
+}
+
 body{
-  background:  rgb(251, 246, 197);
+  background:  rgb(251, 246, 197) !important;
 }
 #container{
   padding: 20px;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   text-align: center;
 
+  .texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h1 {
+      font-size: 10rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  img {
+    border-radius: 50%;
+  }
 }
-.texto{
+/* .texto{
   margin-right: 20px;
 display: flex;
 text-align: center;
@@ -50,4 +73,4 @@ img{
   border-radius: 100px;
   margin-left: 50%;
   
-}
+} */
